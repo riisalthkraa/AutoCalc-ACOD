@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez AutoCalc OptiDevis - Support, démo, questions">
+    <title>Contact - AutoCalc OptiDevis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid var(--gray-lighter);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-solid);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        .faq-answer {
+            color: var(--gray);
+            margin-top: 1rem;
+            line-height: 1.8;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: auto; padding: 8rem 0 4rem;">
+        <div class="container text-center">
+            <div class="badge mb-2"><i class="fas fa-headset"></i> Support Réactif</div>
+            <h1>Contactez-nous</h1>
+            <p style="font-size: 1.25rem; color: var(--gray); margin-top: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Une question ? Besoin d'une démo ? Notre équipe vous répond sous 24h
+            </p>
+        </div>
+    </section>
+
+    <section style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.fr">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="demo">Demande de démo</option>
+                                <option value="achat">Question avant achat</option>
+                                <option value="support">Support technique</option>
+                                <option value="bug">Signaler un bug</option>
+                                <option value="suggestion">Suggestion d'amélioration</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez votre demande en détail..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+
+                        <p style="font-size: 0.875rem; color: var(--gray); margin-top: 1rem; text-align: center;">
+                            * Champs obligatoires - Réponse sous 24h
+                        </p>
+                    </form>
+                </div>
+
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Informations de contact</h2>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-envelope" style="color: var(--primary-solid); font-size: 1.5rem;"></i>
+                            Email
+                        </h3>
+                        <p style="color: var(--gray); margin: 0;">
+                            <a href="mailto:Riisalth@hotmail.fr" style="color: var(--primary-solid); font-size: 1.125rem; font-weight: 600;">
+                                Riisalth@hotmail.fr
+                            </a>
+                        </p>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Réponse garantie sous 24h ouvrées
+                        </p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary-solid); font-size: 1.5rem;"></i>
+                            Adresse
+                        </h3>
+                        <p style="color: var(--gray); margin: 0;">
+                            <strong>David VIEY</strong><br>
+                            99 Rue Michel Montaigne<br>
+                            33350 Castillon-la-Bataille<br>
+                            France
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-clock" style="color: var(--primary-solid); font-size: 1.5rem;"></i>
+                            Horaires support
+                        </h3>
+                        <p style="color: var(--gray); margin: 0;">
+                            <strong>Lundi - Vendredi :</strong> 9h - 18h<br>
+                            <strong>Week-end :</strong> Fermé<br>
+                            <span style="font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
+                                Support par email 7j/7
+                            </span>
+                        </p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-left: 4px solid var(--primary-solid); padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">
+                            <i class="fas fa-download"></i> Essai gratuit
+                        </h4>
+                        <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                            Testez AutoCalc OptiDevis gratuitement pendant 60 jours sans engagement
+                        </p>
+                        <a href="https://github.com/riisalthkraa/AutoCalc-ACOD/releases/tag/v3.3.0" class="btn btn-accent" target="_blank">
+                            <i class="fas fa-download"></i> Télécharger v3.5.0
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
+                <p class="section-subtitle">
+                    Les réponses aux questions les plus courantes
+                </p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment installer AutoCalc OptiDevis ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Téléchargez le fichier <code>AutoCalc-OptiDevis-Setup-3.5.0.exe</code>, double-cliquez dessus et suivez les instructions à l'écran. L'installation prend moins de 2 minutes. Compatible Windows 10/11, Mac OS et Linux.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>La licence est-elle vraiment à vie ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui ! Avec un seul paiement de ~300€, vous obtenez une licence perpétuelle. Les mises à jour mineures (correctifs, améliorations) sont gratuites à vie. Seules les mises à jour majeures optionnelles peuvent être payantes (~50€/an).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Mes données sont-elles en sécurité ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolument ! Toutes vos données (devis, factures, clients) sont stockées 100% localement sur votre ordinateur. Aucune donnée n'est envoyée vers nos serveurs. Vous gardez le contrôle total de vos informations (conformité RGPD maximale).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Puis-je importer mes données existantes ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui ! Nous fournissons des templates Excel pour importer facilement vos clients, fournisseurs et catalogue matériaux. Import en 1 clic depuis vos fichiers existants. Consultez la page <a href="templates.html" style="color: var(--primary-solid); font-weight: 600;">Templates</a>.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Le logiciel fonctionne-t-il sans internet ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, AutoCalc OptiDevis fonctionne en mode 100% offline. Idéal pour les chantiers isolés ou les zones sans connexion internet. Seule la synchronisation multi-postes nécessite un réseau local.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Puis-je essayer avant d'acheter ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui ! Nous offrons un <strong>essai gratuit de 60 jours</strong> sans engagement et sans carte bancaire. Toutes les fonctionnalités sont débloquées pendant la période d'essai.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Le support technique est-il inclus ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, le support technique par email est inclus gratuitement à vie. Nous répondons sous 24h ouvrées à toutes vos questions. Documentation complète également disponible en PDF.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Combien d'utilisateurs peuvent utiliser le logiciel ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        La licence standard est mono-utilisateur mais vous pouvez installer sur plusieurs de vos postes (bureau, portable). Pour plusieurs utilisateurs simultanés, contactez-nous pour une offre entreprise personnalisée.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quels sont les moyens de paiement acceptés ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Nous acceptons les cartes bancaires (Visa, Mastercard via Stripe), PayPal et les virements bancaires. Tous les paiements sont sécurisés et conformes PCI-DSS.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Proposez-vous des formations ?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-solid); transition: var(--transition-fast);"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Nous fournissons une documentation complète (200+ pages) et des tutoriels vidéo. Pour les entreprises, des formations sur-mesure peuvent être organisées (nous contacter pour devis).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 0;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Vous n'avez pas trouvé votre réponse ?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.95;">
+                Contactez-nous directement, nous serons ravis de vous aider
+            </p>
+            <a href="mailto:Riisalth@hotmail.fr" class="btn btn-accent btn-lg">
+                <i class="fas fa-envelope"></i> Envoyer un email
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">La solution intelligente de gestion de devis et factures</p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="qualite.html" class="footer-link">Qualité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.AutoCalc.showToast('Message envoyé ! Nous vous répondrons sous 24h.', 'success');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

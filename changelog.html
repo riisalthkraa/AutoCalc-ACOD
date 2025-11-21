@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Changelog AutoCalc OptiDevis v3.5.0 - Analyses prédictives, corrections dashboard, 21 novembre 2025">
+    <title>Changelog v3.5.0 - AutoCalc OptiDevis</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .changelog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .changelog-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .changelog-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+        .changelog-section h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gray-lighter);
+        }
+        .changelog-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-lighter);
+        }
+        .changelog-item:last-child {
+            border-bottom: none;
+        }
+        .changelog-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+        .changelog-item p {
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        .changelog-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.75rem;
+        }
+        .changelog-item li {
+            padding: 0.375rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray);
+        }
+        .changelog-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-solid);
+            font-weight: 700;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .tag-new {
+            background: var(--success);
+            color: white;
+        }
+        .tag-fix {
+            background: var(--error);
+            color: white;
+        }
+        .tag-improved {
+            background: var(--accent-solid);
+            color: white;
+        }
+        .tag-tech {
+            background: var(--gray);
+            color: white;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link active">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: auto; padding: 8rem 0 4rem;">
+        <div class="container">
+            <div class="changelog-header">
+                <div class="version-badge">
+                    <i class="fas fa-rocket"></i>
+                    Version 3.5.0
+                </div>
+                <h1 style="color: white; margin-bottom: 1rem;">Notes de Version 3.5.0</h1>
+                <p style="font-size: 1.25rem; opacity: 0.95; margin-bottom: 2rem;">
+                    Date de release : <strong>21 Novembre 2025</strong> | Type : <strong>Analyses Prédictives + Dashboard Amélioré</strong>
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Nouveau module ML</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Corrections dashboard</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">140</span>
+                        <span class="stat-label">Tests réussis</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Modules actifs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouveautés v3.5.0 -->
+    <section style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nouveautés v3.5.0 - 21 Novembre 2025</h2>
+            </div>
+
+            <div class="changelog-section" style="border-left: 4px solid var(--primary-solid);">
+                <h3>
+                    <i class="fas fa-calculator" style="color: var(--primary-solid); font-size: 2rem;"></i>
+                    Module Analyses Prédictives (MLModule)
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Prévisions CA Automatiques
+                    </h4>
+                    <p>
+                        Nouveau module d'analyses prédictives 100% JavaScript (aucune installation requise) :
+                    </p>
+                    <ul>
+                        <li><strong>Régression linéaire</strong> : Prévisions CA sur 3 mois avec intervalles de confiance</li>
+                        <li><strong>Coefficient R²</strong> : Indicateur de fiabilité du modèle</li>
+                        <li><strong>Tendance</strong> : Détection automatique hausse/baisse/stable</li>
+                        <li><strong>Moyenne mobile</strong> : Pondération 70% régression + 30% tendance court terme</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Scoring Clients Intelligent
+                    </h4>
+                    <p>
+                        Score de fidélité 0-100 calculé automatiquement pour chaque client :
+                    </p>
+                    <ul>
+                        <li><strong>CA total</strong> : 0-30 points selon le volume d'achats</li>
+                        <li><strong>Fréquence</strong> : 0-25 points selon le nombre de factures</li>
+                        <li><strong>Récence</strong> : 0-25 points (pénalité si >90 jours sans achat)</li>
+                        <li><strong>Paiement</strong> : 0-20 points selon délai moyen de paiement</li>
+                        <li><strong>Recommandations</strong> : VIP, Bon client, Potentiel, À risque, Inactif</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Détection d'Anomalies
+                    </h4>
+                    <p>
+                        Alertes automatiques sur données inhabituelles :
+                    </p>
+                    <ul>
+                        <li><strong>Factures anormales</strong> : Montants > 2 écarts-types de la moyenne</li>
+                        <li><strong>Devis périmés</strong> : En attente depuis plus de 30 jours</li>
+                        <li><strong>Impayés</strong> : Factures en retard avec jours de retard</li>
+                        <li><strong>Baisse CA</strong> : Alerte si chute >50% vs mois précédent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section" style="border-left: 4px solid var(--success);">
+                <h3>
+                    <i class="fas fa-chart-bar" style="color: var(--success); font-size: 2rem;"></i>
+                    Dashboard Amélioré
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-fix">Corrigé</span>
+                        Graphiques qui n'affichaient pas de données
+                    </h4>
+                    <p>
+                        Corrections majeures sur le Dashboard Admin :
+                    </p>
+                    <ul>
+                        <li>Fix extraction données client (<code>clientInfo.name</code>)</li>
+                        <li>Fix extraction items devis (<code>quoteItems</code>)</li>
+                        <li>Fix sensibilité casse statut (<code>payée</code> vs <code>Payée</code>)</li>
+                        <li>Fix appels API (<code>window.electron.invoke</code>)</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-improved">Amélioré</span>
+                        Affichage des Graphiques
+                    </h4>
+                    <p>
+                        Améliorations visuelles des tableaux et graphiques :
+                    </p>
+                    <ul>
+                        <li>Top 20 Produits : hauteur augmentée à 400px</li>
+                        <li>Pourcentages affichés sur tous les graphiques circulaires</li>
+                        <li>Nouvelle section "Répartition CA par Catégorie" (texte + %)</li>
+                        <li>Section "Analyses Prédictives" avec données ML</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section" style="border-left: 4px solid var(--accent-solid);">
+                <h3>
+                    <i class="fas fa-paint-brush" style="color: var(--accent-solid); font-size: 2rem;"></i>
+                    Corrections UI
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-fix">Corrigé</span>
+                        Animation Shimmer Header
+                    </h4>
+                    <p>
+                        Le slider d'animation ne couvre plus le bouton switch mode :
+                    </p>
+                    <ul>
+                        <li><code>overflow: hidden</code> ajouté à <code>.animated-gradient-text</code></li>
+                        <li>Appliqué aux 28 fichiers de thèmes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="margin: 3rem 0; border: 1px solid var(--gray-lighter);">
+
+            <div class="section-header">
+                <h2 class="section-title">Historique des versions précédentes</h2>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-route" style="color: var(--primary-solid); font-size: 2rem;"></i>
+                    Système de Tour Guidé Interactif (v3.2.0)
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Tour Guidé Complet
+                    </h4>
+                    <p>
+                        Nouveau système de découverte guidée de l'application avec navigation automatique :
+                    </p>
+                    <ul>
+                        <li><strong>Tour général</strong> : 18 étapes couvrant toutes les fonctionnalités principales</li>
+                        <li><strong>Tours thématiques</strong> : Devis, Raccourcis clavier, Import de données</li>
+                        <li><strong>Navigation automatique</strong> : Change d'onglet automatiquement pour expliquer chaque section</li>
+                        <li><strong>Sauvegarde de progression</strong> : Reprend là où vous vous êtes arrêté</li>
+                        <li><strong>Message de bienvenue</strong> : Détection automatique des nouveaux utilisateurs</li>
+                        <li><strong>Raccourci F2</strong> : Lancement rapide du tour guidé à tout moment</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Bulles d'Aide Contextuelles
+                    </h4>
+                    <p>
+                        Interface intuitive avec bulles animées qui suivent votre progression :
+                    </p>
+                    <ul>
+                        <li>Animation smooth avec effet de pulse</li>
+                        <li>Positionnement intelligent près des éléments UI</li>
+                        <li>Overlay sombre pour mettre en valeur l'élément actuel</li>
+                        <li>Compteur de progression (Étape X/Y)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-keyboard" style="color: var(--accent-solid); font-size: 2rem;"></i>
+                    Raccourcis Clavier Optimisés AZERTY
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Support Complet Clavier AZERTY Français
+                    </h4>
+                    <p>
+                        Plus de 30 raccourcis clavier adaptés pour clavier AZERTY :
+                    </p>
+                    <ul>
+                        <li><strong>Navigation rapide</strong> : Ctrl+&é"'( pour accéder aux onglets principaux</li>
+                        <li><strong>Alt+1-9</strong> : Navigation directe vers n'importe quel onglet par position</li>
+                        <li><strong>Ctrl+Tab / Ctrl+Shift+Tab</strong> : Cycle entre les onglets</li>
+                        <li><strong>Actions courantes</strong> : Ctrl+S (Sauvegarder), Ctrl+N (Nouveau), Ctrl+D (Dupliquer)</li>
+                        <li><strong>Devis & Factures</strong> : Ctrl+Q (Nouveau devis), Ctrl+B (Convertir en facture)</li>
+                        <li><strong>Recherche</strong> : Ctrl+K (Quick Add), Ctrl+F (Recherche)</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Modal d'Aide Raccourcis Redesigné
+                    </h4>
+                    <p>
+                        Interface claire et organisée pour visualiser tous les raccourcis disponibles :
+                    </p>
+                    <ul>
+                        <li>Organisation par catégories (Navigation, Actions, Devis, Recherche, Utilitaires)</li>
+                        <li>Affichage visuel des touches avec style 3D</li>
+                        <li>Adaptation automatique au thème sombre</li>
+                        <li>Indicateurs 🔒 pour les raccourcis restreints en mode invité</li>
+                        <li>Accessible via F1 ou Ctrl+/ à tout moment</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-improved">Amélioré</span>
+                        Sécurité Mode Invité
+                    </h4>
+                    <p>
+                        Protection renforcée des raccourcis clavier en mode invité :
+                    </p>
+                    <ul>
+                        <li>Blocage automatique des raccourcis vers Catalogue, Configuration, Fournisseurs, Clients</li>
+                        <li>Navigation intelligente qui saute les onglets restreints avec Ctrl+Tab</li>
+                        <li>Messages d'alerte clairs lors de tentatives d'accès non autorisées</li>
+                        <li>Liste des raccourcis accessibles affichée dans l'aide</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-file-excel" style="color: var(--success); font-size: 2rem;"></i>
+                    Import/Export Excel Avancé
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Templates Excel Professionnels
+                    </h4>
+                    <p>
+                        Ajout de 3 templates Excel optimisés pour faciliter l'import de vos données :
+                    </p>
+                    <ul>
+                        <li><strong>Template Clients</strong> : Import en 1 clic de vos fichiers clients (nom, adresse, email, téléphone, historique)</li>
+                        <li><strong>Template Fournisseurs</strong> : Gestion complète de vos fournisseurs (coordonnées, délais, conditions de paiement)</li>
+                        <li><strong>Catalogue Matériaux</strong> : Import massif de matériaux avec métadonnées riches (prix, TVA, unités, conversions)</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">
+                        <strong>Gain de temps :</strong> Importez des centaines d'entrées en quelques secondes au lieu de les saisir manuellement.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Export Excel Enrichi
+                    </h4>
+                    <p>
+                        Nouveau système d'export Excel avec formatage professionnel :
+                    </p>
+                    <ul>
+                        <li>Export des devis et factures au format .xlsx avec mise en forme</li>
+                        <li>Export des statistiques CA avec graphiques intégrés</li>
+                        <li>Export des listes clients/fournisseurs/matériaux pour analyse</li>
+                        <li>Support des formules Excel natives pour calculs dynamiques</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-envelope" style="color: var(--accent-solid); font-size: 2rem;"></i>
+                    Système de Relances Automatiques
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Relances de Paiement Intelligentes
+                    </h4>
+                    <p>
+                        Module complet de gestion des relances de paiement avec :
+                    </p>
+                    <ul>
+                        <li>Détection automatique des factures impayées et échues</li>
+                        <li>Système de relances programmables (J+7, J+14, J+30)</li>
+                        <li>Templates d'emails personnalisables selon le niveau de relance</li>
+                        <li>Historique complet des relances par client</li>
+                        <li>Envoi automatique ou manuel selon vos préférences</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Configuration SMTP Améliorée
+                    </h4>
+                    <p>
+                        Interface simplifiée pour configurer vos serveurs d'envoi d'emails :
+                    </p>
+                    <ul>
+                        <li>Support multi-providers (Gmail, Outlook, SMTP personnalisé)</li>
+                        <li>Test de connexion en 1 clic</li>
+                        <li>Gestion des pièces jointes (PDF devis/factures)</li>
+                        <li>Prévisualisation avant envoi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-tachometer-alt" style="color: var(--primary-solid); font-size: 2rem;"></i>
+                    Dashboard Analytics Amélioré
+                </h3>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-improved">Amélioré</span>
+                        Nouveaux Graphiques Temps Réel
+                    </h4>
+                    <p>
+                        Le tableau de bord a été entièrement repensé avec :
+                    </p>
+                    <ul>
+                        <li><strong>Graphique CA mensuel</strong> : Évolution du chiffre d'affaires avec comparaison N vs N-1</li>
+                        <li><strong>Top 20 produits</strong> : Classement par CA avec indicateurs de tendance</li>
+                        <li><strong>Répartition par catégorie</strong> : Camembert interactif des ventes par catégorie</li>
+                        <li><strong>Taux de conversion</strong> : Suivi du ratio devis→factures avec historique</li>
+                        <li><strong>Factures en retard</strong> : Alertes visuelles pour les impayés</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4>
+                        <span class="tag tag-new">Nouveau</span>
+                        Recommandations IA
+                    </h4>
+                    <p>
+                        Système de recommandations intelligentes basé sur l'analyse de vos données :
+                    </p>
+                    <ul>
+                        <li>Alertes stock bas pour les produits à forte rotation</li>
+                        <li>Suggestions d'optimisation des marges</li>
+                        <li>Détection automatique des tendances produits</li>
+                        <li>Prévisions de ventes basées sur l'historique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Améliorations -->
+    <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Améliorations & Optimisations</h2>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-cogs" style="color: var(--warning); font-size: 2rem;"></i>
+                    Interface Utilisateur
+                </h3>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-improved">Amélioré</span> Gestion des Clients</h4>
+                    <ul>
+                        <li>Nouvelle vue en grille avec filtres avancés (nom, ville, statut)</li>
+                        <li>Recherche fuzzy améliorée (tolère mieux les fautes de frappe)</li>
+                        <li>Export rapide de la liste clients au format Excel/CSV</li>
+                        <li>Ajout du champ "Notes internes" pour chaque client</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-improved">Amélioré</span> Gestion des Fournisseurs</h4>
+                    <ul>
+                        <li>Module fournisseurs avec interface similaire aux clients</li>
+                        <li>Ajout du champ "Délai de livraison moyen"</li>
+                        <li>Historique des commandes par fournisseur</li>
+                        <li>Évaluation fournisseur (notes sur 5 étoiles)</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-improved">Amélioré</span> Catalogue Matériaux</h4>
+                    <ul>
+                        <li>Vue minimaliste avec bouton "Détails" pour afficher les métadonnées</li>
+                        <li>Filtres par catégorie, type et disponibilité</li>
+                        <li>Tri par prix, nom, popularité ou stock</li>
+                        <li>Duplication de matériaux en 1 clic</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-bolt" style="color: var(--accent-solid); font-size: 2rem;"></i>
+                    Performance & Technique
+                </h3>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-tech">Technique</span> Optimisations Performances</h4>
+                    <ul>
+                        <li>Réduction de 40% du temps de chargement initial</li>
+                        <li>Optimisation du cache avec TTL intelligent (5 min)</li>
+                        <li>Amélioration de la recherche fuzzy (5 niveaux de tolérance)</li>
+                        <li>Chargement progressif des images et screenshots</li>
+                    </ul>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-tech">Technique</span> Mises à Jour Dépendances</h4>
+                    <ul>
+                        <li>Electron mis à jour vers v38.3.0</li>
+                        <li>Bootstrap mis à jour vers v5.3.3</li>
+                        <li>Chart.js optimisé pour de meilleures performances</li>
+                        <li>Mise à jour des bibliothèques de sécurité (bcrypt, JWT)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corrections de bugs -->
+    <section style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Corrections de Bugs</h2>
+            </div>
+
+            <div class="changelog-section">
+                <h3>
+                    <i class="fas fa-bug" style="color: var(--error); font-size: 2rem;"></i>
+                    Bugs Corrigés
+                </h3>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Calcul TVA</h4>
+                    <p>
+                        <strong>Problème :</strong> Certains matériaux affichaient "NaN%" au lieu du taux de TVA<br>
+                        <strong>Cause :</strong> Le système gérait uniquement le format <code>tvaRate: 0.20</code> et non <code>tva: 20</code><br>
+                        <strong>Solution :</strong> Support des deux formats avec détection automatique
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Export PDF Multi-pages</h4>
+                    <p>
+                        Correction du bug où les devis de plus de 20 lignes ne s'exportaient pas correctement en PDF multi-pages.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Synchronisation Cloud</h4>
+                    <p>
+                        Résolution des conflits de synchronisation lors de modifications simultanées sur plusieurs postes.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Scanner Code-Barres</h4>
+                    <p>
+                        Amélioration de la détection des codes EAN-13 avec checksum invalide.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Thème Minimal Nordic</h4>
+                    <p>
+                        Correction des contrastes de couleurs pour meilleure lisibilité selon les standards WCAG 2.1.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Calculs Arrondis</h4>
+                    <p>
+                        Les quantités calculées sont désormais systématiquement arrondies au supérieur pour éviter les manques.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Recherche Caractères Spéciaux</h4>
+                    <p>
+                        La recherche gère maintenant correctement les caractères accentués et spéciaux (€, ², ³, °).
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Export FEC Comptable</h4>
+                    <p>
+                        Correction du formatage des dates pour conformité stricte avec le format réglementaire français.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Bug Overlay Tour Guidé</h4>
+                    <p>
+                        <strong>Problème :</strong> Les overlays sombres s'empilaient lors de lancements multiples du tour guidé, rendant l'écran progressivement noir<br>
+                        <strong>Solution :</strong> Vérification et réutilisation de l'overlay existant au lieu d'en créer un nouveau à chaque lancement
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Backdrops Bootstrap Multiples</h4>
+                    <p>
+                        Correction du bug où les backdrops des modals Bootstrap s'accumulaient lors d'appuis multiples sur F1, rendant l'interface de plus en plus sombre.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Navigation Tour Guidé</h4>
+                    <p>
+                        L'étape "Quick Add" du tour général naviguait vers l'onglet Accueil au lieu de Recherche. Corrigé pour une démonstration cohérente.
+                    </p>
+                </div>
+
+                <div class="changelog-item">
+                    <h4><span class="tag tag-fix">Corrigé</span> Affichage Touches Clavier</h4>
+                    <p>
+                        Les touches de raccourcis (kbd) étaient quasi invisibles dans le tour guidé avec un fond blanc sur blanc. Ajout d'un style 3D avec ombre et contraste amélioré.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Migration & Installation -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Migration & Installation</h2>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem;">
+                <h3 style="color: white; margin-bottom: 1.5rem;">
+                    <i class="fas fa-arrow-circle-up"></i> Migration depuis v3.1.0
+                </h3>
+                <p style="margin-bottom: 1.5rem; opacity: 0.95;">
+                    Cette mise à jour est <strong>100% compatible</strong> avec la version 3.1.0. Aucune action manuelle requise.
+                </p>
+                <ol style="line-height: 2; padding-left: 1.5rem; opacity: 0.95;">
+                    <li>Télécharger <code>AutoCalc OptiDevis Setup 3.5.0.exe</code></li>
+                    <li>Fermer l'application si elle est ouverte</li>
+                    <li>Lancer l'installateur et suivre les instructions</li>
+                    <li>Au redémarrage, vos données (devis, factures, clients) sont automatiquement préservées</li>
+                </ol>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 12px; font-size: 0.95rem;">
+                    <strong><i class="fas fa-info-circle"></i> Recommandation :</strong> Effectuez un backup manuel via le menu Admin avant toute mise à jour majeure.
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); border-radius: 20px; padding: 2.5rem;">
+                <h3 style="color: white; margin-bottom: 1.5rem;">
+                    <i class="fas fa-chart-bar"></i> Statistiques de la Release
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div>
+                        <div style="font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9;">Taille de l'installateur</div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">102 MB</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9;">Tests automatisés</div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">140/140 ✓</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9;">Score audit global</div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">75/100</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9;">Bugs connus</div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prochaines Versions Prévues</h2>
+                <p class="section-subtitle">
+                    Ce que nous préparons pour l'avenir
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div class="glass-card">
+                    <div class="badge mb-2" style="background: var(--warning);">
+                        <i class="fas fa-calendar-alt"></i>
+                        Q1-Q2 2026
+                    </div>
+                    <h3>Version 3.3.0 - Gestion Financière</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--gray); margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Module Comptabilité Analytique
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Dashboard trésorerie avancé
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Connexions bancaires (API)
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Prévisionnel de trésorerie
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card">
+                    <div class="badge mb-2" style="background: var(--success);">
+                        <i class="fas fa-calendar-alt"></i>
+                        2027
+                    </div>
+                    <h3>Version 4.0.0 - Conformité 2026</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--gray); margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            E-facturation 2026 (Chorus Pro)
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Certification anti-fraude TVA
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Signature électronique intégrée
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; gap: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--primary-solid);"></i>
+                            Paiements en ligne (Stripe)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 4rem 0;">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 1rem;">Prêt à passer à la v3.5.0 ?</h2>
+            <p style="font-size: 1.25rem; color: var(--gray); margin-bottom: 2rem;">
+                Téléchargez dès maintenant la dernière version avec toutes ces nouveautés
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-download"></i>
+                    Télécharger v3.5.0
+                </a>
+                <a href="documentation.html" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-book"></i>
+                    Voir la documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        La solution intelligente de gestion de devis et factures pour les professionnels du bâtiment
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer-link">Support technique</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem;">
+                            <i class="fas fa-flag"></i> Made in France
+                        </span>
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem; background: var(--success);">
+                            <i class="fas fa-shield-alt"></i> RGPD
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

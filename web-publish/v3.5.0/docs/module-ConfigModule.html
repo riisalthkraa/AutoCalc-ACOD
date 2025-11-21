@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> ConfigModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>ConfigModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><h1>========================================
+CONFIG MODULE - Gestion de la configuration</h1>
+<p>Module de gestion centralisée de toutes les configurations de l'application
+AutoCalc OptiDevis. Gère les paramètres SMTP, en-têtes PDF, thèmes visuels
+et mots de passe avec sauvegarde automatique et validation.</p>
+<p>Architecture :
+Le module gère 4 domaines de configuration distincts :</p>
+<ul>
+<li><strong>SMTP</strong> : Configuration email pour envoi de devis/factures</li>
+<li><strong>PDF Headers</strong> : En-têtes personnalisés pour documents PDF</li>
+<li><strong>Thèmes</strong> : Apparence visuelle de l'application</li>
+<li><strong>Mot de passe</strong> : Gestion du mot de passe administrateur</li>
+</ul>
+<h1>==========================================
+CONFIGURATION SMTP (Email)</h1>
+<p>Fonctionnalités :</p>
+<ul>
+<li>Sélection du service SMTP (Gmail, Outlook, Yahoo, etc.)</li>
+<li>Configuration authentification (email + mot de passe app)</li>
+<li>Test de connexion SMTP avant sauvegarde</li>
+<li>Validation des champs (email valide, champs requis)</li>
+<li>Sauvegarde sécurisée dans app-config.json</li>
+</ul>
+<p>Workflow de configuration :</p>
+<ol>
+<li>Utilisateur saisit service + email + mot de passe</li>
+<li>Validation des champs (validateSMTPConfig)</li>
+<li>Test optionnel de connexion (testSmtpConfig)</li>
+<li>Sauvegarde si test réussi (saveSMTPConfig)</li>
+<li>Événement 'smtp-updated' émis</li>
+</ol>
+<p>IPC Channel : set-config, test-email-config
+Fichier : app-config.json</p>
+<h1>==========================================
+CONFIGURATION EN-TÊTES PDF</h1>
+<p>Données d'en-tête :</p>
+<ul>
+<li>Informations entreprise (nom, adresse, téléphone, email)</li>
+<li>Identifiants légaux (SIRET, TVA intracommunautaire)</li>
+<li>Statut juridique (SARL, SAS, Auto-entrepreneur, etc.)</li>
+<li>Conditions de paiement (30 jours, 60 jours, etc.)</li>
+<li>Conditions additionnelles (CGV personnalisées)</li>
+<li>Mentions légales</li>
+<li>Logo entreprise (base64)</li>
+<li>Design PDF (elegant, modern, compact)</li>
+</ul>
+<p>Auto-sauvegarde du design PDF :</p>
+<ul>
+<li>Listener sur #pdf-design-select (change event)</li>
+<li>Sauvegarde automatique lors du changement</li>
+<li>Indicateur visuel ✓ sur design sélectionné</li>
+<li>Notification de succès</li>
+</ul>
+<p>Validation :</p>
+<ul>
+<li>Nom entreprise obligatoire</li>
+<li>Email valide si fourni</li>
+<li>Autres champs optionnels</li>
+</ul>
+<p>IPC Channel : get-header-config, set-header-config
+Fichier : header-config.json</p>
+<h1>==========================================
+GESTION DES THÈMES</h1>
+<p>Système de thèmes :</p>
+<ul>
+<li>Chargement depuis themes.json</li>
+<li>Organisation par catégories (Clairs, Sombres, Colorés, etc.)</li>
+<li>Select avec optgroups</li>
+<li>Application en temps réel (<link id="theme-link">)</li>
+<li>Sauvegarde automatique du choix</li>
+</ul>
+<p>Workflow :</p>
+<ol>
+<li>loadThemes() charge themes.json via fetch</li>
+<li>Génération d'un <select> avec <optgroup> par catégorie</li>
+<li>Application du thème sauvegardé ou défaut (assets/styles.css)</li>
+<li>Change listener sur select</li>
+<li>applyTheme() met à jour <link id="theme-link" href="..."></li>
+<li>Sauvegarde dans app-config.json</li>
+<li>Événement 'theme-changed' émis</li>
+</ol>
+<p>Fichiers :</p>
+<ul>
+<li>themes.json : Liste des thèmes disponibles</li>
+<li>app-config.json : Thème sélectionné</li>
+<li>app/shared/ui/themes/*.css : Fichiers CSS des thèmes</li>
+</ul>
+<h1>==========================================
+GESTION DU MOT DE PASSE</h1>
+<p>Changement du mot de passe administrateur :</p>
+<ul>
+<li>Champs : nouveau mot de passe + confirmation</li>
+<li>Validation (validatePasswordChange externe)</li>
+<li>Hashage sécurisé par backend (bcrypt)</li>
+<li>Réinitialisation des champs après succès</li>
+<li>Réinitialisation de la validation</li>
+</ul>
+<p>Sécurité :</p>
+<ul>
+<li>Authentification requise (authToken)</li>
+<li>Validation côté client (longueur, correspondance)</li>
+<li>Hashage côté serveur (bcrypt)</li>
+<li>Stockage sécurisé (auth.json)</li>
+</ul>
+<p>IPC Channel : set-password</p>
+<h1>==========================================
+AUTO-SAUVEGARDE</h1>
+<p>Comportements auto-save :</p>
+<ul>
+<li><strong>Design PDF</strong> : Sauvegarde automatique au changement du select</li>
+<li><strong>Thème</strong> : Sauvegarde automatique au changement du select</li>
+<li><strong>Autres configs</strong> : Sauvegarde manuelle via boutons</li>
+</ul>
+<p>Protection contre duplication :</p>
+<ul>
+<li>Variable globale window.pdfDesignAutoSaveSetup</li>
+<li>Évite l'ajout multiple de listeners</li>
+</ul>
+<h1>==========================================
+VALIDATION</h1>
+<p>Fonctions de validation :</p>
+<ul>
+<li><strong>validateSMTPConfig()</strong> : Service + email + mot de passe</li>
+<li><strong>validateHeaderConfig()</strong> : Nom entreprise + email si fourni</li>
+<li><strong>validatePasswordChange()</strong> : Externe (via window)</li>
+</ul>
+<p>Retour standard :</p>
+<pre class="prettyprint source lang-javascript"><code>{
+  valid: boolean,
+  errors: string[]
+}
+</code></pre>
+<h1>==========================================
+SYNCHRONISATION AVEC SCOPE GLOBAL</h1>
+<p>Variables synchronisées :</p>
+<ul>
+<li>window.appConfig ↔ this.appConfig (config générale)</li>
+<li>window.headerConfig ↔ this.headerConfig (en-têtes PDF)</li>
+<li>window.companyLogoBase64 : Logo entreprise (lecture seule)</li>
+</ul>
+<p>Fonctions exposées :</p>
+<ul>
+<li>testSmtpConfig, saveSMTPConfig, populateSmtpConfigForm, validateSMTPConfig</li>
+<li>loadHeaderConfig, saveHeaderConfig, populateHeaderConfigForm, validateHeaderConfig</li>
+<li>setupPdfDesignAutoSave, updatePdfDesignIndicator</li>
+<li>loadThemes, applyTheme, loadConfig</li>
+<li>changePassword</li>
+</ul>
+<h1>==========================================
+INTÉGRATIONS</h1>
+<ul>
+<li><strong>StateManager</strong> : Stockage de auth.token</li>
+<li><strong>NotificationSystem</strong> : Feedback utilisateur</li>
+<li><strong>IPC Channels</strong> : Communication avec Electron main process</li>
+<li><strong>ValidationSystem</strong> : Validation externe des champs</li>
+</ul></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>AutoCalc OptiDevis</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_config_ConfigModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_config_ConfigModule.js.html">modules/config/ConfigModule.js</a>, <a href="modules_config_ConfigModule.js.html#line1">line 1</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="BaseModule.html">BaseModule</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

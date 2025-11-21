@@ -1,0 +1,950 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/templates/TemplatesModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/templates/TemplatesModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * TEMPLATES MODULE - Gestion des modèles de devis
+ * ========================================
+ *
+ * Module de gestion complète des templates (modèles) de devis pour AutoCalc OptiDevis.
+ * Permet de sauvegarder des devis en tant que modèles réutilisables pour accélérer
+ * la création de nouveaux devis similaires.
+ *
+ * Architecture :
+ * Le module gère un système de templates avec :
+ * - **Sauvegarde** : Convertir le devis actuel en template (nom + description)
+ * - **Liste** : Affichage de tous les templates avec métadonnées
+ * - **Utilisation** : Charger un template pour créer un nouveau devis
+ * - **Suppression** : Supprimer des templates obsolètes
+ * - **Persistance** : Stockage dans templates.json via IPC
+ *
+ * ==========================================
+ * CAS D'USAGE TYPIQUES
+ * ==========================================
+ *
+ * **Exemple 1 : Devis de rénovation standard** :
+ * - Vendeur crée un devis type "Rénovation salle de bain" avec 15 articles
+ * - Il sauvegarde comme template "Réno SDB Standard"
+ * - Pour chaque nouveau client : il charge le template, ajuste quantités et client
+ * - Gain de temps : 90% (plus besoin de ressaisir les 15 articles)
+ *
+ * **Exemple 2 : Devis saisonniers** :
+ * - Vendeur crée des templates pour travaux saisonniers (terrasse été, isolation hiver)
+ * - Chaque saison : il charge le template adapté et personnalise
+ *
+ * **Exemple 3 : Devis par typologie de client** :
+ * - Templates spécifiques : "Devis Particulier Basic", "Devis Pro Premium"
+ * - Articles pré-sélectionnés selon le type de client
+ *
+ * ==========================================
+ * STRUCTURE D'UN TEMPLATE
+ * ==========================================
+ *
+ * **Métadonnées** :
+ * - id : Identifiant unique (UUID v4)
+ * - name : Nom du template (obligatoire, ex: "Rénovation salle de bain")
+ * - description : Description optionnelle (ex: "Devis type avec carrelage, plomberie, électricité")
+ * - itemsCount : Nombre d'articles sauvegardés (calculé automatiquement)
+ * - createdAt : Date de création (ISO 8601)
+ * - createdBy : ID de l'utilisateur créateur
+ *
+ * **Contenu du template** (quoteItems) :
+ * Chaque article sauvegarde :
+ * - material : Objet matériau complet (id, name, reference, price, tvaRate, unit, supplier, etc.)
+ * - clientRequest : Demande spécifique du client (texte libre)
+ * - quantity : Quantité de base
+ * - calculation : Données de calcul (surface, longueur, largeur, etc.)
+ *
+ * IMPORTANT : Les prix unitaires et totaux ne sont PAS sauvegardés.
+ * Ils sont recalculés lors du chargement du template (évite obsolescence prix).
+ *
+ * ==========================================
+ * IPC CHANNELS (ELECTRON)
+ * ==========================================
+ *
+ * **save-quote-template** :
+ * - Paramètres : authToken, { name, description, quoteItems }
+ * - Retour : { success: boolean, message?: string }
+ * - Action : Crée un nouveau template dans templates.json
+ *
+ * **list-quote-templates** :
+ * - Paramètres : (aucun - accessible sans auth)
+ * - Retour : { success: boolean, templates: Array&lt;Object> }
+ * - Action : Retourne tous les templates avec métadonnées
+ *
+ * **load-quote-template** :
+ * - Paramètres : templateId
+ * - Retour : { success: boolean, template: Object }
+ * - Action : Charge un template complet avec quoteItems
+ *
+ * **delete-quote-template** :
+ * - Paramètres : authToken, templateId
+ * - Retour : { success: boolean, message?: string }
+ * - Action : Supprime définitivement un template
+ *
+ * ==========================================
+ * MODAL BOOTSTRAP
+ * ==========================================
+ *
+ * **Modal Sauvegarde** (#saveTemplateModal) :
+ * - Titre : "Sauvegarder comme Template"
+ * - Champs :
+ *   - #template-name : Nom du template (obligatoire)
+ *   - #template-description : Description (optionnelle)
+ * - Boutons : "Sauvegarder", "Annuler"
+ * - Validation : Nom non vide, window.quoteItems non vide
+ * - Action "Sauvegarder" : Appelle confirmSaveTemplate()
+ *
+ * ==========================================
+ * WORKFLOW COMPLET - SAUVEGARDE DE TEMPLATE
+ * ==========================================
+ *
+ * 1. Vendeur construit un devis dans QuoteBuilderModule (window.quoteItems rempli)
+ * 2. Clique sur bouton "Sauvegarder comme Template"
+ * 3. askSaveCurrentAsTemplate() appelé :
+ *    - Vérification authToken (getAuthToken())
+ *    - Vérification window.quoteItems.length > 0 (sinon error)
+ *    - Affichage modal #saveTemplateModal
+ * 4. Utilisateur saisit nom et description
+ * 5. Clique "Sauvegarder"
+ * 6. confirmSaveTemplate() appelé :
+ *    - Validation nom non vide
+ *    - Extraction des données de window.quoteItems (material, clientRequest, quantity, calculation)
+ *    - Envoi IPC 'save-quote-template' avec authToken + données
+ * 7. Backend crée le template dans templates.json avec UUID
+ * 8. Si succès :
+ *    - NotificationSystem.success "Template '[nom]' créé"
+ *    - Fermeture modal
+ *    - Réinitialisation formulaire (#template-name, #template-description)
+ *    - Rechargement liste templates (loadTemplates)
+ * 9. Si erreur → NotificationSystem.error
+ *
+ * ==========================================
+ * WORKFLOW COMPLET - UTILISATION DE TEMPLATE
+ * ==========================================
+ *
+ * 1. Vendeur ouvre l'onglet Templates
+ * 2. Liste des templates affichée (loadTemplates)
+ * 3. Clique sur bouton "Utiliser" d'un template
+ * 4. useTemplate(templateId) appelé :
+ *    - Envoi IPC 'load-quote-template' avec templateId
+ *    - Backend retourne template complet avec quoteItems
+ * 5. Vide window.quoteItems actuel (reset devis en cours)
+ * 6. Pour chaque article du template :
+ *    - Reconstruit l'article avec material + clientRequest + quantity + calculation
+ *    - Recalcule les prix (unitPriceHT, unitPriceTTC, priceHT, priceTTC, tva)
+ *      Formule : unitPriceHT = material.price / (1 + material.tvaRate)
+ *    - Ajoute l'article à window.quoteItems
+ * 7. Appelle window.updateQuoteTable() (QuoteBuilderModule) pour rafraîchir UI
+ * 8. Bascule vers onglet "Nouveau Devis" (#new-quote-tab) via Bootstrap Tab API
+ * 9. NotificationSystem.success "Template '[nom]' chargé (X articles)"
+ *
+ * IMPORTANT : Les prix sont recalculés à chaque chargement depuis material.price actuel.
+ * Cela garantit que le devis utilise toujours les prix à jour du catalogue.
+ *
+ * ==========================================
+ * WORKFLOW COMPLET - SUPPRESSION DE TEMPLATE
+ * ==========================================
+ *
+ * 1. Utilisateur clique "Supprimer" sur un template
+ * 2. deleteTemplate(templateId) appelé :
+ *    - Vérification authToken
+ *    - Affichage confirm() natif "Supprimer ce template ?"
+ * 3. Si confirmation utilisateur :
+ *    - Envoi IPC 'delete-quote-template' avec authToken + templateId
+ *    - Backend supprime le template de templates.json
+ * 4. Si succès :
+ *    - NotificationSystem.success "Template supprimé"
+ *    - Rechargement liste templates (loadTemplates)
+ * 5. Si erreur → NotificationSystem.error
+ *
+ * ==========================================
+ * AFFICHAGE DE LA LISTE
+ * ==========================================
+ *
+ * **Tableau des templates** (#templates-table-body) :
+ * - 5 colonnes :
+ *   1. Nom (strong, échappé HTML)
+ *   2. Description (échappé HTML, "-" si vide)
+ *   3. Nombre d'articles (ex: "12 articles")
+ *   4. Date de création (formatée DD/MM/YYYY via DateFormatter.toFrench)
+ *   5. Actions : Bouton "Utiliser" + Bouton "Supprimer"
+ * - Si aucun template → "Aucun template"
+ * - Sécurité : Échappement HTML via TextFormatter.escapeHtml()
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **QuoteBuilderModule** : Utilise window.quoteItems pour sauvegarder/charger
+ * - **QuoteBuilderModule** : Appelle window.updateQuoteTable() pour rafraîchir UI
+ * - **AuthModule** : Utilise window.getAuthToken() pour authentification
+ * - **NotificationSystem** : Feedback utilisateur (success, error)
+ * - **Bootstrap 5.3.3** : Modal de sauvegarde + Tab API
+ * - **IPC Electron** : save-quote-template, list-quote-templates, load-quote-template, delete-quote-template
+ * - **TextFormatter** : Échappement HTML pour sécurité
+ * - **DateFormatter** : Formatage dates françaises
+ *
+ * ==========================================
+ * SÉCURITÉ &amp; VALIDATION
+ * ==========================================
+ *
+ * **Authentification** :
+ * - Sauvegarde : Requiert authToken (réservé utilisateurs connectés)
+ * - Liste : Accessible sans auth (lecture seule)
+ * - Chargement : Accessible sans auth (lecture seule)
+ * - Suppression : Requiert authToken (réservé utilisateurs connectés)
+ *
+ * **Validation** :
+ * - Nom du template : Obligatoire (sinon error "Le nom est requis")
+ * - Devis actuel : Doit contenir au moins 1 article (sinon error "Le devis actuel est vide")
+ * - Suppression : Confirmation native confirm() avant suppression
+ *
+ * **Échappement HTML** :
+ * - Tous les textes utilisateur (nom, description) sont échappés via TextFormatter.escapeHtml()
+ * - Protection contre XSS dans le tableau des templates
+ *
+ * @module TemplatesModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import { TextFormatter, DateFormatter } from '../../shared/utils/formatters.js';
+
+class TemplatesModule extends BaseModule {
+  /**
+   * Crée une instance du module Templates.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('templates', state, eventBus);
+
+    this.log('TemplatesModule instantiated');
+  }
+
+  /**
+   * Initialise le module Templates.
+   * Expose les fonctions globales pour compatibilité.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si l'initialisation échoue
+   *
+   * @example
+   * const templatesModule = new TemplatesModule(state, eventBus);
+   * await templatesModule.init();
+   * // Fonctions globales exposées : askSaveCurrentAsTemplate, confirmSaveTemplate, loadTemplates, useTemplate, deleteTemplate
+   */
+  async init() {
+    try {
+      this.log('Initializing TemplatesModule...');
+
+      // Exposer les fonctions au scope global
+      this.exposeToGlobal({
+        askSaveCurrentAsTemplate: this.askSaveCurrentAsTemplate,
+        confirmSaveTemplate: this.confirmSaveTemplate,
+        loadTemplates: this.loadTemplates,
+        useTemplate: this.useTemplate,
+        askDeleteTemplate: this.askDeleteTemplate,
+        confirmDeleteTemplate: this.confirmDeleteTemplate,
+        viewTemplateDetails: this.viewTemplateDetails
+      });
+
+      // Exposer également sous window.templateManager pour compatibilité HTML
+      window.templateManager = {
+        askSaveCurrentAsTemplate: this.askSaveCurrentAsTemplate.bind(this),
+        confirmSaveTemplate: this.confirmSaveTemplate.bind(this),
+        loadTemplates: this.loadTemplates.bind(this),
+        useTemplate: this.useTemplate.bind(this),
+        askDeleteTemplate: this.askDeleteTemplate.bind(this),
+        confirmDeleteTemplate: this.confirmDeleteTemplate.bind(this),
+        viewTemplateDetails: this.viewTemplateDetails.bind(this)
+      };
+
+      this.log('✓ window.templateManager exposed');
+
+      // Initialiser le modal de suppression
+      const deleteModalElement = this.getElement('#deleteTemplateModal');
+      if (deleteModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+        this.deleteModal = new bootstrap.Modal(deleteModalElement);
+        this.log('Delete modal initialized');
+      }
+
+      // Attacher l'event listener au bouton de confirmation
+      this.addDOMListener('#confirmDeleteTemplateBtn', 'click', () => {
+        this.confirmDeleteTemplate();
+      });
+
+      // Charger automatiquement les templates quand l'onglet devient actif
+      const templatesTab = document.querySelector('#templates-tab, a[href="#templates"]');
+      if (templatesTab) {
+        templatesTab.addEventListener('shown.bs.tab', (event) => {
+          this.log('Templates tab activated, loading templates...');
+          this.loadTemplates();
+        });
+        this.log('Tab activation listener attached to:', templatesTab);
+      } else {
+        this.error('Templates tab button not found!');
+      }
+
+      // Fallback: écouter l'événement sur le tab-pane directement
+      const templatesPane = document.getElementById('templates');
+      if (templatesPane) {
+        // Utiliser MutationObserver pour détecter quand le tab devient actif
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+              if (templatesPane.classList.contains('active') &amp;&amp; templatesPane.classList.contains('show')) {
+                this.log('Templates pane became active (via MutationObserver)');
+                this.loadTemplates();
+              }
+            }
+          });
+        });
+        observer.observe(templatesPane, { attributes: true, attributeFilter: ['class'] });
+        this.log('MutationObserver attached to templates pane');
+      }
+
+      this.initialized = true;
+      this.log('TemplatesModule initialized successfully');
+
+    } catch (error) {
+      this.error('Error initializing TemplatesModule:', error);
+      throw error;
+    }
+  }
+
+  // ==========================================
+  // SAUVEGARDE DE TEMPLATES
+  // ==========================================
+
+  /**
+   * Ouvre le modal pour sauvegarder le devis actuel comme template.
+   * Vérifie l'authentification et que le devis contient au moins 1 article.
+   *
+   * Workflow :
+   * 1. Récupère authToken via window.getAuthToken()
+   * 2. Si non connecté → NotificationSystem.error + return
+   * 3. Vérifie window.quoteItems.length > 0
+   * 4. Si devis vide → NotificationSystem.error "Le devis actuel est vide" + return
+   * 5. Récupère modal #saveTemplateModal
+   * 6. Retire attribut 'inert' (accessibilité)
+   * 7. Affiche modal via Bootstrap
+   *
+   * Prérequis :
+   * - Utilisateur connecté (authToken disponible)
+   * - window.quoteItems doit contenir au moins 1 article
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté ou devis vide
+   *
+   * @example
+   * // Vendeur clique "Sauvegarder comme Template" après avoir construit un devis de 5 articles
+   * await askSaveCurrentAsTemplate();
+   * // → Modal s'ouvre avec champs nom et description
+   */
+  askSaveCurrentAsTemplate = async () => {
+    const authToken = window.getAuthToken?.();
+    if (!authToken) {
+      NotificationSystem.error('Vous devez être connecté pour sauvegarder un template');
+      return;
+    }
+
+    if (window.quoteItems.length === 0) {
+      NotificationSystem.error('Le devis actuel est vide');
+      return;
+    }
+
+    const modalElement = document.getElementById('saveTemplateModal');
+    if (modalElement) modalElement.removeAttribute('inert');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  }
+
+  /**
+   * Sauvegarde le devis actuel comme template après validation.
+   * Récupère le nom et la description, extrait les articles, envoie via IPC.
+   *
+   * Workflow :
+   * 1. Récupère authToken via window.getAuthToken()
+   * 2. Si non connecté → NotificationSystem.error + return
+   * 3. Récupère #template-name et #template-description (trim)
+   * 4. Validation : Si nom vide → NotificationSystem.error "Le nom est requis" + return
+   * 5. Extrait les données de window.quoteItems :
+   *    - Pour chaque article : { material, clientRequest, quantity, calculation }
+   *    - IMPORTANT : Ne sauvegarde PAS les prix (seront recalculés au chargement)
+   * 6. Envoie IPC 'save-quote-template' avec authToken + { name, description, quoteItems }
+   * 7. Si succès :
+   *    - NotificationSystem.success "Template '[nom]' créé"
+   *    - Ferme modal (#saveTemplateModal)
+   *    - Réinitialise formulaire (vide #template-name et #template-description)
+   *    - Recharge liste templates (loadTemplates)
+   * 8. Si erreur → NotificationSystem.error
+   *
+   * Données sauvegardées par article :
+   * - material : Objet matériau complet (id, name, reference, price, tvaRate, unit, supplier, etc.)
+   * - clientRequest : Demande client (texte libre)
+   * - quantity : Quantité de base
+   * - calculation : Données de calcul (surface, longueur, largeur, etc.)
+   *
+   * Backend :
+   * - Génère un UUID v4 pour le template
+   * - Calcule itemsCount automatiquement
+   * - Ajoute createdAt (ISO 8601) et createdBy
+   * - Sauvegarde dans templates.json
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté ou nom manquant
+   * @fires NotificationSystem#success Si template créé
+   *
+   * @example
+   * // Utilisateur saisit "Réno SDB Standard" et clique "Sauvegarder"
+   * await confirmSaveTemplate();
+   * // → IPC 'save-quote-template' envoyé
+   * // → Template créé avec UUID, 12 articles
+   * // → "Template 'Réno SDB Standard' créé"
+   * // → Modal fermé, liste rechargée
+   */
+  confirmSaveTemplate = async () => {
+    try {
+      const authToken = window.getAuthToken?.();
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté pour sauvegarder un template');
+        return;
+      }
+
+      const name = document.getElementById('template-name').value.trim();
+      const description = document.getElementById('template-description').value.trim();
+
+      if (!name) {
+        NotificationSystem.error('Le nom est requis');
+        return;
+      }
+
+      const result = await window.electron.invoke('save-quote-template', authToken, {
+        name,
+        description,
+        quoteItems: window.quoteItems.map(item => ({
+          material: item.material,
+          clientRequest: item.clientRequest,
+          quantity: item.quantity,
+          calculation: item.calculation
+        }))
+      });
+
+      if (result.success) {
+        NotificationSystem.success(`Template "${name}" créé`);
+
+        // Fermer le modal
+        ModalHelper.hide('saveTemplateModal');
+
+        // Réinitialiser le formulaire
+        document.getElementById('template-name').value = '';
+        document.getElementById('template-description').value = '';
+
+        // Recharger la liste des templates
+        await this.loadTemplates();
+
+        // Basculer vers l'onglet Templates pour voir le nouveau template
+        const templatesTab = document.querySelector('[data-bs-target="#templates"]');
+        if (templatesTab &amp;&amp; typeof bootstrap !== 'undefined') {
+          const tab = new bootstrap.Tab(templatesTab);
+          tab.show();
+        }
+      } else {
+        NotificationSystem.error(result.message || 'Erreur');
+      }
+    } catch (error) {
+      console.error('Erreur sauvegarde template:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // CHARGEMENT DES TEMPLATES
+  // ==========================================
+
+  /**
+   * Charge et affiche la liste de tous les templates disponibles.
+   * Génère un tableau HTML avec métadonnées et boutons d'action.
+   *
+   * Workflow :
+   * 1. Envoie IPC 'list-quote-templates' (sans auth, lecture seule)
+   * 2. Backend retourne { success, templates: [...] }
+   * 3. Si erreur → NotificationSystem.error + return
+   * 4. Récupère tableau #templates-table-body
+   * 5. Si aucun template → affiche "Aucun template"
+   * 6. Sinon génère HTML pour chaque template :
+   *    - Colonne 1 : Nom (strong, échappé HTML)
+   *    - Colonne 2 : Description (échappé HTML, "-" si vide)
+   *    - Colonne 3 : Nombre d'articles (ex: "12 articles")
+   *    - Colonne 4 : Date de création (formatée DD/MM/YYYY via DateFormatter.toFrench)
+   *    - Colonne 5 : Bouton "Utiliser" onclick useTemplate(id) + Bouton "Supprimer" onclick deleteTemplate(id)
+   * 7. Affiche le tableau généré
+   *
+   * Sécurité :
+   * - Échappement HTML via TextFormatter.escapeHtml() (protection XSS)
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si erreur de chargement
+   *
+   * @example
+   * // Utilisateur ouvre l'onglet Templates
+   * await loadTemplates();
+   * // → IPC 'list-quote-templates' envoyé
+   * // → Tableau affiché avec 3 templates :
+   * //   1. "Réno SDB Standard" - 12 articles - 15/01/2025
+   * //   2. "Terrasse été" - 8 articles - 10/01/2025
+   * //   3. "Isolation hiver" - 15 articles - 05/01/2025
+   */
+  loadTemplates = async () => {
+    try {
+      const result = await window.electron.invoke('list-quote-templates');
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur chargement templates');
+        return;
+      }
+
+      const templates = result.templates || [];
+      const tbody = document.getElementById('templates-table-body');
+
+      if (templates.length === 0) {
+        tbody.innerHTML = '&lt;tr>&lt;td colspan="4" class="text-center">Aucun template&lt;/td>&lt;/tr>';
+        return;
+      }
+
+      tbody.innerHTML = templates.map(tpl => `
+        &lt;tr>
+          &lt;td>&lt;strong>${TextFormatter.escapeHtml(tpl.name)}&lt;/strong>&lt;/td>
+          &lt;td>&lt;span class="badge bg-info">${tpl.itemsCount} articles&lt;/span>&lt;/td>
+          &lt;td>${DateFormatter.toFrench(tpl.createdAt)}&lt;/td>
+          &lt;td>
+            &lt;div class="btn-icon-group">
+              &lt;button onclick="viewTemplateDetails('${tpl.id}')" class="btn btn-sm btn-info btn-icon" data-bs-toggle="tooltip" title="Voir détails">
+                &lt;i class="fas fa-info-circle">&lt;/i>
+              &lt;/button>
+              &lt;button onclick="useTemplate('${tpl.id}')" class="btn btn-sm btn-success btn-icon" data-bs-toggle="tooltip" title="Utiliser">
+                &lt;i class="fas fa-check">&lt;/i>
+              &lt;/button>
+              &lt;button onclick="askDeleteTemplate('${tpl.id}')" class="btn btn-sm btn-danger btn-icon" data-bs-toggle="tooltip" title="Supprimer">
+                &lt;i class="fas fa-trash-alt">&lt;/i>
+              &lt;/button>
+            &lt;/div>
+          &lt;/td>
+        &lt;/tr>
+      `).join('');
+    } catch (error) {
+      console.error('Erreur loadTemplates:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // UTILISATION D'UN TEMPLATE
+  // ==========================================
+
+  /**
+   * Charge un template et l'applique au devis actuel.
+   * Vide le devis en cours, charge tous les articles du template avec recalcul des prix,
+   * rafraîchit l'UI et bascule vers l'onglet Nouveau Devis.
+   *
+   * Workflow :
+   * 1. Envoie IPC 'load-quote-template' avec templateId
+   * 2. Backend retourne { success, template } avec template.quoteItems complet
+   * 3. Si non trouvé → NotificationSystem.error "Template non trouvé" + return
+   * 4. Vide window.quoteItems actuel (reset complet du devis en cours)
+   * 5. Pour chaque article du template.quoteItems :
+   *    a. Extrait material, clientRequest, quantity, calculation
+   *    b. Recalcule les prix depuis material.price actuel :
+   *       - unitPriceHT = material.price / (1 + material.tvaRate)
+   *       - unitPriceTTC = material.price
+   *       - priceHT = quantity * unitPriceHT
+   *       - priceTTC = quantity * material.price
+   *       - tva = priceTTC - priceHT
+   *    c. Ajoute l'article complet à window.quoteItems
+   * 6. Appelle window.updateQuoteTable() (QuoteBuilderModule) pour rafraîchir UI
+   * 7. Bascule vers onglet #new-quote-tab via Bootstrap Tab API
+   * 8. NotificationSystem.success "Template '[nom]' chargé (X articles)"
+   *
+   * IMPORTANT - Recalcul des prix :
+   * - Les prix du template ne sont PAS sauvegardés
+   * - Ils sont recalculés à chaque chargement depuis material.price actuel
+   * - Garantit que le devis utilise toujours les prix à jour du catalogue
+   * - Si un matériau a changé de prix depuis la création du template, le nouveau prix est utilisé
+   *
+   * Impact sur le devis en cours :
+   * - ATTENTION : window.quoteItems est complètement vidé avant chargement
+   * - Les articles du devis en cours seront perdus (sans confirmation)
+   * - Recommandation UX : Ajouter une confirmation si window.quoteItems.length > 0
+   *
+   * @public
+   * @async
+   * @param {string} templateId - UUID du template à charger
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si template non trouvé ou erreur IPC
+   * @fires NotificationSystem#success Si template chargé avec succès
+   *
+   * @example
+   * // Utilisateur clique "Utiliser" sur template "Réno SDB Standard" (12 articles)
+   * await useTemplate('550e8400-e29b-41d4-a716-446655440000');
+   * // → IPC 'load-quote-template' envoyé
+   * // → window.quoteItems vidé
+   * // → 12 articles chargés avec prix recalculés
+   * // → Onglet "Nouveau Devis" activé
+   * // → "Template 'Réno SDB Standard' chargé (12 articles)"
+   */
+  useTemplate = async (templateId) => {
+    try {
+      const result = await window.electron.invoke('load-quote-template', templateId);
+
+      if (!result.success) {
+        NotificationSystem.error('Template non trouvé');
+        return;
+      }
+
+      const template = result.template;
+
+      // Vider le devis actuel
+      window.quoteItems = [];
+
+      // Charger les articles du template
+      for (const item of template.quoteItems) {
+        window.quoteItems.push({
+          material: item.material,
+          clientRequest: item.clientRequest || '',
+          quantity: item.quantity,
+          calculation: item.calculation,
+          unitPriceHT: item.material.price / (1 + item.material.tvaRate),
+          unitPriceTTC: item.material.price,
+          priceHT: item.quantity * (item.material.price / (1 + item.material.tvaRate)),
+          priceTTC: item.quantity * item.material.price,
+          tva: (item.quantity * item.material.price) - (item.quantity * (item.material.price / (1 + item.material.tvaRate)))
+        });
+      }
+
+      window.updateQuoteTable();
+
+      // Basculer vers l'onglet Nouveau Devis
+      const quoteTab = document.querySelector('#new-quote-tab');
+      if (quoteTab) {
+        const tab = new bootstrap.Tab(quoteTab);
+        tab.show();
+      }
+
+      NotificationSystem.success(`Template "${template.name}" chargé (${window.quoteItems.length} articles)`);
+    } catch (error) {
+      console.error('Erreur useTemplate:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // SUPPRESSION D'UN TEMPLATE
+  // ==========================================
+
+  /**
+   * Demande confirmation avant de supprimer un template.
+   * Charge le template, affiche son nom dans le modal et ouvre le modal de confirmation.
+   *
+   * @public
+   * @async
+   * @param {string} templateId - UUID du template à supprimer
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur clique "Supprimer" sur template
+   * await askDeleteTemplate('550e8400-e29b-41d4-a716-446655440000');
+   * // → Modal de confirmation affiché avec le nom du template
+   */
+  askDeleteTemplate = async (templateId) => {
+    try {
+      // Charger le template pour récupérer son nom
+      const result = await window.electron.invoke('load-quote-template', templateId);
+
+      if (!result.success || !result.template) {
+        NotificationSystem.error('Template introuvable');
+        return;
+      }
+
+      const template = result.template;
+      this.templateToDeleteId = templateId;
+
+      // Mettre à jour le message du modal
+      const deleteMessage = this.getElement('#deleteTemplateMessage');
+      if (deleteMessage) {
+        deleteMessage.textContent = `Êtes-vous sûr de vouloir supprimer le template "${template.name}" ?`;
+      }
+
+      // Afficher le modal
+      if (this.deleteModal) {
+        ModalHelper.show('deleteTemplateModal');
+      }
+
+      this.log('Delete confirmation requested for:', template.name);
+    } catch (error) {
+      this.error('Error asking delete confirmation:', error);
+      NotificationSystem.error('Erreur lors de la demande de suppression');
+    }
+  }
+
+  /**
+   * Supprime définitivement un template après confirmation.
+   * Envoie IPC 'delete-quote-template', puis recharge la liste des templates.
+   *
+   * Workflow :
+   * 1. Récupération authToken via window.getAuthToken()
+   * 2. Si non connecté → NotificationSystem.error, arrêter
+   * 3. Envoi IPC 'delete-quote-template' avec authToken + templateId
+   * 4. Si succès :
+   *    - NotificationSystem.success "Template supprimé"
+   *    - Ferme le modal
+   *    - Recharge liste templates (loadTemplates)
+   * 5. Si erreur → NotificationSystem.error
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté ou erreur IPC
+   * @fires NotificationSystem#success Si template supprimé
+   *
+   * @example
+   * // Utilisateur clique "Confirmer" dans le modal de suppression
+   * await confirmDeleteTemplate();
+   * // → IPC 'delete-quote-template' envoyé
+   * // → Template supprimé de templates.json
+   * // → "Template supprimé"
+   * // → Liste rechargée sans ce template
+   */
+  confirmDeleteTemplate = async () => {
+    try {
+      const authToken = window.getAuthToken?.();
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté pour supprimer un template');
+        return;
+      }
+
+      if (!this.templateToDeleteId) {
+        NotificationSystem.error('Aucun template sélectionné');
+        return;
+      }
+
+      const result = await window.electron.invoke('delete-quote-template', authToken, this.templateToDeleteId);
+
+      if (result.success) {
+        NotificationSystem.success('Template supprimé');
+
+        // Fermer le modal
+        if (this.deleteModal) {
+          ModalHelper.hide('deleteTemplateModal');
+        }
+
+        // Recharger la liste
+        await this.loadTemplates();
+
+        this.templateToDeleteId = null;
+      } else {
+        NotificationSystem.error(result.message || 'Erreur');
+      }
+    } catch (error) {
+      this.error('Error deleting template:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // AFFICHAGE DES DÉTAILS D'UN TEMPLATE
+  // ==========================================
+
+  /**
+   * Affiche les détails complets d'un template dans un modal.
+   *
+   * Workflow :
+   * 1. Charge le template complet via IPC 'load-quote-template'
+   * 2. Si non trouvé : afficher erreur, arrêter
+   * 3. Remplir tous les champs du modal de détails
+   * 4. Afficher le modal 'templateDetailsModal'
+   *
+   * @public
+   * @async
+   * @param {string} templateId - UUID du template
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir détails" pour le template #3
+   * await viewTemplateDetails('550e8400-e29b-41d4-a716-446655440000');
+   * // → Modal affiché avec toutes les informations du template
+   */
+  viewTemplateDetails = async (templateId) => {
+    try {
+      this.log(`Viewing details for template ID: ${templateId}`);
+
+      // Charger le template complet
+      const result = await window.electron.invoke('load-quote-template', templateId);
+
+      if (!result.success || !result.template) {
+        this.error('Template introuvable pour ID:', templateId);
+        NotificationSystem.error('Template introuvable');
+        return;
+      }
+
+      const template = result.template;
+
+      // Remplir tous les champs du modal
+      this.setTextContent('#detail-template-id', template.id ?? '-');
+      this.setTextContent('#detail-template-name', template.name ?? '-');
+      this.setTextContent('#detail-template-description', template.description ?? '-');
+      this.setTextContent('#detail-template-items-count', template.itemsCount ? `${template.itemsCount} articles` : '-');
+      this.setTextContent('#detail-template-created-at', template.createdAt ? DateFormatter.toFrench(template.createdAt) : '-');
+      this.setTextContent('#detail-template-created-by', template.createdBy ?? '-');
+
+      // Afficher le modal
+      ModalHelper.show('templateDetailsModal');
+      this.log('Template details modal displayed for:', template.name);
+    } catch (error) {
+      this.error('Error viewing template details:', error);
+      NotificationSystem.error('Erreur lors de l\'affichage des détails');
+    }
+  }
+
+  /**
+   * Définit le contenu textuel d'un élément (helper).
+   * @private
+   */
+  setTextContent(selector, value) {
+    const element = this.getElement(selector);
+    if (element) {
+      element.textContent = value;
+    } else {
+      this.warn(`Element not found: ${selector}`);
+    }
+  }
+}
+
+export default TemplatesModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

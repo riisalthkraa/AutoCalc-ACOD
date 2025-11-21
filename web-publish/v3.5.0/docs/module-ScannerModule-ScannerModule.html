@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> ScannerModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>ScannerModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-ScannerModule.html">ScannerModule</a>~</span>ScannerModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="ScannerModule">
+        <a class="href-link" href="#ScannerModule">#</a>
+        
+        <span class="code-name">
+            
+                new ScannerModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module Scanner.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_scanner_ScannerModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_scanner_ScannerModule.js.html">modules/scanner/ScannerModule.js</a>, <a href="modules_scanner_ScannerModule.js.html#line215">line 215</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="destroy">
+        <a class="href-link" href="#destroy">#</a>
+        
+        <span class="code-name">
+            
+                destroy<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Détruit le module Scanner et nettoie toutes les ressources.
+Appelé lors de la destruction du module (fermeture app, changement de page).</p>
+<p>Workflow :</p>
+<ol>
+<li>Appelle stopScanner() pour arrêter le scanner et libérer caméra</li>
+<li>Appelle super.destroy() pour cleanup BaseModule</li>
+</ol>
+<p>Garantit :</p>
+<ul>
+<li>Pas de fuite mémoire (MediaStream libéré)</li>
+<li>Pas de caméra active en arrière-plan (track.stop())</li>
+<li>Cleanup complet des event listeners (via BaseModule)</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_scanner_ScannerModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_scanner_ScannerModule.js.html">modules/scanner/ScannerModule.js</a>, <a href="modules_scanner_ScannerModule.js.html#line535">line 535</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Fermeture de l'application
+scannerModule.destroy();
+// → Scanner arrêté si actif
+// → Caméra libérée
+// → Ressources nettoyées</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module Scanner.
+Expose les fonctions globales pour compatibilité.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_scanner_ScannerModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_scanner_ScannerModule.js.html">modules/scanner/ScannerModule.js</a>, <a href="modules_scanner_ScannerModule.js.html#line244">line 244</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Si l'initialisation échoue</p></div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const scannerModule = new ScannerModule(state, eventBus);
+await scannerModule.init();
+// Fonctions globales exposées : startScanner, stopScanner</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="startScanner">
+        <a class="href-link" href="#startScanner">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                startScanner<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Démarre le scanner de codes-barres avec accès caméra et initialisation Quagga.
+Demande permission caméra, configure le flux vidéo et active la détection de codes-barres.</p>
+<p>Workflow complet : Voir en-tête du module &quot;WORKFLOW COMPLET - SCAN DE CODE-BARRES&quot;</p>
+<p>Étapes principales :</p>
+<ol>
+<li>Récupère #scanner-container et #scanner-video (si absent → error)</li>
+<li>Demande accès caméra navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })</li>
+<li>Si refusé → NotificationSystem.error + return</li>
+<li>Si accordé :
+<ul>
+<li>Assigne flux à scannerVideo.srcObject</li>
+<li>Démarre lecture scannerVideo.play()</li>
+<li>Affiche conteneur scanner (display: flex)</li>
+</ul>
+</li>
+<li>Vérifie présence window.Quagga (sinon error &quot;Bibliothèque Quagga non chargée&quot;)</li>
+<li>Initialise Quagga.init() avec config :
+<ul>
+<li>inputStream : Live, LiveStream, 640x480, facingMode: environment</li>
+<li>decoder.readers : 5 formats (EAN-13, EAN-8, UPC, Code 39, Code 128)</li>
+<li>target : scannerVideo</li>
+</ul>
+</li>
+<li>Si erreur init → stopScanner() + error</li>
+<li>Si succès :
+<ul>
+<li>Quagga.start()</li>
+<li>this.isInitialized = true</li>
+<li>NotificationSystem.success &quot;Scanner démarré&quot;</li>
+</ul>
+</li>
+<li>Configure callback Quagga.onDetected() :
+<ul>
+<li>Extrait code-barres : data.codeResult.code</li>
+<li>Remplit #search-input avec le code</li>
+<li>Déclenche window.debouncedSearchMaterial() (MaterialsModule)</li>
+<li>Arrête scanner automatiquement (stopScanner)</li>
+<li>Émet événement 'barcode-detected' avec { code }</li>
+</ul>
+</li>
+</ol>
+<p>Formats de codes-barres supportés :</p>
+<ul>
+<li>EAN-13 : Codes européens 13 chiffres (ex: 3760123456789)</li>
+<li>EAN-8 : Codes européens 8 chiffres</li>
+<li>UPC : Codes américains (Universal Product Code)</li>
+<li>Code 39 : Format alphanumérique industrie</li>
+<li>Code 128 : Format haute densité logistique</li>
+</ul>
+<p>Permissions caméra :</p>
+<ul>
+<li>facingMode: 'environment' = Caméra arrière (smartphones)</li>
+<li>Popup navigateur &quot;Autoriser l'accès à la caméra ?&quot;</li>
+<li>Si refusé : Scanner ne démarre pas</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_scanner_ScannerModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_scanner_ScannerModule.js.html">modules/scanner/ScannerModule.js</a>, <a href="modules_scanner_ScannerModule.js.html#line325">line 325</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#error Si DOM absent,event: permission refusée ou Quagga non chargé</li>
+            
+                <li>NotificationSystem#event:success Si scanner démarré avec succès</li>
+            
+                <li>EventBus#barcode-detected Lors de détection réussie d'un code-barres (avec { code })</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Scanner code-barres"
+await startScanner();
+// → Popup permission caméra
+// → Si accepté : Flux vidéo s'affiche
+// → Scanner actif, détection automatique en cours
+// → "Scanner démarré"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="stopScanner">
+        <a class="href-link" href="#stopScanner">#</a>
+        
+        <span class="code-name">
+            
+                stopScanner<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Arrête le scanner de codes-barres et libère toutes les ressources.
+Arrête Quagga, libère le flux vidéo de la caméra et masque le conteneur scanner.</p>
+<p>Workflow :</p>
+<ol>
+<li>Si this.isInitialized &amp;&amp; window.Quagga :
+<ul>
+<li>Appelle Quagga.stop()</li>
+<li>Met this.isInitialized = false</li>
+<li>NotificationSystem.success &quot;Scanner arrêté&quot;</li>
+</ul>
+</li>
+<li>Récupère scannerVideo (#scanner-video)</li>
+<li>Si scannerVideo.srcObject existe :
+<ul>
+<li>Appelle track.stop() sur tous les tracks du MediaStream</li>
+<li>IMPORTANT : Libère la caméra (sinon LED reste allumée)</li>
+<li>Met scannerVideo.srcObject = null (évite fuite mémoire)</li>
+</ul>
+</li>
+<li>Récupère scannerContainer (#scanner-container)</li>
+<li>Masque le conteneur : scannerContainer.style.display = 'none'</li>
+<li>Émet événement 'scanner-stopped'</li>
+</ol>
+<p>Libération ressources :</p>
+<ul>
+<li>track.stop() : Libère caméra (coupe LED, économie batterie)</li>
+<li>srcObject = null : Évite fuite mémoire du MediaStream</li>
+<li>display = 'none' : Masque UI du scanner</li>
+</ul>
+<p>Quand appelé :</p>
+<ul>
+<li>Manuellement par utilisateur (bouton &quot;Arrêter&quot;)</li>
+<li>Automatiquement après détection d'un code-barres</li>
+<li>Par destroy() lors de la destruction du module</li>
+<li>En cas d'erreur durant startScanner()</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_scanner_ScannerModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_scanner_ScannerModule.js.html">modules/scanner/ScannerModule.js</a>, <a href="modules_scanner_ScannerModule.js.html#line474">line 474</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si scanner arrêté avec succès</li>
+            
+                <li>NotificationSystem#event:error Si conteneur scanner non trouvé</li>
+            
+                <li>EventBus#event:scanner-stopped Après arrêt complet du scanner</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Arrêter le scanner"
+stopScanner();
+// → Quagga arrêté
+// → Flux vidéo libéré (caméra éteinte)
+// → Conteneur masqué
+// → "Scanner arrêté"</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

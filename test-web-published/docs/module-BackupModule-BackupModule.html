@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> BackupModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>BackupModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-BackupModule.html">BackupModule</a>~</span>BackupModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="BackupModule">
+        <a class="href-link" href="#BackupModule">#</a>
+        
+        <span class="code-name">
+            
+                new BackupModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module Backup.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line227">line 227</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<code class="param-type">number</code>
+
+
+    </span>
+
+<h4 class="name" id="MODAL_TRANSITION_DELAY">
+    <a class="href-link" href="#MODAL_TRANSITION_DELAY">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        MODAL_TRANSITION_DELAY
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Délai entre la fermeture d'un modal et l'ouverture d'un autre (ms).
+Évite les conflits de transition Bootstrap lors du workflow de restauration.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line219">line 219</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="confirmRestoreBackup">
+    <a class="href-link" href="#confirmRestoreBackup">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        confirmRestoreBackup
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Affiche le modal de confirmation pour restaurer un backup sélectionné.
+Ferme le modal de liste, stocke les informations et affiche le modal de confirmation.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère authToken via window.getAuthToken()</li>
+<li>Si non connecté/non admin → NotificationSystem.error + return</li>
+<li>Stocke backupPath dans this.pendingRestoreBackupPath</li>
+<li>Stocke filename dans this.pendingRestoreFilename</li>
+<li>Ferme modal liste (#restoreBackupModal) via bootstrap.Modal.getInstance().hide()</li>
+<li>Met à jour #confirmRestoreBackupFilename avec filename</li>
+<li>Attente 300ms pour fermeture complète du modal liste (évite conflit Bootstrap)</li>
+<li>Affiche modal confirmation (#confirmRestoreBackupModal) via getOrCreateInstance()</li>
+</ol>
+<p>Gestion des modals Bootstrap :</p>
+<ul>
+<li>Utilise getInstance() pour récupérer l'instance existante du modal liste</li>
+<li>Utilise getOrCreateInstance() pour le modal confirmation (évite multiples instances)</li>
+<li>Délai 300ms obligatoire entre fermeture et ouverture (sinon conflit backdrop)</li>
+</ul>
+<p>Variables temporaires :</p>
+<ul>
+<li>this.pendingRestoreBackupPath : Utilisé par performRestore()</li>
+<li>this.pendingRestoreFilename : Affichage dans modal confirmation</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line546">line 546</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si non connecté ou non admin</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Restaurer" sur la ligne du backup
+confirmRestoreBackup('C:\\app\\backups\\backup-2025-01-15-143022.zip', 'backup-2025-01-15-143022.zip');
+// → Modal liste se ferme
+// → Attente 300ms
+// → Modal confirmation s'ouvre avec message
+// → "Êtes-vous sûr de vouloir restaurer le backup suivant ?"
+// → "backup-2025-01-15-143022.zip"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="createFullBackup">
+    <a class="href-link" href="#createFullBackup">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        createFullBackup
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Crée un backup complet de toutes les données de l'application.
+Génère un fichier .zip horodaté contenant tous les fichiers JSON.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère authToken via window.getAuthToken() (AuthModule)</li>
+<li>Si non connecté/non admin → NotificationSystem.error + return</li>
+<li>Affiche notification info &quot;Création du backup en cours...&quot;</li>
+<li>Envoie IPC 'create-full-backup' avec authToken</li>
+<li>Backend crée fichier backup-YYYY-MM-DD-HHMMSS.zip avec tous les JSON</li>
+<li>Si succès :
+<ul>
+<li>Calcule taille en MB : (size / 1024 / 1024).toFixed(2)</li>
+<li>Affiche NotificationSystem.success &quot;Backup créé avec succès ! Taille: X MB&quot;</li>
+<li>Émet événement 'backup-created' avec { size, sizeMB }</li>
+</ul>
+</li>
+<li>Si erreur → NotificationSystem.error</li>
+</ol>
+<p>Fichiers sauvegardés :</p>
+<ul>
+<li>materials.json (catalogue des matériaux)</li>
+<li>suppliers.json (fournisseurs)</li>
+<li>quotes.json (devis)</li>
+<li>invoices.json (factures)</li>
+<li>clients.json (clients)</li>
+<li>users.json (utilisateurs)</li>
+<li>config.json (configuration)</li>
+</ul>
+<p>Sécurité :</p>
+<ul>
+<li>Réservé aux administrateurs uniquement (vérification authToken)</li>
+<li>Protection IPC côté backend</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line368">line 368</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si non connecté ou non admin</li>
+            
+                <li>NotificationSystem#event:info Pendant la création du backup</li>
+            
+                <li>NotificationSystem#event:success Si backup créé avec succès</li>
+            
+                <li>EventBus#backup-created Après création réussie (avec { size,event: sizeMB })</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Admin clique sur "Créer Backup Complet"
+await createFullBackup();
+// → IPC 'create-full-backup' envoyé
+// → Fichier backup-2025-01-15-143022.zip créé
+// → "Backup créé avec succès ! Taille: 2.45 MB"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="performRestore">
+    <a class="href-link" href="#performRestore">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        performRestore
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Effectue la restauration complète du backup après confirmation utilisateur.
+Restaure tous les fichiers JSON depuis le .zip, invalide le cache et recharge les modules.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère this.pendingRestoreBackupPath et this.pendingRestoreFilename</li>
+<li>Validation : Si null → NotificationSystem.error &quot;informations manquantes&quot; + return</li>
+<li>Récupère authToken via window.getAuthToken()</li>
+<li>Si non connecté/non admin → NotificationSystem.error + return</li>
+<li>Ferme modal confirmation (#confirmRestoreBackupModal)</li>
+<li>Affiche NotificationSystem.info &quot;Restauration en cours... Veuillez patienter.&quot;</li>
+<li>Envoie IPC 'restore-backup-from-file' avec authToken + backupPath</li>
+<li>Backend extrait .zip et écrase tous les fichiers JSON de données</li>
+<li>Si succès :
+<ul>
+<li>Affiche NotificationSystem.success &quot;Restauration réussie ! Rechargement de l'application...&quot;</li>
+<li>Invalide cache DataCache ('materials')</li>
+<li>Recharge MaterialsModule : window.loadMaterials()</li>
+<li>Rafraîchit UI : window.populateMaterialsTable()</li>
+<li>Émet événement 'backup-restored' avec { backupPath, filename }</li>
+<li>Réinitialise this.pendingRestoreBackupPath = null</li>
+<li>Réinitialise this.pendingRestoreFilename = null</li>
+</ul>
+</li>
+<li>Si erreur → NotificationSystem.error</li>
+</ol>
+<p>Rechargement des données :</p>
+<ul>
+<li>Cache invalidé pour forcer le rechargement depuis les fichiers restaurés</li>
+<li>MaterialsModule rechargé (autres modules se rechargeront au besoin)</li>
+<li>Pas de rechargement complet de l'application (pas de location.reload())</li>
+</ul>
+<p>Impact sur l'application :</p>
+<ul>
+<li>ATTENTION : Cette opération écrase TOUTES les données actuelles</li>
+<li>Les modifications non sauvegardées seront perdues</li>
+<li>Tous les fichiers JSON sont remplacés par ceux du backup</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line631">line 631</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#error Si informations manquantes,event: non admin ou erreur IPC</li>
+            
+                <li>NotificationSystem#event:info Pendant la restauration</li>
+            
+                <li>NotificationSystem#event:success Si restauration réussie</li>
+            
+                <li>EventBus#backup-restored Après restauration réussie (avec { backupPath,event: filename })</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Confirmer" dans le modal de confirmation
+await performRestore();
+// → IPC 'restore-backup-from-file' envoyé avec chemin du backup
+// → Backend extrait backup-2025-01-15-143022.zip
+// → Tous les .json écrasés avec données du backup
+// → Cache invalidé
+// → MaterialsModule rechargé
+// → "Restauration réussie ! Rechargement de l'application..."</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="restoreFullBackup">
+    <a class="href-link" href="#restoreFullBackup">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        restoreFullBackup
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Affiche le modal de sélection des backups disponibles.
+Charge la liste de tous les backups .zip et affiche le tableau de sélection.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère authToken via window.getAuthToken() (AuthModule)</li>
+<li>Si non connecté/non admin → NotificationSystem.error + return</li>
+<li>Envoie IPC 'list-backups' avec authToken</li>
+<li>Backend retourne { success, backups: [...] }</li>
+<li>Génère HTML du tableau #backup-list-table-body avec 4 colonnes :
+<ul>
+<li>Nom du fichier (ex: backup-2025-01-15-143022.zip)</li>
+<li>Date formatée (ex: &quot;15/01/2025 à 14:30:22&quot;)</li>
+<li>Taille formatée (ex: &quot;2.45 MB&quot;)</li>
+<li>Bouton &quot;Restaurer&quot; → onclick confirmRestoreBackup(path, filename)</li>
+</ul>
+</li>
+<li>Si aucun backup → affiche &quot;Aucun backup disponible&quot;</li>
+<li>Affiche modal #restoreBackupModal via Bootstrap</li>
+<li>Émet événement 'restore-modal-opened' avec { backupsCount }</li>
+</ol>
+<p>Structure backup (backend) :</p>
+<ul>
+<li>filename : Nom du fichier (backup-2025-01-15-143022.zip)</li>
+<li>path : Chemin complet du fichier (avec échappement \ → \\)</li>
+<li>formattedDate : Date formatée (15/01/2025 à 14:30:22)</li>
+<li>formattedSize : Taille formatée (2.45 MB)</li>
+<li>size : Taille en octets</li>
+<li>date : Timestamp de création</li>
+</ul>
+<p>Sécurité :</p>
+<ul>
+<li>Réservé aux administrateurs uniquement</li>
+<li>Échappement HTML via TextFormatter.escapeHtml()</li>
+<li>Échappement path pour onclick (replace /\/g, '\\')</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line448">line 448</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#error Si non connecté,event: non admin ou erreur IPC</li>
+            
+                <li>EventBus#restore-modal-opened Après ouverture modal (avec { backupsCount })</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Admin clique sur "Restaurer Backup"
+await restoreFullBackup();
+// → IPC 'list-backups' envoyé
+// → Modal s'ouvre avec tableau de 5 backups disponibles
+// → Événement 'restore-modal-opened' émis avec { backupsCount: 5 }</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module Backup.
+Attache les event listeners et expose les fonctions globales pour compatibilité.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_backup_BackupModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_backup_BackupModule.js.html">modules/backup/BackupModule.js</a>, <a href="modules_backup_BackupModule.js.html#line266">line 266</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Si l'initialisation échoue</p></div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const backupModule = new BackupModule(state, eventBus);
+await backupModule.init();
+// Module prêt : listeners attachés, fonctions globales exposées</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

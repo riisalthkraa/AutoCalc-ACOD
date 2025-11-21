@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> core/UndoRedoManager.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>core/UndoRedoManager.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * UNDO/REDO MANAGER
+ *
+ * Gestionnaire universel d'annulation/rétablissement des actions.
+ * Inspiré de Linear, Notion, Figma pour offrir une expérience fluide.
+ *
+ * Fonctionnalités :
+ * - Historique des 50 dernières actions
+ * - Ctrl+Z / Ctrl+Y (Undo/Redo)
+ * - Persistence localStorage (optionnel)
+ * - Groupement d'actions (batch)
+ * - Toast notifications avec bouton "Rétablir"
+ * - Support des actions asynchrones
+ *
+ * Architecture :
+ * - undoStack: Actions déjà effectuées (can undo)
+ * - redoStack: Actions annulées (can redo)
+ * - Chaque action a: type, undo(), redo(), description
+ *
+ * @version 1.0.0
+ * @author AutoCalc OptiDevis v3.0 - UX Phase 2
+ *
+ * @example
+ * // Enregistrer une action
+ * UndoRedoManager.record({
+ *   type: 'MATERIAL_DELETE',
+ *   description: 'Suppression matériau "Ciment"',
+ *   undo: async () => { await restoreMaterial(material); },
+ *   redo: async () => { await deleteMaterial(material.id); }
+ * });
+ *
+ * @example
+ * // Annuler la dernière action
+ * await UndoRedoManager.undo();
+ *
+ * @example
+ * // Rétablir
+ * await UndoRedoManager.redo();
+ */
+
+class UndoRedoManager {
+  constructor() {
+    /**
+     * Stack des actions effectuées (can undo)
+     * @type {Action[]}
+     * @private
+     */
+    this.undoStack = [];
+
+    /**
+     * Stack des actions annulées (can redo)
+     * @type {Action[]}
+     * @private
+     */
+    this.redoStack = [];
+
+    /**
+     * Limite de l'historique (défaut: 50 actions)
+     * @type {number}
+     * @private
+     */
+    this.maxHistorySize = 50;
+
+    /**
+     * Mode debug
+     * @type {boolean}
+     * @private
+     */
+    this.debug = false;
+
+    /**
+     * Actions en cours d'exécution (pour éviter les boucles infinies)
+     * @type {boolean}
+     * @private
+     */
+    this.isExecuting = false;
+
+    /**
+     * Persistence activée
+     * @type {boolean}
+     * @private
+     */
+    this.persistenceEnabled = true;
+
+    /**
+     * Batch mode (grouper plusieurs actions)
+     * @type {boolean}
+     * @private
+     */
+    this.batchMode = false;
+
+    /**
+     * Actions en attente (batch)
+     * @type {Action[]}
+     * @private
+     */
+    this.batchActions = [];
+
+    console.log('🔄 UndoRedoManager initialized');
+  }
+
+  /**
+   * Enregistre une nouvelle action dans l'historique
+   * @param {Object} action - L'action à enregistrer
+   * @param {string} action.type - Type d'action (ex: 'MATERIAL_DELETE')
+   * @param {string} action.description - Description lisible (ex: 'Suppression matériau "Ciment"')
+   * @param {Function} action.undo - Fonction async d'annulation
+   * @param {Function} action.redo - Fonction async de rétablissement
+   * @param {Object} [action.metadata] - Métadonnées optionnelles
+   */
+  record(action) {
+    // Validation
+    if (!action || typeof action !== 'object') {
+      console.error('[UndoRedoManager] Invalid action:', action);
+      return;
+    }
+
+    if (!action.type || !action.undo || !action.redo) {
+      console.error('[UndoRedoManager] Action must have type, undo, and redo:', action);
+      return;
+    }
+
+    // Si on est en train d'exécuter un undo/redo, ne pas enregistrer
+    if (this.isExecuting) {
+      return;
+    }
+
+    // Enrichir l'action
+    const enrichedAction = {
+      ...action,
+      timestamp: Date.now(),
+      id: this.generateId(),
+      description: action.description || action.type
+    };
+
+    // Mode batch: accumuler les actions
+    if (this.batchMode) {
+      this.batchActions.push(enrichedAction);
+      this.log('Action added to batch:', enrichedAction.description);
+      return;
+    }
+
+    // Ajouter à l'historique
+    this.undoStack.push(enrichedAction);
+
+    // Vider la redoStack (on ne peut plus redo après une nouvelle action)
+    this.redoStack = [];
+
+    // Limiter la taille de l'historique
+    if (this.undoStack.length > this.maxHistorySize) {
+      this.undoStack.shift(); // Retirer la plus ancienne action
+    }
+
+    this.log('Action recorded:', enrichedAction.description, `(${this.undoStack.length} in history)`);
+
+    // Sauvegarder dans localStorage
+    if (this.persistenceEnabled) {
+      this.persist();
+    }
+
+    // Émettre événement
+    if (window.eventBus) {
+      window.eventBus.emit('undoredo:action-recorded', {
+        action: enrichedAction,
+        canUndo: this.canUndo(),
+        canRedo: this.canRedo()
+      });
+    }
+  }
+
+  /**
+   * Annule la dernière action (Ctrl+Z)
+   * @returns {Promise&lt;boolean>} True si l'annulation a réussi
+   */
+  async undo() {
+    if (!this.canUndo()) {
+      this.log('Cannot undo - history is empty');
+      if (window.NotificationSystem) {
+        window.NotificationSystem.info('Aucune action à annuler');
+      }
+      return false;
+    }
+
+    const action = this.undoStack.pop();
+    this.isExecuting = true;
+
+    try {
+      this.log('Undoing:', action.description);
+
+      // Exécuter la fonction d'annulation
+      await action.undo();
+
+      // Déplacer l'action vers la redoStack
+      this.redoStack.push(action);
+
+      this.log('Undo successful:', action.description);
+
+      // Notification avec bouton "Rétablir"
+      if (window.NotificationSystem) {
+        window.NotificationSystem.show(
+          `Action annulée: ${action.description}`,
+          'success',
+          5000,
+          'Annulation',
+          [{
+            label: 'Rétablir',
+            onClick: () => this.redo()
+          }]
+        );
+      }
+
+      // Sauvegarder
+      if (this.persistenceEnabled) {
+        this.persist();
+      }
+
+      // Émettre événement
+      if (window.eventBus) {
+        window.eventBus.emit('undoredo:undo', {
+          action,
+          canUndo: this.canUndo(),
+          canRedo: this.canRedo()
+        });
+      }
+
+      return true;
+
+    } catch (error) {
+      console.error('[UndoRedoManager] Undo failed:', error);
+
+      // Remettre l'action dans l'undoStack
+      this.undoStack.push(action);
+
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error(`Erreur lors de l'annulation: ${error.message}`);
+      }
+
+      return false;
+
+    } finally {
+      this.isExecuting = false;
+    }
+  }
+
+  /**
+   * Rétablit la dernière action annulée (Ctrl+Y)
+   * @returns {Promise&lt;boolean>} True si le rétablissement a réussi
+   */
+  async redo() {
+    if (!this.canRedo()) {
+      this.log('Cannot redo - redo stack is empty');
+      if (window.NotificationSystem) {
+        window.NotificationSystem.info('Aucune action à rétablir');
+      }
+      return false;
+    }
+
+    const action = this.redoStack.pop();
+    this.isExecuting = true;
+
+    try {
+      this.log('Redoing:', action.description);
+
+      // Exécuter la fonction de rétablissement
+      await action.redo();
+
+      // Remettre l'action dans l'undoStack
+      this.undoStack.push(action);
+
+      this.log('Redo successful:', action.description);
+
+      // Notification
+      if (window.NotificationSystem) {
+        window.NotificationSystem.show(
+          `Action rétablie: ${action.description}`,
+          'success',
+          3000,
+          'Rétablissement'
+        );
+      }
+
+      // Sauvegarder
+      if (this.persistenceEnabled) {
+        this.persist();
+      }
+
+      // Émettre événement
+      if (window.eventBus) {
+        window.eventBus.emit('undoredo:redo', {
+          action,
+          canUndo: this.canUndo(),
+          canRedo: this.canRedo()
+        });
+      }
+
+      return true;
+
+    } catch (error) {
+      console.error('[UndoRedoManager] Redo failed:', error);
+
+      // Remettre l'action dans la redoStack
+      this.redoStack.push(action);
+
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error(`Erreur lors du rétablissement: ${error.message}`);
+      }
+
+      return false;
+
+    } finally {
+      this.isExecuting = false;
+    }
+  }
+
+  /**
+   * Vérifie si on peut annuler
+   * @returns {boolean}
+   */
+  canUndo() {
+    return this.undoStack.length > 0;
+  }
+
+  /**
+   * Vérifie si on peut rétablir
+   * @returns {boolean}
+   */
+  canRedo() {
+    return this.redoStack.length > 0;
+  }
+
+  /**
+   * Démarre le mode batch (grouper plusieurs actions)
+   */
+  startBatch() {
+    this.batchMode = true;
+    this.batchActions = [];
+    this.log('Batch mode started');
+  }
+
+  /**
+   * Termine le mode batch et enregistre toutes les actions groupées
+   * @param {string} description - Description du groupe d'actions
+   */
+  endBatch(description = 'Actions groupées') {
+    this.batchMode = false;
+
+    if (this.batchActions.length === 0) {
+      this.log('Batch ended with no actions');
+      return;
+    }
+
+    // Créer une action composite
+    const compositeAction = {
+      type: 'BATCH',
+      description,
+      timestamp: Date.now(),
+      id: this.generateId(),
+      actions: [...this.batchActions],
+      undo: async () => {
+        // Annuler toutes les actions dans l'ordre inverse
+        for (let i = this.batchActions.length - 1; i >= 0; i--) {
+          await this.batchActions[i].undo();
+        }
+      },
+      redo: async () => {
+        // Rétablir toutes les actions dans l'ordre normal
+        for (const action of this.batchActions) {
+          await action.redo();
+        }
+      }
+    };
+
+    // Ajouter à l'historique
+    this.undoStack.push(compositeAction);
+    this.redoStack = [];
+
+    this.log(`Batch ended: ${this.batchActions.length} actions grouped as "${description}"`);
+    this.batchActions = [];
+
+    // Sauvegarder
+    if (this.persistenceEnabled) {
+      this.persist();
+    }
+  }
+
+  /**
+   * Annule le mode batch sans enregistrer
+   */
+  cancelBatch() {
+    this.batchMode = false;
+    this.batchActions = [];
+    this.log('Batch cancelled');
+  }
+
+  /**
+   * Récupère l'historique des actions (pour affichage UI)
+   * @returns {Object[]} Historique avec infos lisibles
+   */
+  getHistory() {
+    return {
+      undo: this.undoStack.map(action => ({
+        id: action.id,
+        type: action.type,
+        description: action.description,
+        timestamp: action.timestamp,
+        timeAgo: this.getTimeAgo(action.timestamp)
+      })),
+      redo: this.redoStack.map(action => ({
+        id: action.id,
+        type: action.type,
+        description: action.description,
+        timestamp: action.timestamp,
+        timeAgo: this.getTimeAgo(action.timestamp)
+      }))
+    };
+  }
+
+  /**
+   * Vide tout l'historique
+   */
+  clearHistory() {
+    this.undoStack = [];
+    this.redoStack = [];
+    this.log('History cleared');
+
+    if (this.persistenceEnabled) {
+      this.clearPersistence();
+    }
+
+    if (window.eventBus) {
+      window.eventBus.emit('undoredo:history-cleared');
+    }
+  }
+
+  /**
+   * Sauvegarde l'historique dans localStorage
+   * @private
+   */
+  persist() {
+    try {
+      // On ne peut pas sauvegarder les fonctions undo/redo
+      // On sauvegarde seulement les métadonnées pour affichage UI
+      const data = {
+        undoStack: this.undoStack.map(a => ({
+          id: a.id,
+          type: a.type,
+          description: a.description,
+          timestamp: a.timestamp
+        })),
+        redoStack: this.redoStack.map(a => ({
+          id: a.id,
+          type: a.type,
+          description: a.description,
+          timestamp: a.timestamp
+        }))
+      };
+
+      localStorage.setItem('undoRedoHistory', JSON.stringify(data));
+    } catch (e) {
+      console.error('[UndoRedoManager] Persistence failed:', e);
+    }
+  }
+
+  /**
+   * Charge l'historique depuis localStorage
+   * Note: Les fonctions undo/redo ne peuvent pas être restaurées
+   * @private
+   */
+  loadPersistence() {
+    try {
+      const saved = localStorage.getItem('undoRedoHistory');
+      if (saved) {
+        const data = JSON.parse(saved);
+        // On ne peut restaurer que les métadonnées, pas les fonctions
+        this.log('Loaded history metadata from localStorage');
+      }
+    } catch (e) {
+      console.error('[UndoRedoManager] Load persistence failed:', e);
+    }
+  }
+
+  /**
+   * Supprime l'historique sauvegardé
+   * @private
+   */
+  clearPersistence() {
+    try {
+      localStorage.removeItem('undoRedoHistory');
+    } catch (e) {
+      console.error('[UndoRedoManager] Clear persistence failed:', e);
+    }
+  }
+
+  /**
+   * Génère un ID unique pour une action
+   * @private
+   * @returns {string}
+   */
+  generateId() {
+    return `action_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Calcule le temps écoulé depuis une action
+   * @private
+   * @param {number} timestamp
+   * @returns {string}
+   */
+  getTimeAgo(timestamp) {
+    const seconds = Math.floor((Date.now() - timestamp) / 1000);
+
+    if (seconds &lt; 60) return `il y a ${seconds}s`;
+    if (seconds &lt; 3600) return `il y a ${Math.floor(seconds / 60)}min`;
+    if (seconds &lt; 86400) return `il y a ${Math.floor(seconds / 3600)}h`;
+    return `il y a ${Math.floor(seconds / 86400)}j`;
+  }
+
+  /**
+   * Active/désactive le mode debug
+   * @param {boolean} enabled
+   */
+  setDebug(enabled) {
+    this.debug = enabled;
+    console.log(`[UndoRedoManager] Debug mode: ${enabled ? 'ON' : 'OFF'}`);
+  }
+
+  /**
+   * Active/désactive la persistence
+   * @param {boolean} enabled
+   */
+  setPersistence(enabled) {
+    this.persistenceEnabled = enabled;
+    console.log(`[UndoRedoManager] Persistence: ${enabled ? 'ON' : 'OFF'}`);
+  }
+
+  /**
+   * Définit la limite de l'historique
+   * @param {number} size
+   */
+  setMaxHistorySize(size) {
+    this.maxHistorySize = size;
+    console.log(`[UndoRedoManager] Max history size: ${size}`);
+
+    // Ajuster l'historique si nécessaire
+    while (this.undoStack.length > size) {
+      this.undoStack.shift();
+    }
+  }
+
+  /**
+   * Log conditionnel (si debug activé)
+   * @private
+   */
+  log(...args) {
+    if (this.debug) {
+      console.log('[UndoRedoManager]', ...args);
+    }
+  }
+}
+
+// ==========================================
+// EXPORT SINGLETON
+// ==========================================
+
+const instance = new UndoRedoManager();
+
+// Exposer au scope global
+window.UndoRedoManager = instance;
+
+export default instance;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

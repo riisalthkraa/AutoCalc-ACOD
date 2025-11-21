@@ -1,0 +1,1423 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/pdf/PDFModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/pdf/PDFModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * PDF MODULE - Génération de documents PDF
+ * ========================================
+ *
+ * Module de génération de documents PDF professionnels pour l'application AutoCalc OptiDevis.
+ * Gère la création de devis et factures au format PDF avec 5 designs personnalisables,
+ * ainsi que l'export, l'impression et l'envoi par email.
+ *
+ * Architecture :
+ * Le module s'appuie sur jsPDF pour générer des documents PDF multipages avec :
+ * - **5 designs professionnels** : Elegant, Modern, Minimalist, Artisan, Tech
+ * - **Génération devis** : PDF multi-pages avec en-tête, articles, totaux, footer
+ * - **Génération factures** : PDF avec mentions légales obligatoires
+ * - **Actions** : Export (sauvegarde locale), Print (via IPC), Email (SMTP + pièce jointe)
+ *
+ * ==========================================
+ * DESIGNS PDF DISPONIBLES (5 STYLES)
+ * ==========================================
+ *
+ * Chaque design possède sa propre configuration (couleurs, typographie, layout) :
+ *
+ * **1. Elegant** (design par défaut) :
+ * - Style professionnel et raffiné
+ * - Couleurs sobres (bleus/gris)
+ * - En-têtes avec logo + bande colorée
+ * - Totaux dans cadre élégant
+ *
+ * **2. Modern** :
+ * - Style contemporain avec bande latérale
+ * - Sidebar de 5mm sur toute la hauteur
+ * - Couleurs vives et contrastées
+ * - Layout moderne et épuré
+ *
+ * **3. Minimalist** :
+ * - Style minimaliste épuré
+ * - Peu de couleurs, beaucoup d'espace blanc
+ * - Lignes fines et discrètes
+ * - Maximum de clarté
+ *
+ * **4. Artisan** :
+ * - Style chaleureux et artisanal
+ * - Couleurs terre et bois
+ * - Typo manuscrite pour touches personnelles
+ * - Ambiance authentique
+ *
+ * **5. Tech** :
+ * - Style tech/digital avec sidebar
+ * - Couleurs électriques (cyan, violet)
+ * - Grille de fond techno
+ * - Aspect futuriste
+ *
+ * Chaque design définit :
+ * - **colors** : Palette de couleurs (primary, secondary, accent, text, border, etc.)
+ * - **typography** : Tailles de police (title, subtitle, body, small) + famille
+ * - **layout** : Dimensions (header, sidebar, spacing, margin)
+ *
+ * Sources : Objets globaux DESIGN_*_QUOTE et DESIGN_*_INVOICE dans pdf-templates.js
+ *
+ * ==========================================
+ * GÉNÉRATION PDF - WORKFLOW DEVIS
+ * ==========================================
+ *
+ * Étapes de génération d'un devis PDF :
+ * 1. **Synchronisation clientInfo** avec formulaire
+ * 2. **Création instance jsPDF** (A4 portrait)
+ * 3. **Sélection design** selon headerConfig.pdfDesign
+ * 4. **Bande latérale** (si Modern/Tech)
+ * 5. **En-tête** : Logo + nom entreprise + type document + numéro + date
+ * 6. **Infos entreprise/client** : Coordonnées en 2 colonnes
+ * 7. **Date et validité** : Date devis + validité 1 mois
+ * 8. **Filtrage items** : Validation des articles (nom, quantité > 0, prix > 0)
+ * 9. **Tableau articles** : Nom, quantité, calcul, PU HT/TTC, Total
+ * 10. **Calcul totaux** : HT, TVA, TTC + remise si applicable
+ * 11. **Carte totaux** : Encadré récapitulatif
+ * 12. **Conditions additionnelles** : CGV personnalisées
+ * 13. **Mentions légales** : Infos légales entreprise
+ * 14. **Footer multi-pages** : Pied de page sur chaque page (numéro page)
+ *
+ * Gestion pagination :
+ * - Détection automatique de dépassement de page
+ * - Ajout de nouvelle page si nécessaire
+ * - Recopie de la sidebar sur nouvelles pages (Modern/Tech)
+ *
+ * ==========================================
+ * GÉNÉRATION PDF - WORKFLOW FACTURE
+ * ==========================================
+ *
+ * Similaire au devis avec spécificités factures :
+ * 1-6. Identique au devis (header, infos, etc.)
+ * 7. **Infos facture** : N° facture, date émission, devis associé, échéance
+ * 8-12. Tableau articles et totaux (identique)
+ * 13. **Conditions de paiement légales** (obligatoires) :
+ *     - Modalités de paiement (30j, 60j, etc.)
+ *     - Pénalités de retard (3× taux légal)
+ *     - Indemnité forfaitaire (40€ art. L441-6)
+ *     - Pas d'escompte pour paiement anticipé
+ * 14. Footer multi-pages
+ *
+ * ==========================================
+ * ACTIONS SUR LES PDF
+ * ==========================================
+ *
+ * **Export PDF (sauvegarde locale)** :
+ * - Génération du document jsPDF
+ * - Appel à doc.save(filename)
+ * - Téléchargement navigateur
+ * - Nom fichier : devis_[client]_[date].pdf ou facture_[numero]_[client].pdf
+ *
+ * **Print PDF (impression)** :
+ * - Génération du document jsPDF
+ * - Conversion en base64 (doc.output('datauristring'))
+ * - Envoi via IPC 'print-pdf' à Electron main process
+ * - Ouverture dialogue impression OS
+ *
+ * **Email PDF (envoi SMTP)** :
+ * - Génération du document jsPDF
+ * - Conversion en base64 pour pièce jointe
+ * - Envoi via IPC 'send-quote-email' avec :
+ *   - Destinataire (email client)
+ *   - Sujet personnalisé
+ *   - Corps de message
+ *   - Pièce jointe PDF en base64
+ * - SMTP configuré dans ConfigModule
+ *
+ * ==========================================
+ * VALIDATION
+ * ==========================================
+ *
+ * Avant génération PDF :
+ * - **validateBeforeExport()** : Vérifie items > 0, clientInfo complet
+ * - **validateBeforeSendEmail()** : Vérifie email client présent
+ *
+ * Pendant génération :
+ * - Filtrage des items invalides (nom vide, quantité ≤ 0, prix ≤ 0)
+ * - Vérification design existe (fallback sur design par défaut si absent)
+ * - Vérification jsPDF chargé
+ *
+ * ==========================================
+ * FONCTIONS HELPERS EXTERNES (pdf-templates.js)
+ * ==========================================
+ *
+ * Le module s'appuie sur des fonctions globales définies dans lib/pdf-templates.js :
+ *
+ * **Dessins de composants** :
+ * - drawHeader[Style]() : En-tête avec logo + infos
+ * - drawInfoSection[Style]() : Section entreprise/client
+ * - drawItemsTable() : Tableau des articles (jsPDF-autotable)
+ * - drawTotalsCard[Style]() : Carte récapitulative des totaux
+ * - drawFooter[Style]() : Pied de page avec numéro
+ * - drawSidebar() / drawSidebarTech() : Bandes latérales décoratives
+ *
+ * **Utilitaires** :
+ * - window.DateFormatter.toFrench() : Formatage dates FR
+ * - window.CurrencyFormatter.format() : Formatage monétaire
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **jsPDF** : Bibliothèque de génération PDF (window.jspdf)
+ * - **jsPDF-autotable** : Plugin pour tableaux (autoTable())
+ * - **ConfigModule** : headerConfig (logo, entreprise, design)
+ * - **QuoteBuilderModule** : quoteItems, clientInfo
+ * - **IPC Electron** : print-pdf, send-quote-email, load-invoice
+ * - **NotificationSystem** : Feedback utilisateur
+ *
+ * @module PDFModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+
+class PDFModule extends BaseModule {
+  /**
+   * Crée une instance du module PDF.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements pour communication inter-modules
+   */
+  constructor(state, eventBus) {
+    super('pdf', state, eventBus);
+
+    this.log('PDFModule instantiated');
+  }
+
+  /**
+   * Initialise le module PDF.
+   * Expose toutes les fonctions de génération et d'action PDF au scope global
+   * et attache les event listeners aux boutons PDF du formulaire devis.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si erreur pendant l'initialisation
+   */
+  async init() {
+    try {
+      this.log('Initializing PDFModule...');
+
+      // Exposer les fonctions au scope global
+      this.exposeToGlobal({
+        // Génération de documents PDF
+        generateQuotePDFDocument: this.generateQuotePDFDocument,
+        generateInvoicePDFDocument: this.generateInvoicePDFDocument,
+
+        // Export, Print, Email - DEVIS
+        exportQuotePDF: this.exportQuotePDF,
+        printQuote: this.printQuote,
+        sendQuoteEmail: this.sendQuoteEmail,
+
+        // Export, Print, Email - FACTURES
+        exportInvoicePDF: this.exportInvoicePDF,
+        printInvoice: this.printInvoice,
+        sendInvoiceEmail: this.sendInvoiceEmail
+      });
+
+      // Attacher les event listeners aux boutons PDF
+      this.attachEventListeners();
+
+      this.initialized = true;
+      this.log('PDFModule initialized successfully');
+
+    } catch (error) {
+      this.error('Error initializing PDFModule:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Attache les event listeners aux boutons PDF du formulaire devis.
+   *
+   * Boutons concernés :
+   * - #export-quote-btn : Export PDF (sauvegarde locale)
+   * - #print-quote-btn : Impression PDF
+   * - #send-quote-btn : Envoi email avec PDF en pièce jointe
+   *
+   * Note : Les boutons PDF des factures sont gérés directement par InvoicesModule
+   * lors de la génération dynamique du tableau des factures.
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    this.log('Attaching PDF event listeners...');
+
+    // Boutons PDF pour les devis
+    this.addDOMListener('#export-quote-btn', 'click', () => {
+      this.log('Export PDF button clicked');
+      this.exportQuotePDF();
+    });
+
+    this.addDOMListener('#print-quote-btn', 'click', () => {
+      this.log('Print button clicked');
+      this.printQuote();
+    });
+
+    this.addDOMListener('#send-quote-btn', 'click', () => {
+      this.log('Send email button clicked');
+      this.sendQuoteEmail();
+    });
+
+    this.log('PDF event listeners attached');
+  }
+
+  // ==========================================
+  // GÉNÉRATION DE DOCUMENTS PDF - DEVIS
+  // ==========================================
+
+  /**
+   * Génère un document PDF professionnel pour le devis en cours.
+   *
+   * Méthode principale qui orchestre toute la génération du PDF avec :
+   * - Sélection automatique du design (Elegant, Modern, Minimalist, Artisan, Tech)
+   * - Construction multi-pages avec en-tête, client, articles, totaux, footer
+   * - Gestion automatique de la pagination
+   * - Application de la remise si définie
+   * - Validation et filtrage des articles
+   *
+   * Workflow détaillé : Voir en-tête du module "GÉNÉRATION PDF - WORKFLOW DEVIS"
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;jsPDF|null>} Instance jsPDF prête pour export/print/email, ou null si erreur
+   * @fires NotificationSystem#error Si jsPDF non chargé ou aucun article valide
+   *
+   * @example
+   * const doc = await this.generateQuotePDFDocument();
+   * if (doc) {
+   *   doc.save('devis.pdf'); // Export
+   * }
+   */
+  generateQuotePDFDocument = async () => {
+    // Synchroniser clientInfo avec les champs du formulaire
+    if (typeof window.syncClientInfoFromForm === 'function') {
+      window.syncClientInfoFromForm();
+    }
+
+    try {
+      const { jsPDF } = window.jspdf;
+      if (!jsPDF) {
+        NotificationSystem.error("Bibliothèque jsPDF non chargée !");
+        return null;
+      }
+
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+
+      // ==========================================
+      // SÉLECTION DU DESIGN
+      // ==========================================
+      const headerConfig = window.headerConfig || {};
+      const designStyle = headerConfig.pdfDesign || 'elegant';
+      let design;
+
+      switch (designStyle) {
+        case 'minimalist':
+          design = window.DESIGN_MINIMALIST_QUOTE;
+          break;
+        case 'artisan':
+          design = window.DESIGN_ARTISAN_QUOTE;
+          break;
+        case 'tech':
+          design = window.DESIGN_TECH_QUOTE;
+          break;
+        case 'modern':
+          design = window.DESIGN_MODERN_QUOTE;
+          break;
+        default:
+          design = window.DESIGN_ELEGANT_QUOTE;
+      }
+
+      // Vérification de sécurité : design existe ?
+      if (!design) {
+        this.log(`⚠️ Design "${designStyle}" non trouvé, utilisation d'un design par défaut`);
+        // Créer un design minimal par défaut
+        design = {
+          name: 'Default',
+          colors: {
+            primary: [44, 62, 80],
+            secondary: [52, 152, 219],
+            accent: [231, 76, 60],
+            text: [31, 41, 55],
+            textLight: [107, 114, 128],
+            white: [255, 255, 255],
+            background: [248, 250, 252],
+            border: [226, 232, 240]
+          },
+          typography: {
+            titleSize: 22,
+            subtitleSize: 13,
+            bodySize: 10,
+            smallSize: 8,
+            fontFamily: 'helvetica'
+          },
+          layout: {
+            headerHeight: 28,
+            sidebarWidth: 5,
+            spacing: {
+              section: 10,
+              line: 5,
+              margin: 15
+            }
+          }
+        };
+      }
+
+      console.log(`Génération PDF avec design: ${design.name}`);
+
+      // ==========================================
+      // BANDE LATÉRALE (DESIGNS AVEC SIDEBAR)
+      // ==========================================
+      if (designStyle === 'modern' || designStyle === 'tech') {
+        if (designStyle === 'tech') {
+          window.drawSidebarTech(doc, design);
+        } else {
+          window.drawSidebar(doc, design);
+        }
+      }
+
+      // ==========================================
+      // EN-TÊTE
+      // ==========================================
+      const clientInfo = window.clientInfo || {};
+      const companyLogoBase64 = window.companyLogoBase64 || '';
+
+      console.log('[PDFModule] Génération PDF devis:');
+      console.log('  - headerConfig:', headerConfig);
+      console.log('  - Nom entreprise:', headerConfig.company?.name);
+      console.log('  - Logo présent:', !!companyLogoBase64);
+      console.log('  - Design PDF:', designStyle);
+
+      const headerConfig_data = {
+        logo: companyLogoBase64,
+        company: headerConfig.company || {},
+        docType: 'DEVIS',
+        docNumber: `DEV-${new Date().getFullYear()}-${String(Math.floor(Math.random() * 10000)).padStart(4, '0')}`,
+        date: clientInfo.quoteDate
+      };
+
+      let currentY;
+      switch (designStyle) {
+        case 'minimalist':
+          currentY = window.drawHeaderMinimalist(doc, headerConfig_data, design);
+          break;
+        case 'artisan':
+          currentY = window.drawHeaderArtisan(doc, headerConfig_data, design);
+          break;
+        case 'tech':
+          currentY = window.drawHeaderTech(doc, headerConfig_data, design);
+          break;
+        case 'modern':
+          currentY = window.drawHeaderModern(doc, headerConfig_data, design);
+          break;
+        default:
+          currentY = window.drawHeaderElegant(doc, headerConfig_data, design);
+      }
+
+      // ==========================================
+      // INFORMATIONS ENTREPRISE + CLIENT
+      // ==========================================
+      const infoConfig = {
+        company: headerConfig.company || {},
+        client: {
+          name: clientInfo.name,
+          address: clientInfo.address,
+          phone: clientInfo.phone,
+          email: clientInfo.email,
+          issuer: clientInfo.issuer
+        }
+      };
+
+      switch (designStyle) {
+        case 'minimalist':
+          currentY = window.drawInfoSectionMinimalist(doc, infoConfig, design, currentY);
+          break;
+        case 'artisan':
+          currentY = window.drawInfoSectionArtisan(doc, infoConfig, design, currentY);
+          break;
+        case 'tech':
+          currentY = window.drawInfoSectionTech(doc, infoConfig, design, currentY);
+          break;
+        case 'modern':
+          currentY = window.drawInfoSectionModern(doc, infoConfig, design, currentY);
+          break;
+        default:
+          currentY = window.drawInfoSectionElegant(doc, infoConfig, design, currentY);
+      }
+
+      // ==========================================
+      // DATE ET VALIDITÉ
+      // ==========================================
+      const xOffset = (designStyle === 'modern' || designStyle === 'tech') ? design.layout.sidebarWidth + 10 : 10;
+
+      doc.setFont(design.typography.fontFamily, 'bold');
+      doc.setFontSize(design.typography.bodySize);
+      doc.setTextColor(...design.colors.text);
+      doc.text(`Date: ${window.DateFormatter.toFrench(clientInfo.quoteDate)}`, xOffset, currentY + 8);
+
+      const quoteDate = new Date(clientInfo.quoteDate);
+      const validityDate = new Date(quoteDate);
+      validityDate.setMonth(validityDate.getMonth() + 1);
+      doc.text(`Validité: ${window.DateFormatter.toFrench(validityDate)}`, xOffset + 80, currentY + 8);
+
+      currentY += 15;
+
+      // ==========================================
+      // FILTRAGE ET VALIDATION DES ITEMS
+      // ==========================================
+      const quoteItems = window.quoteItems || [];
+      const validQuoteItems = quoteItems.filter(item =>
+        item &amp;&amp;
+        item.material &amp;&amp;
+        typeof item.material.name === 'string' &amp;&amp;
+        item.material.name.trim() !== '' &amp;&amp;
+        typeof item.quantity === 'number' &amp;&amp;
+        item.quantity > 0 &amp;&amp;
+        typeof item.priceHT === 'number' &amp;&amp;
+        item.priceHT > 0 &amp;&amp;
+        typeof item.priceTTC === 'number' &amp;&amp;
+        item.priceTTC > 0
+      );
+
+      if (validQuoteItems.length === 0) {
+        NotificationSystem.error('Aucun article valide dans le devis');
+        return null;
+      }
+
+      // ==========================================
+      // TABLEAU DES ARTICLES
+      // ==========================================
+      const tableY = window.drawItemsTable(doc, validQuoteItems, currentY, design, designStyle);
+
+      // ==========================================
+      // TOTAUX
+      // ==========================================
+      let totalHT = validQuoteItems.reduce((sum, item) => sum + item.priceHT, 0);
+      let totalTVA = validQuoteItems.reduce((sum, item) => sum + item.tva, 0);
+      let totalTTC = validQuoteItems.reduce((sum, item) => sum + item.priceTTC, 0);
+
+      // Appliquer la remise si nécessaire
+      const discountPercent = parseFloat(document.getElementById('quote-discount')?.value || 0);
+      const totalHTBeforeDiscount = totalHT;
+      const discountAmount = (totalHT * discountPercent) / 100;
+
+      if (discountPercent > 0) {
+        // Appliquer la remise
+        totalHT = totalHT - discountAmount;
+        const discountFactor = 1 - (discountPercent / 100);
+        totalTVA = totalTVA * discountFactor;
+        totalTTC = totalHT + totalTVA;
+      }
+
+      const totals = {
+        totalHT,
+        totalTVA,
+        totalTTC,
+        discount: discountPercent,
+        discountAmount: discountAmount,
+        totalHTBeforeDiscount: totalHTBeforeDiscount
+      };
+
+      const pageHeight = doc.internal.pageSize.height;
+      let totalsY = tableY + 10;
+
+      // Vérifier si on a besoin d'une nouvelle page
+      if (totalsY + 50 > pageHeight - 25) {
+        doc.addPage();
+        if (designStyle === 'modern' || designStyle === 'tech') {
+          if (designStyle === 'tech') {
+            window.drawSidebarTech(doc, design);
+          } else {
+            window.drawSidebar(doc, design);
+          }
+        }
+        totalsY = 20;
+      }
+
+      switch (designStyle) {
+        case 'minimalist':
+          window.drawTotalsCardMinimalist(doc, totals, design, totalsY);
+          break;
+        case 'artisan':
+          window.drawTotalsCardArtisan(doc, totals, design, totalsY);
+          break;
+        case 'tech':
+          window.drawTotalsCardTech(doc, totals, design, totalsY);
+          break;
+        case 'modern':
+          window.drawTotalsCardModern(doc, totals, design, totalsY);
+          break;
+        default:
+          window.drawTotalsCardElegant(doc, totals, design, totalsY);
+      }
+
+      // ==========================================
+      // CONDITIONS &amp; MENTIONS LÉGALES
+      // ==========================================
+      let mentionsY = totalsY + 45;
+
+      if (mentionsY + 40 > pageHeight - 25) {
+        doc.addPage();
+        if (designStyle === 'modern' || designStyle === 'tech') {
+          if (designStyle === 'tech') {
+            window.drawSidebarTech(doc, design);
+          } else {
+            window.drawSidebar(doc, design);
+          }
+        }
+        mentionsY = 20;
+      }
+
+      doc.setFont(design.typography.fontFamily, 'normal');
+      doc.setFontSize(design.typography.smallSize);
+      doc.setTextColor(...design.colors.textLight);
+
+      const company = headerConfig.company || {};
+
+      if (company.additionalTerms &amp;&amp; company.additionalTerms.trim() !== '') {
+        doc.setFont(design.typography.fontFamily, 'bold');
+        doc.setTextColor(...design.colors.text);
+        doc.text('Conditions supplémentaires:', xOffset, mentionsY);
+        doc.setFont(design.typography.fontFamily, 'normal');
+        doc.setTextColor(...design.colors.textLight);
+        const lines = doc.splitTextToSize(company.additionalTerms, 170);
+        doc.text(lines, xOffset, mentionsY + 5);
+        mentionsY += (lines.length * 4) + 8;
+      }
+
+      if (company.mentionslegales &amp;&amp; company.mentionslegales.trim() !== '') {
+        doc.setFont(design.typography.fontFamily, 'italic');
+        const lines = doc.splitTextToSize(company.mentionslegales, 170);
+        doc.text(lines, xOffset, mentionsY);
+        mentionsY += (lines.length * 4) + 8;
+      }
+
+      // ==========================================
+      // FOOTER SUR TOUTES LES PAGES
+      // ==========================================
+      const totalPages = doc.internal.getNumberOfPages();
+      for (let i = 1; i &lt;= totalPages; i++) {
+        doc.setPage(i);
+        const footerConfig = {
+          paymentTerms: company.paymentTerms || '',
+          mentionsLegales: company.mentionslegales || ''
+        };
+        switch (designStyle) {
+          case 'minimalist':
+            window.drawFooterMinimalist(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'artisan':
+            window.drawFooterArtisan(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'tech':
+            window.drawFooterTech(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'modern':
+            window.drawFooterModern(doc, footerConfig, design, i, totalPages);
+            break;
+          default:
+            window.drawFooterElegant(doc, footerConfig, design, i, totalPages);
+        }
+      }
+
+      return doc;
+
+    } catch (error) {
+      console.error('Erreur génération PDF:', error);
+      NotificationSystem.error(`Erreur lors de la génération du PDF : ${error.message}`);
+      return null;
+    }
+  }
+
+  // ==========================================
+  // GÉNÉRATION DE DOCUMENTS PDF - FACTURES
+  // ==========================================
+
+  /**
+   * Génère un document PDF professionnel pour une facture.
+   *
+   * Similaire à generateQuotePDFDocument() avec spécificités factures :
+   * - Type document "FACTURE" dans l'en-tête
+   * - Numéro de facture + date émission + échéance
+   * - Devis associé (référence)
+   * - Conditions de paiement légales obligatoires (pénalités, indemnité forfaitaire)
+   * - Pas de calcul de remise (déjà incluse dans les totaux de la facture)
+   *
+   * @public
+   * @async
+   * @param {Object} invoice - Objet facture complet avec toutes les données
+   * @param {string} invoice.number - Numéro de facture (ex: "FAC-2025-0001")
+   * @param {string} invoice.issueDate - Date d'émission
+   * @param {string} invoice.dueDate - Date d'échéance
+   * @param {string} [invoice.quoteName] - Nom du devis associé
+   * @param {Object} invoice.clientInfo - Infos client {name, address, phone, email, issuer}
+   * @param {Array&lt;Object>} invoice.quoteItems - Articles de la facture
+   * @param {Object} invoice.totals - Totaux {totalHT, totalTVA, totalTTC, discount, discountAmount}
+   * @returns {Promise&lt;jsPDF|null>} Instance jsPDF ou null si erreur
+   * @fires NotificationSystem#error Si jsPDF non chargé ou aucun article valide
+   *
+   * @example
+   * const doc = await this.generateInvoicePDFDocument(invoice);
+   * if (doc) {
+   *   doc.save(`facture_${invoice.number}.pdf`);
+   * }
+   */
+  generateInvoicePDFDocument = async (invoice) => {
+    try {
+      const { jsPDF } = window.jspdf;
+      if (!jsPDF) {
+        NotificationSystem.error("Bibliothèque jsPDF non chargée !");
+        return null;
+      }
+
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+
+      // ==========================================
+      // SÉLECTION DU DESIGN POUR FACTURE
+      // ==========================================
+      const headerConfig = window.headerConfig || {};
+      const designStyle = headerConfig.pdfDesign || 'elegant';
+      let design;
+
+      switch (designStyle) {
+        case 'minimalist':
+          design = window.DESIGN_MINIMALIST_INVOICE;
+          break;
+        case 'artisan':
+          design = window.DESIGN_ARTISAN_INVOICE;
+          break;
+        case 'tech':
+          design = window.DESIGN_TECH_INVOICE;
+          break;
+        case 'modern':
+          design = window.DESIGN_MODERN_INVOICE;
+          break;
+        default:
+          design = window.DESIGN_ELEGANT_INVOICE;
+      }
+
+      // Vérification de sécurité : design existe ?
+      if (!design) {
+        this.log(`⚠️ Design "${designStyle}" non trouvé, utilisation d'un design par défaut`);
+        // Créer un design minimal par défaut
+        design = {
+          name: 'Default',
+          colors: {
+            primary: [44, 62, 80],
+            secondary: [52, 152, 219],
+            accent: [231, 76, 60],
+            text: [31, 41, 55],
+            textLight: [107, 114, 128],
+            white: [255, 255, 255],
+            background: [248, 250, 252],
+            border: [226, 232, 240]
+          },
+          typography: {
+            titleSize: 22,
+            subtitleSize: 13,
+            bodySize: 10,
+            smallSize: 8,
+            fontFamily: 'helvetica'
+          },
+          layout: {
+            headerHeight: 28,
+            sidebarWidth: 5,
+            spacing: {
+              section: 10,
+              line: 5,
+              margin: 15
+            }
+          }
+        };
+      }
+
+      console.log(`Génération Facture PDF avec design: ${design.name}`);
+
+      // ==========================================
+      // BANDE LATÉRALE (DESIGNS AVEC SIDEBAR)
+      // ==========================================
+      if (designStyle === 'modern' || designStyle === 'tech') {
+        if (designStyle === 'tech') {
+          window.drawSidebarTech(doc, design);
+        } else {
+          window.drawSidebar(doc, design);
+        }
+      }
+
+      // ==========================================
+      // EN-TÊTE
+      // ==========================================
+      const companyLogoBase64 = window.companyLogoBase64 || '';
+
+      const headerConfig_data = {
+        logo: companyLogoBase64,
+        company: headerConfig.company || {},
+        docType: 'FACTURE',
+        docNumber: invoice.number,
+        date: invoice.issueDate
+      };
+
+      let currentY;
+      switch (designStyle) {
+        case 'minimalist':
+          currentY = window.drawHeaderMinimalist(doc, headerConfig_data, design);
+          break;
+        case 'artisan':
+          currentY = window.drawHeaderArtisan(doc, headerConfig_data, design);
+          break;
+        case 'tech':
+          currentY = window.drawHeaderTech(doc, headerConfig_data, design);
+          break;
+        case 'modern':
+          currentY = window.drawHeaderModern(doc, headerConfig_data, design);
+          break;
+        default:
+          currentY = window.drawHeaderElegant(doc, headerConfig_data, design);
+      }
+
+      // ==========================================
+      // INFORMATIONS ENTREPRISE + CLIENT
+      // ==========================================
+      const infoConfig = {
+        company: headerConfig.company || {},
+        client: invoice.clientInfo
+      };
+
+      switch (designStyle) {
+        case 'minimalist':
+          currentY = window.drawInfoSectionMinimalist(doc, infoConfig, design, currentY);
+          break;
+        case 'artisan':
+          currentY = window.drawInfoSectionArtisan(doc, infoConfig, design, currentY);
+          break;
+        case 'tech':
+          currentY = window.drawInfoSectionTech(doc, infoConfig, design, currentY);
+          break;
+        case 'modern':
+          currentY = window.drawInfoSectionModern(doc, infoConfig, design, currentY);
+          break;
+        default:
+          currentY = window.drawInfoSectionElegant(doc, infoConfig, design, currentY);
+      }
+
+      // ==========================================
+      // INFOS FACTURE
+      // ==========================================
+      const xOffset = (designStyle === 'modern' || designStyle === 'tech') ? design.layout.sidebarWidth + 10 : 10;
+
+      doc.setFont(design.typography.fontFamily, 'bold');
+      doc.setFontSize(design.typography.bodySize);
+      doc.setTextColor(...design.colors.text);
+      doc.text(`N° Facture: ${invoice.number}`, xOffset, currentY + 8);
+      doc.text(`Date: ${window.DateFormatter.toFrench(invoice.issueDate)}`, xOffset + 80, currentY + 8);
+
+      currentY += 6;
+
+      doc.setFont(design.typography.fontFamily, 'normal');
+      doc.setFontSize(design.typography.smallSize + 1);
+      if (invoice.quoteName) {
+        doc.text(`Devis associé: ${invoice.quoteName}`, xOffset, currentY + 8);
+      }
+      doc.text(`Échéance: ${window.DateFormatter.toFrench(invoice.dueDate)}`, xOffset + 80, currentY + 8);
+
+      currentY += 15;
+
+      // ==========================================
+      // VALIDATION DES ITEMS
+      // ==========================================
+      const validItems = invoice.quoteItems.filter(item =>
+        item &amp;&amp;
+        item.material &amp;&amp;
+        typeof item.material.name === 'string' &amp;&amp;
+        item.material.name.trim() !== '' &amp;&amp;
+        typeof item.quantity === 'number' &amp;&amp;
+        item.quantity > 0
+      );
+
+      if (validItems.length === 0) {
+        NotificationSystem.error('Aucun article valide dans la facture');
+        return null;
+      }
+
+      // ==========================================
+      // TABLEAU DES ARTICLES
+      // ==========================================
+      const tableY = window.drawItemsTable(doc, validItems, currentY, design, designStyle);
+
+      // ==========================================
+      // TOTAUX
+      // ==========================================
+      const totals = invoice.totals;
+      const pageHeight = doc.internal.pageSize.height;
+      let totalsY = tableY + 10;
+
+      // Vérifier si on a besoin d'une nouvelle page
+      if (totalsY + 50 > pageHeight - 25) {
+        doc.addPage();
+        if (designStyle === 'modern' || designStyle === 'tech') {
+          if (designStyle === 'tech') {
+            window.drawSidebarTech(doc, design);
+          } else {
+            window.drawSidebar(doc, design);
+          }
+        }
+        totalsY = 20;
+      }
+
+      switch (designStyle) {
+        case 'minimalist':
+          window.drawTotalsCardMinimalist(doc, totals, design, totalsY);
+          break;
+        case 'artisan':
+          window.drawTotalsCardArtisan(doc, totals, design, totalsY);
+          break;
+        case 'tech':
+          window.drawTotalsCardTech(doc, totals, design, totalsY);
+          break;
+        case 'modern':
+          window.drawTotalsCardModern(doc, totals, design, totalsY);
+          break;
+        default:
+          window.drawTotalsCardElegant(doc, totals, design, totalsY);
+      }
+
+      // ==========================================
+      // CONDITIONS DE PAIEMENT LÉGALES
+      // ==========================================
+      let conditionsY = totalsY + 45;
+
+      if (conditionsY + 40 > pageHeight - 25) {
+        doc.addPage();
+        if (designStyle === 'modern' || designStyle === 'tech') {
+          if (designStyle === 'tech') {
+            window.drawSidebarTech(doc, design);
+          } else {
+            window.drawSidebar(doc, design);
+          }
+        }
+        conditionsY = 20;
+      }
+
+      doc.setFont(design.typography.fontFamily, 'bold');
+      doc.setFontSize(design.typography.bodySize);
+      doc.setTextColor(...design.colors.text);
+      doc.text('CONDITIONS DE PAIEMENT', xOffset, conditionsY);
+
+      doc.setFont(design.typography.fontFamily, 'normal');
+      doc.setFontSize(design.typography.smallSize);
+      doc.setTextColor(...design.colors.textLight);
+
+      const company = headerConfig.company || {};
+      const paymentTerms = company.paymentTerms || 'Paiement à réception';
+
+      conditionsY += 6;
+      doc.text(`• ${paymentTerms}`, xOffset, conditionsY);
+      conditionsY += 5;
+      doc.text('• Pénalités de retard: 3 fois le taux d\'intérêt légal', xOffset, conditionsY);
+      conditionsY += 5;
+      doc.text('• Indemnité forfaitaire: 40€ (art. L441-6 Code de commerce)', xOffset, conditionsY);
+      conditionsY += 5;
+      doc.text('• Pas d\'escompte pour paiement anticipé', xOffset, conditionsY);
+
+      // ==========================================
+      // FOOTER SUR TOUTES LES PAGES
+      // ==========================================
+      const totalPages = doc.internal.getNumberOfPages();
+      for (let i = 1; i &lt;= totalPages; i++) {
+        doc.setPage(i);
+        const footerConfig = {
+          paymentTerms: company.paymentTerms || '',
+          mentionsLegales: company.mentionslegales || ''
+        };
+        switch (designStyle) {
+          case 'minimalist':
+            window.drawFooterMinimalist(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'artisan':
+            window.drawFooterArtisan(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'tech':
+            window.drawFooterTech(doc, footerConfig, design, i, totalPages);
+            break;
+          case 'modern':
+            window.drawFooterModern(doc, footerConfig, design, i, totalPages);
+            break;
+          default:
+            window.drawFooterElegant(doc, footerConfig, design, i, totalPages);
+        }
+      }
+
+      return doc;
+
+    } catch (error) {
+      console.error('Erreur génération PDF facture:', error);
+      NotificationSystem.error(`Erreur lors de la génération du PDF : ${error.message}`);
+      return null;
+    }
+  }
+
+  // ==========================================
+  // EXPORT PDF - DEVIS
+  // ==========================================
+
+  /**
+   * Exporte le devis en cours au format PDF (sauvegarde locale).
+   *
+   * Workflow :
+   * 1. Validation via validateBeforeExport() (si disponible)
+   * 2. Génération du PDF via generateQuotePDFDocument()
+   * 3. Création du nom de fichier : devis_[client]_[date].pdf
+   * 4. Sauvegarde locale via doc.save() (téléchargement navigateur)
+   * 5. Notification de succès
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si export réussi
+   * @fires NotificationSystem#error Si erreur lors de la génération ou sauvegarde
+   */
+  exportQuotePDF = async () => {
+    this.log('Exporting quote PDF...');
+
+    // Validation avant export
+    if (typeof window.validateBeforeExport === 'function') {
+      if (!window.validateBeforeExport()) {
+        return;
+      }
+    }
+
+    try {
+      // Génère le document PDF
+      const doc = await this.generateQuotePDFDocument();
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      // Récupérer les infos client
+      const clientInfo = window.clientInfo || {};
+      const filename = `devis_${clientInfo.name || 'client'}_${new Date().toISOString().split('T')[0]}.pdf`;
+
+      // Sauvegarder le PDF
+      doc.save(filename);
+
+      NotificationSystem.success(`Devis PDF "${filename}" exporté avec succès !`);
+
+    } catch (error) {
+      console.error('Erreur export PDF:', error);
+      NotificationSystem.error(`Erreur lors de l'export du PDF : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // IMPRESSION PDF - DEVIS
+  // ==========================================
+
+  /**
+   * Imprime le devis en cours via le dialogue d'impression du système.
+   *
+   * Workflow :
+   * 1. Validation via validateBeforeExport()
+   * 2. Génération du PDF
+   * 3. Conversion en base64 (doc.output('datauristring'))
+   * 4. Envoi à Electron main process via IPC 'print-pdf'
+   * 5. Ouverture du dialogue d'impression OS
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si dialogue ouvert
+   * @fires NotificationSystem#error Si erreur
+   */
+  printQuote = async () => {
+    this.log('Printing quote...');
+
+    // Validation avant impression
+    if (typeof window.validateBeforeExport === 'function') {
+      if (!window.validateBeforeExport()) {
+        return;
+      }
+    }
+
+    try {
+      // Génère le document PDF
+      const doc = await this.generateQuotePDFDocument();
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      // Convertir en base64 pour envoi IPC
+      const pdfBase64 = doc.output('datauristring').split(',')[1];
+      const result = await window.electron.invoke('print-pdf', pdfBase64);
+
+      if (result.success) {
+        NotificationSystem.success('Ouverture du PDF pour impression...');
+      } else {
+        NotificationSystem.error('Erreur lors de l\'ouverture du PDF');
+      }
+    } catch (error) {
+      console.error('Erreur impression:', error);
+      NotificationSystem.error(`Erreur impression : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // ENVOI EMAIL - DEVIS
+  // ==========================================
+
+  /**
+   * Envoie le devis en cours par email avec PDF en pièce jointe.
+   *
+   * Workflow :
+   * 1. Validation via validateBeforeSendEmail()
+   * 2. Vérification authentification (authToken requis)
+   * 3. Vérification email client présent
+   * 4. Génération du PDF + conversion base64
+   * 5. Envoi via IPC 'send-quote-email' avec {to, subject, body, attachment}
+   * 6. SMTP configuré dans ConfigModule utilisé par le backend
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si email envoyé
+   * @fires NotificationSystem#error Si erreur ou non authentifié ou email manquant
+   */
+  sendQuoteEmail = async () => {
+    this.log('Sending quote email...');
+
+    // Validation avant envoi
+    if (typeof window.validateBeforeSendEmail === 'function') {
+      if (!window.validateBeforeSendEmail()) {
+        return;
+      }
+    }
+
+    const authToken = window.getAuthToken ? window.getAuthToken() : null;
+    if (!authToken) {
+      NotificationSystem.error('Vous devez être connecté pour envoyer un email');
+      return;
+    }
+
+    try {
+      const recipientEmail = document.getElementById('client-email')?.value;
+
+      if (!recipientEmail) {
+        NotificationSystem.error('Email du client requis');
+        return;
+      }
+
+      // Génère le PDF
+      const doc = await this.generateQuotePDFDocument();
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      const pdfBase64 = doc.output('datauristring').split(',')[1];
+      const clientInfo = window.clientInfo || {};
+      const headerConfig = window.headerConfig || {};
+      const filename = `devis_${clientInfo.name || 'client'}_${new Date().toISOString().split('T')[0]}.pdf`;
+
+      // Envoyer via IPC
+      const result = await window.electron.invoke('send-quote-email', authToken, {
+        to: recipientEmail,
+        subject: `Devis de ${headerConfig.company?.name || 'Votre Entreprise'}`,
+        body: `Bonjour ${clientInfo.name || ''},\n\nVeuillez trouver ci-joint votre devis.\n\nCordialement,\n${headerConfig.company?.name || 'Votre Entreprise'}`,
+        attachment: {
+          filename: filename,
+          content: pdfBase64
+        }
+      });
+
+      if (result.success) {
+        NotificationSystem.success(`Email envoyé avec succès à ${recipientEmail}`);
+      } else {
+        NotificationSystem.error(`Échec de l'envoi : ${result.message}`);
+      }
+
+    } catch (error) {
+      console.error('Erreur envoi email:', error);
+      NotificationSystem.error(`Erreur envoi email : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // EXPORT PDF - FACTURES
+  // ==========================================
+
+  /**
+   * Exporte une facture spécifique au format PDF (sauvegarde locale).
+   *
+   * @public
+   * @async
+   * @param {string} invoiceId - ID de la facture à exporter
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si export réussi
+   * @fires NotificationSystem#error Si erreur de chargement ou génération
+   */
+  exportInvoicePDF = async (invoiceId) => {
+    this.log('Exporting invoice PDF:', invoiceId);
+
+    try {
+      // Charger la facture
+      const result = await window.electron.invoke('load-invoice', invoiceId);
+      if (!result.success) {
+        NotificationSystem.error('Impossible de charger la facture');
+        return;
+      }
+
+      const invoice = result.invoice;
+
+      // Génère le document PDF
+      const doc = await this.generateInvoicePDFDocument(invoice);
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      const filename = `facture_${invoice.number}_${invoice.clientInfo.name || 'client'}.pdf`;
+
+      // Sauvegarder le PDF
+      doc.save(filename);
+
+      NotificationSystem.success('Facture PDF exportée avec succès');
+
+    } catch (error) {
+      console.error('Erreur export PDF facture:', error);
+      NotificationSystem.error(`Erreur export PDF : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // IMPRESSION PDF - FACTURES
+  // ==========================================
+
+  /**
+   * Imprime une facture spécifique via le dialogue d'impression.
+   *
+   * @public
+   * @async
+   * @param {string} invoiceId - ID de la facture à imprimer
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si impression lancée
+   * @fires NotificationSystem#error Si erreur
+   */
+  printInvoice = async (invoiceId) => {
+    this.log('Printing invoice:', invoiceId);
+
+    try {
+      // Charger la facture
+      const result = await window.electron.invoke('load-invoice', invoiceId);
+      if (!result.success) {
+        NotificationSystem.error('Impossible de charger la facture');
+        return;
+      }
+
+      const invoice = result.invoice;
+
+      // Génère le document PDF
+      const doc = await this.generateInvoicePDFDocument(invoice);
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      // Convertir en base64 pour envoi IPC
+      const pdfBase64 = doc.output('datauristring').split(',')[1];
+      const printResult = await window.electron.invoke('print-pdf', pdfBase64);
+
+      if (printResult.success) {
+        NotificationSystem.success('Impression lancée');
+      } else {
+        NotificationSystem.error('Erreur lors de l\'impression');
+      }
+    } catch (error) {
+      console.error('Erreur impression facture:', error);
+      NotificationSystem.error(`Erreur impression : ${error.message}`);
+    }
+  }
+
+  // ==========================================
+  // ENVOI EMAIL - FACTURES
+  // ==========================================
+
+  /**
+   * Envoie une facture spécifique par email avec PDF en pièce jointe.
+   *
+   * @public
+   * @async
+   * @param {string} invoiceId - ID de la facture à envoyer
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si email envoyé
+   * @fires NotificationSystem#error Si erreur ou email client manquant ou non authentifié
+   */
+  sendInvoiceEmail = async (invoiceId) => {
+    this.log('Sending invoice email:', invoiceId);
+
+    const authToken = window.getAuthToken ? window.getAuthToken() : null;
+    if (!authToken) {
+      NotificationSystem.error('Vous devez être connecté pour envoyer un email');
+      return;
+    }
+
+    try {
+      // Charger la facture
+      const result = await window.electron.invoke('load-invoice', invoiceId);
+      if (!result.success) {
+        NotificationSystem.error('Impossible de charger la facture');
+        return;
+      }
+
+      const invoice = result.invoice;
+
+      if (!invoice.clientInfo.email) {
+        NotificationSystem.error('Email client non renseigné');
+        return;
+      }
+
+      // Génère le PDF
+      const doc = await this.generateInvoicePDFDocument(invoice);
+      if (!doc) return; // L'erreur a déjà été affichée
+
+      const pdfBase64 = doc.output('datauristring').split(',')[1];
+      const filename = `facture_${invoice.number}.pdf`;
+      const headerConfig = window.headerConfig || {};
+
+      // Envoyer via IPC
+      const emailResult = await window.electron.invoke('send-quote-email', authToken, {
+        to: invoice.clientInfo.email,
+        subject: `Facture ${invoice.number} - ${headerConfig.company?.name || 'Votre Entreprise'}`,
+        body: `Bonjour ${invoice.clientInfo.name || ''},\n\nVeuillez trouver ci-joint la facture ${invoice.number} d'un montant de ${invoice.totals.totalTTC.toFixed(2)} €.\n\nDate d'échéance : ${window.DateFormatter.toFrench(invoice.dueDate)}\n\nCordialement,\n${headerConfig.company?.name || 'Votre Entreprise'}`,
+        attachment: {
+          filename: filename,
+          content: pdfBase64
+        }
+      });
+
+      if (emailResult.success) {
+        NotificationSystem.success(`Facture envoyée par email à ${invoice.clientInfo.email}`);
+      } else {
+        NotificationSystem.error(`Échec de l'envoi : ${emailResult.message}`);
+      }
+    } catch (error) {
+      console.error('Erreur envoi email facture:', error);
+      NotificationSystem.error(`Erreur envoi email : ${error.message}`);
+    }
+  }
+}
+
+export default PDFModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

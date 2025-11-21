@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> ClientsModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>ClientsModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><h1>========================================
+CLIENTS MODULE - Gestion des clients</h1>
+<p>Module de gestion complète des clients pour l'application AutoCalc OptiDevis.
+Gère le catalogue de clients avec opérations CRUD, filtrage avancé et liaison
+avec les devis et factures.</p>
+<p>Architecture :
+Le module gère un catalogue de clients avec :</p>
+<ul>
+<li><strong>CRUD complet</strong> : Create, Read, Update, Delete avec validation</li>
+<li><strong>Filtrage multi-critères</strong> : Recherche textuelle + filtre par type</li>
+<li><strong>Liaison devis/factures</strong> : Affichage du nombre de devis et factures par client</li>
+<li><strong>Cache intelligent</strong> : DataCache 5 minutes pour performance</li>
+<li><strong>Modals Bootstrap</strong> : Formulaire d'ajout/édition + confirmation suppression</li>
+</ul>
+<h1>==========================================
+DONNÉES CLIENT</h1>
+<p>Structure d'un client (8 champs) :</p>
+<ul>
+<li><strong>id</strong> : Identifiant unique (auto-incrémenté)</li>
+<li><strong>name</strong> : Nom du client (obligatoire, unique)</li>
+<li><strong>contact</strong> : Nom du contact principal</li>
+<li><strong>email</strong> : Adresse email du client</li>
+<li><strong>phone</strong> : Numéro de téléphone</li>
+<li><strong>address</strong> : Adresse complète (tronquée à 50 caractères dans tableau)</li>
+<li><strong>type</strong> : Type de client (Particulier, Artisan, Entreprise générale, Promoteur)</li>
+<li><strong>siret</strong> : Numéro SIRET (identifiant légal)</li>
+<li><strong>notes</strong> : Notes libres (tronquées à 30 caractères dans tableau)</li>
+</ul>
+<p>Stockage : clients.json via IPC</p>
+<h1>==========================================
+FONCTIONNALITÉS CRUD</h1>
+<p><strong>Create (Ajout)</strong> :</p>
+<ol>
+<li>Utilisateur clique &quot;Ajouter client&quot;</li>
+<li>Modal s'ouvre avec formulaire vide</li>
+<li>Utilisateur remplit les champs (nom obligatoire)</li>
+<li>Validation : nom non vide</li>
+<li>Envoi via IPC 'addClient' avec authToken</li>
+<li>Invalidation cache + rechargement + rafraîchissement tableau</li>
+<li>Notification succès</li>
+</ol>
+<p><strong>Read (Lecture)</strong> :</p>
+<ul>
+<li>Chargement au démarrage depuis cache ou backend (IPC 'get-clients')</li>
+<li>Affichage dans tableau trié par ID</li>
+<li>Comptage des devis et factures par client (liaison avec catalog)</li>
+<li>Bouton &quot;Voir devis et factures&quot; pour basculer vers onglet Catalogue avec filtre actif</li>
+</ul>
+<p><strong>Update (Modification)</strong> :</p>
+<ol>
+<li>Utilisateur clique icône &quot;Modifier&quot; sur une ligne</li>
+<li>Modal s'ouvre avec formulaire pré-rempli</li>
+<li>Utilisateur modifie les champs</li>
+<li>Validation : nom non vide</li>
+<li>Envoi via IPC 'updateClient' avec authToken + clientData.id</li>
+<li>Invalidation cache + rechargement + rafraîchissement</li>
+<li>Notification succès</li>
+</ol>
+<p><strong>Delete (Suppression)</strong> :</p>
+<ol>
+<li>Utilisateur clique icône &quot;Supprimer&quot;</li>
+<li>Modal de confirmation avec nom du client</li>
+<li>Confirmation utilisateur</li>
+<li>Envoi via IPC 'deleteClient' avec authToken + id</li>
+<li>Invalidation cache + rechargement + rafraîchissement</li>
+<li>Fermeture modal + notification succès</li>
+</ol>
+<h1>==========================================
+FILTRAGE &amp; RECHERCHE</h1>
+<p><strong>Recherche textuelle</strong> (#search-clients) :</p>
+<ul>
+<li>Recherche dans : name, contact, email, phone</li>
+<li>Insensible à la casse</li>
+<li>Temps réel (événement 'input')</li>
+</ul>
+<p><strong>Filtre par type</strong> (#filter-client-type) :</p>
+<ul>
+<li>Select généré dynamiquement avec comptage par type</li>
+<li>Option &quot;Tous les types&quot; par défaut</li>
+<li>Format : &quot;Type (nombre)&quot;</li>
+<li>Événement 'change'</li>
+</ul>
+<p><strong>Combinaison des filtres</strong> :</p>
+<ul>
+<li>Les deux filtres se cumulent (ET logique)</li>
+<li>Notification du nombre de résultats (toast 2s)</li>
+<li>Affichage &quot;Aucun client trouvé&quot; si 0 résultat</li>
+</ul>
+<h1>==========================================
+LIAISON AVEC MATÉRIAUX</h1>
+<p>Intégration avec MaterialsModule :</p>
+<ul>
+<li>Comptage des devis et factures par client (material.client = client.name)</li>
+<li>Badge vert avec nombre si devis et factures &gt; 0</li>
+<li>Bouton &quot;Voir devis et factures&quot; avec icône œil</li>
+<li>Fonction viewClientQuotes() :
+<ol>
+<li>Bascule vers onglet Catalogue (Bootstrap Tab API)</li>
+<li>Appelle filterByClientName() du MaterialsModule avec délai 100ms</li>
+<li>Filtre automatiquement le catalogue par client</li>
+</ol>
+</li>
+</ul>
+<p>Utilité : Permet de voir rapidement quels devis et factures viennent d'un client</p>
+<h1>==========================================
+CACHE &amp; PERFORMANCE</h1>
+<p><strong>DataCache avec TTL 5 minutes</strong> :</p>
+<ul>
+<li>Clé : 'clients'</li>
+<li>Durée : 5 * 60 * 1000 ms = 300 secondes</li>
+<li>Vérification au loadClients() :
+<ul>
+<li>Si cache valide → utilise cache</li>
+<li>Si cache expiré → fetch backend + mise en cache</li>
+</ul>
+</li>
+<li>Invalidation manuelle après CRUD :
+<ul>
+<li>DataCache.invalidate('clients')</li>
+<li>Force rechargement depuis backend</li>
+</ul>
+</li>
+</ul>
+<p><strong>Synchronisation</strong> :</p>
+<ul>
+<li>this.clients (instance)</li>
+<li>this.state.set('clients') (StateManager)</li>
+<li>window.clients (global, compatibilité legacy)</li>
+<li>DataCache ('clients')</li>
+</ul>
+<h1>==========================================
+MODALS BOOTSTRAP</h1>
+<p><strong>Modal Formulaire</strong> (#clientFormModal) :</p>
+<ul>
+<li>Titre dynamique : &quot;Ajouter&quot; ou &quot;Modifier&quot;</li>
+<li>11 champs de saisie</li>
+<li>Boutons : Sauvegarder, Annuler</li>
+<li>Focus automatique sur #client-name après ouverture (délai 500ms)</li>
+<li>Mode : this.editMode (boolean)</li>
+</ul>
+<p><strong>Modal Suppression</strong> (#deleteClientModal) :</p>
+<ul>
+<li>Message dynamique avec nom du client</li>
+<li>Boutons : Confirmer, Annuler</li>
+<li>ID stocké temporairement dans this.clientToDeleteId</li>
+</ul>
+<h1>==========================================
+EVENT LISTENERS</h1>
+<p><strong>Listeners globaux</strong> (attachEventListeners) :</p>
+<ul>
+<li>Onglet #clients-tab → shown.bs.tab : Rafraîchit tableau + attache listeners</li>
+</ul>
+<p><strong>Listeners spécifiques</strong> (attachClientsListeners) :</p>
+<ul>
+<li>Protection contre double-attachement (clientsListenersAttached flag)</li>
+<li>Boutons : #add-client-btn, #save-client-btn, #cancel-client-btn, #confirmDeleteClientBtn</li>
+<li>Filtres : #search-clients (input), #filter-client-type (change)</li>
+<li>Tableau : onclick editClient(id), askDeleteClient(id), viewClientQuotes(name)</li>
+</ul>
+<h1>==========================================
+ÉVÉNEMENTS ÉMIS</h1>
+<p><strong>EventBus interne</strong> :</p>
+<ul>
+<li>'initialized' : Au démarrage du module</li>
+<li>'loaded' : Après chargement des clients (avec data)</li>
+<li>'added' : Après ajout réussi (avec clientData)</li>
+<li>'updated' : Après modification réussie (avec clientData)</li>
+<li>'deleted' : Après suppression réussie (avec id)</li>
+</ul>
+<p><strong>EventBus global</strong> (this.events) :</p>
+<ul>
+<li>'clients:loaded' : Pour notifier autres modules du chargement</li>
+<li>'clients:updated' : Après tout changement (add/update/delete)</li>
+</ul>
+<p>Utilité : MaterialsModule peut écouter 'clients:loaded' pour rafraîchir son autocomplete</p>
+<h1>==========================================
+INTÉGRATIONS</h1>
+<ul>
+<li><strong>MaterialsModule</strong> : Liaison par client name, fonction filterByClientName()</li>
+<li><strong>StateManager</strong> : Stockage clients, editMode, clientToDeleteId</li>
+<li><strong>DataCache</strong> : Cache 5 min pour performance</li>
+<li><strong>NotificationSystem</strong> : Feedback utilisateur (success, error, info)</li>
+<li><strong>Bootstrap 5.3.3</strong> : Modals, Tab API, Tooltips</li>
+<li><strong>IPC Electron</strong> : get-clients, addClient, updateClient, deleteClient</li>
+</ul></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>AutoCalc OptiDevis</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_clients_ClientsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_clients_ClientsModule.js.html">modules/clients/ClientsModule.js</a>, <a href="modules_clients_ClientsModule.js.html#line1">line 1</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="BaseModule.html">BaseModule</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

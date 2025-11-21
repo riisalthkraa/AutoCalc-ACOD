@@ -1,0 +1,2530 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/materials/MaterialsModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/materials/MaterialsModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * MATERIALS MODULE - Gestion des matériaux
+ * ========================================
+ *
+ * Module de gestion complète du catalogue de matériaux pour l'application AutoCalc OptiDevis.
+ * Gère tous les aspects liés aux matériaux : chargement, affichage, recherche, filtrage,
+ * CRUD (Create, Read, Update, Delete), et sélection pour devis.
+ *
+ * Architecture :
+ * Le module fonctionne sur deux onglets distincts avec des rôles différents :
+ *
+ * 1. **Onglet Recherche** (tous les utilisateurs) :
+ *    - Recherche rapide de matériaux par nom, référence, type
+ *    - Filtrage par catégorie avec compteur
+ *    - Sélection de matériaux pour les ajouter au devis en cours
+ *    - Interface simplifiée optimisée pour la recherche
+ *
+ * 2. **Onglet Catalogue** (mode Admin uniquement) :
+ *    - Tableau complet des matériaux avec toutes les colonnes
+ *    - Ajout, édition, suppression de matériaux
+ *    - Filtrage avancé (recherche texte + type + fournisseur)
+ *    - Gestion complète du catalogue
+ *
+ * Workflow principal - Ajout d'un matériau :
+ * 1. Utilisateur clique sur "Ajouter un matériau" (onglet Catalogue)
+ * 2. Modal s'ouvre avec formulaire vide
+ * 3. Utilisateur remplit les champs (nom, type, prix TTC, TVA, etc.)
+ * 4. Calcul automatique HT ← TTC et TVA
+ * 5. Utilisateur clique "Enregistrer"
+ * 6. Validation des champs obligatoires (nom, type)
+ * 7. Appel IPC 'addMaterial' avec sessionToken
+ * 8. Invalidation du cache + rechargement
+ * 9. Rafraîchissement de la table + notification succès
+ *
+ * Workflow principal - Édition d'un matériau :
+ * 1. Utilisateur clique sur bouton "Modifier" d'un matériau
+ * 2. Modal s'ouvre avec formulaire prérempli
+ * 3. Utilisateur modifie les champs souhaités
+ * 4. Utilisateur clique "Enregistrer"
+ * 5. Appel IPC 'updateMaterial' avec sessionToken
+ * 6. Invalidation du cache + rechargement
+ * 7. Rafraîchissement de la table + notification succès
+ *
+ * Workflow principal - Suppression d'un matériau :
+ * 1. Utilisateur clique sur bouton "Supprimer" d'un matériau
+ * 2. Modal de confirmation s'affiche
+ * 3. Utilisateur confirme la suppression
+ * 4. Appel IPC 'deleteMaterial' avec sessionToken
+ * 5. Invalidation du cache + rechargement
+ * 6. Rafraîchissement de la table + notification succès
+ *
+ * Workflow principal - Sélection pour devis :
+ * 1. Utilisateur recherche un matériau dans l'onglet Recherche
+ * 2. Résultats affichés en temps réel avec filtrage
+ * 3. Utilisateur clique sur "Sélectionner" sur un matériau
+ * 4. Matériau stocké dans state.selectedMaterial + window.selectedMaterial
+ * 5. Affichage mis à jour dans le tableau de bord Vendeur
+ * 6. QuoteBuilderModule peut utiliser ce matériau pour calculer le devis
+ *
+ * Système de cache :
+ * - Cache DataCache de 5 minutes pour les matériaux
+ * - Invalidation automatique lors de tout changement (ajout/modif/suppression)
+ * - Protection contre l'écrasement : si backend retourne [], on garde les matériaux existants
+ *
+ * Système de filtrage :
+ * - Recherche texte : nom, référence, type
+ * - Filtre par type : dropdown avec compteur par catégorie
+ * - Filtre par fournisseur : activé depuis SuppliersModule (filterBySupplier)
+ * - Filtres cumulatifs (ET logique)
+ *
+ * Calcul automatique des prix :
+ * - L'utilisateur saisit le prix TTC et la TVA
+ * - Le prix HT est calculé automatiquement : HT = TTC / (1 + TVA/100)
+ * - Lors de l'affichage : TTC = HT * (1 + TVA/100)
+ *
+ * Compatibilité avec legacy code :
+ * - Exposé via window.materials pour quick-add.js et autre ancien code
+ * - Synchronisation bidirectionnelle : window.materials ↔ this.materials ↔ state.materials
+ * - Support de window.selectedMaterial pour compatibilité
+ * - Fonctions exposées au scope global via exposeToGlobal()
+ *
+ * Événements émis :
+ * - 'materials:initialized' - Module initialisé
+ * - 'materials:loaded' - Matériaux chargés depuis backend/cache
+ * - 'materials:added' - Matériau ajouté
+ * - 'materials:updated' - Matériau modifié
+ * - 'materials:deleted' - Matériau supprimé
+ * - 'materials:selected' - Matériau sélectionné pour devis
+ *
+ * Événements écoutés :
+ * - 'suppliers:loaded' - Rafraîchir la liste des fournisseurs
+ * - 'suppliers:updated' - Rafraîchir la liste des fournisseurs
+ *
+ * Canaux IPC utilisés :
+ * - 'get-materials' - Récupérer tous les matériaux
+ * - 'addMaterial' - Ajouter un nouveau matériau (nécessite sessionToken)
+ * - 'updateMaterial' - Modifier un matériau existant (nécessite sessionToken)
+ * - 'deleteMaterial' - Supprimer un matériau (nécessite sessionToken)
+ *
+ * Intégrations :
+ * - SuppliersModule : Liste des fournisseurs pour le select + filtrage
+ * - QuoteBuilderModule : Matériau sélectionné pour calcul de devis
+ * - QuickAddModule : Ajout rapide de matériaux (via window.materials)
+ * - ScannerModule : Recherche par code-barres
+ * - Dashboard Vendeur : Affichage du matériau sélectionné
+ *
+ * @module MaterialsModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import DataCache from '../../shared/ui/DataCache.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import CacheKeys from '../../shared/cache/CacheKeys.js';
+import LoadingStateManager from '../../shared/ui/LoadingStateManager.js';
+import BulkActionsManager from '../../shared/bulk/BulkActionsManager.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+import mlService from '../../shared/services/MLService.js';
+
+class MaterialsModule extends BaseModule {
+  /**
+   * Crée une instance du module Materials.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements pour communication inter-modules
+   */
+  constructor(state, eventBus) {
+    super('materials', state, eventBus);
+
+    /**
+     * Cache local des matériaux chargés depuis le backend.
+     * Synchronisé avec window.materials pour compatibilité legacy.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     * @property {number} id - ID unique du matériau
+     * @property {string} name - Nom du matériau
+     * @property {string} reference - Référence (optionnel)
+     * @property {string} type - Catégorie/type du matériau
+     * @property {string} unit - Unité de mesure (m², m³, kg, pièce, etc.)
+     * @property {number} price - Prix unitaire HT
+     * @property {number} tva - Taux de TVA (en %)
+     * @property {number} coverage - Rendement/couverture (m² par unité)
+     * @property {number} piecesPerM2 - Nombre de pièces par m²
+     * @property {number} density - Densité du matériau
+     * @property {number} unitWeight - Poids unitaire
+     * @property {number} stock - Quantité en stock
+     * @property {string} barcode - Code-barres (optionnel)
+     * @property {number} purchaseCost - Coût d'achat (optionnel)
+     * @property {string} supplier - Nom du fournisseur (optionnel)
+     */
+    this.materials = [];
+
+    /**
+     * Matériaux filtrés selon les critères de recherche actuels.
+     * Utilisé pour l'affichage des résultats de recherche dans l'onglet Recherche.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.filteredMaterials = [];
+
+    /**
+     * Indicateur du mode d'édition du formulaire.
+     * - false : Mode ajout (nouveau matériau)
+     * - true : Mode édition (modification d'un matériau existant)
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.editMode = false;
+
+    /**
+     * ID du matériau en attente de suppression.
+     * Stocké lors de la demande de confirmation (askDeleteMaterial)
+     * et utilisé lors de la confirmation finale (deleteMaterial).
+     *
+     * @type {number|null}
+     * @private
+     */
+    this.materialToDeleteId = null;
+
+    /**
+     * Instance du modal Bootstrap de confirmation de suppression.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.deleteModal = null;
+
+    /**
+     * Instance du modal Bootstrap du formulaire d'ajout/édition.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.formModal = null;
+
+    /**
+     * Flag pour éviter d'attacher les listeners de l'onglet Catalogue plusieurs fois.
+     * Les listeners sont attachés de manière lazy au premier affichage de l'onglet.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.catalogueListenersAttached = false;
+
+    /**
+     * Nom du fournisseur utilisé pour filtrer les matériaux.
+     * - null : Aucun filtre fournisseur actif
+     * - string : Filtrer uniquement les matériaux de ce fournisseur
+     *
+     * Activé via filterBySupplier() (généralement appelé depuis SuppliersModule)
+     * et désactivé via clearSupplierFilter().
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentSupplierFilter = null;
+
+    /**
+     * Configuration de pagination pour le tableau des matériaux.
+     * @type {Object}
+     * @private
+     */
+    this.pagination = {
+      currentPage: 1,
+      itemsPerPage: 25,
+      totalItems: 0,
+      totalPages: 0
+    };
+
+    /**
+     * Gestionnaire des opérations bulk (sélection multiple).
+     * @type {BulkActionsManager|null}
+     * @private
+     */
+    this.bulkActions = null;
+  }
+
+  /**
+   * Initialise le module Materials.
+   *
+   * Workflow d'initialisation :
+   * 1. Charger les matériaux depuis le backend (ou cache)
+   * 2. Populer les filtres de type (onglets Recherche et Catalogue)
+   * 3. Populer la table des matériaux (onglet Catalogue)
+   * 4. Attacher les event listeners (recherche, filtres, boutons)
+   * 5. Exposer les fonctions au scope global (compatibilité legacy)
+   * 6. Initialiser les modals Bootstrap (suppression, formulaire)
+   * 7. Initialiser le calcul automatique HT/TTC
+   * 8. Écouter les mises à jour des fournisseurs
+   * 9. Populer la liste des fournisseurs dans le formulaire
+   * 10. Émettre l'événement 'materials:initialized'
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * const materialsModule = new MaterialsModule(state, eventBus);
+   * await materialsModule.init();
+   * // → Matériaux chargés et interface prête
+   */
+  async init() {
+    this.log('Initializing Materials Module...');
+    console.log('🔄 MaterialsModule v2.0 - Direct load (legacy removed)');
+
+    // Charger les matériaux directement depuis le backend
+    await this.loadMaterials();
+    console.log('🔍 [DEBUG] Materials loaded, now populating UI...');
+
+    // Populer les filtres et le tableau après chargement
+    console.log('🔍 [DEBUG] Calling populateTypeFilter...');
+    this.populateTypeFilter();
+    console.log('🔍 [DEBUG] Calling populateSearchTypeFilter...');
+    this.populateSearchTypeFilter();
+    console.log('🔍 [DEBUG] Calling populateMaterialsTable...');
+    this.populateMaterialsTable();
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    // Exposer les fonctions au scope global (compatibilité)
+    this.exposeToGlobal({
+      loadMaterials: this.loadMaterials,
+      populateMaterialsTable: this.populateMaterialsTable,
+      selectMaterial: this.selectMaterial, // Réactivé pour compatibilité
+      addMaterial: this.addMaterial,
+      saveMaterial: this.saveMaterial,
+      editMaterial: this.editMaterial,
+      deleteMaterial: this.deleteMaterial,
+      askDeleteMaterial: this.askDeleteMaterial,
+      clearMaterialForm: this.clearMaterialForm,
+      updateSelectedMaterialDisplay: this.updateSelectedMaterialDisplay, // Réactivé pour compatibilité
+      loadMaterialsIntoTable: this.loadMaterialsIntoTable,
+      populateTypeFilter: this.populateTypeFilter,
+      populateSearchTypeFilter: this.populateSearchTypeFilter,
+      applyMaterialFilters: this.applyMaterialFilters,
+      filterBySupplier: this.filterBySupplier,
+      clearSupplierFilter: this.clearSupplierFilter,
+      viewMaterialDetails: this.viewMaterialDetails,
+      changePage: this.changePage,
+      goToPage: this.goToPage,
+      debouncedSearchMaterial: this.filterMaterialsForSearch, // Expose search function
+      filterMaterialsForSearch: this.filterMaterialsForSearch // Expose both names for compatibility
+    });
+
+    // Exposer l'instance du module pour les méthodes de pagination
+    window.materialsModule = this;
+
+    // Initialiser le modal de suppression
+    console.log('🔍 [DEBUG] Initializing delete modal...');
+    const deleteModalElement = this.getElement('#deleteMaterialModal');
+    console.log('🔍 [DEBUG] deleteModalElement:', !!deleteModalElement);
+    console.log('🔍 [DEBUG] bootstrap defined:', typeof bootstrap !== 'undefined');
+
+    if (deleteModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.deleteModal = new bootstrap.Modal(deleteModalElement);
+      console.log('✅ [DEBUG] Delete modal initialized successfully');
+      this.log('Delete modal initialized');
+    } else {
+      console.error('❌ [DEBUG] Delete modal NOT initialized! Element:', !!deleteModalElement, ', Bootstrap:', typeof bootstrap !== 'undefined');
+      this.warn('Delete modal element not found or Bootstrap not loaded');
+    }
+
+    // Initialiser le modal du formulaire
+    const formModalElement = this.getElement('#materialFormModal');
+    if (formModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.formModal = new bootstrap.Modal(formModalElement);
+      this.log('Form modal initialized');
+    } else {
+      this.warn('Form modal element not found or Bootstrap not loaded');
+    }
+
+    // Initialiser le calcul automatique HT/TTC
+    this.initPriceCalculation();
+
+    // Écouter les mises à jour des fournisseurs pour rafraîchir la liste
+    this.events.on('suppliers:loaded', () => {
+      this.populateSuppliersDatalist();
+    });
+
+    this.events.on('suppliers:updated', () => {
+      this.populateSuppliersDatalist();
+    });
+
+    // Peupler la liste des fournisseurs
+    this.populateSuppliersDatalist();
+
+    // Initialiser bulk actions
+    this.bulkActions = new BulkActionsManager({
+      moduleName: 'materials',
+      tableId: 'materials-table-body',
+      checkboxClass: 'material-bulk-checkbox',
+      selectAllId: 'materials-select-all',
+      bulkActionsId: 'materials-bulk-actions',
+      undoRedoManager: window.undoRedoManager,
+      onDeleteCallback: this.bulkDeleteMaterials.bind(this),
+      onExportCallback: this.bulkExportMaterials.bind(this)
+    });
+
+    // 🆕 Enregistrer l'onglet Catalogue pour auto-refresh
+    this.registerTabRefresh();
+
+    // 🆕 Enregistrer les commandes Command Palette (quand prêt)
+    if (window.CommandPalette) {
+      this.registerCommands();
+    } else {
+      // Attendre que Command Palette soit prêt
+      this.events.on('commandpalette:ready', () => {
+        this.registerCommands();
+      });
+    }
+
+    this.log('Materials Module initialized successfully');
+    this.emitEvent('initialized');
+  }
+
+  /**
+   * 🆕 Enregistre l'onglet Catalogue pour auto-refresh automatique.
+   * Appelé une fois lors de l'initialisation du module.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerTabRefresh() {
+    // Vérifier que TabRefreshManager est disponible
+    if (!window.TabRefreshManager) {
+      this.warn('TabRefreshManager not available - tab auto-refresh disabled');
+      return;
+    }
+
+    // Onglet "Catalogue"
+    window.TabRefreshManager.registerTab('admin-tab', async (force) => {
+      this.log('🔄 Auto-refreshing Catalogue...');
+      await this.loadMaterials();
+      this.populateMaterialsTable();
+    }, {
+      ttl: 60000, // 60 secondes (catalogue change moins souvent)
+      label: 'Catalogue'
+    });
+
+    this.log('✅ Tab auto-refresh registered');
+  }
+
+  /**
+   * 🆕 Enregistre les commandes Command Palette pour le module Materials.
+   * Permet d'accéder aux fonctions matériaux via Ctrl+K.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerCommands() {
+    if (!window.CommandPalette) {
+      this.warn('CommandPalette not available - commands registration skipped');
+      return;
+    }
+
+    // Créer un matériau
+    window.CommandPalette.registerCommand('materials-create', {
+      label: '✨ Créer un nouveau matériau',
+      keywords: ['créer', 'nouveau', 'matériau', 'material', 'produit', 'article', 'ajouter'],
+      category: 'Catalogue',
+      icon: '✨',
+      priority: 15,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: async () => {
+        document.getElementById('admin-tab')?.click();
+        await new Promise(r => setTimeout(r, 150));
+        this.addMaterial();
+      }
+    });
+
+    // Rechercher un matériau (accessible en mode Vendeur)
+    window.CommandPalette.registerCommand('materials-search', {
+      label: '🔍 Rechercher un matériau',
+      keywords: ['rechercher', 'chercher', 'trouver', 'matériau', 'material', 'search'],
+      category: 'Catalogue',
+      icon: '🔍',
+      priority: 12,
+      // Pas de condition = accessible à tous
+      action: () => {
+        document.getElementById('search-tab')?.click();
+        setTimeout(() => document.getElementById('searchMaterialInput')?.focus(), 150);
+      }
+    });
+
+    // Importer catalogue
+    window.CommandPalette.registerCommand('materials-import', {
+      label: '📥 Importer un catalogue',
+      keywords: ['importer', 'import', 'catalogue', 'excel', 'csv', 'upload'],
+      category: 'Catalogue',
+      icon: '📥',
+      priority: 8,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => {
+        window.NotificationSystem?.info('Import catalogue : Utilisez l\'onglet Configuration > Import');
+      }
+    });
+
+    // Exporter catalogue
+    window.CommandPalette.registerCommand('materials-export', {
+      label: '📤 Exporter le catalogue',
+      keywords: ['exporter', 'export', 'catalogue', 'excel', 'csv', 'télécharger'],
+      category: 'Catalogue',
+      icon: '📤',
+      priority: 8,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: async () => {
+        if (typeof window.exportMaterialsToExcel === 'function') {
+          await window.exportMaterialsToExcel();
+        } else {
+          window.NotificationSystem?.warning('Fonction d\'export non disponible');
+        }
+      }
+    });
+
+    this.log('✅ Command Palette commands registered');
+  }
+
+  /**
+   * Attache tous les event listeners du module.
+   *
+   * Listeners attachés :
+   * - Onglet Recherche : champ de recherche, filtre de type, bouton recherche
+   * - Scanner : boutons de démarrage et arrêt du scanner de code-barres
+   * - Onglet Catalogue : ouverture de l'onglet (lazy loading des listeners)
+   *
+   * Note : Les listeners spécifiques à l'onglet Catalogue sont attachés séparément
+   * dans attachCatalogueListeners() au premier affichage de l'onglet (optimisation).
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Filtre de recherche dans l'onglet Recherche (disponible au démarrage)
+    // Debouncing 300ms pour éviter filtrage excessif à chaque touche
+    const materialSearchInput = this.getElement('#material-search-input');
+    if (materialSearchInput) {
+      let debounceTimer;
+      materialSearchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          this.filterMaterialsForSearch();
+        }, 300);
+      });
+    }
+
+    const searchTypeFilter = this.getElement('#search-type-filter');
+    if (searchTypeFilter) {
+      searchTypeFilter.addEventListener('change', () => {
+        this.filterMaterialsForSearch();
+      });
+    }
+
+    // Bouton de recherche dans l'onglet Recherche (search-btn)
+    const searchBtn = this.getElement('#search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        const searchInput = this.getElement('#search-input');
+        if (!searchInput || !searchInput.value.trim()) {
+          window.forceShowAll = true;
+          if (typeof window.debouncedSearchMaterial === 'function') {
+            window.debouncedSearchMaterial();
+          }
+          if (window.materials) {
+            NotificationSystem.info(`${window.materials.length} matériaux affichés`, 2000);
+          }
+        } else {
+          if (typeof window.debouncedSearchMaterial === 'function') {
+            window.debouncedSearchMaterial();
+          }
+        }
+      });
+    }
+
+    // Input de recherche générale (search-input)
+    const searchInput = this.getElement('#search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        if (typeof window.debouncedSearchMaterial === 'function') {
+          window.debouncedSearchMaterial();
+        }
+      });
+
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          if (!searchInput.value.trim()) {
+            window.forceShowAll = true;
+          }
+          if (typeof window.debouncedSearchMaterial === 'function') {
+            window.debouncedSearchMaterial();
+          }
+        }
+      });
+    }
+
+    // Scanner de code-barres
+    const scanBarcodeBtn = this.getElement('#scan-barcode-btn');
+    if (scanBarcodeBtn) {
+      scanBarcodeBtn.addEventListener('click', () => {
+        if (typeof window.startScanner === 'function') {
+          window.startScanner();
+        }
+      });
+    }
+
+    const closeScannerBtn = this.getElement('#close-scanner');
+    if (closeScannerBtn) {
+      closeScannerBtn.addEventListener('click', () => {
+        if (typeof window.stopScanner === 'function') {
+          window.stopScanner();
+        }
+      });
+    }
+
+    // Écouter l'événement d'ouverture de l'onglet Catalogue pour attacher les listeners et populer la table
+    const adminTab = this.getElement('#admin-tab');
+    if (adminTab) {
+      adminTab.addEventListener('shown.bs.tab', () => {
+        console.log('📑 [DEBUG] Catalogue tab shown - populating table...');
+        this.attachCatalogueListeners();
+        this.populateMaterialsTable(); // Populer la table quand l'onglet est visible
+      });
+    }
+
+    this.log('Event listeners attached');
+  }
+
+  /**
+   * Initialise le calcul automatique HT/TTC dans le formulaire matériau.
+   *
+   * Lorsque l'utilisateur modifie le prix TTC ou la TVA, le prix HT est recalculé
+   * automatiquement selon la formule : HT = TTC / (1 + TVA/100)
+   *
+   * Exemples de calculs :
+   * - TTC: 120€, TVA: 20% → HT = 120 / 1.20 = 100€
+   * - TTC: 550€, TVA: 10% → HT = 550 / 1.10 = 500€
+   *
+   * @private
+   * @returns {void}
+   */
+  initPriceCalculation() {
+    const priceTTCInput = this.getElement('#material-price-ttc');
+    const tvaInput = this.getElement('#material-tva');
+    const priceHTInput = this.getElement('#material-price');
+
+    if (!priceTTCInput || !tvaInput || !priceHTInput) return;
+
+    // Fonction pour calculer le HT à partir du TTC
+    const calculateHT = () => {
+      const ttc = parseFloat(priceTTCInput.value) || 0;
+      const tva = parseFloat(tvaInput.value) || 20;
+      const ht = ttc / (1 + tva / 100);
+      priceHTInput.value = ht.toFixed(2);
+    };
+
+    // Écouter les changements sur TTC et TVA
+    priceTTCInput.addEventListener('input', calculateHT);
+    tvaInput.addEventListener('input', calculateHT);
+
+    this.log('Price calculation initialized');
+  }
+
+  /**
+   * Attache les listeners spécifiques à l'onglet Catalogue.
+   *
+   * Cette méthode est appelée lors du premier affichage de l'onglet Catalogue
+   * (optimisation pour éviter d'attacher des listeners sur des éléments non visibles).
+   *
+   * Listeners attachés :
+   * - Bouton "Ajouter un matériau"
+   * - Bouton "Enregistrer" du formulaire
+   * - Bouton "Confirmer la suppression"
+   * - Bouton "Annuler" du formulaire
+   * - Bouton "Ajouter un fournisseur" depuis le formulaire matériau
+   * - Champ de recherche dans le catalogue
+   * - Filtre par type dans le catalogue
+   *
+   * @private
+   * @returns {void}
+   */
+  attachCatalogueListeners() {
+    // Ne les attacher qu'une seule fois
+    if (this.catalogueListenersAttached) return;
+
+    // Boutons de gestion des matériaux
+    this.addDOMListener('#add-material-btn', 'click', () => {
+      this.addMaterial();
+    });
+
+    this.addDOMListener('#save-material-btn', 'click', () => {
+      this.saveMaterial();
+    });
+
+    this.addDOMListener('#confirmDeleteMaterialBtn', 'click', () => {
+      if (this.materialToDeleteId) {
+        this.deleteMaterial(this.materialToDeleteId);
+      }
+    });
+
+    this.addDOMListener('#cancel-material-btn', 'click', () => {
+      this.clearMaterialForm();
+    });
+
+    // Bouton pour ajouter un fournisseur depuis le formulaire matériau
+    this.addDOMListener('#add-supplier-from-material-btn', 'click', () => {
+      // Ouvrir le formulaire d'ajout de fournisseur
+      if (typeof window.addSupplier === 'function') {
+        window.addSupplier();
+      } else {
+        this.warn('Fonction addSupplier non disponible');
+      }
+    });
+
+    // Filtres de recherche de l'onglet Catalogue
+    // Debouncing 300ms pour optimiser les performances avec grands catalogues
+    const searchInput = this.getElement('#search-materials');
+    if (searchInput) {
+      let debounceTimer;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          this.applyMaterialFilters();
+        }, 300);
+      });
+    }
+
+    const typeFilter = this.getElement('#filter-type');
+    if (typeFilter) {
+      typeFilter.addEventListener('change', () => {
+        this.applyMaterialFilters();
+      });
+    }
+
+    // Pagination - Sélecteur items par page
+    const itemsPerPageSelect = this.getElement('#materials-items-per-page');
+    if (itemsPerPageSelect) {
+      itemsPerPageSelect.addEventListener('change', (e) => {
+        this.pagination.itemsPerPage = parseInt(e.target.value);
+        this.pagination.currentPage = 1; // Reset to first page
+        this.applyMaterialFilters();
+      });
+    }
+
+    this.catalogueListenersAttached = true;
+    this.log('Catalogue listeners attached');
+  }
+
+  /**
+   * Attends que l'ancien code (app-old.js) ait chargé les matériaux.
+   *
+   * **DEPRECATED - Legacy compatibility only**
+   * Cette méthode est conservée pour compatibilité avec app-old.js.
+   * Elle sera supprimée quand app-old.js sera complètement retiré.
+   *
+   * Workflow :
+   * 1. Vérifier toutes les 50ms si window.materials est défini et non vide
+   * 2. Si trouvé : copier dans this.materials et state.materials, populer les filtres, retourner
+   * 3. Si non trouvé après 5 secondes : charger nous-mêmes via loadMaterials()
+   *
+   * @async
+   * @private
+   * @deprecated Sera supprimé lors du retrait complet de app-old.js
+   * @returns {Promise&lt;void>}
+   */
+  async waitForLegacyMaterialsLoad() {
+    const maxWait = 5000; // 5 secondes max
+    const checkInterval = 50; // Vérifier toutes les 50ms
+    let waited = 0;
+
+    while (waited &lt; maxWait) {
+      if (window.materials &amp;&amp; window.materials.length > 0) {
+        this.log(`✅ Using materials already loaded by legacy code: ${window.materials.length} items`);
+        this.materials = window.materials;
+        this.state.set('materials', window.materials);
+
+        // Populer les filtres
+        this.populateTypeFilter();
+        this.populateSearchTypeFilter();
+
+        this.emitEvent('loaded', this.materials);
+        return;
+      }
+
+      // Attendre un peu avant de revérifier
+      await new Promise(resolve => setTimeout(resolve, checkInterval));
+      waited += checkInterval;
+    }
+
+    // Si après 5 secondes les matériaux ne sont toujours pas chargés, charger nous-mêmes
+    this.warn('Legacy materials not loaded after 5s, loading ourselves...');
+    await this.loadMaterials();
+  }
+
+  /**
+   * Charge les matériaux depuis le backend ou le cache.
+   *
+   * Workflow :
+   * 1. Vérifier le cache DataCache (validité : 5 minutes)
+   * 2. Si cache valide : charger depuis cache, exposer à window.materials, émettre event
+   * 3. Si cache invalide/expiré : appeler IPC 'get-materials'
+   * 4. Parser la réponse (peut être tableau direct ou {data: [...]} ou {materials: [...]})
+   * 5. **Protection critique** : si backend retourne [], mais matériaux déjà chargés → GARDER les existants
+   * 6. Sinon : stocker dans this.materials + state.materials + window.materials
+   * 7. Mettre en cache (si non vide)
+   * 8. Émettre événement 'materials:loaded'
+   * 9. Populer les filtres de type
+   *
+   * Protection contre l'écrasement accidentel :
+   * Si le backend retourne un tableau vide mais que des matériaux sont déjà chargés
+   * (dans window.materials ou this.materials), on conserve les matériaux existants
+   * au lieu de les écraser. Ceci évite la perte de données en cas d'erreur backend temporaire.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @fires materials:loaded - Émis quand les matériaux sont chargés avec succès
+   *
+   * @example
+   * await materialsModule.loadMaterials();
+   * // → Matériaux chargés depuis cache ou backend
+   * // → window.materials, this.materials, state.materials sont synchronisés
+   */
+  async loadMaterials() {
+    try {
+      console.log('🔄 loadMaterials() called');
+      console.log('🔄 Current window.materials:', window.materials?.length || 'undefined');
+      console.log('🔄 Current this.materials:', this.materials?.length || 'undefined');
+
+      // Vérifier le cache
+      const cached = DataCache.get('materials');
+      if (cached &amp;&amp; cached.length > 0) {
+        this.materials = cached;
+        this.state.set('materials', cached);
+
+        // Exposer au scope global pour compatibilité avec quick-add.js
+        window.materials = cached;
+
+        console.log(`✅ Materials loaded from cache: ${cached.length} items`);
+        this.emitEvent('loaded', this.materials);
+        return;
+      }
+
+      // 🆕 Afficher skeleton screen pendant le chargement
+      LoadingStateManager.showSkeleton('#materials-table-body', 'table', 8);
+
+      // Charger depuis le backend
+      console.log('🌐 Calling backend API get-materials...');
+      const response = await this.invoke('get-materials');
+      console.log('🌐 Backend response:', response);
+
+      // Gérer le cas où la réponse est un objet ou un tableau direct
+      // Le backend peut retourner: {success: true, data: [...]} OU {materials: [...]} OU directement [...]
+      const materials = Array.isArray(response)
+        ? response
+        : (response.data || response.materials || []);
+      console.log(`🌐 Parsed materials: ${materials.length} items`);
+
+      // 🛡️ PROTECTION CRITIQUE: Ne PAS écraser avec un tableau vide si des matériaux existent déjà
+      if (materials.length === 0 &amp;&amp; (window.materials?.length > 0 || this.materials?.length > 0)) {
+        console.warn('⚠️⚠️⚠️ Backend returned 0 materials but we already have materials loaded!');
+        console.warn('⚠️ Keeping existing materials instead of overwriting with empty array');
+        console.warn(`⚠️ window.materials: ${window.materials?.length || 0}, this.materials: ${this.materials?.length || 0}`);
+
+        // Garder les matériaux existants
+        const existingMaterials = window.materials || this.materials;
+
+        NotificationSystem.warning('Les matériaux existants ont été conservés (erreur de rechargement)');
+        this.emitEvent('loaded', existingMaterials);
+        return;
+      }
+
+      // Si on arrive ici, soit materials.length > 0, soit aucun matériau n'existait avant
+      this.materials = materials;
+      this.state.set('materials', materials);
+
+      // Exposer au scope global pour compatibilité avec quick-add.js
+      window.materials = materials;
+
+      // Mettre en cache SEULEMENT si on a des matériaux
+      if (materials.length > 0) {
+        DataCache.set('materials', materials, 5 * 60 * 1000); // 5 min
+      }
+
+      console.log(`✅ Loaded ${materials.length} materials from backend`);
+      this.emitEvent('loaded', materials);
+
+      // 🆕 Cacher le skeleton screen
+      LoadingStateManager.hideSkeleton('#materials-table-body');
+
+      // Populer les filtres
+      this.populateTypeFilter();
+      this.populateSearchTypeFilter();
+
+    } catch (error) {
+      console.error('❌ Error loading materials:', error);
+      this.error('Error loading materials:', error);
+
+      // 🆕 Afficher état d'erreur avec bouton retry
+      LoadingStateManager.showErrorState(
+        '#materials-table-body',
+        'Impossible de charger les matériaux',
+        () => this.loadMaterials()
+      );
+
+      NotificationSystem.error('Erreur lors du chargement des matériaux');
+    }
+  }
+
+  /**
+   * Populate la table des matériaux dans l'onglet Catalogue avec pagination.
+   *
+   * Affiche tous les matériaux ou un sous-ensemble filtré dans le tableau HTML.
+   * Les matériaux sont triés par ID numérique croissant pour un affichage cohérent.
+   * Applique la pagination si activée.
+   *
+   * Colonnes affichées :
+   * ID, Nom, Prix TTC, Rendement, Stock, Code-barres, Type, Fournisseur,
+   * Densité, Pièces/m², Unité, TVA, Actions (Modifier/Supprimer)
+   *
+   * @param {Array&lt;Object>|null} [filteredMaterials=null] - Matériaux filtrés à afficher.
+   *                                                         Si null, affiche tous les matériaux.
+   * @returns {void}
+   *
+   * @example
+   * // Afficher tous les matériaux
+   * materialsModule.populateMaterialsTable();
+   *
+   * @example
+   * // Afficher uniquement les matériaux filtrés
+   * const filtered = materials.filter(m => m.type === 'Carrelage');
+   * materialsModule.populateMaterialsTable(filtered);
+   */
+  populateMaterialsTable(filteredMaterials = null) {
+    console.log('🔍 [DEBUG] populateMaterialsTable() called');
+
+    const materialsSource = window.materials || this.materials;
+    const materialsToShow = filteredMaterials || materialsSource;
+    const tbody = this.getElement('#materials-table-body');
+
+    console.log('🔍 [DEBUG] materialsSource length:', materialsSource?.length);
+    console.log('🔍 [DEBUG] materialsToShow length:', materialsToShow?.length);
+    console.log('🔍 [DEBUG] tbody element found:', !!tbody);
+
+    if (!tbody) {
+      // Le tableau n'est pas présent dans tous les contextes (normal en mode admin sur d'autres onglets)
+      console.log('⚠️ [DEBUG] tbody not found - exiting populateMaterialsTable');
+      return;
+    }
+
+    if (materialsToShow.length === 0) {
+      console.log('⚠️ [DEBUG] No materials to show - setting empty message');
+      tbody.innerHTML = '&lt;tr>&lt;td colspan="5" class="text-center">Aucun matériau trouvé&lt;/td>&lt;/tr>';
+      this.updatePaginationControls(0, []);
+      return;
+    }
+
+    // Trier les matériaux par ID numérique
+    const sortedMaterials = [...materialsToShow].sort((a, b) => {
+      const idA = parseInt(a.id) || 0;
+      const idB = parseInt(b.id) || 0;
+      return idA - idB;
+    });
+
+    // Mettre à jour les infos de pagination
+    this.pagination.totalItems = sortedMaterials.length;
+    this.pagination.totalPages = Math.ceil(sortedMaterials.length / this.pagination.itemsPerPage);
+
+    // S'assurer que currentPage est dans les limites
+    if (this.pagination.currentPage > this.pagination.totalPages) {
+      this.pagination.currentPage = this.pagination.totalPages || 1;
+    }
+
+    // Calculer les indices de début et fin pour la page actuelle
+    const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage;
+    const endIndex = startIndex + this.pagination.itemsPerPage;
+    const paginatedMaterials = sortedMaterials.slice(startIndex, endIndex);
+
+    console.log('✅ [DEBUG] Generating HTML for', paginatedMaterials.length, 'materials (page', this.pagination.currentPage, 'of', this.pagination.totalPages, ')');
+    tbody.innerHTML = paginatedMaterials.map(material => {
+      const priceHT = typeof material.price === 'number' ? material.price : 0;
+      const tvaValue = material.tva || (material.tvaRate * 100) || 20;
+      const priceTTC = priceHT * (1 + tvaValue / 100);
+      const stock = TextFormatter.escapeHtml(material.stock ?? '-');
+      const type = TextFormatter.escapeHtml(material.type ?? '-');
+      const name = TextFormatter.escapeHtml(material.name ?? '-');
+
+      return `
+        &lt;tr data-id="${material.id}">
+          &lt;td class="text-center">
+            &lt;input type="checkbox"
+                   class="form-check-input material-bulk-checkbox"
+                   data-id="${material.id}">
+          &lt;/td>
+          &lt;td>&lt;strong>${name}&lt;/strong>&lt;/td>
+          &lt;td>${priceTTC.toFixed(2)} €&lt;/td>
+          &lt;td>${stock}&lt;/td>
+          &lt;td>${type}&lt;/td>
+          &lt;td>
+            &lt;div class="btn-icon-group">
+              &lt;button onclick="viewMaterialDetails(${material.id})" class="btn btn-sm btn-info btn-icon" data-bs-toggle="tooltip" title="Voir détails">&lt;i class="fas fa-info-circle">&lt;/i>&lt;/button>
+              &lt;button onclick="editMaterial(${material.id})" class="btn btn-sm btn-primary btn-icon" data-bs-toggle="tooltip" title="Modifier">&lt;i class="fas fa-edit">&lt;/i>&lt;/button>
+              &lt;button class="btn btn-sm btn-danger btn-icon" onclick="askDeleteMaterial(${material.id})" data-bs-toggle="tooltip" title="Supprimer">&lt;i class="fas fa-trash-alt">&lt;/i>&lt;/button>
+            &lt;/div>
+          &lt;/td>
+        &lt;/tr>
+      `;
+    }).join('');
+
+    console.log('✅ [DEBUG] HTML generated and set to tbody. Total rows:', paginatedMaterials.length);
+    this.log(`Populated table with ${paginatedMaterials.length}/${sortedMaterials.length} materials (page ${this.pagination.currentPage}/${this.pagination.totalPages})`);
+
+    // Mettre à jour les contrôles de pagination
+    this.updatePaginationControls(sortedMaterials.length, paginatedMaterials);
+
+    // Initialiser les bulk actions
+    if (this.bulkActions) {
+      this.bulkActions.initialize();
+    }
+  }
+
+  /**
+   * Charge les matériaux dans la table (callback onglet).
+   *
+   * Méthode de convenance qui combine le chargement des matériaux
+   * et la population de la table en une seule opération.
+   * Utilisée comme callback lors de l'ouverture de l'onglet Catalogue.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async loadMaterialsIntoTable() {
+    await this.loadMaterials();
+    this.populateMaterialsTable();
+  }
+
+  /**
+   * Populate le filtre de type dans l'onglet Catalogue.
+   *
+   * Génère dynamiquement les options du select de filtrage par type,
+   * avec un compteur du nombre de matériaux par type.
+   *
+   * Format des options : "Type (nombre)" (ex: "Carrelage (42)")
+   * Les types sont triés alphabétiquement.
+   *
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * // Après chargement des matériaux
+   * this.populateTypeFilter();
+   * // → Select contient: "Tous les types", "Carrelage (42)", "Peinture (18)", etc.
+   */
+  populateTypeFilter() {
+    const typeFilter = this.getElement('#filter-type');
+    if (!typeFilter) return;
+
+    const materialsSource = window.materials || this.materials;
+
+    // Compter les matériaux par type
+    const typeCount = {};
+    materialsSource.forEach(m => {
+      const type = m.type || 'Non catégorisé';
+      typeCount[type] = (typeCount[type] || 0) + 1;
+    });
+
+    const types = Object.keys(typeCount).sort();
+
+    typeFilter.innerHTML = '&lt;option value="">Tous les types&lt;/option>' +
+      types.map(type => `&lt;option value="${type}">${type} (${typeCount[type]})&lt;/option>`).join('');
+  }
+
+  /**
+   * Populate le filtre de type dans l'onglet Recherche.
+   *
+   * Génère dynamiquement les options du select de filtrage par type,
+   * avec un compteur du nombre de matériaux par type.
+   * Identique à populateTypeFilter() mais pour l'onglet Recherche.
+   *
+   * Format des options : "Type (nombre)" (ex: "Carrelage (42)")
+   * Les types sont triés alphabétiquement.
+   *
+   * @private
+   * @returns {void}
+   */
+  populateSearchTypeFilter() {
+    const typeFilter = this.getElement('#search-type-filter');
+    if (!typeFilter) {
+      this.log('⚠️ search-type-filter element not found (normal if not on Recherche tab)');
+      return;
+    }
+
+    const materialsSource = window.materials || this.materials;
+
+    // Compter le nombre de matériaux par type
+    const typeCount = {};
+    materialsSource.forEach(material => {
+      const type = material.type || 'Non catégorisé';
+      typeCount[type] = (typeCount[type] || 0) + 1;
+    });
+
+    // Trier les types alphabétiquement
+    const sortedTypes = Object.keys(typeCount).sort();
+
+    // Générer les options avec compteur
+    typeFilter.innerHTML = '&lt;option value="">Toutes les catégories&lt;/option>' +
+      sortedTypes.map(type => `&lt;option value="${type}">${type} (${typeCount[type]})&lt;/option>`).join('');
+
+    this.log(`✅ Filtre par catégorie (Recherche) rafraîchi: ${sortedTypes.length} types`);
+  }
+
+  /**
+   * Applique les filtres sur les matériaux dans l'onglet Catalogue.
+   *
+   * Filtres cumulatifs appliqués (logique ET) :
+   * 1. Recherche textuelle : nom, référence, type (insensible à la casse)
+   * 2. Filtre par type : catégorie exacte
+   * 3. Filtre par fournisseur : nom exact (si this.currentSupplierFilter est défini)
+   *
+   * Appelle populateMaterialsTable() avec les matériaux filtrés.
+   * Loggue le nombre de résultats trouvés.
+   *
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur tape "carrelage" dans la recherche et sélectionne type "Sol"
+   * this.applyMaterialFilters();
+   * // → Affiche uniquement les matériaux de type "Sol" contenant "carrelage"
+   */
+  applyMaterialFilters() {
+    const searchText = this.getValue('#search-materials')?.toLowerCase() || '';
+    const selectedType = this.getValue('#filter-type') || '';
+
+    const materialsSource = window.materials || this.materials;
+    const filtered = materialsSource.filter(material => {
+      const matchesSearch = !searchText ||
+        material.name?.toLowerCase().includes(searchText) ||
+        material.reference?.toLowerCase().includes(searchText) ||
+        material.type?.toLowerCase().includes(searchText);
+
+      const matchesType = !selectedType || material.type === selectedType;
+
+      // Filtre par fournisseur (si actif)
+      const matchesSupplier = !this.currentSupplierFilter || material.supplier === this.currentSupplierFilter;
+
+      return matchesSearch &amp;&amp; matchesType &amp;&amp; matchesSupplier;
+    });
+
+    this.populateMaterialsTable(filtered);
+    this.log(`Filtered: ${filtered.length}/${materialsSource.length} materials`);
+  }
+
+  /**
+   * Filtre les matériaux par fournisseur.
+   *
+   * Cette méthode est généralement appelée depuis le SuppliersModule
+   * lorsque l'utilisateur clique sur "Voir les matériaux" d'un fournisseur.
+   *
+   * Workflow :
+   * 1. Définir this.currentSupplierFilter = supplierName
+   * 2. Réinitialiser les autres filtres (recherche, type)
+   * 3. Appliquer les filtres (applyMaterialFilters)
+   * 4. Afficher un indicateur visuel du filtre actif
+   *
+   * @param {string} supplierName - Nom du fournisseur à filtrer (ou null pour réinitialiser)
+   * @returns {void}
+   *
+   * @example
+   * // Depuis SuppliersModule
+   * materialsModule.filterBySupplier('Leroy Merlin');
+   * // → Affiche uniquement les matériaux du fournisseur "Leroy Merlin"
+   */
+  filterBySupplier(supplierName) {
+    this.log(`Filtering materials by supplier: ${supplierName || 'NONE'}`);
+
+    // Définir le filtre actif
+    this.currentSupplierFilter = supplierName;
+
+    // Réinitialiser les autres filtres pour voir tous les matériaux du fournisseur
+    this.setValue('#search-materials', '');
+    this.setValue('#filter-type', '');
+
+    // Appliquer les filtres
+    this.applyMaterialFilters();
+
+    // Afficher un indicateur visuel du filtre actif
+    this.updateSupplierFilterIndicator(supplierName);
+  }
+
+  /**
+   * Met à jour l'indicateur visuel du filtre fournisseur actif.
+   *
+   * Affiche une alerte Bootstrap en haut de l'onglet Catalogue pour indiquer
+   * qu'un filtre fournisseur est actif, avec un bouton pour le supprimer.
+   *
+   * @param {string|null} supplierName - Nom du fournisseur filtré, ou null pour masquer l'indicateur
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * this.updateSupplierFilterIndicator('Leroy Merlin');
+   * // → Affiche "Filtre actif : Fournisseur 'Leroy Merlin'" avec bouton de fermeture
+   *
+   * this.updateSupplierFilterIndicator(null);
+   * // → Masque l'indicateur
+   */
+  updateSupplierFilterIndicator(supplierName) {
+    const container = this.getElement('#supplier-filter-container');
+    if (!container) return;
+
+    if (supplierName) {
+      // Afficher l'indicateur
+      container.innerHTML = `
+        &lt;div class="alert alert-info alert-dismissible fade show mb-0 d-flex align-items-center" role="alert" style="position: relative; clear: both; width: 100%;">
+          &lt;i class="fas fa-filter me-2">&lt;/i>
+          &lt;strong>Filtre actif :&lt;/strong>&amp;nbsp;Fournisseur "${supplierName}"
+          &lt;button type="button" class="btn-close ms-auto" onclick="window.clearSupplierFilter()" aria-label="Fermer">&lt;/button>
+        &lt;/div>
+      `;
+    } else {
+      // Effacer l'indicateur
+      container.innerHTML = '';
+    }
+  }
+
+  /**
+   * Réinitialise le filtre par fournisseur.
+   *
+   * Supprime le filtre fournisseur actif, masque l'indicateur visuel,
+   * et réapplique les autres filtres.
+   *
+   * @returns {void}
+   *
+   * @example
+   * materialsModule.clearSupplierFilter();
+   * // → Affiche à nouveau tous les matériaux (selon autres filtres actifs)
+   */
+  clearSupplierFilter() {
+    this.log('Clearing supplier filter');
+    this.currentSupplierFilter = null;
+    this.updateSupplierFilterIndicator(null);
+    this.applyMaterialFilters();
+  }
+
+  /**
+   * Filtre les matériaux pour la recherche dans l'onglet Recherche.
+   *
+   * Applique les critères de recherche et affiche les résultats en temps réel.
+   *
+   * Filtres appliqués :
+   * - Recherche textuelle : nom, référence, type (insensible à la casse)
+   * - Filtre par type : catégorie exacte
+   *
+   * Les résultats sont stockés dans this.filteredMaterials et affichés
+   * via displaySearchResults().
+   *
+   * @private
+   * @returns {void}
+   */
+  async filterMaterialsForSearch() {
+    const searchText = this.getValue('#search-input')?.toLowerCase() || '';
+    const selectedType = this.getValue('#search-type-filter') || '';
+
+    const materialsSource = window.materials || this.materials;
+    const filtered = materialsSource.filter(material => {
+      const matchesSearch = !searchText ||
+        material.name?.toLowerCase().includes(searchText) ||
+        material.reference?.toLowerCase().includes(searchText) ||
+        material.type?.toLowerCase().includes(searchText);
+
+      const matchesType = !selectedType || material.type === selectedType;
+
+      return matchesSearch &amp;&amp; matchesType;
+    });
+
+    this.filteredMaterials = filtered;
+    this.displaySearchResults(filtered);
+
+    // Suggestions ML intelligentes (si recherche active)
+    if (searchText &amp;&amp; searchText.length >= 3) {
+      await this.displayMLSuggestions(searchText);
+    }
+  }
+
+  /**
+   * Affiche les résultats de recherche dans l'onglet Recherche.
+   *
+   * Génère des cartes HTML pour chaque matériau trouvé, triées par ID numérique.
+   * Chaque carte affiche :
+   * - Nom et référence
+   * - Prix TTC calculé
+   * - Type
+   * - Stock
+   * - Bouton "Sélectionner"
+   *
+   * @param {Array&lt;Object>} materials - Matériaux à afficher
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * const filtered = materials.filter(m => m.name.includes('carrelage'));
+   * this.displaySearchResults(filtered);
+   * // → Affiche les cartes de matériaux contenant "carrelage"
+   */
+  displaySearchResults(materials) {
+    const resultsContainer = this.getElement('#search-results');
+    if (!resultsContainer) return;
+
+    if (materials.length === 0) {
+      resultsContainer.innerHTML = '&lt;p class="text-muted">Aucun matériau trouvé&lt;/p>';
+      return;
+    }
+
+    // Récupérer le terme de recherche pour tri par pertinence
+    const searchText = this.getValue('#search-input')?.toLowerCase() || '';
+
+    // Trier les matériaux par pertinence puis par ID
+    const sortedMaterials = [...materials].sort((a, b) => {
+      if (!searchText) {
+        // Pas de recherche : tri par ID
+        return (parseInt(a.id) || 0) - (parseInt(b.id) || 0);
+      }
+
+      // Calculer score de pertinence pour chaque matériau
+      const getRelevanceScore = (material) => {
+        const name = (material.name || '').toLowerCase();
+        const reference = (material.reference || '').toLowerCase();
+        const type = (material.type || '').toLowerCase();
+
+        // Correspondance exacte dans le nom = 1000 points
+        if (name === searchText) return 1000;
+
+        // Nom commence par le terme de recherche = 500 points
+        if (name.startsWith(searchText)) return 500;
+
+        // Nom contient le terme de recherche = 300 points
+        if (name.includes(searchText)) return 300;
+
+        // Référence contient le terme = 200 points
+        if (reference.includes(searchText)) return 200;
+
+        // Type contient le terme = 100 points
+        if (type.includes(searchText)) return 100;
+
+        return 0;
+      };
+
+      const scoreA = getRelevanceScore(a);
+      const scoreB = getRelevanceScore(b);
+
+      // Trier par score décroissant, puis par ID si égalité
+      if (scoreB !== scoreA) {
+        return scoreB - scoreA;
+      }
+      return (parseInt(a.id) || 0) - (parseInt(b.id) || 0);
+    });
+
+    resultsContainer.innerHTML = sortedMaterials.map(material => {
+      // Calculer le Prix TTC comme dans le backup
+      const priceTTC = (material.price || 0) * (1 + (material.tva || 20) / 100);
+      const name = TextFormatter.escapeHtml(material.name);
+      const reference = TextFormatter.escapeHtml(material.reference || '-');
+      const type = TextFormatter.escapeHtml(material.type || '-');
+      const stock = material.stock !== undefined ? material.stock : 'N/A';
+
+      return `
+        &lt;div class="mb-2 p-2 border rounded" style="cursor: pointer;">
+          &lt;strong>${name}&lt;/strong> (Réf: ${reference})&lt;br>
+          Prix TTC: ${priceTTC.toFixed(2)} €&lt;br>
+          Type: ${type}&lt;br>
+          Stock: ${stock}&lt;br>
+          &lt;button class="btn btn-primary btn-sm mt-2" onclick="selectMaterial(${material.id})">Sélectionner&lt;/button>
+        &lt;/div>
+      `;
+    }).join('');
+  }
+
+  /**
+   * Affiche les suggestions ML intelligentes basées sur la recherche.
+   *
+   * Cette méthode utilise le MLService pour obtenir des suggestions
+   * de matériaux similaires via algorithme TF-IDF (si serveur ML actif)
+   * ou recherche textuelle simple (fallback JavaScript).
+   *
+   * Les suggestions sont affichées en haut des résultats avec un badge "ML"
+   * et un pourcentage de pertinence.
+   *
+   * @param {string} searchQuery - Terme de recherche
+   * @returns {Promise&lt;void>}
+   * @private
+   *
+   * @example
+   * await this.displayMLSuggestions('béton');
+   * // → Affiche suggestions intelligentes pour "béton"
+   */
+  async displayMLSuggestions(searchQuery) {
+    try {
+      // Récupérer suggestions via MLService (auto-fallback si ML indisponible)
+      const suggestions = await mlService.suggestMaterials(searchQuery, 5);
+
+      if (!suggestions || suggestions.length === 0) {
+        return; // Pas de suggestions, ne rien afficher
+      }
+
+      const resultsContainer = this.getElement('#search-results');
+      if (!resultsContainer) return;
+
+      // Créer section suggestions ML
+      const mlContainer = document.createElement('div');
+      mlContainer.id = 'ml-suggestions-container';
+      mlContainer.className = 'mb-3 p-3 border rounded bg-gradient-to-r from-purple-50 to-indigo-50';
+      mlContainer.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      mlContainer.style.color = 'white';
+      mlContainer.style.borderRadius = '8px';
+      mlContainer.style.marginBottom = '16px';
+
+      const header = document.createElement('div');
+      header.className = 'mb-2';
+      header.innerHTML = `
+        &lt;strong>
+          &lt;i class="fas fa-brain">&lt;/i> Suggestions Intelligentes ML
+        &lt;/strong>
+        &lt;small class="ms-2" style="opacity: 0.9;">Basé sur votre recherche&lt;/small>
+      `;
+      mlContainer.appendChild(header);
+
+      // Ajouter chaque suggestion
+      suggestions.forEach(material => {
+        const priceTTC = (material.price || 0) * (1 + (material.tva || 20) / 100);
+        const name = TextFormatter.escapeHtml(material.name);
+        const reference = TextFormatter.escapeHtml(material.reference || '-');
+        const type = TextFormatter.escapeHtml(material.type || '-');
+        const similarity = Math.round((material.similarity || 0) * 100);
+
+        const suggestionCard = document.createElement('div');
+        suggestionCard.className = 'mt-2 p-2 rounded';
+        suggestionCard.style.background = 'rgba(255, 255, 255, 0.2)';
+        suggestionCard.style.cursor = 'pointer';
+        suggestionCard.style.transition = 'background 0.2s';
+        suggestionCard.onmouseover = () => suggestionCard.style.background = 'rgba(255, 255, 255, 0.3)';
+        suggestionCard.onmouseout = () => suggestionCard.style.background = 'rgba(255, 255, 255, 0.2)';
+
+        suggestionCard.innerHTML = `
+          &lt;div class="d-flex justify-content-between align-items-start">
+            &lt;div>
+              &lt;strong>${name}&lt;/strong> &lt;small>(Réf: ${reference})&lt;/small>&lt;br>
+              &lt;small>Prix TTC: ${priceTTC.toFixed(2)} € | Type: ${type}&lt;/small>
+            &lt;/div>
+            &lt;span class="badge bg-light text-dark ms-2">${similarity}% pertinent&lt;/span>
+          &lt;/div>
+          &lt;button class="btn btn-light btn-sm mt-2" onclick="selectMaterial(${material.id})">
+            &lt;i class="fas fa-check">&lt;/i> Sélectionner
+          &lt;/button>
+        `;
+
+        mlContainer.appendChild(suggestionCard);
+      });
+
+      // Supprimer ancien container ML s'il existe
+      const oldML = resultsContainer.querySelector('#ml-suggestions-container');
+      if (oldML) oldML.remove();
+
+      // Insérer en premier (avant résultats normaux)
+      resultsContainer.insertBefore(mlContainer, resultsContainer.firstChild);
+
+    } catch (error) {
+      this.error('Erreur suggestions ML:', error);
+      // Ne pas afficher d'erreur à l'utilisateur (feature optionnelle)
+    }
+  }
+
+  /**
+   * Sélectionne un matériau pour l'ajouter au devis.
+   *
+   * Workflow :
+   * 1. Trouver le matériau par ID dans window.materials ou this.materials
+   * 2. Vérifier que les matériaux sont chargés (sinon afficher erreur + recharger)
+   * 3. Stocker le matériau dans state.selectedMaterial + window.selectedMaterial
+   * 4. Tracker la recherche pour analytics (si window.trackMaterialSearch existe)
+   * 5. Rafraîchir le dashboard Vendeur si on est sur l'onglet Accueil
+   * 6. Nettoyer les champs de recherche
+   * 7. Mettre à jour l'affichage du matériau sélectionné
+   * 8. Mettre à jour l'aperçu du calcul (via window.updateCalculationPreview)
+   * 9. Émettre événement 'materials:selected'
+   * 10. Afficher une notification de succès
+   *
+   * @param {number|string} id - ID du matériau à sélectionner
+   * @returns {void}
+   *
+   * @fires materials:selected - Émis quand un matériau est sélectionné avec succès
+   *
+   * @example
+   * // Depuis l'onglet Recherche
+   * materialsModule.selectMaterial(42);
+   * // → Matériau #42 sélectionné, affiché dans le dashboard, prêt pour calcul devis
+   */
+  selectMaterial(id) {
+    this.log('🎯 Sélection du matériau ID:', id);
+
+    // En mode hybride, lire depuis window.materials pour compatibilité
+    // Vérifier que le tableau contient des éléments
+    const materialsSource = (window.materials &amp;&amp; window.materials.length > 0)
+      ? window.materials
+      : this.materials;
+
+    // Si aucun matériau n'est chargé, afficher un message d'attente
+    if (!materialsSource || materialsSource.length === 0) {
+      this.warn('Materials not loaded yet, please wait...');
+      NotificationSystem.warning('Chargement des matériaux en cours, veuillez patienter...');
+      // Tenter de recharger
+      setTimeout(() => this.loadMaterials(), 100);
+      return;
+    }
+
+    const material = materialsSource.find(m => String(m.id) === String(id));
+
+    if (!material) {
+      this.error(`❌ Matériau non trouvé pour ID: ${id}. Matériaux disponibles: ${materialsSource.length}`);
+      this.error(`IDs disponibles: ${materialsSource.map(m => m.id).slice(0, 10).join(', ')}...`);
+      NotificationSystem.error('Matériau introuvable');
+      return;
+    }
+
+    // Stocker le matériau sélectionné dans le state global
+    this.state.set('selectedMaterial', material);
+
+    // Mettre à jour window.selectedMaterial pour compatibilité
+    window.selectedMaterial = material;
+
+    // Tracker la recherche pour analytics (via ancien code)
+    if (typeof window.trackMaterialSearch === 'function') {
+      window.trackMaterialSearch(material);
+    }
+
+    // Rafraîchir le dashboard Vendeur si on est sur l'onglet Accueil
+    const accueilTab = this.getElement('#accueil');
+    if (accueilTab &amp;&amp; accueilTab.classList.contains('active')) {
+      setTimeout(() => {
+        if (typeof window.loadVendeurDashboard === 'function') {
+          window.loadVendeurDashboard();
+        }
+      }, 100);
+    }
+
+    // Nettoyer les champs de recherche
+    const searchInput = this.getElement('#search-input');
+    const searchResults = this.getElement('#search-results');
+    if (searchInput) searchInput.value = '';
+    if (searchResults) searchResults.innerHTML = '';
+
+    // Mettre à jour l'affichage
+    this.updateSelectedMaterialDisplay();
+
+    // Mettre à jour l'aperçu du calcul (via QuoteBuilderModule)
+    if (typeof window.updateCalculationPreview === 'function') {
+      window.updateCalculationPreview();
+    }
+
+    this.log(`✅ Matériau sélectionné: ${material.name}`);
+    this.emitEvent('selected', material);
+
+    // Afficher une notification
+    NotificationSystem.success(`${material.name} sélectionné`);
+  }
+
+  /**
+   * Met à jour l'affichage du matériau sélectionné dans le dashboard Vendeur.
+   *
+   * Affiche les informations du matériau actuellement sélectionné :
+   * - Nom
+   * - Référence
+   * - Unité
+   * - Prix unitaire HT
+   * - TVA
+   * - Prix unitaire TTC (calculé)
+   *
+   * Si aucun matériau n'est sélectionné, affiche "Aucun".
+   *
+   * @returns {void}
+   *
+   * @example
+   * // Après sélection d'un matériau
+   * this.updateSelectedMaterialDisplay();
+   * // → Affiche "Matériau sélectionné : Carrelage XYZ | Réf : 12345 | ..."
+   */
+  updateSelectedMaterialDisplay() {
+    const material = this.state.get('selectedMaterial') || window.selectedMaterial;
+    const display = this.getElement('#selected-material-display');
+
+    if (!display) return;
+
+    if (!material) {
+      display.innerHTML = '&lt;strong>Matériau sélectionné :&lt;/strong> Aucun';
+      return;
+    }
+
+    // Calculer le prix TTC
+    const priceHT = material.price || 0;
+    const tvaRate = (material.tva || 20) / 100;
+    const priceTTC = priceHT * (1 + tvaRate);
+
+    const name = TextFormatter.escapeHtml(material.name);
+    const reference = TextFormatter.escapeHtml(material.reference || '-');
+    const unit = TextFormatter.escapeHtml(material.unit || '-');
+
+    display.innerHTML = `
+      &lt;strong>Matériau sélectionné :&lt;/strong> ${name}&lt;br>
+      &lt;strong>Réf :&lt;/strong> ${reference} |
+      &lt;strong>Unité :&lt;/strong> ${unit} |
+      &lt;strong>Prix unitaire HT :&lt;/strong> ${priceHT.toFixed(2)} € |
+      &lt;strong>TVA :&lt;/strong> ${material.tva || 20}% |
+      &lt;strong>Prix unitaire TTC :&lt;/strong> ${priceTTC.toFixed(2)} €
+    `;
+  }
+
+  /**
+   * Prépare le formulaire pour ajouter un nouveau matériau.
+   *
+   * Workflow :
+   * 1. Nettoyer le formulaire (clearMaterialForm)
+   * 2. Passer en mode ajout (editMode = false)
+   * 3. Changer le titre du modal → "Ajouter un matériau"
+   * 4. Afficher le modal Bootstrap
+   * 5. Focus sur le champ "Nom" après 500ms
+   *
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Ajouter un matériau" (onglet Catalogue)
+   * materialsModule.addMaterial();
+   * // → Modal s'ouvre avec formulaire vide
+   */
+  addMaterial() {
+    this.clearMaterialForm();
+    this.editMode = false;
+    this.state.set('materialEditMode', false);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#material-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-plus">&lt;/i> Ajouter un matériau';
+    }
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('materialFormModal');
+    }
+
+    // Focus sur le premier champ après l'ouverture du modal
+    setTimeout(() => {
+      const nameInput = this.getElement('#material-name');
+      if (nameInput) {
+        nameInput.focus();
+      }
+    }, 500);
+
+    this.log('Add material form opened');
+  }
+
+  /**
+   * Charge un matériau existant dans le formulaire pour édition.
+   *
+   * Workflow :
+   * 1. Trouver le matériau par ID dans window.materials ou this.materials
+   * 2. Si non trouvé : erreur + notification
+   * 3. Passer en mode édition (editMode = true)
+   * 4. Changer le titre du modal → "Modifier le matériau"
+   * 5. Remplir tous les champs du formulaire avec les valeurs existantes
+   * 6. Calculer le prix TTC à partir du HT pour l'affichage
+   * 7. Afficher le modal Bootstrap
+   *
+   * Note : L'ID est stocké dans un champ caché (#material-id) pour
+   * identifier le matériau lors de la sauvegarde.
+   *
+   * @param {number|string} id - ID du matériau à éditer
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Modifier" d'un matériau
+   * materialsModule.editMaterial(42);
+   * // → Modal s'ouvre avec formulaire prérempli du matériau #42
+   */
+  editMaterial(id) {
+    console.log('🔍🔍🔍 EDIT MATERIAL CALLED - ID:', id, 'type:', typeof id);
+    console.log('window.materials:', window.materials?.length || 'undefined');
+    console.log('this.materials:', this.materials?.length || 'undefined');
+
+    const materialsSource = window.materials || this.materials;
+    console.log('🔍 materialsSource chosen:', materialsSource?.length, 'items');
+    console.log('🔍 materialsSource is array?', Array.isArray(materialsSource));
+    console.log('🔍 materialsSource value:', materialsSource);
+
+    if (materialsSource &amp;&amp; materialsSource.length > 0) {
+      console.log('🔍 First 3 materials:', materialsSource.slice(0, 3).map(m => ({ id: m.id, type: typeof m.id, name: m.name })));
+    } else {
+      console.log('❌ materialsSource is EMPTY or UNDEFINED!');
+    }
+
+    const material = materialsSource?.find(m => String(m.id) === String(id));
+
+    if (!material) {
+      console.error('❌❌❌ MATERIAL NOT FOUND FOR ID:', id);
+      console.error('Available IDs:', materialsSource?.map(m => m.id).join(', ') || 'NONE');
+      this.error('❌ Matériau introuvable pour ID:', id);
+      this.error('IDs disponibles:', materialsSource?.map(m => m.id).join(', '));
+      NotificationSystem.error('Matériau introuvable');
+      return;
+    }
+
+    this.editMode = true;
+    this.state.set('materialEditMode', true);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#material-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-edit">&lt;/i> Modifier le matériau';
+    }
+
+    // Remplir le formulaire
+    console.log('🔧 Remplissage du formulaire avec:', material);
+    this.setValue('#material-id', material.id); // ID (caché)
+    this.setValue('#material-reference', material.reference || ''); // Optionnel
+    this.setValue('#material-name', material.name || '');
+    console.log('🔧 Nom défini:', material.name, '- Vérif élément:', document.getElementById('material-name')?.value);
+    this.setValue('#material-type', material.type || '');
+    console.log('🔧 Type défini:', material.type, '- Vérif élément:', document.getElementById('material-type')?.value);
+    this.setValue('#material-unit', material.unit || '');
+    this.setValue('#material-supplier', material.supplier || ''); // Nouveau champ fournisseur
+
+    // Calculer le TTC à partir du HT pour l'affichage
+    const priceHT = material.price || 0;
+    const tvaValue = material.tva || 20;
+    const priceTTC = priceHT * (1 + tvaValue / 100);
+
+    this.setValue('#material-price', priceHT);
+    this.setValue('#material-price-ttc', priceTTC.toFixed(2));
+    this.setValue('#material-tva', tvaValue);
+    this.setValue('#material-coverage', material.coverage || 0);
+    this.setValue('#material-piecesPerM2', material.piecesPerM2 || 0);
+    this.setValue('#material-density', material.density || 0);
+    this.setValue('#material-unitWeight', material.unitWeight || 0);
+    this.setValue('#material-stock', material.stock || 0);
+    this.setValue('#material-barcode', material.barcode || '');
+    this.setValue('#material-purchase-cost', material.purchaseCost || 0);
+    console.log('✅ Formulaire rempli complètement');
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('materialFormModal');
+    }
+
+    this.log('Editing material:', material.name);
+  }
+
+  /**
+   * Sauvegarde un matériau (ajout ou modification).
+   *
+   * Workflow :
+   * 1. Récupérer toutes les valeurs du formulaire
+   * 2. Valider les champs obligatoires (nom, type)
+   * 3. Si échec validation : afficher erreur, arrêter
+   * 4. Récupérer le sessionToken pour autorisation
+   * 5. Si editMode = true :
+   *    - Appeler IPC 'updateMaterial' avec sessionToken + données
+   *    - Si succès : notification + événement 'materials:updated'
+   * 6. Si editMode = false :
+   *    - Appeler IPC 'addMaterial' avec sessionToken + données
+   *    - Si succès : notification + événement 'materials:added'
+   * 7. Invalider le cache DataCache
+   * 8. Recharger les matériaux depuis le backend
+   * 9. Rafraîchir la table
+   * 10. Nettoyer et fermer le formulaire
+   *
+   * En cas d'erreur : afficher notification d'erreur, garder le modal ouvert.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @fires materials:added - Émis quand un matériau est ajouté avec succès
+   * @fires materials:updated - Émis quand un matériau est modifié avec succès
+   *
+   * @example
+   * // Utilisateur remplit le formulaire et clique "Enregistrer"
+   * await materialsModule.saveMaterial();
+   * // → Matériau sauvegardé, table rafraîchie, modal fermé
+   */
+  async saveMaterial() {
+    // 🆕 Récupérer le bouton pour le loading state
+    const saveButton = document.getElementById('save-material-btn');
+
+    try {
+      // Récupérer les valeurs du formulaire
+      const materialData = {
+        reference: this.getValue('#material-reference') || '', // Optionnel
+        name: this.getValue('#material-name'),
+        type: this.getValue('#material-type'),
+        unit: this.getValue('#material-unit'),
+        price: parseFloat(this.getValue('#material-price') || 0),
+        tva: parseFloat(this.getValue('#material-tva') || 20),
+        coverage: parseFloat(this.getValue('#material-coverage') || 0),
+        piecesPerM2: parseFloat(this.getValue('#material-piecesPerM2') || 0),
+        density: parseFloat(this.getValue('#material-density') || 0),
+        unitWeight: parseFloat(this.getValue('#material-unitWeight') || 0),
+        stock: parseFloat(this.getValue('#material-stock') || 0),
+        barcode: this.getValue('#material-barcode') || '',
+        purchaseCost: parseFloat(this.getValue('#material-purchase-cost') || 0),
+        supplier: this.getValue('#material-supplier') || '' // Nouveau champ fournisseur
+      };
+
+      // Validation
+      if (!materialData.name || !materialData.type) {
+        NotificationSystem.error('Nom et type sont requis');
+        return;
+      }
+
+      // 🆕 Activer le loading state sur le bouton
+      LoadingStateManager.buttonLoading(saveButton, true, 'Enregistrement...');
+
+      const sessionToken = this.getSessionToken();
+
+      if (this.editMode) {
+        // Modification
+        const id = this.getValue('#material-id');
+        materialData.id = id;
+
+        // 🔄 Sauvegarder l'ancien état pour Undo/Redo
+        const oldMaterial = this.materials.find(m => m.id == id);
+        const oldMaterialCopy = oldMaterial ? { ...oldMaterial } : null;
+
+        const result = await this.invokeAPI('updateMaterial', sessionToken, materialData);
+
+        if (result.success) {
+          NotificationSystem.success('Matériau modifié avec succès');
+          this.emitEvent('updated', materialData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; oldMaterialCopy) {
+            window.UndoRedoManager.record({
+              type: 'MATERIAL_UPDATE',
+              description: `Modification matériau "${materialData.name}"`,
+              undo: async () => {
+                // Restaurer l'ancien état
+                await this.invokeAPI('updateMaterial', sessionToken, oldMaterialCopy);
+                CacheKeys.invalidate(CacheKeys.MATERIALS);
+                await this.loadMaterials();
+                this.populateMaterialsTable();
+              },
+              redo: async () => {
+                // Réappliquer la modification
+                await this.invokeAPI('updateMaterial', sessionToken, materialData);
+                CacheKeys.invalidate(CacheKeys.MATERIALS);
+                await this.loadMaterials();
+                this.populateMaterialsTable();
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || 'Erreur lors de la modification');
+        }
+      } else {
+        // Ajout
+        const result = await this.invokeAPI('addMaterial', sessionToken, materialData);
+
+        if (result.success) {
+          NotificationSystem.success('Matériau ajouté avec succès');
+          this.emitEvent('added', materialData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; result.material) {
+            const newMaterialId = result.material.id || result.id;
+            window.UndoRedoManager.record({
+              type: 'MATERIAL_CREATE',
+              description: `Création matériau "${materialData.name}"`,
+              undo: async () => {
+                // Supprimer le matériau créé
+                await this.invokeAPI('deleteMaterial', sessionToken, newMaterialId);
+                CacheKeys.invalidate(CacheKeys.MATERIALS);
+                await this.loadMaterials();
+                this.populateMaterialsTable();
+              },
+              redo: async () => {
+                // Recréer le matériau
+                await this.invokeAPI('addMaterial', sessionToken, materialData);
+                CacheKeys.invalidate(CacheKeys.MATERIALS);
+                await this.loadMaterials();
+                this.populateMaterialsTable();
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || 'Erreur lors de l\'ajout');
+        }
+      }
+
+      // Recharger les matériaux
+      CacheKeys.invalidate(CacheKeys.MATERIALS);
+      await this.loadMaterials();
+
+      // Rafraîchir la table
+      this.populateMaterialsTable();
+
+      // Nettoyer le formulaire
+      this.clearMaterialForm();
+
+      // 🆕 Désactiver le loading state
+      LoadingStateManager.buttonLoading(saveButton, false);
+
+    } catch (error) {
+      this.error('Error saving material:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la sauvegarde');
+
+      // 🆕 Désactiver le loading state en cas d'erreur
+      if (saveButton) {
+        LoadingStateManager.buttonLoading(saveButton, false);
+      }
+    }
+  }
+
+  /**
+   * Demande confirmation pour supprimer un matériau.
+   *
+   * Workflow :
+   * 1. Trouver le matériau par ID
+   * 2. Si non trouvé : erreur + notification
+   * 3. Stocker l'ID dans this.materialToDeleteId (utilisé lors de la confirmation)
+   * 4. Mettre à jour le message du modal de confirmation avec le nom du matériau
+   * 5. Afficher le modal Bootstrap de confirmation
+   *
+   * L'utilisateur peut ensuite confirmer (→ deleteMaterial) ou annuler.
+   *
+   * @param {number|string} id - ID du matériau à supprimer
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Supprimer" d'un matériau
+   * materialsModule.askDeleteMaterial(42);
+   * // → Modal de confirmation s'affiche : "Êtes-vous sûr de vouloir supprimer 'Carrelage XYZ' ?"
+   */
+  askDeleteMaterial(id) {
+    const materialsSource = window.materials || this.materials;
+    const material = materialsSource.find(m => String(m.id) === String(id));
+
+    if (!material) {
+      NotificationSystem.error('Matériau introuvable');
+      return;
+    }
+
+    this.materialToDeleteId = id;
+    this.state.set('materialToDeleteId', id);
+
+    // Mettre à jour le message du modal
+    const deleteMessage = this.getElement('#deleteMaterialMessage');
+    if (deleteMessage) {
+      deleteMessage.textContent = `Êtes-vous sûr de vouloir supprimer "${material.name}" ?`;
+    }
+
+    // Afficher le modal
+    if (this.deleteModal) {
+      ModalHelper.show('deleteMaterialModal');
+    }
+
+    this.log('Delete confirmation requested for:', material.name);
+  }
+
+  /**
+   * Supprime un matériau après confirmation.
+   *
+   * Workflow :
+   * 1. Valider l'ID (doit être non null/undefined)
+   * 2. Récupérer le sessionToken pour autorisation
+   * 3. Appeler IPC 'deleteMaterial' avec sessionToken + ID
+   * 4. Si succès :
+   *    - Notification de succès
+   *    - Émettre événement 'materials:deleted'
+   *    - Fermer le modal de confirmation
+   *    - Invalider le cache DataCache
+   *    - Recharger les matériaux depuis le backend
+   *    - Rafraîchir la table
+   *    - Réinitialiser this.materialToDeleteId
+   * 5. Si échec : afficher notification d'erreur
+   *
+   * @async
+   * @param {number|string} id - ID du matériau à supprimer
+   * @returns {Promise&lt;void>}
+   *
+   * @fires materials:deleted - Émis quand un matériau est supprimé avec succès
+   *
+   * @example
+   * // Utilisateur confirme la suppression
+   * await materialsModule.deleteMaterial(42);
+   * // → Matériau #42 supprimé, table rafraîchie, modal fermé
+   */
+  async deleteMaterial(id) {
+    try {
+      // Validation de l'ID
+      if (!id || id === null || id === undefined) {
+        this.error('deleteMaterial called with invalid ID:', id);
+        NotificationSystem.error('Erreur: ID de matériau invalide');
+        return;
+      }
+
+      // 🔄 Sauvegarder le matériau pour Undo/Redo
+      const materialToDelete = this.materials.find(m => m.id == id);
+      const materialCopy = materialToDelete ? { ...materialToDelete } : null;
+
+      const sessionToken = this.getSessionToken();
+
+      const result = await this.invokeAPI('deleteMaterial', sessionToken, id);
+
+      if (result.success) {
+        NotificationSystem.success('Matériau supprimé avec succès');
+        this.emitEvent('deleted', id);
+
+        // 🔄 Enregistrer l'action Undo/Redo
+        if (window.UndoRedoManager &amp;&amp; materialCopy) {
+          window.UndoRedoManager.record({
+            type: 'MATERIAL_DELETE',
+            description: `Suppression matériau "${materialCopy.name}"`,
+            undo: async () => {
+              // Restaurer le matériau
+              await this.invokeAPI('addMaterial', sessionToken, materialCopy);
+              CacheKeys.invalidate(CacheKeys.MATERIALS);
+              await this.loadMaterials();
+              this.populateMaterialsTable();
+            },
+            redo: async () => {
+              // Resupprimer le matériau
+              await this.invokeAPI('deleteMaterial', sessionToken, id);
+              CacheKeys.invalidate(CacheKeys.MATERIALS);
+              await this.loadMaterials();
+              this.populateMaterialsTable();
+            }
+          });
+        }
+
+        // Fermer le modal
+        if (this.deleteModal) {
+          ModalHelper.hide('deleteMaterialModal');
+        }
+
+        // Recharger les matériaux
+        CacheKeys.invalidate(CacheKeys.MATERIALS);
+        await this.loadMaterials();
+
+        // Rafraîchir la table
+        this.populateMaterialsTable();
+
+        this.materialToDeleteId = null;
+      } else {
+        throw new Error(result.message || 'Erreur lors de la suppression');
+      }
+    } catch (error) {
+      this.error('Error deleting material:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la suppression');
+    }
+  }
+
+  /**
+   * Nettoie le formulaire matériau et le ferme.
+   *
+   * Workflow :
+   * 1. Réinitialiser tous les champs du formulaire (vider les valeurs)
+   * 2. Garder la TVA à 20% par défaut
+   * 3. Passer en mode ajout (editMode = false)
+   * 4. Fermer le modal Bootstrap
+   * 5. Réinitialiser le titre → "Ajouter un matériau"
+   *
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique "Annuler" ou après sauvegarde réussie
+   * materialsModule.clearMaterialForm();
+   * // → Formulaire vidé et fermé
+   */
+  clearMaterialForm() {
+    this.setValue('#material-id', ''); // ID (caché)
+    this.setValue('#material-reference', ''); // Optionnel
+    this.setValue('#material-name', '');
+    this.setValue('#material-type', '');
+    this.setValue('#material-unit', '');
+    this.setValue('#material-supplier', ''); // Nouveau champ fournisseur
+    this.setValue('#material-price', '');
+    this.setValue('#material-price-ttc', '');
+    this.setValue('#material-tva', 20); // Garder 20 par défaut
+    this.setValue('#material-coverage', '');
+    this.setValue('#material-piecesPerM2', '');
+    this.setValue('#material-density', '');
+    this.setValue('#material-unitWeight', '');
+    this.setValue('#material-stock', '');
+    this.setValue('#material-barcode', '');
+    this.setValue('#material-purchase-cost', '');
+
+    this.editMode = false;
+    this.state.set('materialEditMode', false);
+
+    // Fermer le modal
+    if (this.formModal) {
+      ModalHelper.hide('materialFormModal');
+    }
+
+    // Réinitialiser le titre
+    const formTitle = this.getElement('#material-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-plus">&lt;/i> Ajouter un matériau';
+    }
+
+    this.log('Material form cleared');
+  }
+
+  /**
+   * Populate le select des fournisseurs dans le formulaire matériau.
+   *
+   * Récupère la liste des fournisseurs depuis window.suppliers ou state.suppliers,
+   * génère les options du select HTML, et les trie alphabétiquement.
+   *
+   * Si aucun fournisseur n'est disponible, affiche "Aucun fournisseur".
+   * Préserve la valeur actuellement sélectionnée si elle existe toujours.
+   *
+   * Cette méthode est appelée :
+   * - Lors de l'initialisation du module
+   * - Lors de l'événement 'suppliers:loaded'
+   * - Lors de l'événement 'suppliers:updated'
+   *
+   * @returns {void}
+   *
+   * @example
+   * // Après chargement des fournisseurs
+   * this.populateSuppliersDatalist();
+   * // → Select contient "Aucun fournisseur", "Fournisseur A", "Fournisseur B", ...
+   */
+  populateSuppliersDatalist() {
+    const selectElement = this.getElement('#material-supplier');
+    if (!selectElement) {
+      this.log('⚠️ Select fournisseurs non trouvé');
+      return;
+    }
+
+    // Récupérer la liste des fournisseurs depuis window.suppliers ou le state
+    const suppliers = window.suppliers || this.state.get('suppliers') || [];
+
+    // Vérifier que suppliers est bien un tableau
+    if (!Array.isArray(suppliers)) {
+      this.log('⚠️ suppliers n\'est pas un tableau');
+      selectElement.innerHTML = '&lt;option value="">Aucun fournisseur&lt;/option>';
+      return;
+    }
+
+    if (suppliers.length === 0) {
+      this.log('ℹ️ Aucun fournisseur disponible');
+      selectElement.innerHTML = '&lt;option value="">Aucun fournisseur&lt;/option>';
+      return;
+    }
+
+    // Sauvegarder la valeur actuelle si elle existe
+    const currentValue = selectElement.value;
+
+    // Générer les options
+    selectElement.innerHTML = '&lt;option value="">Aucun fournisseur&lt;/option>' +
+      suppliers
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(supplier => `&lt;option value="${supplier.name}">${supplier.name}&lt;/option>`)
+        .join('');
+
+    // Restaurer la valeur si elle existe toujours
+    if (currentValue &amp;&amp; suppliers.some(s => s.name === currentValue)) {
+      selectElement.value = currentValue;
+    }
+
+    this.log(`✅ Select fournisseurs mis à jour avec ${suppliers.length} fournisseurs`);
+  }
+
+  /**
+   * Affiche les détails complets d'un matériau dans un modal.
+   *
+   * Workflow :
+   * 1. Chercher le matériau par ID dans la liste
+   * 2. Si non trouvé : afficher erreur, arrêter
+   * 3. Calculer le prix TTC depuis le prix HT et la TVA
+   * 4. Remplir tous les champs du modal de détails
+   * 5. Afficher le modal 'materialDetailsModal'
+   *
+   * @public
+   * @param {number|string} id - ID du matériau
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir détails" pour le matériau #5
+   * viewMaterialDetails(5);
+   * // → Modal affiché avec toutes les informations du matériau
+   */
+  viewMaterialDetails(id) {
+    this.log(`Viewing details for material ID: ${id}`);
+
+    // Chercher le matériau
+    const materialsSource = window.materials || this.materials || [];
+    const material = materialsSource.find(m => String(m.id) === String(id));
+
+    if (!material) {
+      this.error('Matériau introuvable pour ID:', id);
+      NotificationSystem.error('Matériau introuvable');
+      return;
+    }
+
+    // Calculer le prix TTC
+    const priceHT = typeof material.price === 'number' ? material.price : 0;
+    const tvaValue = material.tva || (material.tvaRate * 100) || 20;
+    const priceTTC = priceHT * (1 + tvaValue / 100);
+
+    // Remplir tous les champs du modal
+    this.setTextContent('#detail-material-id', material.id ?? '-');
+    this.setTextContent('#detail-material-name', material.name ?? '-');
+    this.setTextContent('#detail-material-price-ht', priceHT > 0 ? `${priceHT.toFixed(2)} €` : '-');
+    this.setTextContent('#detail-material-tva', tvaValue > 0 ? `${tvaValue}%` : '-');
+    this.setTextContent('#detail-material-price-ttc', priceTTC > 0 ? `${priceTTC.toFixed(2)} €` : '-');
+    this.setTextContent('#detail-material-stock', material.stock ?? '-');
+    this.setTextContent('#detail-material-unit', material.unit ?? '-');
+    this.setTextContent('#detail-material-type', material.type ?? '-');
+    this.setTextContent('#detail-material-supplier', material.supplier ?? '-');
+    this.setTextContent('#detail-material-coverage', material.coverage ?? '-');
+    this.setTextContent('#detail-material-density', material.density ?? '-');
+    this.setTextContent('#detail-material-pieces', material.piecesPerM2 ?? '-');
+    this.setTextContent('#detail-material-barcode', material.barcode ?? '-');
+
+    // Afficher le modal
+    ModalHelper.show('materialDetailsModal');
+    this.log('Material details modal displayed for:', material.name);
+  }
+
+  /**
+   * Définit le contenu textuel d'un élément (helper).
+   * @private
+   */
+  setTextContent(selector, value) {
+    const element = this.getElement(selector);
+    if (element) {
+      element.textContent = value;
+    } else {
+      this.warn(`Element not found: ${selector}`);
+    }
+  }
+
+  /**
+   * Change de page dans la pagination.
+   * @param {number} direction - Direction: -1 pour précédent, 1 pour suivant
+   * @private
+   */
+  changePage(direction) {
+    const newPage = this.pagination.currentPage + direction;
+    if (newPage >= 1 &amp;&amp; newPage &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = newPage;
+      this.applyMaterialFilters();
+    }
+  }
+
+  /**
+   * Va à une page spécifique.
+   * @param {number} pageNumber - Numéro de page (1-indexed)
+   * @private
+   */
+  goToPage(pageNumber) {
+    if (pageNumber >= 1 &amp;&amp; pageNumber &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = pageNumber;
+      this.applyMaterialFilters();
+    }
+  }
+
+  /**
+   * Met à jour les contrôles de pagination (info et boutons).
+   * @param {number} totalItems - Nombre total d'items
+   * @param {Array} displayedItems - Items affichés sur la page actuelle
+   * @private
+   */
+  updatePaginationControls(totalItems, displayedItems) {
+    // Mettre à jour l'info de pagination
+    const paginationInfo = this.getElement('#materials-pagination-info');
+    if (paginationInfo) {
+      if (totalItems === 0) {
+        paginationInfo.textContent = 'Aucun matériau';
+      } else {
+        const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage + 1;
+        const endIndex = startIndex + displayedItems.length - 1;
+        paginationInfo.textContent = `Affichage ${startIndex}-${endIndex} sur ${totalItems} matériaux`;
+      }
+    }
+
+    // Mettre à jour les boutons de pagination
+    const paginationControls = this.getElement('#materials-pagination-controls');
+    if (paginationControls &amp;&amp; totalItems > 0) {
+      const prevDisabled = this.pagination.currentPage === 1 ? 'disabled' : '';
+      const nextDisabled = this.pagination.currentPage === this.pagination.totalPages ? 'disabled' : '';
+
+      // Générer les numéros de page (max 5 pages visibles)
+      const pageNumbers = this.generatePageNumbers();
+
+      paginationControls.innerHTML = `
+        &lt;button class="btn btn-sm btn-outline-primary" ${prevDisabled} onclick="window.materialsModule.changePage(-1)">
+          &lt;i class="fas fa-chevron-left">&lt;/i> Précédent
+        &lt;/button>
+        ${pageNumbers.map(page => {
+          if (page === '...') {
+            return '&lt;span class="mx-1">...&lt;/span>';
+          }
+          const active = page === this.pagination.currentPage ? 'btn-primary' : 'btn-outline-primary';
+          return `&lt;button class="btn btn-sm ${active}" onclick="window.materialsModule.goToPage(${page})">${page}&lt;/button>`;
+        }).join('')}
+        &lt;button class="btn btn-sm btn-outline-primary" ${nextDisabled} onclick="window.materialsModule.changePage(1)">
+          Suivant &lt;i class="fas fa-chevron-right">&lt;/i>
+        &lt;/button>
+      `;
+    } else if (paginationControls) {
+      paginationControls.innerHTML = '';
+    }
+  }
+
+  /**
+   * Génère les numéros de page à afficher (max 5 pages visibles avec ellipses).
+   * @returns {Array} - Array de numéros de page et ellipses
+   * @private
+   */
+  generatePageNumbers() {
+    const pages = [];
+    const total = this.pagination.totalPages;
+    const current = this.pagination.currentPage;
+
+    if (total &lt;= 7) {
+      // Afficher toutes les pages si &lt;= 7
+      for (let i = 1; i &lt;= total; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Toujours afficher la première page
+      pages.push(1);
+
+      if (current > 3) {
+        pages.push('...');
+      }
+
+      // Pages autour de la page actuelle
+      const start = Math.max(2, current - 1);
+      const end = Math.min(total - 1, current + 1);
+
+      for (let i = start; i &lt;= end; i++) {
+        pages.push(i);
+      }
+
+      if (current &lt; total - 2) {
+        pages.push('...');
+      }
+
+      // Toujours afficher la dernière page
+      pages.push(total);
+    }
+
+    return pages;
+  }
+
+  /**
+   * Suppression groupée de matériaux
+   *
+   * @param {Array&lt;string|number>} materialIds - IDs des matériaux à supprimer
+   * @returns {Promise&lt;Object>} Objet contenant les matériaux supprimés et les callbacks undo/redo
+   */
+  async bulkDeleteMaterials(materialIds) {
+    const deletedMaterials = [];
+
+    for (const id of materialIds) {
+      const material = this.materials.find(m => m.id === parseInt(id));
+      if (material) {
+        deletedMaterials.push({...material});
+        await window.ipcRenderer.invoke('deleteMaterial', {
+          sessionToken: this.sessionToken,
+          id: parseInt(id)
+        });
+      }
+    }
+
+    DataCache.invalidate(CacheKeys.MATERIALS);
+    await this.loadMaterials();
+    this.applyMaterialsFilters();
+
+    return {
+      deletedMaterials,
+      undoCallback: async () => {
+        // Logique d'annulation (réinsérer les matériaux)
+        for (const mat of deletedMaterials) {
+          await window.ipcRenderer.invoke('addMaterial', {
+            sessionToken: this.sessionToken,
+            ...mat
+          });
+        }
+        DataCache.invalidate(CacheKeys.MATERIALS);
+        await this.loadMaterials();
+        this.applyMaterialsFilters();
+      },
+      redoCallback: async () => {
+        // Logique de refaire (re-supprimer)
+        await this.bulkDeleteMaterials(materialIds);
+      }
+    };
+  }
+
+  /**
+   * Exportation groupée de matériaux
+   *
+   * @param {Array&lt;string|number>} materialIds - IDs des matériaux à exporter
+   * @returns {Promise&lt;void>}
+   */
+  async bulkExportMaterials(materialIds) {
+    const materialsToExport = this.materials.filter(m =>
+      materialIds.includes(m.id.toString())
+    );
+
+    const csvContent = this.generateCSV(materialsToExport);
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `materials_export_${Date.now()}.csv`;
+    link.click();
+  }
+
+  /**
+   * Génère un CSV depuis un tableau de matériaux
+   *
+   * @param {Array&lt;Object>} materials - Matériaux à exporter
+   * @returns {string} Contenu CSV
+   */
+  generateCSV(materials) {
+    if (!materials || !Array.isArray(materials) || materials.length === 0) {
+      return 'ID;Nom;Référence;Type;Prix TTC;TVA;Unité;Fournisseur';
+    }
+
+    const headers = ['ID', 'Nom', 'Référence', 'Type', 'Prix TTC', 'TVA', 'Unité', 'Fournisseur'];
+    const rows = materials.map(m => [
+      m.id,
+      m.name,
+      m.reference || '',
+      m.type,
+      m.price?.toFixed(2) || '0.00',
+      m.tva || '20',
+      m.unit || 'pièce',
+      m.supplier || ''
+    ]);
+
+    return [headers, ...rows].map(row => row.join(';')).join('\n');
+  }
+}
+
+export default MaterialsModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

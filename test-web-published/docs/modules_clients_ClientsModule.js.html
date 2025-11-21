@@ -1,0 +1,2114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/clients/ClientsModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/clients/ClientsModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * CLIENTS MODULE - Gestion des clients
+ * ========================================
+ *
+ * Module de gestion complète des clients pour l'application AutoCalc OptiDevis.
+ * Gère le catalogue de clients avec opérations CRUD, filtrage avancé et liaison
+ * avec les devis et factures.
+ *
+ * Architecture :
+ * Le module gère un catalogue de clients avec :
+ * - **CRUD complet** : Create, Read, Update, Delete avec validation
+ * - **Filtrage multi-critères** : Recherche textuelle + filtre par type
+ * - **Liaison devis/factures** : Affichage du nombre de devis et factures par client
+ * - **Cache intelligent** : DataCache 5 minutes pour performance
+ * - **Modals Bootstrap** : Formulaire d'ajout/édition + confirmation suppression
+ *
+ * ==========================================
+ * DONNÉES CLIENT
+ * ==========================================
+ *
+ * Structure d'un client (8 champs) :
+ * - **id** : Identifiant unique (auto-incrémenté)
+ * - **name** : Nom du client (obligatoire, unique)
+ * - **contact** : Nom du contact principal
+ * - **email** : Adresse email du client
+ * - **phone** : Numéro de téléphone
+ * - **address** : Adresse complète (tronquée à 50 caractères dans tableau)
+ * - **type** : Type de client (Particulier, Artisan, Entreprise générale, Promoteur)
+ * - **siret** : Numéro SIRET (identifiant légal)
+ * - **notes** : Notes libres (tronquées à 30 caractères dans tableau)
+ *
+ * Stockage : clients.json via IPC
+ *
+ * ==========================================
+ * FONCTIONNALITÉS CRUD
+ * ==========================================
+ *
+ * **Create (Ajout)** :
+ * 1. Utilisateur clique "Ajouter client"
+ * 2. Modal s'ouvre avec formulaire vide
+ * 3. Utilisateur remplit les champs (nom obligatoire)
+ * 4. Validation : nom non vide
+ * 5. Envoi via IPC 'addClient' avec authToken
+ * 6. Invalidation cache + rechargement + rafraîchissement tableau
+ * 7. Notification succès
+ *
+ * **Read (Lecture)** :
+ * - Chargement au démarrage depuis cache ou backend (IPC 'get-clients')
+ * - Affichage dans tableau trié par ID
+ * - Comptage des devis et factures par client (liaison avec catalog)
+ * - Bouton "Voir devis et factures" pour basculer vers onglet Catalogue avec filtre actif
+ *
+ * **Update (Modification)** :
+ * 1. Utilisateur clique icône "Modifier" sur une ligne
+ * 2. Modal s'ouvre avec formulaire pré-rempli
+ * 3. Utilisateur modifie les champs
+ * 4. Validation : nom non vide
+ * 5. Envoi via IPC 'updateClient' avec authToken + clientData.id
+ * 6. Invalidation cache + rechargement + rafraîchissement
+ * 7. Notification succès
+ *
+ * **Delete (Suppression)** :
+ * 1. Utilisateur clique icône "Supprimer"
+ * 2. Modal de confirmation avec nom du client
+ * 3. Confirmation utilisateur
+ * 4. Envoi via IPC 'deleteClient' avec authToken + id
+ * 5. Invalidation cache + rechargement + rafraîchissement
+ * 6. Fermeture modal + notification succès
+ *
+ * ==========================================
+ * FILTRAGE &amp; RECHERCHE
+ * ==========================================
+ *
+ * **Recherche textuelle** (#search-clients) :
+ * - Recherche dans : name, contact, email, phone
+ * - Insensible à la casse
+ * - Temps réel (événement 'input')
+ *
+ * **Filtre par type** (#filter-client-type) :
+ * - Select généré dynamiquement avec comptage par type
+ * - Option "Tous les types" par défaut
+ * - Format : "Type (nombre)"
+ * - Événement 'change'
+ *
+ * **Combinaison des filtres** :
+ * - Les deux filtres se cumulent (ET logique)
+ * - Notification du nombre de résultats (toast 2s)
+ * - Affichage "Aucun client trouvé" si 0 résultat
+ *
+ * ==========================================
+ * LIAISON AVEC MATÉRIAUX
+ * ==========================================
+ *
+ * Intégration avec MaterialsModule :
+ * - Comptage des devis et factures par client (material.client = client.name)
+ * - Badge vert avec nombre si devis et factures > 0
+ * - Bouton "Voir devis et factures" avec icône œil
+ * - Fonction viewClientQuotes() :
+ *   1. Bascule vers onglet Catalogue (Bootstrap Tab API)
+ *   2. Appelle filterByClientName() du MaterialsModule avec délai 100ms
+ *   3. Filtre automatiquement le catalogue par client
+ *
+ * Utilité : Permet de voir rapidement quels devis et factures viennent d'un client
+ *
+ * ==========================================
+ * CACHE &amp; PERFORMANCE
+ * ==========================================
+ *
+ * **DataCache avec TTL 5 minutes** :
+ * - Clé : 'clients'
+ * - Durée : 5 * 60 * 1000 ms = 300 secondes
+ * - Vérification au loadClients() :
+ *   - Si cache valide → utilise cache
+ *   - Si cache expiré → fetch backend + mise en cache
+ * - Invalidation manuelle après CRUD :
+ *   - DataCache.invalidate('clients')
+ *   - Force rechargement depuis backend
+ *
+ * **Synchronisation** :
+ * - this.clients (instance)
+ * - this.state.set('clients') (StateManager)
+ * - window.clients (global, compatibilité legacy)
+ * - DataCache ('clients')
+ *
+ * ==========================================
+ * MODALS BOOTSTRAP
+ * ==========================================
+ *
+ * **Modal Formulaire** (#clientFormModal) :
+ * - Titre dynamique : "Ajouter" ou "Modifier"
+ * - 11 champs de saisie
+ * - Boutons : Sauvegarder, Annuler
+ * - Focus automatique sur #client-name après ouverture (délai 500ms)
+ * - Mode : this.editMode (boolean)
+ *
+ * **Modal Suppression** (#deleteClientModal) :
+ * - Message dynamique avec nom du client
+ * - Boutons : Confirmer, Annuler
+ * - ID stocké temporairement dans this.clientToDeleteId
+ *
+ * ==========================================
+ * EVENT LISTENERS
+ * ==========================================
+ *
+ * **Listeners globaux** (attachEventListeners) :
+ * - Onglet #clients-tab → shown.bs.tab : Rafraîchit tableau + attache listeners
+ *
+ * **Listeners spécifiques** (attachClientsListeners) :
+ * - Protection contre double-attachement (clientsListenersAttached flag)
+ * - Boutons : #add-client-btn, #save-client-btn, #cancel-client-btn, #confirmDeleteClientBtn
+ * - Filtres : #search-clients (input), #filter-client-type (change)
+ * - Tableau : onclick editClient(id), askDeleteClient(id), viewClientQuotes(name)
+ *
+ * ==========================================
+ * ÉVÉNEMENTS ÉMIS
+ * ==========================================
+ *
+ * **EventBus interne** :
+ * - 'initialized' : Au démarrage du module
+ * - 'loaded' : Après chargement des clients (avec data)
+ * - 'added' : Après ajout réussi (avec clientData)
+ * - 'updated' : Après modification réussie (avec clientData)
+ * - 'deleted' : Après suppression réussie (avec id)
+ *
+ * **EventBus global** (this.events) :
+ * - 'clients:loaded' : Pour notifier autres modules du chargement
+ * - 'clients:updated' : Après tout changement (add/update/delete)
+ *
+ * Utilité : MaterialsModule peut écouter 'clients:loaded' pour rafraîchir son autocomplete
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **MaterialsModule** : Liaison par client name, fonction filterByClientName()
+ * - **StateManager** : Stockage clients, editMode, clientToDeleteId
+ * - **DataCache** : Cache 5 min pour performance
+ * - **NotificationSystem** : Feedback utilisateur (success, error, info)
+ * - **Bootstrap 5.3.3** : Modals, Tab API, Tooltips
+ * - **IPC Electron** : get-clients, addClient, updateClient, deleteClient
+ *
+ * @module ClientsModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import DataCache from '../../shared/ui/DataCache.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import CacheKeys from '../../shared/cache/CacheKeys.js';
+import BulkActionsManager from '../../shared/bulk/BulkActionsManager.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+
+class ClientsModule extends BaseModule {
+  /**
+   * Crée une instance du module Clients.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('clients', state, eventBus);
+
+    /**
+     * Cache local de tous les clients.
+     * Synchronisé avec StateManager et window.clients.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.clients = [];
+
+    /**
+     * Liste filtrée des clients (après recherche/filtre).
+     * Utilisé pour affichage conditionnel mais non actuellement exploité.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.filteredClients = [];
+
+    /**
+     * Mode édition actif (true) ou ajout (false).
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.editMode = false;
+
+    /**
+     * ID du client à supprimer (stockage temporaire pour modal).
+     *
+     * @type {number|null}
+     * @private
+     */
+    this.clientToDeleteId = null;
+
+    /**
+     * Instance du modal Bootstrap de confirmation de suppression.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.deleteModal = null;
+
+    /**
+     * Instance du modal Bootstrap du formulaire ajout/édition.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.formModal = null;
+
+    /**
+     * Flag évitant le double-attachement des listeners.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.clientsListenersAttached = false;
+
+    /**
+     * Configuration de pagination pour le tableau des clients.
+     * @type {Object}
+     * @private
+     */
+    this.pagination = {
+      currentPage: 1,
+      itemsPerPage: 25,
+      totalItems: 0,
+      totalPages: 0
+    };
+
+    /**
+     * Gestionnaire d'actions groupées (bulk operations).
+     *
+     * @type {BulkActionsManager|null}
+     * @private
+     */
+    this.bulkActions = null;
+  }
+
+  /**
+   * Initialise le module Clients.
+   * Charge les clients, peuple filtres et tableau, attache listeners, expose fonctions globales.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires EventBus#initialized Après initialisation complète
+   */
+  async init() {
+    this.log('Initializing Clients Module...');
+    console.log('🚚 ClientsModule v1.0 - Initialization');
+
+    // Charger les clients depuis le backend
+    await this.loadClients();
+
+    // Populer les filtres et le tableau après chargement
+    this.populateTypeFilter();
+    this.populateClientsTable();
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    // Initialiser le gestionnaire d'actions groupées
+    this.bulkActions = new BulkActionsManager({
+      moduleName: 'clients',
+      tableId: 'clients-table-body',
+      checkboxClass: 'client-bulk-checkbox',
+      selectAllId: 'clients-select-all',
+      bulkActionsId: 'clients-bulk-actions',
+      undoRedoManager: window.undoRedoManager,
+      onDeleteCallback: this.bulkDeleteClients.bind(this),
+      onExportCallback: this.bulkExportClients.bind(this)
+    });
+    this.bulkActions.initialize();
+
+    // Exposer les fonctions au scope global (compatibilité)
+    this.exposeToGlobal({
+      loadClients: this.loadClients,
+      populateClientsTable: this.populateClientsTable,
+      addClient: this.addClient,
+      saveClient: this.saveClient,
+      editClient: this.editClient,
+      deleteClient: this.deleteClient,
+      askDeleteClient: this.askDeleteClient,
+      clearClientForm: this.clearClientForm,
+      applyClientFilters: this.applyClientFilters,
+      populateTypeFilter: this.populateTypeFilter,
+      viewClientQuotes: this.viewClientQuotes,
+      viewClientDetails: this.viewClientDetails,
+      changePage: this.changePage,
+      goToPage: this.goToPage
+    });
+
+    // Exposer l'instance du module pour les méthodes de pagination
+    window.clientsModule = this;
+
+    // Initialiser le modal de suppression
+    const deleteModalElement = this.getElement('#deleteClientModal');
+    if (deleteModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.deleteModal = new bootstrap.Modal(deleteModalElement);
+      this.log('Delete modal initialized');
+    }
+
+    // Initialiser le modal du formulaire
+    const formModalElement = this.getElement('#clientFormModal');
+    if (formModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.formModal = new bootstrap.Modal(formModalElement);
+      this.log('Form modal initialized');
+    }
+
+    // Enregistrer l'auto-refresh de l'onglet
+    this.registerTabRefresh();
+
+    // 🆕 Enregistrer les commandes Command Palette (quand prêt)
+    if (window.CommandPalette) {
+      this.registerCommands();
+    } else {
+      // Attendre que Command Palette soit prêt
+      this.events.on('commandpalette:ready', () => {
+        this.registerCommands();
+      });
+    }
+
+    this.log('Clients Module initialized successfully');
+    this.emitEvent('initialized');
+  }
+
+  /**
+   * 🆕 Enregistre l'onglet Clients pour auto-refresh automatique.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerTabRefresh() {
+    if (!window.TabRefreshManager) {
+      this.warn('TabRefreshManager not available - tab auto-refresh disabled');
+      return;
+    }
+
+    // Onglet "Clients"
+    window.TabRefreshManager.registerTab('clients-tab', async (force) => {
+      this.log('🔄 Auto-refreshing Clients...');
+      await this.loadClientsTab();
+    }, {
+      ttl: 30000, // 30 secondes
+      label: 'Clients'
+    });
+
+    this.log('✅ Tab auto-refresh registered');
+  }
+
+  /**
+   * 🆕 Enregistre les commandes Command Palette pour le module Clients.
+   *
+   * @private
+   */
+  registerCommands() {
+    if (!window.CommandPalette) return;
+
+    // Créer client
+    window.CommandPalette.registerCommand('clients-create', {
+      label: '👤 Créer un nouveau client',
+      keywords: ['créer', 'nouveau', 'client', 'customer', 'ajouter'],
+      category: 'Clients',
+      icon: '👤',
+      priority: 15,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: async () => {
+        document.getElementById('clients-tab')?.click();
+        await new Promise(r => setTimeout(r, 150));
+        window.addClient?.();
+      }
+    });
+
+    // Voir clients
+    window.CommandPalette.registerCommand('clients-list', {
+      label: '👥 Voir tous les clients',
+      keywords: ['clients', 'customers', 'liste', 'voir', 'tous'],
+      category: 'Clients',
+      icon: '👥',
+      priority: 12,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('clients-tab')?.click()
+    });
+
+    this.log('✅ Command Palette commands registered');
+  }
+
+  /**
+   * Charge les données de l'onglet Clients (alias pour loadClients).
+   * Utilisé par TabRefreshManager pour auto-refresh.
+   *
+   * @private
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async loadClientsTab() {
+    await this.loadClients();
+    this.populateClientsTable();
+  }
+
+  /**
+   * Attache les event listeners globaux du module.
+   * Écoute l'ouverture de l'onglet Clients pour rafraîchir le tableau.
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Écouter l'événement d'ouverture de l'onglet Clients
+    const clientsTab = this.getElement('#clients-tab');
+    if (clientsTab) {
+      clientsTab.addEventListener('shown.bs.tab', () => {
+        // Clients tab shown - populating table
+        this.attachClientsListeners();
+        this.populateClientsTable();
+      });
+    }
+
+    this.log('Event listeners attached');
+  }
+
+  /**
+   * Attache les listeners spécifiques (boutons, filtres).
+   * Protection contre double-attachement via flag.
+   * @private
+   */
+  attachClientsListeners() {
+    // Ne les attacher qu'une seule fois
+    if (this.clientsListenersAttached) return;
+
+    // Boutons de gestion des clients
+    this.addDOMListener('#add-client-btn', 'click', () => {
+      this.addClient();
+    });
+
+    this.addDOMListener('#export-clients-excel-btn', 'click', () => {
+      this.exportClientsToExcel();
+    });
+
+    this.addDOMListener('#save-client-btn', 'click', () => {
+      this.saveClient();
+    });
+
+    this.addDOMListener('#confirmDeleteClientBtn', 'click', () => {
+      if (this.clientToDeleteId) {
+        this.deleteClient(this.clientToDeleteId);
+      }
+    });
+
+    this.addDOMListener('#cancel-client-btn', 'click', () => {
+      this.clearClientForm();
+    });
+
+    // Filtres de recherche
+    // Debouncing 300ms pour optimiser les performances de recherche
+    const searchInput = this.getElement('#search-clients');
+    if (searchInput) {
+      let debounceTimer;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          this.applyClientFilters();
+        }, 300);
+      });
+    }
+
+    const typeFilter = this.getElement('#filter-client-type');
+    if (typeFilter) {
+      typeFilter.addEventListener('change', () => {
+        this.applyClientFilters();
+      });
+    }
+
+    // Mise à jour de l'aperçu d'icône pour le type de client
+    this.addDOMListener('#client-type', 'change', (e) => {
+      this.updateClientTypeIconPreview(e.target.value);
+    });
+
+    // Pagination - Sélecteur items par page
+    const itemsPerPageSelect = this.getElement('#clients-items-per-page');
+    if (itemsPerPageSelect) {
+      itemsPerPageSelect.addEventListener('change', (e) => {
+        this.pagination.itemsPerPage = parseInt(e.target.value);
+        this.pagination.currentPage = 1; // Reset to first page
+        this.applyClientFilters();
+      });
+    }
+
+    this.clientsListenersAttached = true;
+    this.log('Clients listeners attached');
+  }
+
+  /**
+   * Charge les clients depuis cache (5min) ou backend via IPC.
+   * @public @async @fires EventBus#loaded @fires clients:loaded
+   */
+  async loadClients() {
+    try {
+      console.log('🔄 loadClients() called');
+
+      // Vérifier le cache
+      const cached = DataCache.get('clients');
+      if (cached &amp;&amp; cached.length > 0) {
+        this.clients = cached;
+        this.state.set('clients', cached);
+        window.clients = cached;
+        console.log(`✅ Clients loaded from cache: ${cached.length} items`);
+        this.emitEvent('loaded', this.clients);
+        return;
+      }
+
+      // Charger depuis le backend
+      console.log('🌐 Calling backend API get-clients...');
+      const response = await this.invoke('get-clients');
+      console.log('🌐 Backend response:', response);
+
+      const clients = Array.isArray(response)
+        ? response
+        : (response.data || response.clients || []);
+      console.log(`🌐 Parsed clients: ${clients.length} items`);
+
+      this.clients = clients;
+      this.state.set('clients', clients);
+      window.clients = clients;
+
+      // Mettre en cache
+      if (clients.length > 0) {
+        DataCache.set('clients', clients, 5 * 60 * 1000); // 5 min
+      }
+
+      console.log(`✅ Loaded ${clients.length} clients from backend`);
+      this.emitEvent('loaded', clients);
+
+      // Émettre un événement global pour que d'autres modules puissent réagir
+      this.events.emit('clients:loaded', clients);
+
+      // Populer les filtres
+      this.populateTypeFilter();
+
+    } catch (error) {
+      console.error('❌ Error loading clients:', error);
+      this.error('Error loading clients:', error);
+      NotificationSystem.error('Erreur lors du chargement des clients');
+    }
+  }
+
+  /**
+   * Retourne l'icône Font Awesome appropriée pour le type de client.
+   *
+   * @private
+   * @param {string} clientType - Type du client (ex: "Artisan", "Entreprise générale", "Promoteur")
+   * @returns {string} Code HTML de l'icône avec sa couleur
+   *
+   * @example
+   * getClientTypeIcon("Artisan")
+   * // → "&lt;i class='fas fa-hammer text-warning'>&lt;/i>"
+   */
+  getClientTypeIcon(clientType) {
+    const iconMap = {
+      'Artisan': "&lt;i class='fas fa-hammer text-warning'>&lt;/i>",
+      'Entreprise générale': "&lt;i class='fas fa-building text-primary'>&lt;/i>",
+      'Entreprise': "&lt;i class='fas fa-building text-primary'>&lt;/i>",
+      'Promoteur': "&lt;i class='fas fa-city text-success'>&lt;/i>",
+      'Particulier': "&lt;i class='fas fa-user text-info'>&lt;/i>",
+      'Architecte': "&lt;i class='fas fa-drafting-compass text-secondary'>&lt;/i>",
+      'Maître d\'ouvrage': "&lt;i class='fas fa-hard-hat text-danger'>&lt;/i>",
+      'Collectivité': "&lt;i class='fas fa-landmark text-info'>&lt;/i>",
+      'Industriel': "&lt;i class='fas fa-industry text-dark'>&lt;/i>",
+      'Commerçant': "&lt;i class='fas fa-store text-primary'>&lt;/i>",
+      'Autre': "&lt;i class='fas fa-question text-muted'>&lt;/i>"
+    };
+
+    return iconMap[clientType] || "&lt;i class='fas fa-users text-muted'>&lt;/i>";
+  }
+
+  /**
+   * Met à jour l'aperçu de l'icône dans le formulaire client en fonction du type sélectionné.
+   *
+   * @param {string} clientType - Type du client sélectionné dans le dropdown
+   * @returns {void}
+   */
+  updateClientTypeIconPreview(clientType) {
+    const iconPreview = this.getElement('#client-type-icon-preview');
+    if (!iconPreview) return;
+
+    const iconHTML = this.getClientTypeIcon(clientType);
+    iconPreview.innerHTML = iconHTML;
+  }
+
+  /**
+   * Compte le nombre de devis, factures et CA pour chaque client.
+   * Charge les devis et factures depuis les modules respectifs et les groupe par nom de client.
+   *
+   * @private
+   * @async
+   * @returns {Promise&lt;Object>} Objet avec clientName comme clé et { quotes, invoices, totalRevenue } comme valeur
+   *
+   * @example
+   * // Retourne: { "SARL Dupont": { quotes: 5, invoices: 3, totalRevenue: 15240.50 }, "Artisan Bernard": { quotes: 2, invoices: 1, totalRevenue: 3500.00 } }
+   */
+  async countQuotesAndInvoicesPerClient() {
+    const counts = {};
+
+    try {
+      // Récupérer les devis depuis l'IPC
+      const quotesResult = await this.invoke('list-saved-quotes');
+      if (quotesResult.success &amp;&amp; quotesResult.quotes) {
+        quotesResult.quotes.forEach(quote => {
+          // Le handler list-saved-quotes extrait directement clientName
+          const clientName = quote.clientName;
+          if (clientName) {
+            // Utiliser le nom normalisé comme clé
+            const normalizedName = clientName.toLowerCase().trim();
+
+            if (!counts[normalizedName]) {
+              counts[normalizedName] = { quotes: 0, invoices: 0, totalRevenue: 0 };
+            }
+            counts[normalizedName].quotes++;
+          }
+        });
+      }
+
+      // Récupérer les factures depuis l'IPC
+      const invoicesResult = await this.invoke('list-invoices');
+      if (invoicesResult.success &amp;&amp; invoicesResult.invoices) {
+        invoicesResult.invoices.forEach(invoice => {
+          // Les factures ont clientInfo complet
+          const clientName = invoice.clientInfo?.name;
+          if (clientName) {
+            // Utiliser le nom normalisé comme clé
+            const normalizedName = clientName.toLowerCase().trim();
+
+            if (!counts[normalizedName]) {
+              counts[normalizedName] = { quotes: 0, invoices: 0, totalRevenue: 0 };
+            }
+            counts[normalizedName].invoices++;
+
+            // Ajouter au CA seulement si la facture est payée
+            if (invoice.status === 'payée') {
+              const totalTTC = invoice.totals?.totalTTC || 0;
+              counts[normalizedName].totalRevenue += totalTTC;
+            }
+          }
+        });
+      }
+    } catch (error) {
+      this.error('Error counting quotes and invoices per client:', error);
+    }
+
+    return counts;
+  }
+
+  /**
+   * Peuple le tableau avec clients (tous ou filtrés) avec pagination. Trie par ID, affiche comptage devis et factures.
+   * @public @param {Array} [filteredClients] Liste filtrée optionnelle
+   */
+  async populateClientsTable(filteredClients = null) {
+    // Populate clients table
+
+    const clientsSource = window.clients || this.clients;
+    const clientsToShow = filteredClients || clientsSource;
+    const tbody = this.getElement('#clients-table-body');
+
+    if (!tbody) {
+      // tbody not found
+      return;
+    }
+
+    if (clientsToShow.length === 0) {
+      tbody.innerHTML = '&lt;tr>&lt;td colspan="7" class="text-center">Aucun client trouvé&lt;/td>&lt;/tr>';
+      this.updatePaginationControls(0, []);
+      return;
+    }
+
+    // Trier les clients par ID
+    const sortedClients = [...clientsToShow].sort((a, b) => {
+      const idA = parseInt(a.id) || 0;
+      const idB = parseInt(b.id) || 0;
+      return idA - idB;
+    });
+
+    // Mettre à jour les infos de pagination
+    this.pagination.totalItems = sortedClients.length;
+    this.pagination.totalPages = Math.ceil(sortedClients.length / this.pagination.itemsPerPage);
+
+    // S'assurer que currentPage est dans les limites
+    if (this.pagination.currentPage > this.pagination.totalPages) {
+      this.pagination.currentPage = this.pagination.totalPages || 1;
+    }
+
+    // Calculer les indices de début et fin pour la page actuelle
+    const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage;
+    const endIndex = startIndex + this.pagination.itemsPerPage;
+    const paginatedClients = sortedClients.slice(startIndex, endIndex);
+
+    // Compter les devis et factures par client
+    const quotesAndInvoicesCounts = await this.countQuotesAndInvoicesPerClient();
+
+    tbody.innerHTML = paginatedClients.map(client => {
+      const name = TextFormatter.escapeHtml(client.name ?? '-');
+      const phone = TextFormatter.escapeHtml(client.phone ?? '-');
+      const email = TextFormatter.escapeHtml(client.email ?? '');
+      const type = TextFormatter.escapeHtml(client.type ?? '-');
+
+      // Formater la colonne Contact (Téléphone + Email)
+      // Note: phone et email sont déjà échappés ci-dessus
+      let contactDisplay = '';
+      if (phone !== TextFormatter.escapeHtml('-')) {
+        contactDisplay = `&lt;i class="fas fa-phone text-primary">&lt;/i> ${phone}`;
+      }
+      if (email) {
+        if (contactDisplay) contactDisplay += '&lt;br>';
+        contactDisplay += `&lt;i class="fas fa-envelope text-secondary">&lt;/i> &lt;small>${email}&lt;/small>`;
+      }
+      if (!contactDisplay) {
+        contactDisplay = '&lt;span class="text-muted">-&lt;/span>';
+      }
+
+      // Nombre de devis et factures pour ce client (recherche insensible à la casse)
+      const normalizedClientName = client.name.toLowerCase().trim();
+      const counts = quotesAndInvoicesCounts[normalizedClientName] || { quotes: 0, invoices: 0, totalRevenue: 0 };
+      const totalCount = counts.quotes + counts.invoices;
+      const escapedClientName = TextFormatter.escapeHtml(client.name).replace(/'/g, '&amp;#39;');
+      const materialsDisplay = totalCount > 0
+        ? `&lt;span class="badge bg-primary">${counts.quotes} devis&lt;/span>
+           &lt;span class="badge bg-success ms-1">${counts.invoices} facture${counts.invoices > 1 ? 's' : ''}&lt;/span>
+           &lt;button onclick="viewClientQuotes('${escapedClientName}')" class="btn btn-sm btn-outline-primary btn-icon ms-1" data-bs-toggle="tooltip" title="Voir les devis et factures">
+             &lt;i class="fas fa-eye">&lt;/i>
+           &lt;/button>`
+        : '&lt;span class="text-muted">Aucun&lt;/span>';
+
+      // CA total (factures payées)
+      const revenueDisplay = counts.totalRevenue > 0
+        ? `&lt;strong class="text-success">${counts.totalRevenue.toFixed(2)} €&lt;/strong>`
+        : '&lt;span class="text-muted">0,00 €&lt;/span>';
+
+      // Icône et badge pour le type de client
+      const typeIcon = this.getClientTypeIcon(type);
+      const typeDisplay = type !== '-'
+        ? `${typeIcon} &lt;span class="badge bg-info">${type}&lt;/span>`
+        : '&lt;span class="text-muted">-&lt;/span>';
+
+      return `
+        &lt;tr>
+          &lt;td class="text-center">
+            &lt;input type="checkbox" class="client-bulk-checkbox form-check-input" data-id="${client.id}">
+          &lt;/td>
+          &lt;td>&lt;strong>${name}&lt;/strong>&lt;/td>
+          &lt;td>${contactDisplay}&lt;/td>
+          &lt;td>${typeDisplay}&lt;/td>
+          &lt;td>${materialsDisplay}&lt;/td>
+          &lt;td>${revenueDisplay}&lt;/td>
+          &lt;td>
+            &lt;div class="btn-icon-group">
+              &lt;button onclick="viewClientDetails(${client.id})" class="btn btn-sm btn-info btn-icon" data-bs-toggle="tooltip" title="Voir détails">
+                &lt;i class="fas fa-info-circle">&lt;/i>
+              &lt;/button>
+              &lt;button onclick="editClient(${client.id})" class="btn btn-sm btn-primary btn-icon" data-bs-toggle="tooltip" title="Modifier">
+                &lt;i class="fas fa-edit">&lt;/i>
+              &lt;/button>
+              &lt;button class="btn btn-sm btn-danger btn-icon" onclick="askDeleteClient(${client.id})" data-bs-toggle="tooltip" title="Supprimer">
+                &lt;i class="fas fa-trash-alt">&lt;/i>
+              &lt;/button>
+            &lt;/div>
+          &lt;/td>
+        &lt;/tr>
+      `;
+    }).join('');
+
+    // Table populated successfully
+    this.log(`Populated table with ${paginatedClients.length}/${sortedClients.length} clients (page ${this.pagination.currentPage}/${this.pagination.totalPages})`);
+
+    // Mettre à jour les contrôles de pagination
+    this.updatePaginationControls(sortedClients.length, paginatedClients);
+
+    // Réinitialiser les sélections bulk après le peuplement du tableau
+    if (this.bulkActions) {
+      this.bulkActions.clearSelection();
+      this.bulkActions.updateBulkActionsUI();
+    }
+  }
+
+  /**
+   * Génère le select de filtre par type avec comptages.
+   * @public
+   */
+  populateTypeFilter() {
+    const typeFilter = this.getElement('#filter-client-type');
+    if (!typeFilter) return;
+
+    const clientsSource = window.clients || this.clients;
+
+    // Compter les clients par type
+    const typeCount = {};
+    clientsSource.forEach(s => {
+      const type = s.type || 'Non catégorisé';
+      typeCount[type] = (typeCount[type] || 0) + 1;
+    });
+
+    const types = Object.keys(typeCount).sort();
+
+    typeFilter.innerHTML = '&lt;option value="">Tous les types&lt;/option>' +
+      types.map(type => `&lt;option value="${type}">${type} (${typeCount[type]})&lt;/option>`).join('');
+  }
+
+  /**
+   * Applique les filtres de recherche et de type sur les clients.
+   * Combine recherche textuelle ET filtre par type (logique AND).
+   * Affiche le nombre de résultats via notification.
+   *
+   * Workflow :
+   * 1. Récupère la valeur de recherche textuelle (#search-clients)
+   * 2. Récupère le type sélectionné (#filter-client-type)
+   * 3. Filtre les clients (matchesSearch AND matchesType)
+   * 4. Appelle populateClientsTable() avec la liste filtrée
+   * 5. Affiche notification info avec le nombre de résultats (toast 2s)
+   *
+   * Champs recherchés :
+   * - name, contact, email, phone (insensible à la casse)
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#info Affiche le nombre de clients affichés
+   *
+   * @example
+   * // Utilisateur tape "Martin" dans #search-clients
+   * // → Filtre tous les clients contenant "martin" (name/contact/email/phone)
+   * // → Affiche "3 client(s) affiché(s)" pendant 2s
+   *
+   * @example
+   * // Utilisateur sélectionne "Maçonnerie" + tape "Martin"
+   * // → Filtre seulement les maçons nommés "Martin"
+   * // → Affiche "1 client(s) affiché(s)"
+   */
+  applyClientFilters() {
+    const searchText = this.getValue('#search-clients')?.toLowerCase() || '';
+    const selectedType = this.getValue('#filter-client-type') || '';
+
+    const clientsSource = window.clients || this.clients;
+    const filtered = clientsSource.filter(client => {
+      const matchesSearch = !searchText ||
+        client.name?.toLowerCase().includes(searchText) ||
+        client.contact?.toLowerCase().includes(searchText) ||
+        client.email?.toLowerCase().includes(searchText) ||
+        client.phone?.toLowerCase().includes(searchText);
+
+      const matchesType = !selectedType || client.type === selectedType;
+
+      return matchesSearch &amp;&amp; matchesType;
+    });
+
+    this.populateClientsTable(filtered);
+    this.log(`Filtered: ${filtered.length}/${clientsSource.length} clients`);
+
+    // Notification du résultat du filtrage
+    if (searchText || selectedType) {
+      NotificationSystem.info(`${filtered.length} client(s) affiché(s)`, 2000);
+    }
+  }
+
+  /**
+   * Prépare le formulaire modal pour ajouter un nouveau client.
+   * Réinitialise le formulaire, change le titre en "Ajouter", et affiche le modal.
+   *
+   * Workflow :
+   * 1. Appelle clearClientForm() pour vider tous les champs
+   * 2. Désactive editMode (mode ajout)
+   * 3. Synchronise StateManager ('clientEditMode' = false)
+   * 4. Change le titre du modal en "Ajouter un client" avec icône camion
+   * 5. Affiche le modal Bootstrap (#clientFormModal)
+   * 6. Focus automatique sur #client-name après 500ms
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur bouton "Ajouter client"
+   * addClient();
+   * // → Modal s'ouvre avec formulaire vide
+   * // → Titre: "Ajouter un client"
+   * // → Focus sur champ Nom
+   */
+  addClient() {
+    this.clearClientForm();
+    this.editMode = false;
+    this.state.set('clientEditMode', false);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#client-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-users">&lt;/i> Ajouter un client';
+    }
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('clientFormModal');
+    }
+
+    // Focus sur le premier champ
+    setTimeout(() => {
+      const nameInput = this.getElement('#client-form-name');
+      if (nameInput) nameInput.focus();
+    }, 500);
+
+    this.log('Add client form opened');
+  }
+
+  /**
+   * Charge un client existant dans le formulaire modal pour édition.
+   * Recherche le client par ID, pré-remplit le formulaire et affiche le modal.
+   *
+   * Workflow :
+   * 1. Recherche le client dans window.clients ou this.clients par ID
+   * 2. Si introuvable → NotificationSystem.error + return
+   * 3. Active editMode (mode modification)
+   * 4. Synchronise StateManager ('clientEditMode' = true)
+   * 5. Change le titre du modal en "Modifier le client" avec icône edit
+   * 6. Pré-remplit tous les 11 champs du formulaire avec setValue()
+   * 7. Affiche le modal Bootstrap (#clientFormModal)
+   *
+   * @public
+   * @param {number|string} id - ID du client à éditer
+   * @returns {void}
+   * @fires NotificationSystem#error Si le client n'est pas trouvé
+   *
+   * @example
+   * // Utilisateur clique sur icône "Modifier" du client ID=5
+   * editClient(5);
+   * // → Modal s'ouvre avec formulaire pré-rempli
+   * // → Titre: "Modifier le client"
+   * // → Tous les champs contiennent les données du client
+   */
+  editClient(id) {
+    console.log('🔍 EDIT CLIENT CALLED - ID:', id);
+
+    const clientsSource = window.clients || this.clients;
+    const client = clientsSource?.find(s => String(s.id) === String(id));
+
+    if (!client) {
+      console.error('❌ CLIENT NOT FOUND FOR ID:', id);
+      NotificationSystem.error('Client introuvable');
+      return;
+    }
+
+    this.editMode = true;
+    this.state.set('clientEditMode', true);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#client-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-edit">&lt;/i> Modifier le client';
+    }
+
+    // Remplir le formulaire
+    console.log('🔧 Remplissage du formulaire avec:', client);
+    this.setValue('#client-id', client.id);
+    this.setValue('#client-form-name', client.name || '');
+    this.setValue('#client-contact', client.contact || '');
+    this.setValue('#client-form-email', client.email || '');
+    this.setValue('#client-form-phone', client.phone || '');
+    this.setValue('#client-form-address', client.address || '');
+    this.setValue('#client-type', client.type || '');
+    this.setValue('#client-siret', client.siret || '');
+    this.setValue('#client-delivery-delay', client.deliveryDelay || '');
+    this.setValue('#client-website', client.website || '');
+    this.setValue('#client-notes', client.notes || '');
+
+    // Mettre à jour l'aperçu de l'icône du type
+    this.updateClientTypeIconPreview(client.type || '');
+
+    console.log('✅ Formulaire rempli complètement');
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('clientFormModal');
+    }
+
+    this.log('Editing client:', client.name);
+  }
+
+  /**
+   * Sauvegarde un client (ajout ou modification selon editMode).
+   * Valide le formulaire, envoie via IPC, invalide le cache et rafraîchit.
+   *
+   * Workflow :
+   * 1. Récupère les 10 champs du formulaire (via getValue())
+   * 2. Validation : nom obligatoire (sinon error + return)
+   * 3. Récupère sessionToken pour authentification IPC
+   * 4. Si editMode = true :
+   *    - Récupère l'ID du client (#client-id)
+   *    - Appelle IPC 'updateClient' avec sessionToken + clientData
+   *    - Émet événement 'updated' avec clientData
+   * 5. Si editMode = false :
+   *    - Appelle IPC 'addClient' avec sessionToken + clientData
+   *    - Émet événement 'added' avec clientData
+   * 6. Invalide le cache DataCache ('clients')
+   * 7. Recharge les clients (loadClients)
+   * 8. Rafraîchit le tableau (populateClientsTable)
+   * 9. Émet événement global 'clients:updated' (EventBus)
+   * 10. Nettoie le formulaire (clearClientForm)
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si nom manquant ou erreur IPC
+   * @fires NotificationSystem#success Si sauvegarde réussie
+   * @fires EventBus#added Après ajout réussi (avec clientData)
+   * @fires EventBus#updated Après modification réussie (avec clientData)
+   * @fires clients:updated Événement global pour notifier autres modules
+   *
+   * @example
+   * // Utilisateur remplit le formulaire et clique "Sauvegarder" (mode ajout)
+   * await saveClient();
+   * // → IPC 'addClient' appelé
+   * // → Cache invalidé
+   * // → Tableau rafraîchi
+   * // → "Client ajouté avec succès"
+   *
+   * @example
+   * // Utilisateur modifie un client existant et clique "Sauvegarder"
+   * await saveClient();
+   * // → IPC 'updateClient' appelé avec clientData.id
+   * // → Cache invalidé
+   * // → "Client modifié avec succès"
+   */
+  async saveClient() {
+    try {
+      // Récupérer les valeurs du formulaire
+      const clientData = {
+        name: this.getValue('#client-form-name'),
+        contact: this.getValue('#client-contact') || '',
+        email: this.getValue('#client-form-email') || '',
+        phone: this.getValue('#client-form-phone') || '',
+        address: this.getValue('#client-form-address') || '',
+        type: this.getValue('#client-type') || '',
+        siret: this.getValue('#client-siret') || '',
+        deliveryDelay: parseInt(this.getValue('#client-delivery-delay') || 0),
+        website: this.getValue('#client-website') || '',
+        notes: this.getValue('#client-notes') || ''
+      };
+
+      // Validation
+      if (!clientData.name) {
+        NotificationSystem.error('Le nom du client est requis');
+        return;
+      }
+
+      const sessionToken = this.getSessionToken();
+
+      if (this.editMode) {
+        // Modification - nécessite mode admin
+        if (!sessionToken) {
+          NotificationSystem.error('⚠️ Mode Admin requis pour modifier des clients. Veuillez vous connecter.');
+          this.clearClientForm();
+          return;
+        }
+
+        const id = this.getValue('#client-id');
+        clientData.id = id;
+
+        // 🔄 Sauvegarder l'ancien état pour Undo/Redo
+        const oldClient = this.clients.find(c => c.id == id);
+        const oldClientCopy = oldClient ? { ...oldClient } : null;
+
+        const result = await this.invokeAPI('updateClient', sessionToken, clientData);
+
+        if (result.success) {
+          NotificationSystem.success('Client modifié avec succès');
+          this.emitEvent('updated', clientData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; oldClientCopy) {
+            window.UndoRedoManager.record({
+              type: 'CLIENT_UPDATE',
+              description: `Modification client "${clientData.name}"`,
+              undo: async () => {
+                await this.invokeAPI('updateClient', sessionToken, oldClientCopy);
+                DataCache.invalidate('clients');
+                await this.loadClients();
+                this.populateClientsTable();
+                this.events.emit('clients:updated');
+              },
+              redo: async () => {
+                await this.invokeAPI('updateClient', sessionToken, clientData);
+                DataCache.invalidate('clients');
+                await this.loadClients();
+                this.populateClientsTable();
+                this.events.emit('clients:updated');
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || 'Erreur lors de la modification');
+        }
+      } else {
+        // Ajout - autorisé pour tous (vendeurs et admin)
+        const result = await this.invokeAPI('addClient', sessionToken, clientData);
+
+        if (result.success) {
+          NotificationSystem.success('Client ajouté avec succès');
+          this.emitEvent('added', clientData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; result.client) {
+            const newClientId = result.client.id || result.id;
+            window.UndoRedoManager.record({
+              type: 'CLIENT_CREATE',
+              description: `Création client "${clientData.name}"`,
+              undo: async () => {
+                await this.invokeAPI('deleteClient', sessionToken, newClientId);
+                DataCache.invalidate('clients');
+                await this.loadClients();
+                this.populateClientsTable();
+                this.events.emit('clients:updated');
+              },
+              redo: async () => {
+                await this.invokeAPI('addClient', sessionToken, clientData);
+                DataCache.invalidate('clients');
+                await this.loadClients();
+                this.populateClientsTable();
+                this.events.emit('clients:updated');
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || "Erreur lors de l'ajout");
+        }
+      }
+
+      // Recharger les clients
+      DataCache.invalidate('clients');
+      await this.loadClients();
+
+      // Rafraîchir la table
+      this.populateClientsTable();
+
+      // Émettre un événement global pour que d'autres modules puissent réagir
+      this.events.emit('clients:updated');
+
+      // Nettoyer le formulaire
+      this.clearClientForm();
+
+    } catch (error) {
+      this.error('Error saving client:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la sauvegarde');
+    }
+  }
+
+  /**
+   * Affiche le modal de confirmation pour supprimer un client.
+   * Recherche le client, stocke son ID, personnalise le message et affiche le modal.
+   *
+   * Workflow :
+   * 1. Recherche le client dans window.clients ou this.clients par ID
+   * 2. Si introuvable → NotificationSystem.error + return
+   * 3. Stocke l'ID dans this.clientToDeleteId (utilisé par confirmDeleteClientBtn)
+   * 4. Synchronise StateManager ('clientToDeleteId')
+   * 5. Met à jour le message du modal (#deleteClientMessage) :
+   *    "Êtes-vous sûr de vouloir supprimer "[nom]" ?"
+   * 6. Affiche le modal Bootstrap (#deleteClientModal)
+   *
+   * @public
+   * @param {number|string} id - ID du client à supprimer
+   * @returns {void}
+   * @fires NotificationSystem#error Si le client n'est pas trouvé
+   *
+   * @example
+   * // Utilisateur clique sur icône "Supprimer" du client ID=3
+   * askDeleteClient(3);
+   * // → Modal de confirmation s'affiche
+   * // → Message: "Êtes-vous sûr de vouloir supprimer "BatiPro" ?"
+   * // → Bouton "Confirmer" → appelle deleteClient(3)
+   */
+  askDeleteClient(id) {
+    const clientsSource = window.clients || this.clients;
+    const client = clientsSource.find(s => String(s.id) === String(id));
+
+    if (!client) {
+      NotificationSystem.error('Client introuvable');
+      return;
+    }
+
+    this.clientToDeleteId = id;
+    this.state.set('clientToDeleteId', id);
+
+    // Mettre à jour le message du modal
+    const deleteMessage = this.getElement('#deleteClientMessage');
+    if (deleteMessage) {
+      deleteMessage.textContent = `Êtes-vous sûr de vouloir supprimer "${client.name}" ?`;
+    }
+
+    // Afficher le modal
+    if (this.deleteModal) {
+      ModalHelper.show('deleteClientModal');
+    }
+
+    this.log('Delete confirmation requested for:', client.name);
+  }
+
+  /**
+   * Supprime définitivement un client après confirmation.
+   * Envoie la requête de suppression via IPC, invalide le cache et rafraîchit.
+   *
+   * Workflow :
+   * 1. Validation : ID non vide (sinon error + return)
+   * 2. Récupère sessionToken pour authentification IPC
+   * 3. Appelle IPC 'deleteClient' avec sessionToken + id
+   * 4. Si succès :
+   *    - Affiche NotificationSystem.success
+   *    - Émet événement 'deleted' avec id
+   *    - Ferme le modal de confirmation (#deleteClientModal)
+   *    - Invalide cache DataCache ('clients')
+   *    - Recharge les clients (loadClients)
+   *    - Rafraîchit le tableau (populateClientsTable)
+   *    - Émet événement global 'clients:updated' (EventBus)
+   *    - Réinitialise this.clientToDeleteId
+   * 5. Si erreur → throw Error
+   *
+   * @public
+   * @async
+   * @param {number|string} id - ID du client à supprimer
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si ID invalide ou erreur IPC
+   * @fires NotificationSystem#success Si suppression réussie
+   * @fires EventBus#deleted Après suppression réussie (avec id)
+   * @fires clients:updated Événement global pour notifier autres modules
+   *
+   * @example
+   * // Utilisateur confirme la suppression dans le modal
+   * await deleteClient(3);
+   * // → IPC 'deleteClient' appelé
+   * // → Cache invalidé
+   * // → Tableau rafraîchi
+   * // → Modal fermé
+   * // → "Client supprimé avec succès"
+   */
+  async deleteClient(id) {
+    try {
+      if (!id) {
+        this.error('deleteClient called with invalid ID:', id);
+        NotificationSystem.error('Erreur: ID de client invalide');
+        return;
+      }
+
+      // Vérifier que l'utilisateur est en mode admin
+      const sessionToken = this.getSessionToken();
+      if (!sessionToken) {
+        NotificationSystem.error('⚠️ Mode Admin requis pour supprimer des clients. Veuillez vous connecter.');
+        if (this.deleteModal) {
+          ModalHelper.hide('deleteClientModal');
+        }
+        return;
+      }
+
+      // 🔄 Sauvegarder le client pour Undo/Redo
+      const clientToDelete = this.clients.find(c => c.id == id);
+      const clientCopy = clientToDelete ? { ...clientToDelete } : null;
+
+      const result = await this.invokeAPI('deleteClient', sessionToken, id);
+
+      if (result.success) {
+        NotificationSystem.success('Client supprimé avec succès');
+        this.emitEvent('deleted', id);
+
+        // 🔄 Enregistrer l'action Undo/Redo
+        if (window.UndoRedoManager &amp;&amp; clientCopy) {
+          window.UndoRedoManager.record({
+            type: 'CLIENT_DELETE',
+            description: `Suppression client "${clientCopy.name}"`,
+            undo: async () => {
+              await this.invokeAPI('addClient', sessionToken, clientCopy);
+              DataCache.invalidate('clients');
+              await this.loadClients();
+              this.populateClientsTable();
+              this.events.emit('clients:updated');
+            },
+            redo: async () => {
+              await this.invokeAPI('deleteClient', sessionToken, id);
+              CacheKeys.invalidate(CacheKeys.CLIENTS);
+              await this.loadClients();
+              this.populateClientsTable();
+              this.events.emit('clients:updated');
+            }
+          });
+        }
+
+        // Fermer le modal
+        if (this.deleteModal) {
+          ModalHelper.hide('deleteClientModal');
+        }
+
+        // Recharger les clients
+        CacheKeys.invalidate(CacheKeys.CLIENTS);
+        await this.loadClients();
+
+        // Rafraîchir la table
+        this.populateClientsTable();
+
+        // Émettre un événement global pour que d'autres modules puissent réagir
+        this.events.emit('clients:updated');
+
+        this.clientToDeleteId = null;
+      } else {
+        throw new Error(result.message || 'Erreur lors de la suppression');
+      }
+    } catch (error) {
+      this.error('Error deleting client:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la suppression');
+    }
+  }
+
+  /**
+   * Nettoie complètement le formulaire client et ferme le modal.
+   * Réinitialise tous les champs, désactive editMode et restaure le titre par défaut.
+   *
+   * Workflow :
+   * 1. Vide les 11 champs du formulaire via setValue('') :
+   *    - client-id, name, contact, email, phone, address, type,
+   *      siret, delivery-delay, website, notes
+   * 2. Désactive editMode (mode ajout)
+   * 3. Synchronise StateManager ('clientEditMode' = false)
+   * 4. Ferme le modal Bootstrap (#clientFormModal)
+   * 5. Réinitialise le titre du modal en "Ajouter un client"
+   *
+   * Appelé par :
+   * - addClient() : Pour préparer un formulaire vide
+   * - saveClient() : Après sauvegarde réussie
+   * - Bouton "Annuler" du modal (#cancel-client-btn)
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique "Annuler" dans le modal
+   * clearClientForm();
+   * // → Tous les champs vidés
+   * // → Modal fermé
+   * // → Titre réinitialisé
+   */
+  clearClientForm() {
+    this.setValue('#client-id', '');
+    this.setValue('#client-form-name', '');
+    this.setValue('#client-contact', '');
+    this.setValue('#client-form-email', '');
+    this.setValue('#client-form-phone', '');
+    this.setValue('#client-form-address', '');
+    this.setValue('#client-type', '');
+    this.setValue('#client-siret', '');
+    this.setValue('#client-delivery-delay', '');
+    this.setValue('#client-website', '');
+    this.setValue('#client-notes', '');
+
+    // Réinitialiser l'aperçu de l'icône du type
+    this.updateClientTypeIconPreview('');
+
+    this.editMode = false;
+    this.state.set('clientEditMode', false);
+
+    // Fermer le modal
+    if (this.formModal) {
+      ModalHelper.hide('clientFormModal');
+    }
+
+    // Réinitialiser le titre
+    const formTitle = this.getElement('#client-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-users">&lt;/i> Ajouter un client';
+    }
+
+    this.log('Client form cleared');
+  }
+
+  /**
+   * Retourne la liste triée des noms de clients pour autocomplete.
+   * Utilisé par d'autres modules (ex: MaterialsModule) pour remplir les champs d'autocomplete.
+   *
+   * @public
+   * @returns {Array&lt;string>} Liste des noms de clients triés alphabétiquement
+   *
+   * @example
+   * // MaterialsModule veut afficher une liste d'autocomplete de clients
+   * const clientNames = getClientNames();
+   * // → ["BatiPro", "ElecPlus", "MaçonMax", "PlombiPro"]
+   *
+   * @example
+   * // Utilisation dans un champ autocomplete
+   * const names = getClientNames();
+   * autocomplete(document.getElementById("client-input"), names);
+   */
+  getClientNames() {
+    const clientsSource = window.clients || this.clients;
+    return clientsSource.map(s => s.name).sort();
+  }
+
+  /**
+   * Bascule vers l'onglet Catalogue et filtre les devis et factures par client.
+   * Utilise Bootstrap Tab API pour changer d'onglet et appelle filterByClientName() du MaterialsModule.
+   *
+   * Workflow :
+   * 1. Récupère l'onglet #admin-tab (Catalogue)
+   * 2. Active l'onglet via Bootstrap Tab API (new bootstrap.Tab().show())
+   * 3. Attend 100ms pour laisser l'onglet se charger
+   * 4. Appelle window.filterByClientName(clientName) du MaterialsModule
+   * 5. Si fonction non disponible → affiche warning dans console
+   *
+   * Intégration :
+   * - Appelé par le bouton "Voir devis et factures" dans le tableau des clients
+   * - Affiche le badge vert avec nombre de devis et factures (ex: "12")
+   * - Nécessite que MaterialsModule expose filterByClientName() en global
+   *
+   * @public
+   * @param {string} clientName - Nom du client dont on veut voir les devis et factures
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir devis et factures" pour le client "BatiPro"
+   * viewClientQuotes("BatiPro");
+   * // → Bascule vers onglet Catalogue
+   * // → Filtre actif: client = "BatiPro"
+   * // → Affiche uniquement les 12 devis et factures fournis par BatiPro
+   */
+  viewClientQuotes(clientName) {
+    this.log(`Viewing quotes and invoices for client: ${clientName}`);
+
+    // Basculer vers l'onglet Devis
+    const quotesTab = this.getElement('#quotes-tab');
+    if (quotesTab) {
+      const tabTrigger = new bootstrap.Tab(quotesTab);
+      tabTrigger.show();
+    }
+
+    // Filtrer les devis par nom de client
+    // avec un léger délai pour laisser l'onglet se charger
+    setTimeout(() => {
+      const searchInput = document.getElementById('quotes-search-input');
+      if (searchInput) {
+        searchInput.value = clientName;
+        // Déclencher l'événement de recherche
+        const event = new Event('input', { bubbles: true });
+        searchInput.dispatchEvent(event);
+      }
+    }, 150);
+  }
+
+  /**
+   * Affiche les détails complets d'un client dans un modal.
+   *
+   * Workflow :
+   * 1. Chercher le client par ID dans la liste
+   * 2. Si non trouvé : afficher erreur, arrêter
+   * 3. Remplir tous les champs du modal de détails
+   * 4. Afficher le modal 'clientDetailsModal'
+   *
+   * @public
+   * @param {number|string} id - ID du client
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir détails" pour le client #3
+   * viewClientDetails(3);
+   * // → Modal affiché avec toutes les informations du client
+   */
+  viewClientDetails(id) {
+    this.log(`Viewing details for client ID: ${id}`);
+
+    // Chercher le client
+    const client = (window.clients || this.clients).find(s => String(s.id) === String(id));
+
+    if (!client) {
+      this.error('Client introuvable pour ID:', id);
+      NotificationSystem.error('Client introuvable');
+      return;
+    }
+
+    // Remplir tous les champs du modal
+    this.setTextContent('#detail-client-id', client.id ?? '-');
+    this.setTextContent('#detail-client-name', client.name ?? '-');
+    this.setTextContent('#detail-client-contact', client.contact ?? '-');
+    this.setTextContent('#detail-client-phone', client.phone ?? '-');
+    this.setTextContent('#detail-client-email', client.email ?? '-');
+    this.setTextContent('#detail-client-address', client.address ?? '-');
+    this.setTextContent('#detail-client-type', client.type ?? '-');
+    this.setTextContent('#detail-client-siret', client.siret ?? '-');
+    this.setTextContent('#detail-client-delivery', client.deliveryDelay ? `${client.deliveryDelay} jours` : '-');
+    this.setTextContent('#detail-client-website', client.website ?? '-');
+    this.setTextContent('#detail-client-notes', client.notes ?? '-');
+
+    // Afficher le modal
+    ModalHelper.show('clientDetailsModal');
+    this.log('Client details modal displayed for:', client.name);
+  }
+
+  /**
+   * Exporte la liste des clients vers un fichier Excel.
+   * Génère un fichier Excel avec toutes les informations clients et leurs statistiques.
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur clique sur "Exporter Excel"
+   * await exportClientsToExcel();
+   * // → Fichier "clients-YYYY-MM-DD.xlsx" téléchargé
+   */
+  async exportClientsToExcel() {
+    try {
+      this.log('Exporting clients to Excel...');
+
+      // Vérifier si XLSX est disponible
+      if (typeof XLSX === 'undefined') {
+        NotificationSystem.error('Bibliothèque XLSX non disponible');
+        return;
+      }
+
+      const clientsSource = window.clients || this.clients;
+      if (!clientsSource || clientsSource.length === 0) {
+        NotificationSystem.warning('Aucun client à exporter');
+        return;
+      }
+
+      // Récupérer les statistiques de devis/factures/CA
+      const stats = await this.countQuotesAndInvoicesPerClient();
+
+      // Préparer les données pour Excel
+      const excelData = [
+        ['Liste des Clients', '', '', '', '', '', ''],
+        [`Exporté le ${new Date().toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}`, '', '', '', '', '', ''],
+        [],
+        ['ID', 'Nom', 'Contact', 'Email', 'Téléphone', 'Type', 'Nombre de Devis', 'Nombre de Factures', 'CA Total TTC (€)', 'SIRET', 'Adresse', 'Notes']
+      ];
+
+      // Ajouter chaque client
+      clientsSource.forEach(client => {
+        // Recherche insensible à la casse
+        const normalizedClientName = client.name.toLowerCase().trim();
+        const clientStats = stats[normalizedClientName] || { quotes: 0, invoices: 0, totalRevenue: 0 };
+        excelData.push([
+          client.id || '',
+          client.name || '',
+          client.contact || '',
+          client.email || '',
+          client.phone || '',
+          client.type || '',
+          clientStats.quotes,
+          clientStats.invoices,
+          clientStats.totalRevenue.toFixed(2),
+          client.siret || '',
+          client.address || '',
+          client.notes || ''
+        ]);
+      });
+
+      // Créer le workbook et la feuille
+      const ws = XLSX.utils.aoa_to_sheet(excelData);
+
+      // Définir les largeurs de colonnes
+      ws['!cols'] = [
+        { wch: 5 },   // ID
+        { wch: 30 },  // Nom
+        { wch: 20 },  // Contact
+        { wch: 30 },  // Email
+        { wch: 15 },  // Téléphone
+        { wch: 20 },  // Type
+        { wch: 12 },  // Devis
+        { wch: 12 },  // Factures
+        { wch: 15 },  // CA
+        { wch: 18 },  // SIRET
+        { wch: 40 },  // Adresse
+        { wch: 40 }   // Notes
+      ];
+
+      // Mettre en gras les en-têtes (ligne 4)
+      const headerRow = 3; // Index 0-based
+      for (let col = 0; col &lt; 12; col++) {
+        const cellAddress = XLSX.utils.encode_cell({ r: headerRow, c: col });
+        if (!ws[cellAddress]) continue;
+        ws[cellAddress].s = {
+          font: { bold: true },
+          fill: { fgColor: { rgb: "4472C4" } },
+          alignment: { horizontal: "center" }
+        };
+      }
+
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Clients');
+
+      // Générer le fichier en base64
+      const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'base64' });
+
+      // Sauvegarder avec l'API Electron
+      const now = new Date();
+      const filename = `clients-${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}.xlsx`;
+
+      const saveResult = await this.invoke('save-excel', {
+        base64: wbout,
+        filename: filename,
+        title: 'Exporter Liste Clients'
+      });
+
+      if (saveResult.success) {
+        NotificationSystem.success(`Fichier Excel sauvegardé: ${saveResult.path}`);
+        this.log('Clients exported successfully:', saveResult.path);
+      } else {
+        NotificationSystem.warning(saveResult.message || 'Export annulé');
+      }
+
+    } catch (error) {
+      this.error('Error exporting clients to Excel:', error);
+      NotificationSystem.error('Erreur lors de l\'export Excel');
+    }
+  }
+
+  /**
+   * Définit le contenu textuel d'un élément (helper).
+   * @private
+   */
+  setTextContent(selector, value) {
+    const element = this.getElement(selector);
+    if (element) {
+      element.textContent = value;
+    } else {
+      this.warn(`Element not found: ${selector}`);
+    }
+  }
+
+  /**
+   * Change de page dans la pagination.
+   * @param {number} direction - Direction: -1 pour précédent, 1 pour suivant
+   * @private
+   */
+  changePage(direction) {
+    const newPage = this.pagination.currentPage + direction;
+    if (newPage >= 1 &amp;&amp; newPage &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = newPage;
+      this.applyClientFilters();
+    }
+  }
+
+  /**
+   * Va à une page spécifique.
+   * @param {number} pageNumber - Numéro de page (1-indexed)
+   * @private
+   */
+  goToPage(pageNumber) {
+    if (pageNumber >= 1 &amp;&amp; pageNumber &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = pageNumber;
+      this.applyClientFilters();
+    }
+  }
+
+  /**
+   * Met à jour les contrôles de pagination (info et boutons).
+   * @param {number} totalItems - Nombre total d'items
+   * @param {Array} displayedItems - Items affichés sur la page actuelle
+   * @private
+   */
+  updatePaginationControls(totalItems, displayedItems) {
+    // Mettre à jour l'info de pagination
+    const paginationInfo = this.getElement('#clients-pagination-info');
+    if (paginationInfo) {
+      if (totalItems === 0) {
+        paginationInfo.textContent = 'Aucun client';
+      } else {
+        const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage + 1;
+        const endIndex = startIndex + displayedItems.length - 1;
+        paginationInfo.textContent = `Affichage ${startIndex}-${endIndex} sur ${totalItems} clients`;
+      }
+    }
+
+    // Mettre à jour les boutons de pagination
+    const paginationControls = this.getElement('#clients-pagination-controls');
+    if (paginationControls &amp;&amp; totalItems > 0) {
+      const prevDisabled = this.pagination.currentPage === 1 ? 'disabled' : '';
+      const nextDisabled = this.pagination.currentPage === this.pagination.totalPages ? 'disabled' : '';
+
+      // Générer les numéros de page (max 5 pages visibles)
+      const pageNumbers = this.generatePageNumbers();
+
+      paginationControls.innerHTML = `
+        &lt;button class="btn btn-sm btn-outline-primary" ${prevDisabled} onclick="window.clientsModule.changePage(-1)">
+          &lt;i class="fas fa-chevron-left">&lt;/i> Précédent
+        &lt;/button>
+        ${pageNumbers.map(page => {
+          if (page === '...') {
+            return '&lt;span class="mx-1">...&lt;/span>';
+          }
+          const active = page === this.pagination.currentPage ? 'btn-primary' : 'btn-outline-primary';
+          return `&lt;button class="btn btn-sm ${active}" onclick="window.clientsModule.goToPage(${page})">${page}&lt;/button>`;
+        }).join('')}
+        &lt;button class="btn btn-sm btn-outline-primary" ${nextDisabled} onclick="window.clientsModule.changePage(1)">
+          Suivant &lt;i class="fas fa-chevron-right">&lt;/i>
+        &lt;/button>
+      `;
+    } else if (paginationControls) {
+      paginationControls.innerHTML = '';
+    }
+  }
+
+  /**
+   * Génère les numéros de page à afficher (max 5 pages visibles avec ellipses).
+   * @returns {Array} - Array de numéros de page et ellipses
+   * @private
+   */
+  generatePageNumbers() {
+    const pages = [];
+    const total = this.pagination.totalPages;
+    const current = this.pagination.currentPage;
+
+    if (total &lt;= 7) {
+      // Afficher toutes les pages si &lt;= 7
+      for (let i = 1; i &lt;= total; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Toujours afficher la première page
+      pages.push(1);
+
+      if (current > 3) {
+        pages.push('...');
+      }
+
+      // Pages autour de la page actuelle
+      const start = Math.max(2, current - 1);
+      const end = Math.min(total - 1, current + 1);
+
+      for (let i = start; i &lt;= end; i++) {
+        pages.push(i);
+      }
+
+      if (current &lt; total - 2) {
+        pages.push('...');
+      }
+
+      // Toujours afficher la dernière page
+      pages.push(total);
+    }
+
+    return pages;
+  }
+
+  /**
+   * Supprime plusieurs clients en une seule opération (bulk delete).
+   *
+   * @async
+   * @param {Array&lt;string|number>} clientIds - Liste des IDs de clients à supprimer
+   * @returns {Promise&lt;Object>} Résultat avec deletedItems, undoCallback, redoCallback
+   */
+  async bulkDeleteClients(clientIds) {
+    try {
+      this.log(`Bulk deleting ${clientIds.length} clients...`);
+
+      // Vérifier le mode admin
+      const sessionToken = this.getSessionToken();
+      if (!sessionToken) {
+        NotificationSystem.error('Mode Admin requis pour supprimer des clients');
+        throw new Error('Admin mode required');
+      }
+
+      // Sauvegarder les clients avant suppression (pour undo)
+      const clientsToDelete = clientIds.map(id => {
+        const client = this.clients.find(c => String(c.id) === String(id));
+        return client ? { ...client } : null;
+      }).filter(Boolean);
+
+      // Supprimer tous les clients un par un
+      const deletePromises = clientIds.map(id =>
+        this.invokeAPI('deleteClient', sessionToken, id)
+      );
+
+      const results = await Promise.all(deletePromises);
+
+      // Vérifier si toutes les suppressions ont réussi
+      const allSuccess = results.every(r => r.success);
+      if (!allSuccess) {
+        const failedCount = results.filter(r => !r.success).length;
+        throw new Error(`${failedCount} suppression(s) échouée(s)`);
+      }
+
+      // Recharger les clients
+      CacheKeys.invalidate(CacheKeys.CLIENTS);
+      await this.loadClients();
+      this.populateClientsTable();
+      this.events.emit('clients:updated');
+
+      // Préparer les callbacks undo/redo
+      const undoCallback = async () => {
+        for (const client of clientsToDelete) {
+          await this.invokeAPI('addClient', sessionToken, client);
+        }
+        CacheKeys.invalidate(CacheKeys.CLIENTS);
+        await this.loadClients();
+        this.populateClientsTable();
+        this.events.emit('clients:updated');
+      };
+
+      const redoCallback = async () => {
+        for (const id of clientIds) {
+          await this.invokeAPI('deleteClient', sessionToken, id);
+        }
+        CacheKeys.invalidate(CacheKeys.CLIENTS);
+        await this.loadClients();
+        this.populateClientsTable();
+        this.events.emit('clients:updated');
+      };
+
+      return {
+        deletedItems: clientsToDelete,
+        undoCallback,
+        redoCallback
+      };
+
+    } catch (error) {
+      this.error('Error in bulk delete clients:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la suppression groupée');
+      throw error;
+    }
+  }
+
+  /**
+   * Exporte plusieurs clients en CSV (bulk export).
+   *
+   * @async
+   * @param {Array&lt;string|number>} clientIds - Liste des IDs de clients à exporter
+   * @returns {Promise&lt;void>}
+   */
+  async bulkExportClients(clientIds) {
+    try {
+      this.log(`Bulk exporting ${clientIds.length} clients...`);
+
+      // Récupérer les clients sélectionnés
+      const clientsToExport = clientIds.map(id => {
+        const client = this.clients.find(c => String(c.id) === String(id));
+        return client;
+      }).filter(Boolean);
+
+      if (clientsToExport.length === 0) {
+        NotificationSystem.warning('Aucun client à exporter');
+        return;
+      }
+
+      // Récupérer les statistiques pour chaque client
+      const stats = await this.countQuotesAndInvoicesPerClient();
+
+      // Enrichir les clients avec les stats
+      const enrichedClients = clientsToExport.map(client => {
+        const normalizedName = client.name.toLowerCase().trim();
+        const clientStats = stats[normalizedName] || { quotes: 0, invoices: 0, totalRevenue: 0 };
+        return {
+          ...client,
+          quotesCount: clientStats.quotes,
+          invoicesCount: clientStats.invoices,
+          totalRevenue: clientStats.totalRevenue
+        };
+      });
+
+      // Générer le CSV
+      const csv = this.generateCSV(enrichedClients);
+
+      // Sauvegarder le fichier
+      const now = new Date();
+      const filename = `clients-export-${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}.csv`;
+
+      const saveResult = await this.invoke('save-file', {
+        content: csv,
+        filename: filename,
+        title: 'Exporter Clients Sélectionnés',
+        filters: [{ name: 'CSV', extensions: ['csv'] }]
+      });
+
+      if (saveResult.success) {
+        NotificationSystem.success(`${clientsToExport.length} client(s) exporté(s): ${saveResult.path}`);
+        this.log('Clients exported successfully:', saveResult.path);
+      } else {
+        NotificationSystem.warning(saveResult.message || 'Export annulé');
+      }
+
+    } catch (error) {
+      this.error('Error in bulk export clients:', error);
+      NotificationSystem.error('Erreur lors de l\'export groupé');
+    }
+  }
+
+  /**
+   * Génère un fichier CSV à partir d'une liste de clients.
+   *
+   * @param {Array&lt;Object>} clients - Liste des clients à exporter
+   * @returns {string} Contenu CSV
+   * @private
+   */
+  generateCSV(clients) {
+    if (!clients || !Array.isArray(clients) || clients.length === 0) {
+      return 'ID,Nom,Contact,Email,Téléphone,Type,SIRET,Adresse,Délai de livraison,Site Web,Nombre de Devis,Nombre de Factures,CA Total TTC (€),Notes';
+    }
+
+    // En-têtes CSV
+    const headers = [
+      'ID',
+      'Nom',
+      'Contact',
+      'Email',
+      'Téléphone',
+      'Type',
+      'SIRET',
+      'Adresse',
+      'Délai de livraison',
+      'Site Web',
+      'Nombre de Devis',
+      'Nombre de Factures',
+      'CA Total TTC (€)',
+      'Notes'
+    ];
+
+    // Fonction pour échapper les valeurs CSV
+    const escapeCSV = (value) => {
+      if (value == null) return '';
+      const str = String(value);
+      if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+        return `"${str.replace(/"/g, '""')}"`;
+      }
+      return str;
+    };
+
+    // Construire les lignes
+    const rows = [headers.join(',')];
+
+    clients.forEach(client => {
+      const row = [
+        escapeCSV(client.id),
+        escapeCSV(client.name),
+        escapeCSV(client.contact),
+        escapeCSV(client.email),
+        escapeCSV(client.phone),
+        escapeCSV(client.type),
+        escapeCSV(client.siret),
+        escapeCSV(client.address),
+        escapeCSV(client.deliveryDelay ? `${client.deliveryDelay} jours` : ''),
+        escapeCSV(client.website),
+        escapeCSV(client.quotesCount || 0),
+        escapeCSV(client.invoicesCount || 0),
+        escapeCSV(client.totalRevenue ? client.totalRevenue.toFixed(2) : '0.00'),
+        escapeCSV(client.notes)
+      ];
+      rows.push(row.join(','));
+    });
+
+    return rows.join('\n');
+  }
+}
+
+export default ClientsModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

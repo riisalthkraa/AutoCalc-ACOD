@@ -1,0 +1,744 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/quickadd/QuickAddModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/quickadd/QuickAddModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * QUICK ADD MODULE - Ajout rapide au devis
+ * ========================================
+ *
+ * Module d'ajout rapide de matériaux au devis pour AutoCalc OptiDevis.
+ * Permet l'ajout ultra-rapide via syntaxe naturelle avec calculs automatiques.
+ *
+ * Architecture :
+ * Le module gère l'ajout rapide avec :
+ * - **Syntaxe naturelle** : "50 parpaings", "75m² plâtre", "10m³ béton"
+ * - **Recherche fuzzy** : Algorithme multi-niveaux avec stop words
+ * - **Calculs automatiques** : Conversion unités → quantités (m², m³, m, /h)
+ * - **Ajout direct** : Matériau ajouté à window.quoteItems instantanément
+ * - **Suggestions** : Propositions si matériau introuvable
+ *
+ * ==========================================
+ * SYNTAXE NATURELLE
+ * ==========================================
+ *
+ * **Format général** : `[quantité][unité optionnelle] [nom matériau]`
+ *
+ * **Exemples valides** :
+ * - "50 parpaings" → 50 unités de parpaings
+ * - "75m² plâtre" → Calcul auto pièces selon piecesPerM2 ou coverage
+ * - "10m³ béton" → Calcul auto sacs selon density + unitWeight
+ * - "25m câble électrique" → Calcul auto selon coverage linéaire
+ * - "8/h main d'oeuvre" → 8 heures de main d'oeuvre
+ *
+ * **Unités supportées** :
+ * - m² (surface)
+ * - m³ (volume)
+ * - m (longueur)
+ * - /h (heures)
+ * - Aucune unité = unités directes
+ *
+ * **Normalisation** :
+ * - "m2" → "m²" (conversion automatique)
+ * - "m3" → "m³" (conversion automatique)
+ * - Virgule → Point (25,5 → 25.5)
+ *
+ * ==========================================
+ * CALCULS AUTOMATIQUES
+ * ==========================================
+ *
+ * **Surface (m²)** :
+ * - Si material.piecesPerM2 existe :
+ *   - Quantité = surface × piecesPerM2
+ *   - Ex: 75m² × 10 pcs/m² = 750 unités
+ * - Sinon si material.coverage existe :
+ *   - Quantité = surface ÷ coverage
+ *   - Ex: 75m² ÷ 1.5m²/unité = 50 unités
+ * - Sinon : Quantité = surface (pas de conversion)
+ *
+ * **Volume (m³)** :
+ * - Si material.coverage (m³) existe :
+ *   - Quantité = volume ÷ coverage
+ *   - Ex: 10m³ ÷ 0.5m³/unité = 20 unités
+ * - Sinon si material.density + material.unitWeight existent :
+ *   - Poids total = volume × density
+ *   - Quantité = poids total ÷ unitWeight
+ *   - Ex: 10m³ × 1800kg/m³ ÷ 25kg/sac = 720 sacs
+ * - Sinon : Quantité = volume (pas de conversion)
+ *
+ * **Longueur (m)** :
+ * - Si material.coverage (m) existe :
+ *   - Quantité = longueur ÷ coverage
+ *   - Ex: 25m ÷ 2.5m/unité = 10 unités
+ * - Sinon : Quantité = longueur
+ *
+ * **Heures (/h)** :
+ * - Quantité = heures directes (pas de conversion)
+ *
+ * ==========================================
+ * RECHERCHE FUZZY MULTI-NIVEAUX
+ * ==========================================
+ *
+ * **Algorithme de recherche** (par ordre de priorité) :
+ *
+ * **Niveau 1 : Exacte** :
+ * - Recherche exacte sur name ou reference
+ * - Ex: "parpaing" trouve exactement "Parpaing"
+ *
+ * **Niveau 2 : Exacte nettoyée** :
+ * - Recherche exacte après suppression stop words
+ * - Ex: "sac de ciment" → "ciment" → trouve "Ciment"
+ *
+ * **Niveau 3 : Partielle (contient)** :
+ * - Recherche partielle sur name, reference, type
+ * - Ex: "plat" trouve "Plâtre"
+ *
+ * **Niveau 4 : Partielle nettoyée** :
+ * - Recherche partielle après nettoyage
+ * - Ex: "plaque de plâtre" → "plâtre" → trouve "Plâtre BA13"
+ *
+ * **Niveau 5 : Fuzzy (tous les mots)** :
+ * - Tous les mots-clés doivent être présents
+ * - Ex: "plaque plâtre" trouve "Plaque de plâtre BA13"
+ *
+ * **Niveau 6 : Permissif (au moins 1 mot)** :
+ * - Au moins 1 mot-clé présent
+ * - Ex: "plâtre" trouve n'importe quel matériau contenant "plâtre"
+ *
+ * **Stop Words** :
+ * Mots ignorés lors de la recherche :
+ * - Articles : de, le, la, les, un, une, des, du
+ * - Contenants : sac, sacs, plaque, plaques, barre, barres, rouleau, rouleaux
+ *
+ * ==========================================
+ * SUGGESTIONS
+ * ==========================================
+ *
+ * **Affichage suggestions** :
+ * - Si matériau introuvable → affiche 3 suggestions
+ * - Recherche partielle sur 3 premiers caractères du terme nettoyé
+ * - Affichage via NotificationSystem.info "💡 Suggestions: X, Y, Z"
+ *
+ * **Exemple** :
+ * - Utilisateur tape : "parpan" (erreur de frappe)
+ * - Aucun matériau trouvé
+ * - Suggestions : "Parpaing 15cm, Parpaing 20cm, Parpaing creux"
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **QuoteBuilderModule** : Ajoute à window.quoteItems directement
+ * - **QuoteBuilderModule** : Appelle window.updateQuoteTable() pour rafraîchir UI
+ * - **MaterialsModule** : Utilise window.materials pour recherche
+ * - **DashboardModule** : Appelle window.trackMaterialSearch() pour analytics
+ * - **DashboardModule** : Rafraîchit window.loadVendeurDashboard() si onglet Accueil actif
+ * - **NotificationSystem** : Feedback utilisateur (success, error, warning, info)
+ *
+ * ==========================================
+ * ÉVÉNEMENTS
+ * ==========================================
+ *
+ * **Input #quickAddInput** :
+ * - Touche Enter : Appelle processInput()
+ *
+ * **Bouton #quickAddBtn** :
+ * - Click : Appelle processInput()
+ *
+ * @module QuickAddModule
+ * @extends BaseModule
+ * @version 2.6.5
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+
+class QuickAddModule extends BaseModule {
+  /**
+   * Crée une instance du module QuickAdd.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('QuickAddModule', state, eventBus);
+
+    /**
+     * Référence à l'input Quick Add (#quickAddInput).
+     * @type {HTMLInputElement|null}
+     * @private
+     */
+    this.input = null;
+
+    /**
+     * État d'activation du module (actuellement non utilisé).
+     * @type {boolean}
+     * @private
+     */
+    this.isActive = false;
+  }
+
+  /**
+   * Initialise le module QuickAdd.
+   * Configure les event listeners sur l'input et le bouton.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async init() {
+    this.log('Initializing Quick Add Module...');
+
+    this.input = document.getElementById('quickAddInput');
+
+    if (!this.input) {
+      this.log('Input Quick Add non trouvé');
+      return;
+    }
+
+    // Event listener sur la touche Entrée
+    this.input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        this.processInput();
+      }
+    });
+
+    // Event listener sur le bouton
+    const btn = document.getElementById('quickAddBtn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        this.processInput();
+      });
+    }
+
+    this.log('Module Quick Add initialisé');
+
+    // Exposer les fonctions
+    this.exposeToGlobal({
+      quickAddProcessInput: this.processInput
+    });
+  }
+
+  /**
+   * Traite l'entrée utilisateur du Quick Add et ajoute le matériau au devis.
+   * Parse la syntaxe naturelle, recherche le matériau, calcule la quantité et ajoute au devis.
+   *
+   * Syntaxe : `[quantité][unité optionnelle] [nom matériau]`
+   *
+   * Workflow :
+   * 1. Normalisation input (m2→m², m3→m³, virgule→point)
+   * 2. Parse avec regex : /^(\d+(?:[.,]\d+)?)\s*(?:(m²|m³|m|\/h))?\s+(.+)$/i
+   * 3. Si format invalide → NotificationSystem.warning + return
+   * 4. Recherche matériau via findMaterial() (fuzzy multi-niveaux)
+   * 5. Si introuvable → error + suggestMaterials() + return
+   * 6. Calcul quantité via calculateQuantity() (conversions unités)
+   * 7. Ajout au devis via addToQuote()
+   * 8. Vide input et refocus
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#warning Si format invalide
+   * @fires NotificationSystem#error Si matériau introuvable
+   * @fires NotificationSystem#info Si suggestions affichées
+   *
+   * @example
+   * // Utilisateur tape "50 parpaings" et appuie Enter
+   * processInput();
+   * // → Parse: 50 unités, "parpaings"
+   * // → Trouve matériau "Parpaing"
+   * // → Calcule 50 unités
+   * // → Ajoute au devis
+   * // → "✓ Ajouté: 50 Parpaing (50 unités)"
+   *
+   * @example
+   * // Utilisateur tape "75m² plâtre"
+   * processInput();
+   * // → Parse: 75m², "plâtre"
+   * // → Trouve "Plaque de plâtre BA13"
+   * // → Calcule 750 unités (75m² × 10 pcs/m²)
+   * // → Ajoute au devis
+   */
+  processInput = () => {
+    let text = this.input.value.trim();
+
+    if (!text) {
+      return;
+    }
+
+    // Normaliser les unités (m2 → m², m3 → m³)
+    text = text.replace(/(\d)\s*m2\b/gi, '$1m²');
+    text = text.replace(/(\d)\s*m3\b/gi, '$1m³');
+
+    this.log(`Traitement: "${text}"`);
+
+    // Pattern avec unité de mesure: [quantité][unité] [matériau]
+    // Exemples: "75m² plaque de plâtre", "10m³ béton", "50 parpaings"
+    const patternWithUnit = /^(\d+(?:[.,]\d+)?)\s*(?:(m²|m³|m|\/h))?\s+(.+)$/i;
+    const match = text.match(patternWithUnit);
+
+    if (!match) {
+      if (window.NotificationSystem) {
+        window.NotificationSystem.warning('Format invalide. Exemples: "50 parpaings" ou "75m² plâtre"');
+      }
+      return;
+    }
+
+    const inputValue = parseFloat(match[1].replace(',', '.'));
+    const inputUnit = match[2] ? match[2].toLowerCase() : null;
+    const materialName = match[3].trim().toLowerCase();
+
+    this.log(`Recherche: ${inputValue}${inputUnit || ''} "${materialName}"`);
+
+    // Rechercher le matériau dans la base
+    const material = this.findMaterial(materialName);
+
+    if (!material) {
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error(`Matériau introuvable: "${materialName}"`);
+      }
+      this.suggestMaterials(materialName);
+      return;
+    }
+
+    // Calculer la quantité d'unités nécessaires
+    const { quantity, calculation } = this.calculateQuantity(material, inputValue, inputUnit);
+
+    if (quantity &lt;= 0) {
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error('Impossible de calculer la quantité nécessaire');
+      }
+      return;
+    }
+
+    // Ajouter au devis
+    this.addToQuote(material, quantity, calculation);
+
+    // Vider l'input
+    this.input.value = '';
+    this.input.focus();
+  }
+
+  /**
+   * Calcule la quantité d'unités nécessaires selon l'unité saisie
+   * Gère les conversions m², m³, m, /h → unités
+   *
+   * @param {Object} material - Matériau sélectionné
+   * @param {number} inputValue - Valeur saisie
+   * @param {string} inputUnit - Unité saisie (m², m³, m, /h, null)
+   * @returns {Object} {quantity, calculation}
+   */
+  calculateQuantity = (material, inputValue, inputUnit) => {
+    let quantity = inputValue;
+    let calculation = `${inputValue} unités`;
+
+    // Si une unité est spécifiée, calculer le nombre d'unités nécessaires
+    if (inputUnit) {
+      const materialUnit = material.unit?.toLowerCase();
+
+      if (inputUnit === 'm²') {
+        if (material.piecesPerM2 &amp;&amp; material.piecesPerM2 > 0) {
+          // Nombre de pièces = surface × pièces par m²
+          quantity = Math.ceil(inputValue * material.piecesPerM2);
+          calculation = `${inputValue}m² (${material.piecesPerM2} pcs/m²) = ${quantity} unités`;
+          this.log(`Calcul m²: ${inputValue}m² × ${material.piecesPerM2} pcs/m² = ${quantity} unités`);
+        } else if (material.coverage &amp;&amp; material.coverage > 0) {
+          // Nombre d'unités = surface ÷ couverture par unité
+          quantity = Math.ceil(inputValue / material.coverage);
+          calculation = `${inputValue}m² ÷ ${material.coverage}m²/unité = ${quantity} unités`;
+          this.log(`Calcul m²: ${inputValue}m² ÷ ${material.coverage}m²/unité = ${quantity} unités`);
+        } else {
+          // Pas de données de couverture, utiliser la valeur directe
+          quantity = inputValue;
+          calculation = `${inputValue}m²`;
+        }
+      } else if (inputUnit === 'm³') {
+        if (material.coverage &amp;&amp; material.coverage > 0 &amp;&amp; materialUnit === 'm³') {
+          // Volume: nombre d'unités = volume ÷ couverture par unité
+          quantity = Math.ceil(inputValue / material.coverage);
+          calculation = `${inputValue}m³ ÷ ${material.coverage}m³/unité = ${quantity} unités`;
+          this.log(`Calcul m³: ${inputValue}m³ ÷ ${material.coverage}m³/unité = ${quantity} unités`);
+        } else if (material.density &amp;&amp; material.unitWeight) {
+          // Calcul via densité: poids = volume × densité, puis nombre de sacs
+          const totalWeight = inputValue * material.density;
+          quantity = Math.ceil(totalWeight / material.unitWeight);
+          calculation = `${inputValue}m³ × ${material.density}kg/m³ ÷ ${material.unitWeight}kg/sac = ${quantity} sacs`;
+          this.log(`Calcul m³: ${inputValue}m³ × ${material.density}kg/m³ = ${totalWeight}kg ÷ ${material.unitWeight}kg = ${quantity} sacs`);
+        } else {
+          quantity = inputValue;
+          calculation = `${inputValue}m³`;
+        }
+      } else if (inputUnit === 'm') {
+        if (material.coverage &amp;&amp; material.coverage > 0 &amp;&amp; materialUnit === 'm') {
+          // Longueur: nombre d'unités = longueur ÷ couverture par unité
+          quantity = Math.ceil(inputValue / material.coverage);
+          calculation = `${inputValue}m ÷ ${material.coverage}m/unité = ${quantity} unités`;
+          this.log(`Calcul m: ${inputValue}m ÷ ${material.coverage}m/unité = ${quantity} unités`);
+        } else {
+          quantity = inputValue;
+          calculation = `${inputValue}m`;
+        }
+      } else if (inputUnit === '/h') {
+        // Heures: utiliser directement la valeur
+        quantity = inputValue;
+        calculation = `${inputValue}h`;
+      }
+    }
+
+    return { quantity, calculation };
+  }
+
+  /**
+   * Recherche un matériau avec algorithme fuzzy multi-niveaux.
+   * Utilise 6 niveaux de recherche progressive du plus strict au plus permissif.
+   *
+   * Stratégie de recherche (par ordre de priorité) :
+   * 1. Exacte : name === term OU reference === term
+   * 2. Exacte nettoyée : Après suppression stop words
+   * 3. Partielle : name.includes(term) OU reference.includes(term) OU type.includes(term)
+   * 4. Partielle nettoyée : Après suppression stop words
+   * 5. Fuzzy : TOUS les mots-clés présents (every)
+   * 6. Permissive : AU MOINS 1 mot-clé présent (some)
+   *
+   * Stop words ignorés :
+   * - Articles : de, le, la, les, un, une, des, du
+   * - Contenants : sac, sacs, plaque, plaques, barre, barres, rouleau, rouleaux
+   *
+   * @public
+   * @param {string} searchTerm - Terme de recherche saisi par l'utilisateur
+   * @returns {Object|null} Matériau trouvé ou null
+   *
+   * @example
+   * // Recherche exacte
+   * findMaterial("parpaing");
+   * // → Trouve "Parpaing" (niveau 1)
+   *
+   * @example
+   * // Recherche avec stop words
+   * findMaterial("sac de ciment");
+   * // → "sac" et "de" ignorés → "ciment" → Trouve "Ciment" (niveau 2)
+   *
+   * @example
+   * // Recherche partielle
+   * findMaterial("plat");
+   * // → Trouve "Plâtre" (niveau 3)
+   */
+  findMaterial = (searchTerm) => {
+    const materials = this.state.get('materials') || window.materials || [];
+
+    if (!materials || materials.length === 0) {
+      this.log('Aucun matériau chargé');
+      return null;
+    }
+
+    const term = searchTerm.toLowerCase();
+
+    // STOP WORDS - Mots à ignorer dans la recherche
+    const stopWords = [
+      'de', 'le', 'la', 'les', 'un', 'une', 'des', 'du',
+      'sac', 'sacs', 'plaque', 'plaques', 'barre', 'barres',
+      'rouleau', 'rouleaux'
+    ];
+
+    // Nettoyer le terme de recherche
+    const cleanedTerm = term
+      .split(/\s+/)
+      .filter(word => !stopWords.includes(word) &amp;&amp; word.length > 1)
+      .join(' ');
+
+    // 1. Recherche exacte d'abord
+    let found = materials.find(m =>
+      m.name.toLowerCase() === term ||
+      m.reference?.toLowerCase() === term
+    );
+
+    if (found) return found;
+
+    // 2. Recherche exacte avec terme nettoyé
+    found = materials.find(m =>
+      m.name.toLowerCase() === cleanedTerm ||
+      m.reference?.toLowerCase() === cleanedTerm
+    );
+
+    if (found) return found;
+
+    // 3. Recherche partielle (contient) - terme original
+    found = materials.find(m =>
+      m.name.toLowerCase().includes(term) ||
+      m.reference?.toLowerCase().includes(term) ||
+      m.type?.toLowerCase().includes(term)
+    );
+
+    if (found) return found;
+
+    // 4. Recherche partielle (contient) - terme nettoyé
+    if (cleanedTerm !== term) {
+      found = materials.find(m =>
+        m.name.toLowerCase().includes(cleanedTerm) ||
+        m.reference?.toLowerCase().includes(cleanedTerm) ||
+        m.type?.toLowerCase().includes(cleanedTerm)
+      );
+
+      if (found) return found;
+    }
+
+    // 5. Recherche fuzzy (mots séparés) - terme nettoyé
+    const words = cleanedTerm.split(/\s+/).filter(w => w.length > 1);
+    if (words.length > 0) {
+      found = materials.find(m => {
+        const materialText = (m.name + ' ' + (m.reference || '') + ' ' + (m.type || '')).toLowerCase();
+        return words.every(word => materialText.includes(word));
+      });
+
+      if (found) return found;
+    }
+
+    // 6. Recherche très permissive : au moins 1 mot clé trouvé
+    if (words.length > 0) {
+      found = materials.find(m => {
+        const materialText = (m.name + ' ' + (m.reference || '') + ' ' + (m.type || '')).toLowerCase();
+        return words.some(word => materialText.includes(word));
+      });
+    }
+
+    return found;
+  }
+
+  /**
+   * Ajoute un matériau au devis
+   * @param {Object} material - Matériau à ajouter
+   * @param {number} quantity - Quantité calculée
+   * @param {string} calculation - Détail du calcul
+   */
+  addToQuote = (material, quantity, calculation = null) => {
+    // Vérifier que quoteItems existe
+    if (typeof window.quoteItems === 'undefined') {
+      this.log('quoteItems non trouvé');
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error('Erreur: Impossible d\'ajouter au devis');
+      }
+      return;
+    }
+
+    // Validation: material valide avec propriétés requises
+    if (!material || typeof material.price !== 'number') {
+      this.log('Material invalide ou propriétés manquantes:', material);
+      if (window.NotificationSystem) {
+        window.NotificationSystem.error('Erreur: Données du matériau invalides');
+      }
+      return;
+    }
+
+    // Assurer que tvaRate est un nombre valide (défaut 0.20 si non défini)
+    // Supporte les deux formats: tva (20) et tvaRate (0.20)
+    let tvaRate;
+    if (typeof material.tvaRate === 'number' &amp;&amp; !isNaN(material.tvaRate)) {
+      tvaRate = material.tvaRate;
+    } else if (typeof material.tva === 'number' &amp;&amp; !isNaN(material.tva)) {
+      tvaRate = material.tva / 100; // Convertir 20 en 0.20
+    } else {
+      tvaRate = 0.20; // Défaut 20%
+    }
+
+    // Tracker la recherche pour le dashboard Vendeur
+    if (typeof window.trackMaterialSearch === 'function') {
+      window.trackMaterialSearch(material);
+    }
+
+    // Calculer les prix
+    const priceHT = quantity * material.price / (1 + tvaRate);
+    const priceTTC = quantity * material.price;
+    const tva = priceTTC - priceHT;
+
+    // Texte de calcul par défaut si non fourni
+    const calculationText = calculation || `${quantity} unités`;
+
+    // Ajouter directement au devis
+    window.quoteItems.push({
+      material: material,
+      clientRequest: `Quick Add`,
+      quantity: quantity,
+      calculation: calculationText,
+      unitPriceHT: material.price / (1 + tvaRate),
+      unitPriceTTC: material.price,
+      priceHT: priceHT,
+      priceTTC: priceTTC,
+      tva: tva,
+      totalHT: priceHT.toFixed(2),
+      totalTVA: tva.toFixed(2),
+      totalTTC: priceTTC.toFixed(2),
+      tvaRate: `${(tvaRate * 100).toFixed(1)}%`
+    });
+
+    // Mettre à jour l'affichage
+    if (typeof window.updateQuoteTable === 'function') {
+      window.updateQuoteTable();
+    }
+
+    // Rafraîchir le dashboard Vendeur si on est sur l'onglet Accueil
+    if (typeof window.loadVendeurDashboard === 'function') {
+      const accueilTab = document.getElementById('accueil');
+      if (accueilTab &amp;&amp; accueilTab.classList.contains('active')) {
+        setTimeout(() => {
+          window.loadVendeurDashboard();
+        }, 100);
+      }
+    }
+
+    if (window.NotificationSystem) {
+      window.NotificationSystem.success(`✓ Ajouté: ${quantity} ${material.name} (${calculationText})`);
+    }
+    this.log(`Ajouté: ${quantity} x ${material.name} - ${calculationText}`);
+  }
+
+  /**
+   * Suggère des matériaux proches du terme recherché
+   * @param {string} searchTerm - Terme recherché
+   */
+  suggestMaterials = (searchTerm) => {
+    const materials = this.state.get('materials') || window.materials || [];
+    if (!materials || materials.length === 0) return;
+
+    const term = searchTerm.toLowerCase();
+
+    // Nettoyer le terme comme dans findMaterial
+    const stopWords = [
+      'de', 'le', 'la', 'les', 'un', 'une', 'des', 'du',
+      'sac', 'sacs', 'plaque', 'plaques', 'barre', 'barres',
+      'rouleau', 'rouleaux'
+    ];
+    const cleanedTerm = term
+      .split(/\s+/)
+      .filter(word => !stopWords.includes(word) &amp;&amp; word.length > 1)
+      .join(' ');
+
+    const searchTerm2 = cleanedTerm || term;
+
+    const suggestions = materials
+      .filter(m => {
+        const text = (m.name + ' ' + (m.reference || '') + ' ' + (m.type || '')).toLowerCase();
+        // Essayer avec les 3 premières lettres du terme nettoyé
+        return searchTerm2.length >= 3 &amp;&amp; text.includes(searchTerm2.substring(0, 3));
+      })
+      .slice(0, 3)
+      .map(m => m.name);
+
+    if (suggestions.length > 0 &amp;&amp; window.NotificationSystem) {
+      window.NotificationSystem.info(`💡 Suggestions: ${suggestions.join(', ')}`);
+    }
+  }
+}
+
+export default QuickAddModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

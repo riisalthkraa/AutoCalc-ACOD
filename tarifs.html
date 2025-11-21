@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarifs AutoCalc OptiDevis - Licence unique 300€, pas d'abonnement">
+    <title>Tarifs - AutoCalc OptiDevis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+        }
+        .pricing-card.featured {
+            border: 3px solid var(--primary-solid);
+        }
+        .pricing-card.featured::before {
+            content: 'RECOMMANDÉ';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .price-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link active">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: auto; padding: 8rem 0 4rem;">
+        <div class="container text-center">
+            <div class="badge mb-2"><i class="fas fa-tag"></i> Tarif Simple et Transparent</div>
+            <h1>Un Seul Prix, À Vie</h1>
+            <p style="font-size: 1.25rem; color: var(--gray); margin-top: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Pas d'abonnement mensuel, pas de frais cachés. Un investissement unique pour une licence perpétuelle.
+            </p>
+        </div>
+    </section>
+
+    <section style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+                <div class="pricing-card featured">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Licence Unique</h3>
+                    <p style="color: var(--gray); margin-bottom: 2rem;">Pour artisans, PME et négoces</p>
+                    <div class="price-amount">300€</div>
+                    <p style="font-weight: 600; margin-bottom: 2rem;">TTC - Paiement unique</p>
+
+                    <ul style="list-style: none; padding: 0; margin: 2rem 0;">
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Licence à vie</strong> - Propriété perpétuelle</div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Mises à jour mineures gratuites</strong></div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Support technique inclus</strong></div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Installation Windows/Mac/Linux</strong></div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Toutes les fonctionnalités</strong> (20 modules)</div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Données 100% locales</strong></div>
+                        </li>
+                        <li style="padding: 1rem 0; display: flex; gap: 1rem;">
+                            <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div><strong>Essai gratuit 60 jours</strong></div>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-shopping-cart"></i> Commander maintenant
+                    </a>
+                </div>
+
+                <div>
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-left: 4px solid var(--primary-solid); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-piggy-bank" style="color: var(--success); font-size: 1.5rem;"></i>
+                            Économies sur 3 ans
+                        </h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray);">
+                            Comparaison avec solutions SaaS à abonnement :
+                        </p>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="font-weight: 600;">OBAT Croissance</span>
+                                <span style="color: var(--error); font-weight: 700;">3 204€</span>
+                            </div>
+                            <div style="font-size: 0.9rem; color: var(--gray);">69€/mois × 36 mois + utilisateur</div>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="font-weight: 600;">AutoCalc OptiDevis</span>
+                                <span style="color: var(--success); font-weight: 700;">450€</span>
+                            </div>
+                            <div style="font-size: 0.9rem; color: var(--gray);">300€ + 150€ MAJ sur 3 ans</div>
+                        </div>
+                        <div style="background: var(--success); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">2 754€</div>
+                            <div style="font-size: 1.125rem;">d'économie (85%)</div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h4 style="margin-bottom: 1.5rem;">Modalités de paiement</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--gray);">
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-credit-card" style="color: var(--primary-solid); margin-top: 0.25rem;"></i>
+                                <div>Carte bancaire (Stripe sécurisé)</div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fab fa-paypal" style="color: var(--primary-solid); margin-top: 0.25rem;"></i>
+                                <div>PayPal</div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-university" style="color: var(--primary-solid); margin-top: 0.25rem;"></i>
+                                <div>Virement bancaire</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Questions Fréquentes</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary-solid);"></i>
+                        La licence est-elle vraiment à vie ?
+                    </h4>
+                    <p style="color: var(--gray); margin: 0;">
+                        Oui ! Un seul paiement de ~300€ vous donne accès à vie au logiciel. Les mises à jour mineures (correctifs, améliorations) sont gratuites. Seules les mises à jour majeures optionnelles (~50€/an) peuvent être facturées.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary-solid);"></i>
+                        Puis-je installer sur plusieurs ordinateurs ?
+                    </h4>
+                    <p style="color: var(--gray); margin: 0;">
+                        La licence est mono-utilisateur mais vous pouvez installer sur vos différents postes (bureau, portable). Pour plusieurs utilisateurs simultanés, contactez-nous pour une offre entreprise.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary-solid);"></i>
+                        Y a-t-il des frais cachés ?
+                    </h4>
+                    <p style="color: var(--gray); margin: 0;">
+                        Absolument aucun. Le prix affiché inclut le logiciel complet, le support et les mises à jour mineures. Aucun frais mensuel ou annuel.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md);">
+                    <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary-solid);"></i>
+                        Proposez-vous des remises ?
+                    </h4>
+                    <p style="color: var(--gray); margin: 0;">
+                        Des remises sont possibles pour les achats groupés (>5 licences) ou les associations professionnelles. Contactez-nous pour un devis personnalisé.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 0;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Prêt à démarrer ?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.95;">
+                Essayez gratuitement pendant 60 jours avant d'acheter
+            </p>
+            <a href="contact.html" class="btn btn-accent btn-lg">
+                <i class="fas fa-download"></i> Essai gratuit 60 jours
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">La solution intelligente de gestion de devis et factures</p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="qualite.html" class="footer-link">Qualité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> QuoteBuilderModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>QuoteBuilderModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a>~</span>QuoteBuilderModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="QuoteBuilderModule">
+        <a class="href-link" href="#QuoteBuilderModule">#</a>
+        
+        <span class="code-name">
+            
+                new QuoteBuilderModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module QuoteBuilder.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements pour communication inter-modules</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line121">line 121</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="addToQuote">
+        <a class="href-link" href="#addToQuote">#</a>
+        
+        <span class="code-name">
+            
+                addToQuote<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Ajoute un nouvel article au devis en cours.</p>
+<p>Workflow complet :</p>
+<ol>
+<li>Validation via validateBeforeAddToQuote() (si disponible)</li>
+<li>Vérification qu'un matériau est sélectionné</li>
+<li>Récupération des paramètres de calcul (surface, épaisseur, longueur, unités)</li>
+<li>Calcul de la quantité via calculateQuantity()</li>
+<li>Validation que la quantité &gt; 0</li>
+<li>Calcul des prix HT, TTC et TVA</li>
+<li>Création de l'objet item avec 13 propriétés</li>
+<li>Ajout à this.quoteItems</li>
+<li>Rafraîchissement du tableau via updateQuoteTable()</li>
+<li>Réinitialisation des champs et de la sélection</li>
+<li>Notification de succès</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line516">line 516</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si aucun matériau sélectionné ou quantité invalide</li>
+            
+                <li>NotificationSystem#event:success Lorsque l'article est ajouté</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur sélectionne un matériau, saisit surface = 10 m², clique "Ajouter"
+this.addToQuote();
+// → Item ajouté avec quantité calculée, prix HT/TTC, affichage dans tableau
+// → Champs réinitialisés, prêt pour nouvel article</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="adjustToAveragePrice">
+        <a class="href-link" href="#adjustToAveragePrice">#</a>
+        
+        <span class="code-name">
+            
+                adjustToAveragePrice<span class="signature">(targetPrice)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Ajuste le devis pour utiliser le prix moyen suggéré.</p>
+<p>Cette méthode applique une remise proportionnelle pour atteindre
+le prix moyen recommandé par le ML.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>targetPrice</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Prix cible (moyen historique)</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line922">line 922</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="askClearQuote">
+        <a class="href-link" href="#askClearQuote">#</a>
+        
+        <span class="code-name">
+            
+                askClearQuote<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Demande une confirmation utilisateur avant de vider complètement le devis.</p>
+<p>Vérifie d'abord si le devis contient des données (articles ou infos client).
+Si le devis est déjà vide, affiche une notification et ne fait rien.</p>
+<p>Si le devis contient des données, affiche un modal Bootstrap (#clearQuoteModal)
+demandant confirmation. La confirmation appellera clearQuote().</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line972">line 972</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si le devis est déjà vide</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur le bouton "Vider le devis"
+this.askClearQuote();
+// → Si devis non vide : modal de confirmation affiché
+// → Si devis vide : notification "Le devis est déjà vide"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="calculateQuoteTotals">
+        <a class="href-link" href="#calculateQuoteTotals">#</a>
+        
+        <span class="code-name">
+            
+                calculateQuoteTotals<span class="signature">()</span><span class="type-signature"> &rarr; {Object|number|number|number}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Calcule les totaux du devis en cours.</p>
+<p>Additionne tous les prix HT, TVA et TTC de tous les articles présents
+dans this.quoteItems et retourne les totaux arrondis à 2 décimales.</p>
+<p>Note : Cette fonction ne prend PAS en compte la remise. Pour obtenir
+les totaux avec remise appliquée, utiliser updateQuoteTable() qui gère
+le calcul complet incluant la remise.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line794">line 794</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Objet contenant les totaux du devis</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Object</code>
+
+
+    </div>
+    
+</div>
+
+                
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>return.totalHT - Total hors taxes (2 décimales)</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">number</code>
+
+
+    </div>
+    
+</div>
+
+                
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>return.totalTVA - Total TVA (2 décimales)</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">number</code>
+
+
+    </div>
+    
+</div>
+
+                
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>return.totalTTC - Total toutes taxes comprises (2 décimales)</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">number</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const totals = this.calculateQuoteTotals();
+console.log(totals);
+// { totalHT: 1250.50, totalTVA: 250.10, totalTTC: 1500.60 }</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="clearQuote">
+        <a class="href-link" href="#clearQuote">#</a>
+        
+        <span class="code-name">
+            
+                clearQuote<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Vide complètement le devis en cours et réinitialise tous les champs.</p>
+<p>Opérations effectuées :</p>
+<ul>
+<li>Vide this.quoteItems (supprime tous les articles)</li>
+<li>Réinitialise this.clientInfo (vide tous les champs sauf date → aujourd'hui)</li>
+<li>Réinitialise les métadonnées (currentQuoteId, currentQuoteName, currentQuoteCreatedAt)</li>
+<li>Remet le statut à 'brouillon'</li>
+<li>Vide tous les champs du formulaire HTML</li>
+<li>Remet la remise à 0%</li>
+<li>Masque le bouton &quot;Changer le statut&quot;</li>
+<li>Déverrouille les champs (si un devis accepté était chargé)</li>
+<li>Rafraîchit le tableau d'affichage</li>
+</ul>
+<p>Cette fonction est appelée après confirmation de l'utilisateur via askClearQuote().</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line1016">line 1016</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Lorsque le devis est réinitialisé</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur confirme la suppression dans le modal
+this.clearQuote();
+// → Devis entièrement vidé
+// → Formulaire réinitialisé
+// → Prêt pour un nouveau devis</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module QuoteBuilder.</p>
+<p>Effectue les opérations suivantes :</p>
+<ul>
+<li>Expose toutes les fonctions au scope global pour compatibilité legacy</li>
+<li>Configure les getters/setters pour synchroniser les propriétés avec window.*</li>
+<li>Configure tous les event listeners sur les champs du formulaire</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line233">line 233</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Si une erreur survient pendant l'initialisation</p></div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const module = new QuoteBuilderModule(stateManager, eventBus);
+await module.init();</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="removeQuoteItem">
+        <a class="href-link" href="#removeQuoteItem">#</a>
+        
+        <span class="code-name">
+            
+                removeQuoteItem<span class="signature">(index)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Supprime un article du devis en cours.</p>
+<p>Supprime l'item situé à l'index spécifié de this.quoteItems,
+met à jour le tableau d'affichage et affiche une notification de succès
+avec le nom du matériau supprimé.</p>
+<p>Si l'index est invalide (hors limites), affiche une erreur.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>index</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Index de l'item à supprimer dans this.quoteItems (0-based)</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line624">line 624</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Lorsque l'article est supprimé</li>
+            
+                <li>NotificationSystem#event:error Si l'index est invalide</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur le bouton "Supprimer" de la 3e ligne
+removeQuoteItem(2); // Index 2 = 3e élément
+// → Article retiré de quoteItems
+// → Tableau mis à jour
+// → Notification: "Ciment Portland retiré du devis"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="setQuoteFieldsLocked">
+        <a class="href-link" href="#setQuoteFieldsLocked">#</a>
+        
+        <span class="code-name">
+            
+                setQuoteFieldsLocked<span class="signature">(locked)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Verrouille ou déverrouille tous les champs et boutons du formulaire de devis.</p>
+<p>Utilisé principalement pour empêcher la modification d'un devis accepté/signé.
+Lorsqu'un devis au statut &quot;accepté&quot; est chargé, tous les champs sont verrouillés
+pour préserver l'intégrité du document signé.</p>
+<p>Éléments verrouillés/déverrouillés :</p>
+<ul>
+<li>Champs client : nom, téléphone, email, adresse, date, émetteur</li>
+<li>Champ remise</li>
+<li>Boutons d'action : Ajouter article, Ajout rapide, Sauvegarder devis</li>
+<li>Boutons de modification/suppression dans le tableau des articles</li>
+</ul>
+<p>Effet visuel du verrouillage :</p>
+<ul>
+<li>Champs : disabled + fond gris (#f5f5f5) + curseur not-allowed</li>
+<li>Boutons : disabled + opacité 0.5 + curseur not-allowed</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>locked</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">boolean</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>true pour verrouiller les champs, false pour les déverrouiller</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line1091">line 1091</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Examples</h5>
+    
+    
+        <pre class="prettyprint"><code>// Chargement d'un devis accepté (signé)
+this.setQuoteFieldsLocked(true);
+// → Tous les champs et boutons sont désactivés et grisés</code></pre>
+    
+
+    
+        <pre class="prettyprint"><code>// Admin déverrouille manuellement un devis accepté
+this.setQuoteFieldsLocked(false);
+// → Tous les champs redeviennent modifiables</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateCalculationPreview">
+        <a class="href-link" href="#updateCalculationPreview">#</a>
+        
+        <span class="code-name">
+            
+                updateCalculationPreview<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Met à jour l'aperçu du calcul en temps réel.</p>
+<p>Récupère les valeurs saisies dans les champs de calcul (surface, épaisseur, longueur, unités),
+calcule automatiquement la quantité et les prix (HT, TVA, TTC), puis affiche le résultat
+dans la zone #calculation-preview.</p>
+<p>Utilise la fonction centralisée calculateQuantity() pour déterminer :</p>
+<ul>
+<li>La quantité en fonction du type de calcul (surfacique/volumique/direct)</li>
+<li>Le texte explicatif du calcul</li>
+</ul>
+<p>Si aucun matériau n'est sélectionné, vide la zone d'aperçu.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line439">line 439</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Lorsque l'utilisateur saisit "10" dans le champ surface
+// La prévisualisation affiche automatiquement :
+// Calcul: 10 m² × 12.5 pièces/m² = 125 unités
+// Quantité: 125 unités
+// Prix Total HT: 520.83 €
+// TVA (20.0%): 104.17 €
+// Prix Total TTC: 625.00 €</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateQuoteTable">
+        <a class="href-link" href="#updateQuoteTable">#</a>
+        
+        <span class="code-name">
+            
+                updateQuoteTable<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Met à jour l'affichage complet du tableau du devis.</p>
+<p>Reconstruit entièrement le tableau HTML (#quote-table) avec tous les articles du devis,
+puis calcule et affiche les totaux (HT, TVA, TTC) en bas de page.</p>
+<p>Gestion de la remise :</p>
+<ul>
+<li>Récupère le pourcentage de remise (#quote-discount)</li>
+<li>Si remise &gt; 0 : affiche les lignes &quot;Total HT avant remise&quot; et &quot;Remise&quot;</li>
+<li>Applique la remise sur le total HT</li>
+<li>Recalcule TVA et TTC proportionnellement</li>
+</ul>
+<p>Chaque ligne du tableau affiche :</p>
+<ul>
+<li>Nom du matériau</li>
+<li>Demande client</li>
+<li>Quantité</li>
+<li>Détail du calcul</li>
+<li>Prix unitaire HT</li>
+<li>Prix unitaire TTC</li>
+<li>Total HT</li>
+<li>Taux TVA</li>
+<li>Total TTC</li>
+<li>Bouton &quot;Supprimer&quot;</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line675">line 675</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si le tableau n'est pas trouvé dans le DOM</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Après ajout ou suppression d'un article
+this.updateQuoteTable();
+// → Tableau reconstruit avec tous les articles
+// → Totaux recalculés et affichés</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateSelectedMaterialDisplay">
+        <a class="href-link" href="#updateSelectedMaterialDisplay">#</a>
+        
+        <span class="code-name">
+            
+                updateSelectedMaterialDisplay<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Met à jour l'affichage du matériau actuellement sélectionné.</p>
+<p>Affiche le nom du matériau sélectionné dans la zone #selected-material-display,
+ou &quot;Aucun&quot; si aucun matériau n'est sélectionné.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotebuilder_QuoteBuilderModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotebuilder_QuoteBuilderModule.js.html">modules/quotebuilder/QuoteBuilderModule.js</a>, <a href="modules_quotebuilder_QuoteBuilderModule.js.html#line398">line 398</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Après sélection d'un matériau
+this.selectedMaterial = material;
+this.updateSelectedMaterialDisplay();
+// Affiche: "Matériau sélectionné : Ciment Portland"</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+═══════════════════════════════════════════════════════════════════
+  AUTOCALC OPTIDEVIS - RÉSUMÉ VERSION 3.2.0
+═══════════════════════════════════════════════════════════════════
+
+VERSION: 3.2.0
+DATE: 24 Octobre 2025
+TYPE: Mise à jour majeure (Features + UI Fixes)
+AUTEUR: David VIEY <Riisalth@hotmail.fr>
+
+═══════════════════════════════════════════════════════════════════
+  RÉSUMÉ EN 1 MINUTE
+═══════════════════════════════════════════════════════════════════
+
+Version majeure qui corrige l'affichage des modals dans tous les thèmes
+sombres et ajoute un système d'import complet pour faciliter la migration
+depuis vos logiciels concurrents (Obat, Batiprix, Excel, CSV).
+
+CORRECTION: Modals illisibles → 100% des 9 thèmes sombres OK
+NOUVEAU: Module d'import de données avec templates Excel
+NOUVEAU: Migration facilitée depuis Obat/Batiprix
+TOTAL: 18 modules chargés
+
+═══════════════════════════════════════════════════════════════════
+  CHANGEMENTS PRINCIPAUX
+═══════════════════════════════════════════════════════════════════
+
+🐛 CORRECTIONS UI
+   → Modals illisibles dans thèmes sombres (texte sombre sur fond sombre)
+   → 9 thèmes sombres corrigés (styles6, styles20-27)
+   → Tous les éléments de texte forcés en clair dans modals
+
+✨ NOUVELLE FONCTIONNALITÉ MAJEURE - IMPORT DE DONNÉES
+   → Module ImportModule complet (937 lignes)
+   → Import Matériaux/Fournisseurs/Clients
+   → Support Excel (.xlsx), CSV (.csv)
+   → Support XML Obat/Batiprix (en développement)
+   → Templates Excel téléchargeables avec exemples
+   → Mapping automatique des colonnes (fuzzy matching)
+   → Prévisualisation avant import
+   → Validation pré-import
+   → Barre de progression en temps réel
+   → Rapport d'import détaillé
+
+📄 TEMPLATES EXCEL PRÉ-FORMATÉS
+   → Template_Materiaux_AutoCalc.xlsx (3 exemples)
+   → Template_Fournisseurs_AutoCalc.xlsx (3 exemples)
+   → Template_Clients_AutoCalc.xlsx (3 exemples)
+   → Colonnes optimisées pour auto-détection
+   → Données d'exemple réalistes
+
+═══════════════════════════════════════════════════════════════════
+  THÈMES SOMBRES CORRIGÉS
+═══════════════════════════════════════════════════════════════════
+
+THÈMES AVEC MODALS FIXES:
+• Minimal Nordic (styles6.css)
+• Midnight Professional (styles20.css)
+• Charcoal Elite (styles21.css)
+• Dark Ocean (styles22.css)
+• Carbon Modern (styles23.css)
+• Obsidian Purple (styles24.css)
+• Forest Night (styles25.css)
+• Crimson Shadow (styles26.css)
+• Arctic Slate (styles27.css)
+
+MODIFICATIONS CSS:
+• Headers de modals: dégradés cohérents
+• Corps de modals: texte clair forcé (!important)
+• Inputs: fond sombre avec texte clair
+• Listes: hover states appropriés
+• Tous les tags supportés (h1-h6, p, span, div, label, etc.)
+
+═══════════════════════════════════════════════════════════════════
+  DÉTAILS MODULE IMPORT
+═══════════════════════════════════════════════════════════════════
+
+FORMATS SUPPORTÉS:
+✅ Excel (.xlsx, .xls) - Microsoft Excel
+✅ CSV (.csv) - Fichiers texte délimités
+⏳ XML (.xml) - Obat/Batiprix (prochainement)
+
+FONCTIONNALITÉS:
+📥 Import Matériaux
+   → Catalogue complet avec stocks
+   → Références, prix, TVA, fournisseur
+   → Codes-barres EAN13
+
+📥 Import Fournisseurs
+   → Contacts complets
+   → SIRET, délais de livraison
+   → Types de fournisseurs
+
+📥 Import Clients
+   → Particuliers, Entreprises, Sociétés
+   → Coordonnées complètes
+   → SIRET optionnel
+
+MAPPING INTELLIGENT:
+• Détection automatique de colonnes
+• Support de variations de noms
+  Exemple: nom/name/designation/libelle
+• Mapping manuel si besoin
+• Prévisualisation avec mapping coloré
+
+VALIDATION:
+• Champs obligatoires (nom, type pour matériaux)
+• Format email (regex)
+• Format SIRET (14 chiffres)
+• TVA (0, 5.5, 10, 20)
+• Prix/Stock (nombres positifs)
+
+WORKFLOW:
+1. Cliquer sur "📥 Importer Catalogue/Fournisseurs/Clients"
+2. (Optionnel) Télécharger template Excel
+3. Sélectionner fichier Excel/CSV
+4. Vérifier prévisualisation et mapping
+5. Lancer l'import
+6. Consulter rapport (succès/échecs)
+
+═══════════════════════════════════════════════════════════════════
+  TEMPLATES EXCEL
+═══════════════════════════════════════════════════════════════════
+
+TEMPLATE MATÉRIAUX:
+• Brique rouge traditionnelle (0.85€, stock 1500)
+• Ciment gris 25kg (8.90€, stock 250)
+• Plaque plâtre BA13 (3.50€/m², stock 500)
+
+TEMPLATE FOURNISSEURS:
+• Point P (Jean Dupont, 2 jours livraison)
+• BigMat (Marie Martin, 3 jours livraison)
+• Leroy Merlin (Pierre Durand, 1 jour livraison)
+
+TEMPLATE CLIENTS:
+• Entreprise Martin (Entreprise, SIRET)
+• Dupont Pierre (Particulier, sans SIRET)
+• SCI Les Acacias (Société, SIRET)
+
+COLONNES OPTIMISÉES:
+• Noms de colonnes détectés automatiquement
+• Largeurs ajustées automatiquement
+• Format Excel standard (.xlsx)
+• Compatible LibreOffice, Google Sheets
+
+═══════════════════════════════════════════════════════════════════
+  ARCHITECTURE TECHNIQUE
+═══════════════════════════════════════════════════════════════════
+
+FICHIERS MODIFIÉS:
+• app.js (ligne 12: version 3.2.0, ligne 8: 18 modules)
+• package.json (version: 3.2.0)
+• index.html (3 boutons import + modal complète)
+
+FICHIERS CRÉÉS:
+• app/modules/import/ImportModule.js (937 lignes)
+• CHANGELOG.md (documentation complète)
+• web-publish/v3.2.0/VERSION_SUMMARY.txt
+
+DESIGN PATTERN:
+✅ Architecture non-invasive (additive)
+✅ Extend BaseModule pattern
+✅ EventBus pour communication
+✅ StateManager pour état global
+✅ Utilise APIs existantes (pas de modification)
+
+INTÉGRATIONS:
+• MaterialsModule.addMaterial()
+• SuppliersModule.addSupplier()
+• ClientsModule.addClient()
+
+═══════════════════════════════════════════════════════════════════
+  AVANTAGES COMPÉTITIFS
+═══════════════════════════════════════════════════════════════════
+
+STRATÉGIE BUSINESS:
+🎯 Faciliter migration depuis Obat/Batiprix
+💰 Prix attractif vs concurrents
+🏠 100% local (pas de cloud obligatoire)
+⚡ Rapidité d'exécution
+🧩 Modularité complète
+
+DIFFÉRENCIATION:
+• Import facile et rapide
+• Templates prêts à l'emploi
+• Validation intelligente
+• Migration en quelques clics
+• Pas d'abonnement mensuel
+• Données restent chez vous
+
+═══════════════════════════════════════════════════════════════════
+  COMPATIBILITÉ
+═══════════════════════════════════════════════════════════════════
+
+Depuis v3.1.0    : ✅ 100% compatible - mise à jour directe
+Depuis v3.0.0    : ✅ 100% compatible - mise à jour directe
+Electron         : v38.2.1
+Node.js          : v22+ recommandé
+Windows          : 10/11 (64-bit)
+
+MIGRATION:
+Aucune action requise.
+Vos données (devis, factures, clients, fournisseurs) sont préservées.
+Nouveau module Import accessible immédiatement.
+
+═══════════════════════════════════════════════════════════════════
+  PROCHAINES VERSIONS
+═══════════════════════════════════════════════════════════════════
+
+v3.2.1 (Prévu - Court terme)
+   → Support XML Obat (parseur complet)
+   → Support XML Batiprix (parseur complet)
+   → Import direct depuis exports concurrents
+
+v3.3.0 (Prévu - Moyen terme)
+   → Export Excel/CSV depuis l'application
+   → Synchronisation cloud (optionnelle)
+   → Statistiques avancées
+
+v3.4.0 (Prévu - Long terme)
+   → Templates de devis personnalisables
+   → E-Facture (Factur-X)
+   → Signature électronique
+
+═══════════════════════════════════════════════════════════════════
+  TESTS & QUALITÉ
+═══════════════════════════════════════════════════════════════════
+
+Module Import:
+✅ 18 modules chargés correctement
+✅ Pas de conflit avec modules existants
+✅ Architecture non-invasive validée
+✅ Templates Excel générés correctement
+✅ Mapping automatique fonctionnel
+
+Tests généraux:
+Tests unitaires      : 140/140 passés ✅
+Tests d'intégration  : 100% passés ✅
+Compatibilité thèmes : 28/28 thèmes OK ✅
+
+═══════════════════════════════════════════════════════════════════
+  INSTALLATION
+═══════════════════════════════════════════════════════════════════
+
+Si vous utilisez déjà AutoCalc OptiDevis:
+1. Fermez l'application
+2. Lancez AutoCalc OptiDevis Setup 3.2.0.exe
+3. Suivez les instructions
+4. Redémarrez l'application
+5. Testez le nouveau module Import!
+
+Première installation:
+1. Téléchargez AutoCalc OptiDevis Setup 3.2.0.exe
+2. Exécutez l'installateur
+3. Choisissez le répertoire d'installation
+4. Lancez l'application
+5. Créez votre mot de passe administrateur
+
+═══════════════════════════════════════════════════════════════════
+  UTILISATION MODULE IMPORT
+═══════════════════════════════════════════════════════════════════
+
+ÉTAPE 1 - TÉLÉCHARGER TEMPLATE:
+• Onglet Catalogue → "📥 Importer Catalogue"
+• Cliquez sur "Template Matériaux" (ou autre)
+• Template Excel téléchargé automatiquement
+
+ÉTAPE 2 - PRÉPARER VOS DONNÉES:
+• Ouvrez le template dans Excel
+• Remplacez les exemples par vos données
+• Respectez les colonnes (ou renommez similairement)
+• Sauvegardez votre fichier
+
+ÉTAPE 3 - IMPORTER:
+• Retournez dans AutoCalc OptiDevis
+• Cliquez "📥 Importer Catalogue"
+• Sélectionnez votre fichier Excel
+• Vérifiez la prévisualisation
+• Lancez l'import
+• Consultez le rapport
+
+ÉTAPE 4 - VÉRIFIER:
+• Vos données apparaissent dans le tableau
+• Vérifiez les quantités importées
+• Consultez les éventuelles erreurs
+
+═══════════════════════════════════════════════════════════════════
+  DOCUMENTATION
+═══════════════════════════════════════════════════════════════════
+
+CHANGELOG.md         → Changelog technique détaillé v3.2.0
+VERSION_SUMMARY.txt  → Ce fichier (résumé v3.2.0)
+ImportModule.js      → Documentation inline complète (937 lignes)
+
+DOCUMENTATION INLINE:
+• Architecture détaillée
+• Structure attendue pour chaque type
+• Workflow d'import expliqué
+• Validation des données
+• Gestion des erreurs
+
+═══════════════════════════════════════════════════════════════════
+  CONTACT & SUPPORT
+═══════════════════════════════════════════════════════════════════
+
+Développeur : David VIEY
+Email       : Riisalth@hotmail.fr
+Support     : Documentation incluse
+
+QUESTIONS FRÉQUENTES:
+Q: Mon fichier Excel a des noms de colonnes différents?
+R: Le mapping automatique détecte les variations courantes.
+   Exemple: "nom", "name", "designation" sont tous reconnus.
+
+Q: Puis-je importer plusieurs fichiers?
+R: Oui, importez-les un par un. Les données s'ajoutent.
+
+Q: Que se passe-t-il si j'ai des doublons?
+R: Les doublons sont ignorés et listés dans le rapport.
+
+Q: Les données sont-elles sauvegardées automatiquement?
+R: Oui, backup automatique toutes les 5 minutes.
+
+Q: Puis-je annuler un import?
+R: Non, mais le rapport liste tous les ajouts. Restaurez
+   un backup si nécessaire.
+
+═══════════════════════════════════════════════════════════════════
+
+© 2025 AutoCalc OptiDevis - Tous droits réservés
+
+═══════════════════════════════════════════════════════════════════

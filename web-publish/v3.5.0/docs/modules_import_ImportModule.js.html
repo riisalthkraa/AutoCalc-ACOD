@@ -1,0 +1,1215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/import/ImportModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/import/ImportModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * IMPORT MODULE - Import de données
+ * ========================================
+ *
+ * Module d'importation de données depuis fichiers externes (Excel, CSV, XML).
+ * Permet d'importer en masse des catalogues de matériaux, fournisseurs et clients
+ * pour faciliter la migration depuis d'autres logiciels ou la saisie initiale.
+ *
+ * Architecture :
+ * Le module fonctionne en 3 étapes pour chaque type de données :
+ * 1. **Sélection fichier** - Upload Excel/CSV/XML
+ * 2. **Prévisualisation &amp; Mapping** - Correspondance colonnes
+ * 3. **Validation &amp; Import** - Vérification + ajout via API existantes
+ *
+ * Fonctionnalités :
+ * - **Import Matériaux** : Catalogue complet avec mapping automatique
+ * - **Import Fournisseurs** : Base fournisseurs avec validation
+ * - **Import Clients** : Fichier clients avec vérification doublons
+ * - **Mapping intelligent** : Détection automatique colonnes + manuel
+ * - **Validation pré-import** : Champs obligatoires + format
+ * - **Rapport d'import** : Statistiques succès/échecs
+ *
+ * Formats supportés :
+ * - **Excel (.xlsx)** : Format Microsoft Excel moderne
+ * - **CSV (.csv)** : Fichier texte séparé par virgules
+ * - **XML (.xml)** : Format d'export standard (Obat, Batiprix, etc.)
+ *
+ * Structure attendue Matériaux :
+ * Colonnes possibles (mapping flexible) :
+ * - nom/name/designation/libelle
+ * - reference/ref/code
+ * - type/categorie/famille
+ * - unite/unit/unité
+ * - prix/price/prix_ht/prixHT
+ * - tva/TVA
+ * - fournisseur/supplier
+ * - stock
+ * - code_barre/barcode/ean
+ *
+ * Structure attendue Fournisseurs :
+ * - nom/name/raison_sociale
+ * - contact
+ * - email/mail
+ * - telephone/phone/tel
+ * - adresse/address
+ * - type/categorie
+ * - siret
+ * - delai_livraison/deliveryDelay
+ *
+ * Structure attendue Clients :
+ * - nom/name/raison_sociale
+ * - contact
+ * - email/mail
+ * - telephone/phone/tel
+ * - adresse/address
+ * - type/categorie
+ * - siret
+ *
+ * Workflow Import Matériaux :
+ * 1. Utilisateur clique "Importer Catalogue" (onglet Matériaux)
+ * 2. Modal d'import s'ouvre avec zone de drop/upload
+ * 3. Utilisateur sélectionne fichier Excel/CSV
+ * 4. Parsing du fichier (xlsx library)
+ * 5. Détection automatique des colonnes (fuzzy matching)
+ * 6. Affichage prévisualisation (10 premières lignes)
+ * 7. Interface de mapping manuel si nécessaire
+ * 8. Validation des données (champs obligatoires)
+ * 9. Importation par batch (appel addMaterial pour chaque ligne)
+ * 10. Rapport d'import (X réussites, Y échecs)
+ *
+ * Validation Matériaux :
+ * - Obligatoire : nom, type
+ * - Optionnel : tous les autres champs
+ * - Prix : nombre positif
+ * - TVA : 0, 5.5, 10, 20
+ * - Stock : nombre >= 0
+ *
+ * Validation Fournisseurs :
+ * - Obligatoire : nom
+ * - Optionnel : tous les autres champs
+ * - Email : format valide
+ * - SIRET : 14 chiffres
+ *
+ * Validation Clients :
+ * - Obligatoire : nom
+ * - Optionnel : tous les autres champs
+ * - Email : format valide
+ * - SIRET : 14 chiffres
+ *
+ * Gestion erreurs :
+ * - Ligne sans nom → ignorée + log
+ * - Doublons nom → ignoré + log
+ * - Format incorrect → ligne ignorée + log
+ * - Rapport final avec liste des erreurs
+ *
+ * Intégrations :
+ * - MaterialsModule : Utilise addMaterial() existant
+ * - SuppliersModule : Utilise addSupplier() existant
+ * - ClientsModule : Utilise addClient() existant
+ * - Ne modifie AUCUNE fonction existante
+ *
+ * @module ImportModule
+ * @extends BaseModule
+ * @version 1.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+
+class ImportModule extends BaseModule {
+  /**
+   * Crée une instance du module Import.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements pour communication inter-modules
+   */
+  constructor(state, eventBus) {
+    super('import', state, eventBus);
+
+    /**
+     * Fichier actuellement chargé pour prévisualisation
+     * @type {Object|null}
+     */
+    this.currentFile = null;
+
+    /**
+     * Données parsées du fichier
+     * @type {Array&lt;Object>}
+     */
+    this.parsedData = [];
+
+    /**
+     * Mapping des colonnes (clé = nom colonne attendue, valeur = nom colonne fichier)
+     * @type {Object}
+     */
+    this.columnMapping = {};
+
+    /**
+     * Type d'import en cours (materials, suppliers, clients)
+     * @type {string|null}
+     */
+    this.importType = null;
+
+    this.log('ImportModule v1.0 - Initialization');
+  }
+
+  /**
+   * Initialise le module Import.
+   * Attache les event listeners pour les boutons d'import.
+   *
+   * @returns {Promise&lt;void>}
+   */
+  async init() {
+    this.log('Initializing ImportModule...');
+
+    // Exposer fonctions au scope global pour compatibilité
+    this.exposeToGlobal();
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    this.log('✓ ImportModule initialized');
+  }
+
+  /**
+   * Expose les fonctions du module au scope global pour compatibilité.
+   * @private
+   */
+  exposeToGlobal() {
+    window.openImportModal = (type) => this.openImportModal(type);
+    window.handleFileSelect = (event, type) => this.handleFileSelect(event, type);
+    window.startImport = () => this.startImport();
+    window.cancelImport = () => this.cancelImport();
+    window.downloadTemplate = (type) => this.downloadTemplate(type);
+  }
+
+  /**
+   * Attache les event listeners du module.
+   * @private
+   */
+  attachEventListeners() {
+    this.log('Attaching event listeners...');
+
+    // Listeners pour drag &amp; drop (à implémenter si besoin)
+  }
+
+  /**
+   * Ouvre la modal d'import pour un type de données spécifique.
+   *
+   * @param {string} type - Type d'import ('materials', 'suppliers', 'clients')
+   */
+  openImportModal(type) {
+    this.log(`Opening import modal for type: ${type}`);
+    this.importType = type;
+
+    // Réinitialiser l'état
+    this.currentFile = null;
+    this.parsedData = [];
+    this.columnMapping = {};
+
+    // Afficher la modal (Bootstrap)
+    const modal = new bootstrap.Modal(document.getElementById('importModal'));
+
+    // Mettre à jour le titre selon le type
+    const titles = {
+      materials: 'Importer Catalogue Matériaux',
+      suppliers: 'Importer Fournisseurs',
+      clients: 'Importer Clients'
+    };
+    document.getElementById('importModalTitle').textContent = titles[type];
+
+    // Afficher zone de sélection fichier
+    document.getElementById('importFileSection').style.display = 'block';
+    document.getElementById('importPreviewSection').style.display = 'none';
+    document.getElementById('importProgressSection').style.display = 'none';
+
+    modal.show();
+  }
+
+  /**
+   * Gère la sélection d'un fichier par l'utilisateur.
+   *
+   * @param {Event} event - Événement de sélection de fichier
+   * @param {string} type - Type d'import
+   */
+  async handleFileSelect(event, type) {
+    const file = event.target.files[0];
+    if (!file) {
+      return;
+    }
+
+    this.log(`File selected: ${file.name} (${file.type})`);
+    this.currentFile = file;
+
+    // Vérifier l'extension
+    const ext = file.name.split('.').pop().toLowerCase();
+    if (!['xlsx', 'xls', 'csv', 'xml'].includes(ext)) {
+      NotificationSystem.show('Format de fichier non supporté. Utilisez Excel (.xlsx), CSV (.csv) ou XML (.xml).', 'error');
+      return;
+    }
+
+    // Parser le fichier selon son type
+    try {
+      if (ext === 'xlsx' || ext === 'xls') {
+        await this.parseExcelFile(file);
+      } else if (ext === 'csv') {
+        await this.parseCSVFile(file);
+      } else if (ext === 'xml') {
+        await this.parseXMLFile(file);
+      }
+
+      // Afficher la prévisualisation
+      this.showPreview();
+    } catch (error) {
+      this.log('Error parsing file:', error);
+      NotificationSystem.show(`Erreur lors de la lecture du fichier : ${error.message}`, 'error');
+    }
+  }
+
+  /**
+   * Parse un fichier Excel.
+   *
+   * @param {File} file - Fichier à parser
+   * @returns {Promise&lt;void>}
+   * @private
+   */
+  async parseExcelFile(file) {
+    this.log('Parsing Excel file...');
+
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+
+          // Prendre la première feuille
+          const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+
+          // Convertir en JSON
+          const jsonData = XLSX.utils.sheet_to_json(firstSheet, { defval: '' });
+
+          this.log(`Parsed ${jsonData.length} rows from Excel`);
+          this.parsedData = jsonData;
+
+          // Détecter automatiquement les colonnes
+          this.autoDetectColumns();
+
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      };
+
+      reader.onerror = () => reject(new Error('Erreur de lecture du fichier'));
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
+  /**
+   * Parse un fichier CSV.
+   *
+   * @param {File} file - Fichier à parser
+   * @returns {Promise&lt;void>}
+   * @private
+   */
+  async parseCSVFile(file) {
+    this.log('Parsing CSV file...');
+
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const text = e.target.result;
+
+          // Parser CSV basique (peut être amélioré avec une lib dédiée)
+          const lines = text.split('\n');
+          const headers = lines[0].split(/[,;]/); // Support virgule et point-virgule
+
+          const jsonData = [];
+          for (let i = 1; i &lt; lines.length; i++) {
+            if (lines[i].trim() === '') continue;
+
+            const values = lines[i].split(/[,;]/);
+            const row = {};
+            headers.forEach((header, index) => {
+              row[header.trim()] = values[index] ? values[index].trim() : '';
+            });
+            jsonData.push(row);
+          }
+
+          this.log(`Parsed ${jsonData.length} rows from CSV`);
+          this.parsedData = jsonData;
+
+          // Détecter automatiquement les colonnes
+          this.autoDetectColumns();
+
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      };
+
+      reader.onerror = () => reject(new Error('Erreur de lecture du fichier'));
+      reader.readAsText(file);
+    });
+  }
+
+  /**
+   * Parse un fichier XML (Obat, Batiprix, générique).
+   *
+   * @param {File} file - Fichier à parser
+   * @returns {Promise&lt;void>}
+   * @private
+   */
+  async parseXMLFile(file) {
+    this.log('Parsing XML file...');
+
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const text = e.target.result;
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+          // Détection du format
+          const format = this.detectXMLFormat(xmlDoc);
+          this.log(`Detected XML format: ${format}`);
+
+          let jsonData = [];
+          if (format === 'obat') {
+            jsonData = this.parseObatXML(xmlDoc);
+          } else if (format === 'batiprix') {
+            jsonData = this.parseBatiprixXML(xmlDoc);
+          } else {
+            jsonData = this.parseGenericXML(xmlDoc);
+          }
+
+          this.log(`Parsed ${jsonData.length} items from XML`);
+          this.parsedData = jsonData;
+          this.autoDetectColumns();
+
+          NotificationSystem.show(`${jsonData.length} articles importés depuis ${format.toUpperCase()}`, 'success');
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      };
+
+      reader.onerror = () => reject(new Error('Erreur de lecture du fichier XML'));
+      reader.readAsText(file, 'UTF-8');
+    });
+  }
+
+  /**
+   * Détecte le format XML (Obat, Batiprix, générique)
+   * @param {Document} xmlDoc
+   * @returns {string}
+   */
+  detectXMLFormat(xmlDoc) {
+    const root = xmlDoc.documentElement.tagName.toLowerCase();
+    const content = xmlDoc.documentElement.innerHTML.toLowerCase();
+
+    if (content.includes('obat') || root.includes('obat') || xmlDoc.querySelector('ouvrage, article-obat')) {
+      return 'obat';
+    }
+    if (content.includes('batiprix') || root.includes('batiprix') || xmlDoc.querySelector('prix-batiment, article-batiprix')) {
+      return 'batiprix';
+    }
+    return 'generic';
+  }
+
+  /**
+   * Parse XML format Obat
+   * @param {Document} xmlDoc
+   * @returns {Array}
+   */
+  parseObatXML(xmlDoc) {
+    const items = [];
+    const articles = xmlDoc.querySelectorAll('ouvrage, article, ligne, item, produit');
+
+    articles.forEach(article => {
+      const item = {
+        nom: this.getXMLValue(article, ['designation', 'libelle', 'nom', 'name', 'desc']),
+        reference: this.getXMLValue(article, ['reference', 'ref', 'code', 'id']),
+        type: this.getXMLValue(article, ['type', 'categorie', 'famille', 'lot']),
+        unite: this.getXMLValue(article, ['unite', 'unit', 'u']),
+        prix: parseFloat(this.getXMLValue(article, ['prix', 'pu', 'prix_unitaire', 'prixht', 'montant']) || 0),
+        tva: parseFloat(this.getXMLValue(article, ['tva', 'taxe']) || 20),
+        fournisseur: this.getXMLValue(article, ['fournisseur', 'supplier']),
+        stock: parseInt(this.getXMLValue(article, ['stock', 'qte', 'quantite']) || 0)
+      };
+
+      if (item.nom) items.push(item);
+    });
+
+    return items;
+  }
+
+  /**
+   * Parse XML format Batiprix
+   * @param {Document} xmlDoc
+   * @returns {Array}
+   */
+  parseBatiprixXML(xmlDoc) {
+    const items = [];
+    const articles = xmlDoc.querySelectorAll('article, ligne, ouvrage, prix, element');
+
+    articles.forEach(article => {
+      const item = {
+        nom: this.getXMLValue(article, ['libelle', 'designation', 'intitule', 'nom']),
+        reference: this.getXMLValue(article, ['code', 'reference', 'ref', 'numero']),
+        type: this.getXMLValue(article, ['chapitre', 'categorie', 'famille', 'lot', 'type']),
+        unite: this.getXMLValue(article, ['unite', 'u', 'unit']),
+        prix: parseFloat(this.getXMLValue(article, ['prix_mo', 'prix_materiau', 'pu_ht', 'prix', 'cout']) || 0),
+        tva: parseFloat(this.getXMLValue(article, ['tva', 'taux_tva']) || 20),
+        fournisseur: 'Batiprix',
+        stock: 0
+      };
+
+      if (item.nom) items.push(item);
+    });
+
+    return items;
+  }
+
+  /**
+   * Parse XML générique
+   * @param {Document} xmlDoc
+   * @returns {Array}
+   */
+  parseGenericXML(xmlDoc) {
+    const items = [];
+    const possibleTags = ['item', 'article', 'product', 'produit', 'ligne', 'row', 'record', 'materiau'];
+
+    let articles = [];
+    for (const tag of possibleTags) {
+      articles = xmlDoc.querySelectorAll(tag);
+      if (articles.length > 0) break;
+    }
+
+    articles.forEach(article => {
+      const item = {};
+      Array.from(article.children).forEach(child => {
+        const key = child.tagName.toLowerCase();
+        item[key] = child.textContent?.trim() || '';
+      });
+      if (Object.keys(item).length > 0) items.push(item);
+    });
+
+    return items;
+  }
+
+  /**
+   * Récupère une valeur XML en testant plusieurs noms possibles
+   * @param {Element} element
+   * @param {Array&lt;string>} possibleNames
+   * @returns {string}
+   */
+  getXMLValue(element, possibleNames) {
+    for (const name of possibleNames) {
+      const child = element.querySelector(name);
+      if (child &amp;&amp; child.textContent?.trim()) {
+        return child.textContent.trim();
+      }
+      const attr = element.getAttribute(name);
+      if (attr) return attr;
+    }
+    return '';
+  }
+
+  /**
+   * Détecte automatiquement les colonnes en faisant du fuzzy matching.
+   * @private
+   */
+  autoDetectColumns() {
+    this.log('Auto-detecting columns...');
+
+    if (this.parsedData.length === 0) return;
+
+    const fileColumns = Object.keys(this.parsedData[0]);
+    this.columnMapping = {};
+
+    // Définir les mappings attendus selon le type
+    const expectedColumns = this.getExpectedColumns();
+
+    // Pour chaque colonne attendue, chercher la meilleure correspondance
+    expectedColumns.forEach(expected => {
+      const match = this.findBestMatch(expected.variations, fileColumns);
+      if (match) {
+        this.columnMapping[expected.key] = match;
+        this.log(`Mapped column: ${expected.key} → ${match}`);
+      }
+    });
+  }
+
+  /**
+   * Retourne les colonnes attendues selon le type d'import.
+   *
+   * @returns {Array&lt;Object>} Liste des colonnes avec leurs variations
+   * @private
+   */
+  getExpectedColumns() {
+    const columns = {
+      materials: [
+        { key: 'name', variations: ['nom', 'name', 'designation', 'libelle', 'libellé'] },
+        { key: 'reference', variations: ['reference', 'ref', 'code', 'référence'] },
+        { key: 'type', variations: ['type', 'categorie', 'catégorie', 'famille'] },
+        { key: 'unit', variations: ['unite', 'unit', 'unité'] },
+        { key: 'price', variations: ['prix', 'price', 'prix_ht', 'prixHT', 'pu_ht'] },
+        { key: 'tva', variations: ['tva', 'TVA', 'taxe'] },
+        { key: 'supplier', variations: ['fournisseur', 'supplier', 'vendeur'] },
+        { key: 'stock', variations: ['stock', 'quantite', 'quantité', 'qty'] },
+        { key: 'barcode', variations: ['code_barre', 'barcode', 'ean', 'ean13'] }
+      ],
+      suppliers: [
+        { key: 'name', variations: ['nom', 'name', 'raison_sociale'] },
+        { key: 'contact', variations: ['contact', 'responsable'] },
+        { key: 'email', variations: ['email', 'mail', 'e-mail'] },
+        { key: 'phone', variations: ['telephone', 'phone', 'tel', 'téléphone'] },
+        { key: 'address', variations: ['adresse', 'address', 'rue'] },
+        { key: 'type', variations: ['type', 'categorie', 'catégorie'] },
+        { key: 'siret', variations: ['siret', 'siren'] },
+        { key: 'deliveryDelay', variations: ['delai_livraison', 'deliveryDelay', 'delai', 'délai'] }
+      ],
+      clients: [
+        { key: 'name', variations: ['nom', 'name', 'raison_sociale'] },
+        { key: 'contact', variations: ['contact', 'responsable'] },
+        { key: 'email', variations: ['email', 'mail', 'e-mail'] },
+        { key: 'phone', variations: ['telephone', 'phone', 'tel', 'téléphone'] },
+        { key: 'address', variations: ['adresse', 'address', 'rue'] },
+        { key: 'type', variations: ['type', 'categorie', 'catégorie'] },
+        { key: 'siret', variations: ['siret', 'siren'] }
+      ]
+    };
+
+    return columns[this.importType] || [];
+  }
+
+  /**
+   * Trouve la meilleure correspondance entre des variations et des colonnes.
+   *
+   * @param {Array&lt;string>} variations - Variations possibles du nom de colonne
+   * @param {Array&lt;string>} fileColumns - Colonnes du fichier
+   * @returns {string|null} Nom de la colonne correspondante ou null
+   * @private
+   */
+  findBestMatch(variations, fileColumns) {
+    for (const variation of variations) {
+      const match = fileColumns.find(col =>
+        col.toLowerCase().trim() === variation.toLowerCase()
+      );
+      if (match) return match;
+    }
+    return null;
+  }
+
+  /**
+   * Affiche la prévisualisation des données à importer.
+   * @private
+   */
+  showPreview() {
+    this.log('Showing preview...');
+
+    // Cacher section fichier, afficher section preview
+    document.getElementById('importFileSection').style.display = 'none';
+    document.getElementById('importPreviewSection').style.display = 'block';
+
+    // Afficher stats
+    document.getElementById('importStats').innerHTML = `
+      &lt;div class="alert alert-info">
+        &lt;strong>${this.parsedData.length}&lt;/strong> lignes détectées
+      &lt;/div>
+    `;
+
+    // Afficher mapping des colonnes
+    const mappingHtml = this.renderColumnMapping();
+    document.getElementById('importMapping').innerHTML = mappingHtml;
+
+    // Afficher tableau de prévisualisation (10 premières lignes)
+    const previewHtml = this.renderPreviewTable();
+    document.getElementById('importPreviewTable').innerHTML = previewHtml;
+
+    // Afficher le bouton "Lancer l'import"
+    document.getElementById('importStartBtn').style.display = 'inline-block';
+  }
+
+  /**
+   * Génère le HTML pour l'affichage du mapping des colonnes.
+   *
+   * @returns {string} HTML du mapping
+   * @private
+   */
+  renderColumnMapping() {
+    const expectedColumns = this.getExpectedColumns();
+
+    let html = '&lt;div class="row">';
+    expectedColumns.forEach(col => {
+      const mapped = this.columnMapping[col.key];
+      const status = mapped ?
+        `&lt;span class="badge bg-success">Mappée: ${mapped}&lt;/span>` :
+        '&lt;span class="badge bg-warning">Non détectée&lt;/span>';
+
+      html += `
+        &lt;div class="col-md-6 mb-2">
+          &lt;strong>${col.key}&lt;/strong>: ${status}
+        &lt;/div>
+      `;
+    });
+    html += '&lt;/div>';
+
+    return html;
+  }
+
+  /**
+   * Génère le HTML pour le tableau de prévisualisation.
+   *
+   * @returns {string} HTML du tableau
+   * @private
+   */
+  renderPreviewTable() {
+    if (this.parsedData.length === 0) {
+      return '&lt;p class="text-muted">Aucune donnée à afficher&lt;/p>';
+    }
+
+    const previewRows = this.parsedData.slice(0, 10);
+    const columns = Object.keys(this.parsedData[0]);
+
+    let html = '&lt;table class="table table-sm table-bordered">&lt;thead>&lt;tr>';
+    columns.forEach(col => {
+      html += `&lt;th>${col}&lt;/th>`;
+    });
+    html += '&lt;/tr>&lt;/thead>&lt;tbody>';
+
+    previewRows.forEach(row => {
+      html += '&lt;tr>';
+      columns.forEach(col => {
+        const value = row[col] || '';
+        html += `&lt;td>${TextFormatter.escapeHtml(value)}&lt;/td>`;
+      });
+      html += '&lt;/tr>';
+    });
+
+    html += '&lt;/tbody>&lt;/table>';
+    return html;
+  }
+
+  /**
+   * Lance le processus d'importation.
+   */
+  async startImport() {
+    this.log('Starting import...');
+
+    // Afficher section progression
+    const previewSection = document.getElementById('importPreviewSection');
+    const progressSection = document.getElementById('importProgressSection');
+    const progressBar = document.getElementById('importProgress');
+    const progressText = document.getElementById('importProgressText');
+
+    if (previewSection) previewSection.style.display = 'none';
+    if (progressSection) progressSection.style.display = 'block';
+
+    let successCount = 0;
+    let errorCount = 0;
+    const errors = [];
+
+    // Importer ligne par ligne
+    for (let i = 0; i &lt; this.parsedData.length; i++) {
+      const row = this.parsedData[i];
+
+      // Mettre à jour progression
+      const progress = ((i + 1) / this.parsedData.length) * 100;
+      if (progressBar) progressBar.style.width = `${progress}%`;
+      if (progressText) progressText.textContent = `Import en cours... ${i + 1}/${this.parsedData.length}`;
+
+      try {
+        // Mapper la ligne selon le type d'import
+        const mappedData = this.mapRowData(row);
+
+        // Valider les données
+        const validationError = this.validateRowData(mappedData);
+        if (validationError) {
+          errorCount++;
+          errors.push(`Ligne ${i + 1}: ${validationError}`);
+          continue;
+        }
+
+        // Importer via l'API existante
+        await this.importRow(mappedData);
+        successCount++;
+
+      } catch (error) {
+        errorCount++;
+        errors.push(`Ligne ${i + 1}: ${error.message}`);
+        this.log(`Error importing row ${i + 1}:`, error);
+      }
+
+      // Petit délai pour ne pas surcharger
+      await this.sleep(10);
+    }
+
+    // Sauvegarder les données importées
+    try {
+      const authToken = window.sessionToken || '';
+      if (this.importType === 'materials' &amp;&amp; window.materials) {
+        await window.electronAPI.invoke('update-materials', authToken, { materials: window.materials });
+        if (window.populateMaterialsTable) window.populateMaterialsTable();
+      } else if (this.importType === 'suppliers' &amp;&amp; window.suppliers) {
+        await window.electronAPI.invoke('update-suppliers', authToken, { suppliers: window.suppliers });
+        if (window.populateSuppliersTable) window.populateSuppliersTable();
+      } else if (this.importType === 'clients' &amp;&amp; window.clients) {
+        await window.electronAPI.invoke('update-clients', authToken, { clients: window.clients });
+        if (window.populateClientsTable) window.populateClientsTable();
+      }
+    } catch (saveError) {
+      this.log('Erreur sauvegarde:', saveError);
+    }
+
+    // Afficher rapport final
+    this.showImportReport(successCount, errorCount, errors);
+  }
+
+  /**
+   * Mappe les données d'une ligne selon le mapping de colonnes.
+   *
+   * @param {Object} row - Ligne de données brutes
+   * @returns {Object} Données mappées
+   * @private
+   */
+  mapRowData(row) {
+    const mapped = {};
+
+    Object.keys(this.columnMapping).forEach(key => {
+      const sourceColumn = this.columnMapping[key];
+      mapped[key] = row[sourceColumn];
+    });
+
+    return mapped;
+  }
+
+  /**
+   * Valide les données d'une ligne avant import.
+   *
+   * @param {Object} data - Données à valider
+   * @returns {string|null} Message d'erreur ou null si valide
+   * @private
+   */
+  validateRowData(data) {
+    // Validation commune : nom obligatoire
+    if (!data.name || data.name.trim() === '') {
+      return 'Nom obligatoire';
+    }
+
+    // Validations spécifiques selon le type
+    if (this.importType === 'materials') {
+      if (!data.type) {
+        return 'Type obligatoire pour les matériaux';
+      }
+    }
+
+    // Validation email si présent
+    if (data.email &amp;&amp; !this.isValidEmail(data.email)) {
+      return 'Format email invalide';
+    }
+
+    return null;
+  }
+
+  /**
+   * Valide un format email.
+   *
+   * @param {string} email - Email à valider
+   * @returns {boolean} true si valide
+   * @private
+   */
+  isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  /**
+   * Importe une ligne de données via l'API correspondante.
+   *
+   * @param {Object} data - Données à importer
+   * @returns {Promise&lt;void>}
+   * @private
+   */
+  async importRow(data) {
+    if (this.importType === 'materials') {
+      // Ajouter directement au tableau materials et sauvegarder
+      const newMaterial = {
+        id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+        name: data.name,
+        reference: data.reference || '',
+        type: data.type || 'Autre',
+        unit: data.unit || 'pièce',
+        priceHT: parseFloat(data.price) || 0,
+        tva: parseFloat(data.tva) || 20,
+        supplier: data.supplier || '',
+        stock: parseInt(data.stock) || 0,
+        barcode: data.barcode || ''
+      };
+      if (window.materials) {
+        window.materials.push(newMaterial);
+      }
+
+    } else if (this.importType === 'suppliers') {
+      const newSupplier = {
+        id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+        name: data.name,
+        contact: data.contact || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        address: data.address || '',
+        type: data.type || '',
+        siret: data.siret || '',
+        deliveryDelay: parseInt(data.deliveryDelay) || 0
+      };
+      if (window.suppliers) {
+        window.suppliers.push(newSupplier);
+      }
+
+    } else if (this.importType === 'clients') {
+      const newClient = {
+        id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+        name: data.name,
+        contact: data.contact || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        address: data.address || '',
+        type: data.type || 'Particulier',
+        siret: data.siret || ''
+      };
+      if (window.clients) {
+        window.clients.push(newClient);
+      }
+    }
+  }
+
+  /**
+   * Affiche le rapport d'import final.
+   *
+   * @param {number} successCount - Nombre d'imports réussis
+   * @param {number} errorCount - Nombre d'erreurs
+   * @param {Array&lt;string>} errors - Liste des messages d'erreur
+   * @private
+   */
+  showImportReport(successCount, errorCount, errors) {
+    this.log(`Import complete: ${successCount} success, ${errorCount} errors`);
+
+    // Fermer le modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('importModal'));
+    if (modal) modal.hide();
+
+    // Afficher toast de confirmation
+    if (errorCount === 0) {
+      NotificationSystem.success(`Import réussi : ${successCount} éléments importés`);
+    } else if (successCount > 0) {
+      NotificationSystem.warning(`Import partiel : ${successCount} réussis, ${errorCount} erreurs`);
+    } else {
+      NotificationSystem.error(`Import échoué : ${errorCount} erreurs`);
+    }
+
+    // Notifier les autres modules du changement
+    if (successCount > 0) {
+      if (this.importType === 'materials') {
+        this.eventBus.emit('materials:imported', { count: successCount });
+      } else if (this.importType === 'suppliers') {
+        this.eventBus.emit('suppliers:imported', { count: successCount });
+      } else if (this.importType === 'clients') {
+        this.eventBus.emit('clients:imported', { count: successCount });
+      }
+    }
+  }
+
+  /**
+   * Annule l'import en cours.
+   */
+  cancelImport() {
+    this.log('Import cancelled');
+    bootstrap.Modal.getInstance(document.getElementById('importModal')).hide();
+  }
+
+  /**
+   * Utilitaire : pause asynchrone.
+   *
+   * @param {number} ms - Millisecondes de pause
+   * @returns {Promise&lt;void>}
+   * @private
+   */
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  /**
+   * Télécharge un template Excel pré-formaté pour faciliter l'import.
+   * Le template contient les colonnes attendues et des exemples de données.
+   *
+   * @param {string} type - Type de template ('materials', 'suppliers', 'clients')
+   */
+  downloadTemplate(type) {
+    this.log(`Generating template for type: ${type}`);
+
+    try {
+      // Définir les colonnes et données d'exemple selon le type
+      let columns, exampleData, filename;
+
+      if (type === 'materials') {
+        columns = ['nom', 'reference', 'type', 'unite', 'prix', 'tva', 'fournisseur', 'stock', 'code_barre'];
+        exampleData = [
+          {
+            nom: 'Brique rouge traditionnelle',
+            reference: 'BRI-001',
+            type: 'Maçonnerie',
+            unite: 'pièce',
+            prix: 0.85,
+            tva: 20,
+            fournisseur: 'Point P',
+            stock: 1500,
+            code_barre: '3245678901234'
+          },
+          {
+            nom: 'Ciment gris 25kg',
+            reference: 'CIM-025',
+            type: 'Maçonnerie',
+            unite: 'sac',
+            prix: 8.90,
+            tva: 20,
+            fournisseur: 'BigMat',
+            stock: 250,
+            code_barre: '3245678901235'
+          },
+          {
+            nom: 'Plaque plâtre BA13 2.5x1.2m',
+            reference: 'PLA-BA13',
+            type: 'Plâtrerie',
+            unite: 'm²',
+            prix: 3.50,
+            tva: 20,
+            fournisseur: 'Placo',
+            stock: 500,
+            code_barre: '3245678901236'
+          }
+        ];
+        filename = 'Template_Materiaux_AutoCalc.xlsx';
+
+      } else if (type === 'suppliers') {
+        columns = ['nom', 'contact', 'email', 'telephone', 'adresse', 'type', 'siret', 'delai_livraison'];
+        exampleData = [
+          {
+            nom: 'Point P',
+            contact: 'Jean Dupont',
+            email: 'contact@pointp.fr',
+            telephone: '0123456789',
+            adresse: '15 rue des Matériaux, 75001 Paris',
+            type: 'Négoce',
+            siret: '12345678901234',
+            delai_livraison: 2
+          },
+          {
+            nom: 'BigMat',
+            contact: 'Marie Martin',
+            email: 'info@bigmat.fr',
+            telephone: '0987654321',
+            adresse: '22 avenue du Commerce, 69000 Lyon',
+            type: 'Négoce',
+            siret: '98765432109876',
+            delai_livraison: 3
+          },
+          {
+            nom: 'Leroy Merlin',
+            contact: 'Pierre Durand',
+            email: 'pro@leroymerlin.fr',
+            telephone: '0147258369',
+            adresse: '50 boulevard Hausmann, 75008 Paris',
+            type: 'Grande Surface',
+            siret: '45678901234567',
+            delai_livraison: 1
+          }
+        ];
+        filename = 'Template_Fournisseurs_AutoCalc.xlsx';
+
+      } else if (type === 'clients') {
+        columns = ['nom', 'contact', 'email', 'telephone', 'adresse', 'type', 'siret'];
+        exampleData = [
+          {
+            nom: 'Entreprise Martin',
+            contact: 'Alain Martin',
+            email: 'martin.alain@email.fr',
+            telephone: '0612345678',
+            adresse: '10 rue du Commerce, 75001 Paris',
+            type: 'Entreprise',
+            siret: '12345678901234'
+          },
+          {
+            nom: 'Dupont Pierre',
+            contact: 'Pierre Dupont',
+            email: 'pierre.dupont@email.fr',
+            telephone: '0698765432',
+            adresse: '5 avenue Victor Hugo, 69000 Lyon',
+            type: 'Particulier',
+            siret: ''
+          },
+          {
+            nom: 'SCI Les Acacias',
+            contact: 'Sophie Leclerc',
+            email: 'sci.lesacacias@email.fr',
+            telephone: '0745123698',
+            adresse: '30 rue des Fleurs, 13000 Marseille',
+            type: 'Société',
+            siret: '98765432109876'
+          }
+        ];
+        filename = 'Template_Clients_AutoCalc.xlsx';
+
+      } else {
+        NotificationSystem.show('Type de template non reconnu', 'error');
+        return;
+      }
+
+      // Créer le workbook et la worksheet
+      const ws = XLSX.utils.json_to_sheet(exampleData, { header: columns });
+
+      // Ajuster la largeur des colonnes
+      const colWidths = columns.map(col => {
+        const maxLength = Math.max(
+          col.length,
+          ...exampleData.map(row => String(row[col] || '').length)
+        );
+        return { wch: Math.min(maxLength + 2, 30) };
+      });
+      ws['!cols'] = colWidths;
+
+      // Créer le workbook
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Données');
+
+      // Générer le fichier et déclencher le téléchargement
+      XLSX.writeFile(wb, filename);
+
+      NotificationSystem.show(`Template Excel téléchargé : ${filename}`, 'success', 3000);
+      this.log(`Template downloaded: ${filename}`);
+
+    } catch (error) {
+      this.log('Error generating template:', error);
+      NotificationSystem.show(`Erreur lors de la génération du template : ${error.message}`, 'error');
+    }
+  }
+}
+
+export default ImportModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

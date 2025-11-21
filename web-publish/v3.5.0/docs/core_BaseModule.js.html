@@ -1,0 +1,958 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> core/BaseModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>core/BaseModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * BASE MODULE - Classe de base modulaire
+ * ========================================
+ *
+ * Classe de base abstraite pour tous les modules de l'application AutoCalc OptiDevis.
+ * Fournit les fonctionnalités communes et impose un contrat pour l'architecture modulaire.
+ *
+ * Architecture :
+ * - Pattern Template Method : définit le squelette d'initialisation/destruction
+ * - Gestion automatique du cycle de vie (init, destroy)
+ * - Accès centralisé à l'état global (StateManager)
+ * - Communication inter-modules via EventBus
+ * - Gestion automatique de la mémoire (cleanup des listeners)
+ * - Helpers DOM pour manipulation simplifiée
+ * - Raccourcis IPC pour communication Electron
+ *
+ * Responsabilités :
+ * - Fournir un accès uniforme au StateManager et à l'EventBus
+ * - Gérer automatiquement les event listeners DOM (ajout + suppression)
+ * - Gérer automatiquement les souscriptions d'état (ajout + suppression)
+ * - Gérer automatiquement les souscriptions d'événements (ajout + suppression)
+ * - Fournir des helpers pour les opérations DOM courantes
+ * - Exposer des fonctions au scope global (compatibilité legacy)
+ * - Simplifier les appels IPC Electron
+ * - Fournir des méthodes utilitaires (logging, authentification, etc.)
+ *
+ * Cycle de vie d'un module :
+ * ```
+ * 1. Construction : new XxxModule(state, events)
+ * 2. Enregistrement : app.registerModule('xxx', moduleInstance)
+ * 3. Initialisation : await module.init()
+ * 4. Utilisation : module écoute/émet des événements, gère l'UI
+ * 5. Destruction : module.destroy() (cleanup automatique)
+ * ```
+ *
+ * Contrat à respecter par les modules enfants :
+ * - DOIT implémenter async init()
+ * - PEUT surcharger destroy() (mais appeler super.destroy())
+ * - DOIT utiliser addDOMListener() au lieu de addEventListener()
+ * - DOIT utiliser subscribeToState() au lieu de state.subscribe()
+ * - DOIT utiliser subscribeToEvent() au lieu de events.on()
+ *
+ * Exemple d'implémentation :
+ * ```javascript
+ * class MaterialsModule extends BaseModule {
+ *   constructor(state, events) {
+ *     super('materials', state, events);
+ *     this.materials = [];
+ *   }
+ *
+ *   async init() {
+ *     // 1. Charger les données
+ *     await this.loadMaterials();
+ *
+ *     // 2. Attacher les event listeners (avec cleanup auto)
+ *     this.addDOMListener('#search-btn', 'click', this.handleSearch);
+ *     this.addDOMListener('#add-btn', 'click', this.handleAdd);
+ *
+ *     // 3. Souscrire aux changements d'état (avec cleanup auto)
+ *     this.subscribeToState('currentTab', (tab) => {
+ *       if (tab === 'materials') this.show();
+ *     });
+ *
+ *     // 4. Souscrire aux événements (avec cleanup auto)
+ *     this.subscribeToEvent('suppliers:updated', this.onSupplierUpdate);
+ *
+ *     // 5. Exposer les fonctions globales (compatibilité legacy)
+ *     this.exposeToGlobal({
+ *       selectMaterial: this.selectMaterial,
+ *       deleteMaterial: this.deleteMaterial
+ *     });
+ *
+ *     this.initialized = true;
+ *   }
+ *
+ *   // Cleanup automatique lors de destroy() !
+ *   // Pas besoin de removeEventListener manuellement
+ * }
+ * ```
+ *
+ * Avantages de cette approche :
+ * - Pas de fuites mémoire (cleanup automatique)
+ * - Code module simplifié (pas de gestion manuelle des listeners)
+ * - Cohérence entre modules (même API)
+ * - Facilite les tests (mock de state et events)
+ * - Découplage maximal (modules indépendants)
+ *
+ * Événements émis :
+ * Aucun directement (la classe est abstraite)
+ * Les modules enfants émettent leurs propres événements via emitEvent()
+ *
+ * Événements écoutés :
+ * Aucun directement (la classe est abstraite)
+ * Les modules enfants écoutent via subscribeToEvent()
+ *
+ * @module BaseModule
+ * @class BaseModule
+ * @abstract
+ * @version 1.0.0
+ * @author Claude AI - AutoCalc OptiDevis Refactoring
+ * @created 2024-10-XX
+ */
+
+class BaseModule {
+  /**
+   * Constructeur du module de base
+   * Initialise les références au state, events, et les structures de tracking
+   *
+   * @constructor
+   * @param {string} name - Nom du module (ex: 'materials', 'quotes', 'invoices')
+   * @param {StateManager} state - Instance du gestionnaire d'état global
+   * @param {EventBus} eventBus - Instance du bus d'événements
+   *
+   * @example
+   * class MaterialsModule extends BaseModule {
+   *   constructor(state, events) {
+   *     super('materials', state, events);
+   *     // Initialisation spécifique au module
+   *     this.materials = [];
+   *     this.filteredMaterials = [];
+   *   }
+   * }
+   */
+  constructor(name, state, eventBus) {
+    /**
+     * Nom du module (identifiant unique)
+     * @type {string}
+     * @public
+     */
+    this.name = name;
+
+    /**
+     * Instance du StateManager pour accès à l'état global
+     * @type {StateManager}
+     * @protected
+     */
+    this.state = state;
+
+    /**
+     * Instance du EventBus pour communication inter-modules
+     * @type {EventBus}
+     * @protected
+     */
+    this.events = eventBus;
+
+    /**
+     * API avec namespace pour événements de ce module
+     * Permet d'émettre "loaded" au lieu de "materials:loaded"
+     * @type {Object}
+     * @protected
+     */
+    this.moduleEvents = eventBus.namespace(name);
+
+    /**
+     * Liste des event listeners DOM enregistrés pour cleanup automatique
+     * Structure: [{element, event, handler}, ...]
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.domListeners = [];
+
+    /**
+     * Liste des souscriptions d'état pour cleanup automatique
+     * Chaque entrée est une fonction de désinscription
+     * @type {Array&lt;Function>}
+     * @private
+     */
+    this.stateSubscriptions = [];
+
+    /**
+     * Liste des souscriptions d'événements pour cleanup automatique
+     * Chaque entrée est une fonction de désinscription
+     * @type {Array&lt;Function>}
+     * @private
+     */
+    this.eventSubscriptions = [];
+
+    /**
+     * Indicateur d'initialisation du module
+     * @type {boolean}
+     * @protected
+     */
+    this.initialized = false;
+
+    /**
+     * Mode debug : affiche des logs détaillés
+     * @type {boolean}
+     * @protected
+     */
+    this.debug = false;
+
+    this.log(`Module ${name} created`);
+  }
+
+  /**
+   * Initialise le module (DOIT être implémentée par les modules enfants)
+   * Méthode abstraite qui définit le contrat pour tous les modules
+   *
+   * Les modules enfants doivent implémenter cette méthode pour :
+   * - Charger les données nécessaires
+   * - Attacher les event listeners DOM
+   * - Souscrire aux changements d'état
+   * - Souscrire aux événements inter-modules
+   * - Exposer les fonctions globales si nécessaire
+   *
+   * @abstract
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si la méthode n'est pas implémentée
+   *
+   * @example
+   * async init() {
+   *   // 1. Charger les données
+   *   await this.loadMaterials();
+   *
+   *   // 2. Event listeners DOM
+   *   this.addDOMListener('#btn-search', 'click', this.handleSearch);
+   *
+   *   // 3. Souscriptions état
+   *   this.subscribeToState('currentTab', this.onTabChange);
+   *
+   *   // 4. Souscriptions événements
+   *   this.subscribeToEvent('suppliers:updated', this.refresh);
+   *
+   *   // 5. Exposer au global (legacy)
+   *   this.exposeToGlobal({ selectMaterial: this.selectMaterial });
+   * }
+   */
+  async init() {
+    throw new Error(`Module ${this.name} must implement init() method`);
+  }
+
+  /**
+   * Nettoie le module avant destruction
+   * Retire automatiquement tous les event listeners, souscriptions et ressources
+   *
+   * Cette méthode peut être surchargée par les modules enfants pour
+   * un cleanup spécifique, mais il faut appeler super.destroy()
+   *
+   * Cleanup automatique :
+   * 1. Retire tous les event listeners DOM
+   * 2. Désabonne toutes les souscriptions d'état
+   * 3. Désabonne toutes les souscriptions d'événements
+   * 4. Marque le module comme non initialisé
+   *
+   * @example
+   * // Dans un module enfant avec cleanup spécifique
+   * destroy() {
+   *   // Cleanup spécifique
+   *   this.chart?.destroy();
+   *   this.modal?.hide();
+   *
+   *   // Appeler le cleanup de base (IMPORTANT)
+   *   super.destroy();
+   * }
+   */
+  destroy() {
+    this.log(`Destroying module ${this.name}`);
+
+    // ==========================================
+    // 1. RETIRER TOUS LES EVENT LISTENERS DOM
+    // ==========================================
+    this.domListeners.forEach(({ element, event, handler }) => {
+      element.removeEventListener(event, handler);
+    });
+    this.domListeners = [];
+
+    // ==========================================
+    // 2. DÉSABONNER TOUTES LES SOUSCRIPTIONS D'ÉTAT
+    // ==========================================
+    this.stateSubscriptions.forEach(unsubscribe => unsubscribe());
+    this.stateSubscriptions = [];
+
+    // ==========================================
+    // 3. DÉSABONNER TOUTES LES SOUSCRIPTIONS D'ÉVÉNEMENTS
+    // ==========================================
+    this.eventSubscriptions.forEach(unsubscribe => unsubscribe());
+    this.eventSubscriptions = [];
+
+    // Marquer comme non initialisé
+    this.initialized = false;
+
+    this.log(`Module ${this.name} destroyed`);
+  }
+
+  /**
+   * Attache un event listener DOM et le track pour cleanup automatique
+   *
+   * À UTILISER AU LIEU DE addEventListener() dans les modules !
+   * Garantit que les listeners seront retirés lors de destroy()
+   *
+   * Le handler est automatiquement bindé au module (this = module)
+   *
+   * @param {HTMLElement|string} elementOrSelector - Élément DOM ou sélecteur CSS
+   * @param {string} event - Type d'événement ('click', 'input', 'change', etc.)
+   * @param {Function} handler - Gestionnaire d'événement
+   * @param {Object} [options={}] - Options pour addEventListener
+   *
+   * @example
+   * // Attacher un listener sur un bouton
+   * this.addDOMListener('#btn-save', 'click', this.handleSave);
+   *
+   * @example
+   * // Attacher sur un élément déjà récupéré
+   * const input = document.querySelector('#search-input');
+   * this.addDOMListener(input, 'input', this.handleSearch);
+   *
+   * @example
+   * // Avec options (capture, once, etc.)
+   * this.addDOMListener('#form', 'submit', this.handleSubmit, {
+   *   capture: true,
+   *   once: true
+   * });
+   */
+  addDOMListener(elementOrSelector, event, handler, options = {}) {
+    // Résoudre l'élément (si c'est un sélecteur, le chercher)
+    const element = typeof elementOrSelector === 'string'
+      ? document.querySelector(elementOrSelector)
+      : elementOrSelector;
+
+    // Si l'élément n'existe pas, log en mode debug seulement
+    // Normal que certains éléments n'existent pas dans tous les onglets
+    if (!element) {
+      if (this.debug) {
+        this.log(`Element not found (will skip): ${elementOrSelector}`);
+      }
+      return;
+    }
+
+    // Binder le handler au module pour que "this" pointe vers le module
+    const boundHandler = handler.bind(this);
+
+    // Attacher le listener
+    element.addEventListener(event, boundHandler, options);
+
+    // Tracker pour cleanup automatique
+    this.domListeners.push({
+      element,
+      event,
+      handler: boundHandler
+    });
+
+    if (this.debug) {
+      this.log(`DOM listener added: ${event} on`, element);
+    }
+  }
+
+  /**
+   * Attache plusieurs event listeners à un élément en une seule fois
+   * Raccourci pour éviter de répéter addDOMListener()
+   *
+   * @param {HTMLElement|string} elementOrSelector - Élément DOM ou sélecteur CSS
+   * @param {Object} events - Objet { eventType: handler, ... }
+   *
+   * @example
+   * // Attacher plusieurs événements sur un formulaire
+   * this.addDOMListeners('#material-form', {
+   *   submit: this.handleSubmit,
+   *   reset: this.handleReset,
+   *   change: this.handleChange
+   * });
+   */
+  addDOMListeners(elementOrSelector, events) {
+    Object.keys(events).forEach(event => {
+      this.addDOMListener(elementOrSelector, event, events[event]);
+    });
+  }
+
+  /**
+   * Souscrit aux changements d'une clé spécifique de l'état global
+   * Wrapper autour de StateManager.subscribe() avec cleanup automatique
+   *
+   * À UTILISER AU LIEU DE state.subscribe() dans les modules !
+   * Garantit que la souscription sera retirée lors de destroy()
+   *
+   * Le callback est automatiquement bindé au module (this = module)
+   *
+   * @param {string} key - Clé de l'état à surveiller
+   * @param {Function} callback - Fonction appelée lors du changement
+   *                               Signature: callback(newValue, oldValue, key)
+   * @returns {Function} Fonction de désinscription (rarement nécessaire)
+   *
+   * @example
+   * // Surveiller le changement d'onglet
+   * this.subscribeToState('currentTab', (newTab, oldTab) => {
+   *   if (newTab === 'materials') {
+   *     this.show();
+   *   } else {
+   *     this.hide();
+   *   }
+   * });
+   *
+   * @example
+   * // Surveiller les matériaux
+   * this.subscribeToState('materials', (newMaterials) => {
+   *   console.log(`Matériaux mis à jour: ${newMaterials.length} items`);
+   *   this.refreshTable(newMaterials);
+   * });
+   */
+  subscribeToState(key, callback) {
+    // Binder le callback au module
+    const unsubscribe = this.state.subscribe(key, callback.bind(this));
+
+    // Tracker pour cleanup automatique
+    this.stateSubscriptions.push(unsubscribe);
+
+    return unsubscribe;
+  }
+
+  /**
+   * Souscrit à un événement global du bus
+   * Wrapper autour de EventBus.on() avec cleanup automatique
+   *
+   * À UTILISER AU LIEU DE events.on() dans les modules !
+   * Garantit que la souscription sera retirée lors de destroy()
+   *
+   * Le handler est automatiquement bindé au module (this = module)
+   *
+   * @param {string} event - Nom de l'événement (ex: 'materials:loaded')
+   * @param {Function} handler - Fonction appelée lors de l'événement
+   *                              Signature: handler(data, event)
+   * @param {Object} [options={}] - Options (priority, once)
+   * @returns {Function} Fonction de désinscription (rarement nécessaire)
+   *
+   * @example
+   * // Écouter le chargement des matériaux
+   * this.subscribeToEvent('materials:loaded', (materials) => {
+   *   this.updateMaterialsList(materials);
+   * });
+   *
+   * @example
+   * // Écouter avec priorité élevée
+   * this.subscribeToEvent('app:shutdown', () => {
+   *   this.saveUnsavedData();
+   * }, { priority: 10 });
+   *
+   * @example
+   * // Écouter une seule fois
+   * this.subscribeToEvent('app:first-load', () => {
+   *   this.showWelcomeTutorial();
+   * }, { once: true });
+   */
+  subscribeToEvent(event, handler, options = {}) {
+    // Binder le handler au module
+    const unsubscribe = this.events.on(event, handler.bind(this), options);
+
+    // Tracker pour cleanup automatique
+    this.eventSubscriptions.push(unsubscribe);
+
+    return unsubscribe;
+  }
+
+  /**
+   * Émet un événement de ce module (avec namespace automatique)
+   * Wrapper autour de moduleEvents.emit()
+   *
+   * Préfixe automatiquement l'événement avec le nom du module
+   * Ex: dans MaterialsModule, emitEvent('loaded') → émet 'materials:loaded'
+   *
+   * @param {string} event - Nom de l'événement (SANS le namespace)
+   * @param {*} data - Données de l'événement
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Dans MaterialsModule
+   * async loadMaterials() {
+   *   const materials = await this.invoke('materials:get');
+   *   this.emitEvent('loaded', materials); // Émet 'materials:loaded'
+   * }
+   *
+   * @example
+   * // Dans QuotesModule
+   * async saveQuote(quote) {
+   *   await this.invoke('quotes:save', quote);
+   *   this.emitEvent('saved', quote); // Émet 'quotes:saved'
+   * }
+   */
+  emitEvent(event, data) {
+    return this.moduleEvents.emit(event, data);
+  }
+
+  /**
+   * Émet un événement global (sans namespace)
+   * Wrapper autour de EventBus.emit()
+   *
+   * À utiliser quand on veut émettre un événement qui ne correspond
+   * pas au namespace du module
+   *
+   * @param {string} event - Nom complet de l'événement (avec namespace si nécessaire)
+   * @param {*} data - Données de l'événement
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Émettre un événement global
+   * this.emitGlobalEvent('app:critical-error', {
+   *   module: this.name,
+   *   error: errorDetails
+   * });
+   */
+  emitGlobalEvent(event, data) {
+    return this.events.emit(event, data);
+  }
+
+  /**
+   * Expose des fonctions au scope global pour compatibilité legacy
+   *
+   * ⚠️ IMPORTANT : Utilisé pour maintenir la compatibilité avec les onclick inline
+   * et les event listeners existants pendant la migration
+   *
+   * Les fonctions sont automatiquement bindées au module
+   *
+   * @param {Object} functions - Objet { nomFonction: fonction, ... }
+   *
+   * @example
+   * // Exposer des fonctions pour les onclick dans le HTML
+   * this.exposeToGlobal({
+   *   selectMaterial: this.selectMaterial,
+   *   deleteMaterial: this.deleteMaterial,
+   *   editMaterial: this.editMaterial
+   * });
+   *
+   * // Permet d'utiliser dans le HTML:
+   * // &lt;button onclick="selectMaterial(123)">Sélectionner&lt;/button>
+   */
+  exposeToGlobal(functions) {
+    Object.keys(functions).forEach(key => {
+      if (window[key]) {
+        console.warn(`[${this.name}] Overwriting global function: ${key}`);
+      }
+
+      // Binder la fonction au module pour conserver le contexte
+      window[key] = functions[key].bind(this);
+
+      if (this.debug) {
+        this.log(`Exposed to global: ${key}`);
+      }
+    });
+  }
+
+  /**
+   * Invoque un canal IPC Electron (main process)
+   * Raccourci pour window.electron.invoke() avec gestion d'erreurs
+   *
+   * @param {string} channel - Nom du canal IPC (ex: 'materials:get')
+   * @param {...*} args - Arguments à passer au canal
+   * @returns {Promise&lt;*>} Résultat de l'appel IPC
+   * @throws {Error} Si l'appel IPC échoue
+   *
+   * @example
+   * // Charger les matériaux
+   * const materials = await this.invoke('materials:get');
+   *
+   * @example
+   * // Sauvegarder un devis
+   * const result = await this.invoke('quotes:save', quoteData);
+   * if (result.success) {
+   *   console.log('Devis sauvegardé avec ID:', result.id);
+   * }
+   *
+   * @example
+   * // Supprimer un matériau
+   * await this.invoke('materials:delete', { id: materialId });
+   */
+  async invoke(channel, ...args) {
+    try {
+      return await window.electron.invoke(channel, ...args);
+    } catch (error) {
+      console.error(`[${this.name}] IPC error on ${channel}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Invoque une méthode de l'API Electron (electronAPI)
+   * Raccourci pour window.electronAPI.method() avec validation
+   *
+   * @param {string} method - Nom de la méthode à appeler
+   * @param {...*} args - Arguments de la méthode
+   * @returns {Promise&lt;*>} Résultat de l'appel
+   * @throws {Error} Si la méthode n'existe pas ou échoue
+   *
+   * @example
+   * // Ouvrir un fichier
+   * const filePath = await this.invokeAPI('openFile', {
+   *   title: 'Sélectionner un fichier',
+   *   filters: [{ name: 'Images', extensions: ['png', 'jpg'] }]
+   * });
+   */
+  async invokeAPI(method, ...args) {
+    try {
+      if (!window.electronAPI || !window.electronAPI[method]) {
+        throw new Error(`electronAPI.${method} is not available`);
+      }
+      return await window.electronAPI[method](...args);
+    } catch (error) {
+      console.error(`[${this.name}] API error on ${method}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Récupère un élément du DOM
+   * Raccourci pour document.querySelector()
+   *
+   * @param {string} selector - Sélecteur CSS
+   * @returns {HTMLElement|null} Élément trouvé ou null
+   *
+   * @example
+   * const button = this.getElement('#btn-save');
+   * if (button) {
+   *   button.disabled = false;
+   * }
+   */
+  getElement(selector) {
+    return document.querySelector(selector);
+  }
+
+  /**
+   * Récupère plusieurs éléments du DOM
+   * Raccourci pour document.querySelectorAll()
+   *
+   * @param {string} selector - Sélecteur CSS
+   * @returns {NodeList} Liste d'éléments
+   *
+   * @example
+   * const checkboxes = this.getElements('input[type="checkbox"]');
+   * checkboxes.forEach(cb => cb.checked = false);
+   */
+  getElements(selector) {
+    return document.querySelectorAll(selector);
+  }
+
+  /**
+   * Récupère la valeur d'un élément de formulaire
+   *
+   * @param {string} selector - Sélecteur CSS
+   * @returns {string|null} Valeur de l'élément ou null si introuvable
+   *
+   * @example
+   * const searchTerm = this.getValue('#search-input');
+   * if (searchTerm) {
+   *   this.filterMaterials(searchTerm);
+   * }
+   */
+  getValue(selector) {
+    const element = this.getElement(selector);
+    return element ? element.value : null;
+  }
+
+  /**
+   * Définit la valeur d'un élément de formulaire
+   *
+   * @param {string} selector - Sélecteur CSS
+   * @param {*} value - Valeur à définir
+   *
+   * @example
+   * this.setValue('#material-name', 'Plaque de plâtre BA13');
+   * this.setValue('#material-price', 12.50);
+   */
+  setValue(selector, value) {
+    const element = this.getElement(selector);
+    if (element) {
+      element.value = value;
+    }
+  }
+
+  /**
+   * Affiche ou cache un élément
+   *
+   * @param {string|HTMLElement} elementOrSelector - Élément ou sélecteur
+   * @param {boolean} show - true pour afficher, false pour cacher
+   *
+   * @example
+   * // Afficher un message d'erreur
+   * this.toggleElement('#error-message', true);
+   *
+   * @example
+   * // Cacher le formulaire
+   * const form = this.getElement('#material-form');
+   * this.toggleElement(form, false);
+   */
+  toggleElement(elementOrSelector, show) {
+    const element = typeof elementOrSelector === 'string'
+      ? this.getElement(elementOrSelector)
+      : elementOrSelector;
+
+    if (element) {
+      element.style.display = show ? '' : 'none';
+    }
+  }
+
+  /**
+   * Ajoute une classe CSS à un élément
+   *
+   * @param {string|HTMLElement} elementOrSelector - Élément ou sélecteur
+   * @param {string} className - Nom de la classe
+   *
+   * @example
+   * this.addClass('#material-card', 'selected');
+   */
+  addClass(elementOrSelector, className) {
+    const element = typeof elementOrSelector === 'string'
+      ? this.getElement(elementOrSelector)
+      : elementOrSelector;
+
+    if (element) {
+      element.classList.add(className);
+    }
+  }
+
+  /**
+   * Retire une classe CSS d'un élément
+   *
+   * @param {string|HTMLElement} elementOrSelector - Élément ou sélecteur
+   * @param {string} className - Nom de la classe
+   *
+   * @example
+   * this.removeClass('#material-card', 'selected');
+   */
+  removeClass(elementOrSelector, className) {
+    const element = typeof elementOrSelector === 'string'
+      ? this.getElement(elementOrSelector)
+      : elementOrSelector;
+
+    if (element) {
+      element.classList.remove(className);
+    }
+  }
+
+  /**
+   * Récupère le token de session de l'utilisateur
+   * Raccourci pour this.state.get('sessionToken')
+   *
+   * @returns {string|null} Token de session ou null si non connecté
+   *
+   * @example
+   * const token = this.getSessionToken();
+   * if (token) {
+   *   await this.makeAuthenticatedRequest(token);
+   * }
+   */
+  getSessionToken() {
+    return this.state.get('sessionToken');
+  }
+
+  /**
+   * Vérifie si l'utilisateur est authentifié pour cette session
+   * Raccourci pour this.state.get('isAuthenticatedThisSession')
+   *
+   * @returns {boolean} true si authentifié, false sinon
+   *
+   * @example
+   * if (this.isAuthenticated()) {
+   *   this.showAdminFeatures();
+   * } else {
+   *   this.showGuestInterface();
+   * }
+   */
+  isAuthenticated() {
+    return this.state.get('isAuthenticatedThisSession');
+  }
+
+  /**
+   * Vérifie si l'utilisateur est en mode invité (lecture seule)
+   * Raccourci pour this.state.get('isGuestMode')
+   *
+   * @returns {boolean} true si en mode invité, false sinon
+   *
+   * @example
+   * if (this.isGuestMode()) {
+   *   this.disableEditButtons();
+   * }
+   */
+  isGuestMode() {
+    return this.state.get('isGuestMode');
+  }
+
+  /**
+   * Log un message en mode debug uniquement
+   * Préfixe automatiquement avec le nom du module
+   *
+   * @param {...*} args - Arguments à logger
+   *
+   * @example
+   * this.log('Materials loaded:', this.materials.length);
+   * // Output: [materials] Materials loaded: 150
+   */
+  log(...args) {
+    if (this.debug) {
+      console.log(`[${this.name}]`, ...args);
+    }
+  }
+
+  /**
+   * Log une erreur (toujours affiché, même sans mode debug)
+   * Préfixe automatiquement avec le nom du module
+   *
+   * @param {...*} args - Arguments à logger
+   *
+   * @example
+   * this.error('Failed to load materials:', error);
+   * // Output: [materials] Failed to load materials: Error...
+   */
+  error(...args) {
+    console.error(`[${this.name}]`, ...args);
+  }
+
+  /**
+   * Log un avertissement (toujours affiché, même sans mode debug)
+   * Préfixe automatiquement avec le nom du module
+   *
+   * @param {...*} args - Arguments à logger
+   *
+   * @example
+   * this.warn('Material not found:', materialId);
+   * // Output: [materials] Material not found: 12345
+   */
+  warn(...args) {
+    console.warn(`[${this.name}]`, ...args);
+  }
+
+  /**
+   * Active ou désactive le mode debug pour ce module
+   * En mode debug, les appels à this.log() sont affichés
+   *
+   * @param {boolean} enabled - true pour activer, false pour désactiver
+   *
+   * @example
+   * // Activer le debug pour un module spécifique
+   * const materialsModule = app.getModule('materials');
+   * materialsModule.setDebug(true);
+   */
+  setDebug(enabled) {
+    this.debug = enabled;
+    this.log(`Debug mode: ${enabled ? 'ON' : 'OFF'}`);
+  }
+}
+
+// Export pour utilisation en module ES6
+export default BaseModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> PDFModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>PDFModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-PDFModule.html">PDFModule</a>~</span>PDFModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="PDFModule">
+        <a class="href-link" href="#PDFModule">#</a>
+        
+        <span class="code-name">
+            
+                new PDFModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module PDF.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements pour communication inter-modules</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line184">line 184</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="exportInvoicePDF">
+    <a class="href-link" href="#exportInvoicePDF">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        exportInvoicePDF
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Exporte une facture spécifique au format PDF (sauvegarde locale).</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line1161">line 1161</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si export réussi</li>
+            
+                <li>NotificationSystem#event:error Si erreur de chargement ou génération</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="exportQuotePDF">
+    <a class="href-link" href="#exportQuotePDF">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        exportQuotePDF
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Exporte le devis en cours au format PDF (sauvegarde locale).</p>
+<p>Workflow :</p>
+<ol>
+<li>Validation via validateBeforeExport() (si disponible)</li>
+<li>Génération du PDF via generateQuotePDFDocument()</li>
+<li>Création du nom de fichier : devis_[client]_[date].pdf</li>
+<li>Sauvegarde locale via doc.save() (téléchargement navigateur)</li>
+<li>Notification de succès</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line990">line 990</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si export réussi</li>
+            
+                <li>NotificationSystem#event:error Si erreur lors de la génération ou sauvegarde</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="generateInvoicePDFDocument">
+    <a class="href-link" href="#generateInvoicePDFDocument">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        generateInvoicePDFDocument
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Génère un document PDF professionnel pour une facture.</p>
+<p>Similaire à generateQuotePDFDocument() avec spécificités factures :</p>
+<ul>
+<li>Type document &quot;FACTURE&quot; dans l'en-tête</li>
+<li>Numéro de facture + date émission + échéance</li>
+<li>Devis associé (référence)</li>
+<li>Conditions de paiement légales obligatoires (pénalités, indemnité forfaitaire)</li>
+<li>Pas de calcul de remise (déjà incluse dans les totaux de la facture)</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line672">line 672</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si jsPDF non chargé ou aucun article valide</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const doc = await this.generateInvoicePDFDocument(invoice);
+if (doc) {
+  doc.save(`facture_${invoice.number}.pdf`);
+}</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="generateQuotePDFDocument">
+    <a class="href-link" href="#generateQuotePDFDocument">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        generateQuotePDFDocument
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Génère un document PDF professionnel pour le devis en cours.</p>
+<p>Méthode principale qui orchestre toute la génération du PDF avec :</p>
+<ul>
+<li>Sélection automatique du design (Elegant, Modern, Minimalist, Artisan, Tech)</li>
+<li>Construction multi-pages avec en-tête, client, articles, totaux, footer</li>
+<li>Gestion automatique de la pagination</li>
+<li>Application de la remise si définie</li>
+<li>Validation et filtrage des articles</li>
+</ul>
+<p>Workflow détaillé : Voir en-tête du module &quot;GÉNÉRATION PDF - WORKFLOW DEVIS&quot;</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line295">line 295</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si jsPDF non chargé ou aucun article valide</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const doc = await this.generateQuotePDFDocument();
+if (doc) {
+  doc.save('devis.pdf'); // Export
+}</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="printInvoice">
+    <a class="href-link" href="#printInvoice">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        printInvoice
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Imprime une facture spécifique via le dialogue d'impression.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line1205">line 1205</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si impression lancée</li>
+            
+                <li>NotificationSystem#event:error Si erreur</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="printQuote">
+    <a class="href-link" href="#printQuote">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        printQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Imprime le devis en cours via le dialogue d'impression du système.</p>
+<p>Workflow :</p>
+<ol>
+<li>Validation via validateBeforeExport()</li>
+<li>Génération du PDF</li>
+<li>Conversion en base64 (doc.output('datauristring'))</li>
+<li>Envoi à Electron main process via IPC 'print-pdf'</li>
+<li>Ouverture du dialogue d'impression OS</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line1040">line 1040</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si dialogue ouvert</li>
+            
+                <li>NotificationSystem#event:error Si erreur</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="sendInvoiceEmail">
+    <a class="href-link" href="#sendInvoiceEmail">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        sendInvoiceEmail
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Envoie une facture spécifique par email avec PDF en pièce jointe.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line1251">line 1251</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si email envoyé</li>
+            
+                <li>NotificationSystem#event:error Si erreur ou email client manquant ou non authentifié</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="sendQuoteEmail">
+    <a class="href-link" href="#sendQuoteEmail">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        sendQuoteEmail
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Envoie le devis en cours par email avec PDF en pièce jointe.</p>
+<p>Workflow :</p>
+<ol>
+<li>Validation via validateBeforeSendEmail()</li>
+<li>Vérification authentification (authToken requis)</li>
+<li>Vérification email client présent</li>
+<li>Génération du PDF + conversion base64</li>
+<li>Envoi via IPC 'send-quote-email' avec {to, subject, body, attachment}</li>
+<li>SMTP configuré dans ConfigModule utilisé par le backend</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line1091">line 1091</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:success Si email envoyé</li>
+            
+                <li>NotificationSystem#event:error Si erreur ou non authentifié ou email manquant</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module PDF.
+Expose toutes les fonctions de génération et d'action PDF au scope global
+et attache les event listeners aux boutons PDF du formulaire devis.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_pdf_PDFModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_pdf_PDFModule.js.html">modules/pdf/PDFModule.js</a>, <a href="modules_pdf_PDFModule.js.html#line199">line 199</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Si erreur pendant l'initialisation</p></div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

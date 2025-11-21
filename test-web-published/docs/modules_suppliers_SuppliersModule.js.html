@@ -1,0 +1,1946 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/suppliers/SuppliersModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/suppliers/SuppliersModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * SUPPLIERS MODULE - Gestion des fournisseurs
+ * ========================================
+ *
+ * Module de gestion complète des fournisseurs pour l'application AutoCalc OptiDevis.
+ * Gère le catalogue de fournisseurs avec opérations CRUD, filtrage avancé et liaison
+ * avec les matériaux du catalogue.
+ *
+ * Architecture :
+ * Le module gère un catalogue de fournisseurs avec :
+ * - **CRUD complet** : Create, Read, Update, Delete avec validation
+ * - **Filtrage multi-critères** : Recherche textuelle + filtre par type
+ * - **Liaison matériaux** : Affichage du nombre de matériaux par fournisseur
+ * - **Cache intelligent** : DataCache 5 minutes pour performance
+ * - **Modals Bootstrap** : Formulaire d'ajout/édition + confirmation suppression
+ *
+ * ==========================================
+ * DONNÉES FOURNISSEUR
+ * ==========================================
+ *
+ * Structure d'un fournisseur (11 champs) :
+ * - **id** : Identifiant unique (auto-incrémenté)
+ * - **name** : Nom du fournisseur (obligatoire, unique)
+ * - **contact** : Nom du contact principal
+ * - **email** : Adresse email du fournisseur
+ * - **phone** : Numéro de téléphone
+ * - **address** : Adresse complète (tronquée à 50 caractères dans tableau)
+ * - **type** : Type de fournisseur (Maçonnerie, Plomberie, Électricité, etc.)
+ * - **siret** : Numéro SIRET (identifiant légal)
+ * - **deliveryDelay** : Délai de livraison en jours (nombre)
+ * - **website** : Site web du fournisseur
+ * - **notes** : Notes libres (tronquées à 30 caractères dans tableau)
+ *
+ * Stockage : suppliers.json via IPC
+ *
+ * ==========================================
+ * FONCTIONNALITÉS CRUD
+ * ==========================================
+ *
+ * **Create (Ajout)** :
+ * 1. Utilisateur clique "Ajouter fournisseur"
+ * 2. Modal s'ouvre avec formulaire vide
+ * 3. Utilisateur remplit les champs (nom obligatoire)
+ * 4. Validation : nom non vide
+ * 5. Envoi via IPC 'addSupplier' avec authToken
+ * 6. Invalidation cache + rechargement + rafraîchissement tableau
+ * 7. Notification succès
+ *
+ * **Read (Lecture)** :
+ * - Chargement au démarrage depuis cache ou backend (IPC 'get-suppliers')
+ * - Affichage dans tableau trié par ID
+ * - Comptage des matériaux par fournisseur (liaison avec catalog)
+ * - Bouton "Voir matériaux" pour basculer vers onglet Catalogue avec filtre actif
+ *
+ * **Update (Modification)** :
+ * 1. Utilisateur clique icône "Modifier" sur une ligne
+ * 2. Modal s'ouvre avec formulaire pré-rempli
+ * 3. Utilisateur modifie les champs
+ * 4. Validation : nom non vide
+ * 5. Envoi via IPC 'updateSupplier' avec authToken + supplierData.id
+ * 6. Invalidation cache + rechargement + rafraîchissement
+ * 7. Notification succès
+ *
+ * **Delete (Suppression)** :
+ * 1. Utilisateur clique icône "Supprimer"
+ * 2. Modal de confirmation avec nom du fournisseur
+ * 3. Confirmation utilisateur
+ * 4. Envoi via IPC 'deleteSupplier' avec authToken + id
+ * 5. Invalidation cache + rechargement + rafraîchissement
+ * 6. Fermeture modal + notification succès
+ *
+ * ==========================================
+ * FILTRAGE &amp; RECHERCHE
+ * ==========================================
+ *
+ * **Recherche textuelle** (#search-suppliers) :
+ * - Recherche dans : name, contact, email, phone
+ * - Insensible à la casse
+ * - Temps réel (événement 'input')
+ *
+ * **Filtre par type** (#filter-supplier-type) :
+ * - Select généré dynamiquement avec comptage par type
+ * - Option "Tous les types" par défaut
+ * - Format : "Type (nombre)"
+ * - Événement 'change'
+ *
+ * **Combinaison des filtres** :
+ * - Les deux filtres se cumulent (ET logique)
+ * - Notification du nombre de résultats (toast 2s)
+ * - Affichage "Aucun fournisseur trouvé" si 0 résultat
+ *
+ * ==========================================
+ * LIAISON AVEC MATÉRIAUX
+ * ==========================================
+ *
+ * Intégration avec MaterialsModule :
+ * - Comptage des matériaux par fournisseur (material.supplier = supplier.name)
+ * - Badge vert avec nombre si matériaux > 0
+ * - Bouton "Voir matériaux" avec icône œil
+ * - Fonction viewSupplierMaterials() :
+ *   1. Bascule vers onglet Catalogue (Bootstrap Tab API)
+ *   2. Appelle filterBySupplier() du MaterialsModule avec délai 100ms
+ *   3. Filtre automatiquement le catalogue par fournisseur
+ *
+ * Utilité : Permet de voir rapidement quels matériaux viennent d'un fournisseur
+ *
+ * ==========================================
+ * CACHE &amp; PERFORMANCE
+ * ==========================================
+ *
+ * **DataCache avec TTL 5 minutes** :
+ * - Clé : 'suppliers'
+ * - Durée : 5 * 60 * 1000 ms = 300 secondes
+ * - Vérification au loadSuppliers() :
+ *   - Si cache valide → utilise cache
+ *   - Si cache expiré → fetch backend + mise en cache
+ * - Invalidation manuelle après CRUD :
+ *   - DataCache.invalidate('suppliers')
+ *   - Force rechargement depuis backend
+ *
+ * **Synchronisation** :
+ * - this.suppliers (instance)
+ * - this.state.set('suppliers') (StateManager)
+ * - window.suppliers (global, compatibilité legacy)
+ * - DataCache ('suppliers')
+ *
+ * ==========================================
+ * MODALS BOOTSTRAP
+ * ==========================================
+ *
+ * **Modal Formulaire** (#supplierFormModal) :
+ * - Titre dynamique : "Ajouter" ou "Modifier"
+ * - 11 champs de saisie
+ * - Boutons : Sauvegarder, Annuler
+ * - Focus automatique sur #supplier-name après ouverture (délai 500ms)
+ * - Mode : this.editMode (boolean)
+ *
+ * **Modal Suppression** (#deleteSupplierModal) :
+ * - Message dynamique avec nom du fournisseur
+ * - Boutons : Confirmer, Annuler
+ * - ID stocké temporairement dans this.supplierToDeleteId
+ *
+ * ==========================================
+ * EVENT LISTENERS
+ * ==========================================
+ *
+ * **Listeners globaux** (attachEventListeners) :
+ * - Onglet #suppliers-tab → shown.bs.tab : Rafraîchit tableau + attache listeners
+ *
+ * **Listeners spécifiques** (attachSuppliersListeners) :
+ * - Protection contre double-attachement (suppliersListenersAttached flag)
+ * - Boutons : #add-supplier-btn, #save-supplier-btn, #cancel-supplier-btn, #confirmDeleteSupplierBtn
+ * - Filtres : #search-suppliers (input), #filter-supplier-type (change)
+ * - Tableau : onclick editSupplier(id), askDeleteSupplier(id), viewSupplierMaterials(name)
+ *
+ * ==========================================
+ * ÉVÉNEMENTS ÉMIS
+ * ==========================================
+ *
+ * **EventBus interne** :
+ * - 'initialized' : Au démarrage du module
+ * - 'loaded' : Après chargement des fournisseurs (avec data)
+ * - 'added' : Après ajout réussi (avec supplierData)
+ * - 'updated' : Après modification réussie (avec supplierData)
+ * - 'deleted' : Après suppression réussie (avec id)
+ *
+ * **EventBus global** (this.events) :
+ * - 'suppliers:loaded' : Pour notifier autres modules du chargement
+ * - 'suppliers:updated' : Après tout changement (add/update/delete)
+ *
+ * Utilité : MaterialsModule peut écouter 'suppliers:loaded' pour rafraîchir son autocomplete
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **MaterialsModule** : Liaison par supplier name, fonction filterBySupplier()
+ * - **StateManager** : Stockage suppliers, editMode, supplierToDeleteId
+ * - **DataCache** : Cache 5 min pour performance
+ * - **NotificationSystem** : Feedback utilisateur (success, error, info)
+ * - **Bootstrap 5.3.3** : Modals, Tab API, Tooltips
+ * - **IPC Electron** : get-suppliers, addSupplier, updateSupplier, deleteSupplier
+ *
+ * @module SuppliersModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import DataCache from '../../shared/ui/DataCache.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import CacheKeys from '../../shared/cache/CacheKeys.js';
+import BulkActionsManager from '../../shared/bulk/BulkActionsManager.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+
+class SuppliersModule extends BaseModule {
+  /**
+   * Crée une instance du module Suppliers.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('suppliers', state, eventBus);
+
+    /**
+     * Cache local de tous les fournisseurs.
+     * Synchronisé avec StateManager et window.suppliers.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.suppliers = [];
+
+    /**
+     * Liste filtrée des fournisseurs (après recherche/filtre).
+     * Utilisé pour affichage conditionnel mais non actuellement exploité.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.filteredSuppliers = [];
+
+    /**
+     * Mode édition actif (true) ou ajout (false).
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.editMode = false;
+
+    /**
+     * ID du fournisseur à supprimer (stockage temporaire pour modal).
+     *
+     * @type {number|null}
+     * @private
+     */
+    this.supplierToDeleteId = null;
+
+    /**
+     * Instance du modal Bootstrap de confirmation de suppression.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.deleteModal = null;
+
+    /**
+     * Instance du modal Bootstrap du formulaire ajout/édition.
+     *
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.formModal = null;
+
+    /**
+     * Flag évitant le double-attachement des listeners.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this.suppliersListenersAttached = false;
+
+    /**
+     * Configuration de pagination pour le tableau des fournisseurs.
+     * @type {Object}
+     * @private
+     */
+    this.pagination = {
+      currentPage: 1,
+      itemsPerPage: 25,
+      totalItems: 0,
+      totalPages: 0
+    };
+
+    /**
+     * Gestionnaire d'opérations groupées (bulk actions).
+     * @type {BulkActionsManager|null}
+     * @private
+     */
+    this.bulkActions = null;
+  }
+
+  /**
+   * Initialise le module Suppliers.
+   * Charge les fournisseurs, peuple filtres et tableau, attache listeners, expose fonctions globales.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires EventBus#initialized Après initialisation complète
+   */
+  async init() {
+    this.log('Initializing Suppliers Module...');
+    console.log('🚚 SuppliersModule v1.0 - Initialization');
+
+    // Charger les fournisseurs depuis le backend
+    await this.loadSuppliers();
+
+    // Populer les filtres et le tableau après chargement
+    this.populateTypeFilter();
+    this.populateSuppliersTable();
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    // Exposer les fonctions au scope global (compatibilité)
+    this.exposeToGlobal({
+      loadSuppliers: this.loadSuppliers,
+      populateSuppliersTable: this.populateSuppliersTable,
+      addSupplier: this.addSupplier,
+      saveSupplier: this.saveSupplier,
+      editSupplier: this.editSupplier,
+      deleteSupplier: this.deleteSupplier,
+      askDeleteSupplier: this.askDeleteSupplier,
+      clearSupplierForm: this.clearSupplierForm,
+      applySupplierFilters: this.applySupplierFilters,
+      populateTypeFilter: this.populateTypeFilter,
+      viewSupplierMaterials: this.viewSupplierMaterials,
+      viewSupplierDetails: this.viewSupplierDetails,
+      changePage: this.changePage,
+      goToPage: this.goToPage
+    });
+
+    // Exposer l'instance du module pour les méthodes de pagination
+    window.suppliersModule = this;
+
+    // Initialiser le modal de suppression
+    const deleteModalElement = this.getElement('#deleteSupplierModal');
+    if (deleteModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.deleteModal = new bootstrap.Modal(deleteModalElement);
+      this.log('Delete modal initialized');
+    }
+
+    // Initialiser le modal du formulaire
+    const formModalElement = this.getElement('#supplierFormModal');
+    if (formModalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.formModal = new bootstrap.Modal(formModalElement);
+      this.log('Form modal initialized');
+    }
+
+    // Initialiser le gestionnaire d'opérations groupées
+    this.bulkActions = new BulkActionsManager({
+      moduleName: 'suppliers',
+      tableId: 'suppliers-table-body',
+      checkboxClass: 'supplier-bulk-checkbox',
+      selectAllId: 'suppliers-select-all',
+      bulkActionsId: 'suppliers-bulk-actions',
+      undoRedoManager: window.undoRedoManager,
+      onDeleteCallback: this.bulkDeleteSuppliers.bind(this),
+      onExportCallback: this.bulkExportSuppliers.bind(this)
+    });
+    this.bulkActions.initialize();
+    this.log('Bulk actions manager initialized');
+
+    // Enregistrer l'auto-refresh de l'onglet
+    this.registerTabRefresh();
+
+    // 🆕 Enregistrer les commandes Command Palette (quand prêt)
+    if (window.CommandPalette) {
+      this.registerCommands();
+    } else {
+      // Attendre que Command Palette soit prêt
+      this.events.on('commandpalette:ready', () => {
+        this.registerCommands();
+      });
+    }
+
+    this.log('Suppliers Module initialized successfully');
+    this.emitEvent('initialized');
+  }
+
+  /**
+   * 🆕 Enregistre l'onglet Fournisseurs pour auto-refresh automatique.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerTabRefresh() {
+    if (!window.TabRefreshManager) {
+      this.warn('TabRefreshManager not available - tab auto-refresh disabled');
+      return;
+    }
+
+    // Onglet "Fournisseurs"
+    window.TabRefreshManager.registerTab('suppliers-tab', async (force) => {
+      this.log('🔄 Auto-refreshing Fournisseurs...');
+      await this.loadSuppliersTab();
+    }, {
+      ttl: 30000, // 30 secondes
+      label: 'Fournisseurs'
+    });
+
+    this.log('✅ Tab auto-refresh registered');
+  }
+
+  /**
+   * 🆕 Enregistre les commandes Command Palette pour le module Suppliers.
+   *
+   * @private
+   */
+  registerCommands() {
+    if (!window.CommandPalette) return;
+
+    // Créer fournisseur
+    window.CommandPalette.registerCommand('suppliers-create', {
+      label: '🚚 Créer un nouveau fournisseur',
+      keywords: ['créer', 'nouveau', 'fournisseur', 'supplier', 'ajouter'],
+      category: 'Fournisseurs',
+      icon: '🚚',
+      priority: 15,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: async () => {
+        document.getElementById('suppliers-tab')?.click();
+        await new Promise(r => setTimeout(r, 150));
+        window.addSupplier?.();
+      }
+    });
+
+    // Voir fournisseurs
+    window.CommandPalette.registerCommand('suppliers-list', {
+      label: '🚛 Voir tous les fournisseurs',
+      keywords: ['fournisseurs', 'suppliers', 'liste', 'voir', 'tous'],
+      category: 'Fournisseurs',
+      icon: '🚛',
+      priority: 12,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('suppliers-tab')?.click()
+    });
+
+    this.log('✅ Command Palette commands registered');
+  }
+
+  /**
+   * Charge les données de l'onglet Fournisseurs (alias pour loadSuppliers).
+   * Utilisé par TabRefreshManager pour auto-refresh.
+   *
+   * @private
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async loadSuppliersTab() {
+    await this.loadSuppliers();
+    this.populateSuppliersTable();
+  }
+
+  /**
+   * Attache les event listeners globaux du module.
+   * Écoute l'ouverture de l'onglet Fournisseurs pour rafraîchir le tableau.
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Écouter l'événement d'ouverture de l'onglet Fournisseurs
+    const suppliersTab = this.getElement('#suppliers-tab');
+    if (suppliersTab) {
+      suppliersTab.addEventListener('shown.bs.tab', () => {
+        // Suppliers tab shown - populating table
+        this.attachSuppliersListeners();
+        this.populateSuppliersTable();
+      });
+    }
+
+    this.log('Event listeners attached');
+  }
+
+  /**
+   * Attache les listeners spécifiques (boutons, filtres).
+   * Protection contre double-attachement via flag.
+   * @private
+   */
+  attachSuppliersListeners() {
+    // Ne les attacher qu'une seule fois
+    if (this.suppliersListenersAttached) return;
+
+    // Boutons de gestion des fournisseurs
+    this.addDOMListener('#add-supplier-btn', 'click', () => {
+      this.addSupplier();
+    });
+
+    this.addDOMListener('#save-supplier-btn', 'click', () => {
+      this.saveSupplier();
+    });
+
+    this.addDOMListener('#confirmDeleteSupplierBtn', 'click', () => {
+      if (this.supplierToDeleteId) {
+        this.deleteSupplier(this.supplierToDeleteId);
+      }
+    });
+
+    this.addDOMListener('#cancel-supplier-btn', 'click', () => {
+      this.clearSupplierForm();
+    });
+
+    // Filtres de recherche
+    // Debouncing 300ms pour optimiser les performances de recherche
+    const searchInput = this.getElement('#search-suppliers');
+    if (searchInput) {
+      let debounceTimer;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          this.applySupplierFilters();
+        }, 300);
+      });
+    }
+
+    const typeFilter = this.getElement('#filter-supplier-type');
+    if (typeFilter) {
+      typeFilter.addEventListener('change', () => {
+        this.applySupplierFilters();
+      });
+    }
+
+    // Mise à jour de l'aperçu d'icône pour le type de fournisseur
+    this.addDOMListener('#supplier-type', 'change', (e) => {
+      this.updateSupplierTypeIconPreview(e.target.value);
+    });
+
+    // Pagination - Sélecteur items par page
+    const itemsPerPageSelect = this.getElement('#suppliers-items-per-page');
+    if (itemsPerPageSelect) {
+      itemsPerPageSelect.addEventListener('change', (e) => {
+        this.pagination.itemsPerPage = parseInt(e.target.value);
+        this.pagination.currentPage = 1; // Reset to first page
+        this.applySupplierFilters();
+      });
+    }
+
+    this.suppliersListenersAttached = true;
+    this.log('Suppliers listeners attached');
+  }
+
+  /**
+   * Charge les fournisseurs depuis cache (5min) ou backend via IPC.
+   * @public @async @fires EventBus#loaded @fires suppliers:loaded
+   */
+  async loadSuppliers() {
+    try {
+      console.log('🔄 loadSuppliers() called');
+
+      // Vérifier le cache
+      const cached = DataCache.get('suppliers');
+      if (cached &amp;&amp; cached.length > 0) {
+        this.suppliers = cached;
+        this.state.set('suppliers', cached);
+        window.suppliers = cached;
+        console.log(`✅ Suppliers loaded from cache: ${cached.length} items`);
+        this.emitEvent('loaded', this.suppliers);
+        return;
+      }
+
+      // Charger depuis le backend
+      console.log('🌐 Calling backend API get-suppliers...');
+      const response = await this.invoke('get-suppliers');
+      console.log('🌐 Backend response:', response);
+
+      const suppliers = Array.isArray(response)
+        ? response
+        : (response.data || response.suppliers || []);
+      console.log(`🌐 Parsed suppliers: ${suppliers.length} items`);
+
+      this.suppliers = suppliers;
+      this.state.set('suppliers', suppliers);
+      window.suppliers = suppliers;
+
+      // Mettre en cache
+      if (suppliers.length > 0) {
+        DataCache.set('suppliers', suppliers, 5 * 60 * 1000); // 5 min
+      }
+
+      console.log(`✅ Loaded ${suppliers.length} suppliers from backend`);
+      this.emitEvent('loaded', suppliers);
+
+      // Émettre un événement global pour que d'autres modules puissent réagir
+      this.events.emit('suppliers:loaded', suppliers);
+
+      // Populer les filtres
+      this.populateTypeFilter();
+
+    } catch (error) {
+      console.error('❌ Error loading suppliers:', error);
+      this.error('Error loading suppliers:', error);
+      NotificationSystem.error('Erreur lors du chargement des fournisseurs');
+    }
+  }
+
+  /**
+   * Retourne l'icône HTML correspondant au type de fournisseur.
+   *
+   * @param {string} supplierType - Type du fournisseur (ex: "Grossiste", "Distributeur", "Fabricant")
+   * @returns {string} Code HTML de l'icône avec sa couleur
+   *
+   * @example
+   * getSupplierTypeIcon("Grossiste")
+   * // → "&lt;i class='fas fa-warehouse text-primary'>&lt;/i>"
+   */
+  getSupplierTypeIcon(supplierType) {
+    const iconMap = {
+      'Grossiste': "&lt;i class='fas fa-warehouse text-primary'>&lt;/i>",
+      'Distributeur': "&lt;i class='fas fa-truck text-success'>&lt;/i>",
+      'Négoce': "&lt;i class='fas fa-building text-info'>&lt;/i>",
+      'Spécialiste': "&lt;i class='fas fa-bolt text-warning'>&lt;/i>",
+      'Fabricant': "&lt;i class='fas fa-industry text-danger'>&lt;/i>",
+      'Importateur': "&lt;i class='fas fa-globe text-secondary'>&lt;/i>",
+      'Centrale d\'achat': "&lt;i class='fas fa-shopping-cart text-primary'>&lt;/i>",
+      'Autre': "&lt;i class='fas fa-question text-muted'>&lt;/i>"
+    };
+
+    return iconMap[supplierType] || "&lt;i class='fas fa-truck text-muted'>&lt;/i>";
+  }
+
+  /**
+   * Met à jour l'aperçu de l'icône dans le formulaire fournisseur en fonction du type sélectionné.
+   *
+   * @param {string} supplierType - Type du fournisseur sélectionné dans le dropdown
+   * @returns {void}
+   */
+  updateSupplierTypeIconPreview(supplierType) {
+    const iconPreview = this.getElement('#supplier-type-icon-preview');
+    if (!iconPreview) return;
+
+    const iconHTML = this.getSupplierTypeIcon(supplierType);
+    iconPreview.innerHTML = iconHTML;
+  }
+
+  /**
+   * Peuple le tableau avec fournisseurs (tous ou filtrés). Trie par ID, affiche comptage matériaux.
+   * @public @param {Array} [filteredSuppliers] Liste filtrée optionnelle
+   */
+  populateSuppliersTable(filteredSuppliers = null) {
+    // Populate suppliers table
+
+    const suppliersSource = window.suppliers || this.suppliers;
+    const suppliersToShow = filteredSuppliers || suppliersSource;
+    const tbody = this.getElement('#suppliers-table-body');
+
+    if (!tbody) {
+      // tbody not found
+      return;
+    }
+
+    if (suppliersToShow.length === 0) {
+      tbody.innerHTML = '&lt;tr>&lt;td colspan="6" class="text-center">Aucun fournisseur trouvé&lt;/td>&lt;/tr>';
+      this.updatePaginationControls(0, []);
+      return;
+    }
+
+    // Trier les fournisseurs par ID
+    const sortedSuppliers = [...suppliersToShow].sort((a, b) => {
+      const idA = parseInt(a.id) || 0;
+      const idB = parseInt(b.id) || 0;
+      return idA - idB;
+    });
+
+    // Mettre à jour les infos de pagination
+    this.pagination.totalItems = sortedSuppliers.length;
+    this.pagination.totalPages = Math.ceil(sortedSuppliers.length / this.pagination.itemsPerPage);
+
+    // S'assurer que currentPage est dans les limites
+    if (this.pagination.currentPage > this.pagination.totalPages) {
+      this.pagination.currentPage = this.pagination.totalPages || 1;
+    }
+
+    // Calculer les indices de début et fin pour la page actuelle
+    const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage;
+    const endIndex = startIndex + this.pagination.itemsPerPage;
+    const paginatedSuppliers = sortedSuppliers.slice(startIndex, endIndex);
+
+    // Compter les matériaux par fournisseur
+    const materials = window.materials || [];
+    const materialCounts = {};
+    materials.forEach(material => {
+      const supplierName = material.supplier;
+      if (supplierName) {
+        materialCounts[supplierName] = (materialCounts[supplierName] || 0) + 1;
+      }
+    });
+
+    tbody.innerHTML = paginatedSuppliers.map(supplier => {
+      const name = TextFormatter.escapeHtml(supplier.name ?? '-');
+      const phone = TextFormatter.escapeHtml(supplier.phone ?? '-');
+      const email = TextFormatter.escapeHtml(supplier.email ?? '');
+      const type = TextFormatter.escapeHtml(supplier.type ?? '-');
+
+      // Formater la colonne Contact (Téléphone + Email)
+      // Note: phone et email sont déjà échappés ci-dessus
+      let contactDisplay = '';
+      if (phone !== TextFormatter.escapeHtml('-')) {
+        contactDisplay = `&lt;i class="fas fa-phone text-primary">&lt;/i> ${phone}`;
+      }
+      if (email) {
+        if (contactDisplay) contactDisplay += '&lt;br>';
+        contactDisplay += `&lt;i class="fas fa-envelope text-secondary">&lt;/i> &lt;small>${email}&lt;/small>`;
+      }
+      if (!contactDisplay) {
+        contactDisplay = '&lt;span class="text-muted">-&lt;/span>';
+      }
+
+      // Nombre de matériaux pour ce fournisseur
+      const materialsCount = materialCounts[supplier.name] || 0;
+      const escapedSupplierName = TextFormatter.escapeHtml(supplier.name).replace(/'/g, '&amp;#39;');
+      const materialsDisplay = materialsCount > 0
+        ? `&lt;span class="badge bg-success">${materialsCount}&lt;/span>
+           &lt;button onclick="viewSupplierMaterials('${escapedSupplierName}')" class="btn btn-sm btn-outline-primary btn-icon ms-1" data-bs-toggle="tooltip" title="Voir les matériaux">
+             &lt;i class="fas fa-eye">&lt;/i>
+           &lt;/button>`
+        : '&lt;span class="text-muted">0&lt;/span>';
+
+      // Afficher l'icône du type avec le badge
+      const typeIcon = this.getSupplierTypeIcon(type);
+      const typeDisplay = type !== '-'
+        ? `${typeIcon} &lt;span class="badge bg-info">${type}&lt;/span>`
+        : '&lt;span class="text-muted">-&lt;/span>';
+
+      return `
+        &lt;tr>
+          &lt;td class="text-center" style="width: 40px;">
+            &lt;input type="checkbox" class="supplier-bulk-checkbox" data-id="${supplier.id}">
+          &lt;/td>
+          &lt;td>&lt;strong>${name}&lt;/strong>&lt;/td>
+          &lt;td>${contactDisplay}&lt;/td>
+          &lt;td>${typeDisplay}&lt;/td>
+          &lt;td>${materialsDisplay}&lt;/td>
+          &lt;td>
+            &lt;div class="btn-icon-group">
+              &lt;button onclick="viewSupplierDetails(${supplier.id})" class="btn btn-sm btn-info btn-icon" data-bs-toggle="tooltip" title="Voir détails">
+                &lt;i class="fas fa-info-circle">&lt;/i>
+              &lt;/button>
+              &lt;button onclick="editSupplier(${supplier.id})" class="btn btn-sm btn-primary btn-icon" data-bs-toggle="tooltip" title="Modifier">
+                &lt;i class="fas fa-edit">&lt;/i>
+              &lt;/button>
+              &lt;button class="btn btn-sm btn-danger btn-icon" onclick="askDeleteSupplier(${supplier.id})" data-bs-toggle="tooltip" title="Supprimer">
+                &lt;i class="fas fa-trash-alt">&lt;/i>
+              &lt;/button>
+            &lt;/div>
+          &lt;/td>
+        &lt;/tr>
+      `;
+    }).join('');
+
+    // Table populated successfully
+    this.log(`Populated table with ${paginatedSuppliers.length}/${sortedSuppliers.length} suppliers (page ${this.pagination.currentPage}/${this.pagination.totalPages})`);
+
+    // Mettre à jour les contrôles de pagination
+    this.updatePaginationControls(sortedSuppliers.length, paginatedSuppliers);
+  }
+
+  /**
+   * Génère le select de filtre par type avec comptages.
+   * @public
+   */
+  populateTypeFilter() {
+    const typeFilter = this.getElement('#filter-supplier-type');
+    if (!typeFilter) return;
+
+    const suppliersSource = window.suppliers || this.suppliers;
+
+    // Compter les fournisseurs par type
+    const typeCount = {};
+    suppliersSource.forEach(s => {
+      const type = s.type || 'Non catégorisé';
+      typeCount[type] = (typeCount[type] || 0) + 1;
+    });
+
+    const types = Object.keys(typeCount).sort();
+
+    typeFilter.innerHTML = '&lt;option value="">Tous les types&lt;/option>' +
+      types.map(type => `&lt;option value="${type}">${type} (${typeCount[type]})&lt;/option>`).join('');
+  }
+
+  /**
+   * Applique les filtres de recherche et de type sur les fournisseurs.
+   * Combine recherche textuelle ET filtre par type (logique AND).
+   * Affiche le nombre de résultats via notification.
+   *
+   * Workflow :
+   * 1. Récupère la valeur de recherche textuelle (#search-suppliers)
+   * 2. Récupère le type sélectionné (#filter-supplier-type)
+   * 3. Filtre les fournisseurs (matchesSearch AND matchesType)
+   * 4. Appelle populateSuppliersTable() avec la liste filtrée
+   * 5. Affiche notification info avec le nombre de résultats (toast 2s)
+   *
+   * Champs recherchés :
+   * - name, contact, email, phone (insensible à la casse)
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#info Affiche le nombre de fournisseurs affichés
+   *
+   * @example
+   * // Utilisateur tape "Martin" dans #search-suppliers
+   * // → Filtre tous les fournisseurs contenant "martin" (name/contact/email/phone)
+   * // → Affiche "3 fournisseur(s) affiché(s)" pendant 2s
+   *
+   * @example
+   * // Utilisateur sélectionne "Maçonnerie" + tape "Martin"
+   * // → Filtre seulement les maçons nommés "Martin"
+   * // → Affiche "1 fournisseur(s) affiché(s)"
+   */
+  applySupplierFilters() {
+    const searchText = this.getValue('#search-suppliers')?.toLowerCase() || '';
+    const selectedType = this.getValue('#filter-supplier-type') || '';
+
+    const suppliersSource = window.suppliers || this.suppliers;
+    const filtered = suppliersSource.filter(supplier => {
+      const matchesSearch = !searchText ||
+        supplier.name?.toLowerCase().includes(searchText) ||
+        supplier.contact?.toLowerCase().includes(searchText) ||
+        supplier.email?.toLowerCase().includes(searchText) ||
+        supplier.phone?.toLowerCase().includes(searchText);
+
+      const matchesType = !selectedType || supplier.type === selectedType;
+
+      return matchesSearch &amp;&amp; matchesType;
+    });
+
+    this.populateSuppliersTable(filtered);
+    this.log(`Filtered: ${filtered.length}/${suppliersSource.length} suppliers`);
+
+    // Notification du résultat du filtrage
+    if (searchText || selectedType) {
+      NotificationSystem.info(`${filtered.length} fournisseur(s) affiché(s)`, 2000);
+    }
+  }
+
+  /**
+   * Prépare le formulaire modal pour ajouter un nouveau fournisseur.
+   * Réinitialise le formulaire, change le titre en "Ajouter", et affiche le modal.
+   *
+   * Workflow :
+   * 1. Appelle clearSupplierForm() pour vider tous les champs
+   * 2. Désactive editMode (mode ajout)
+   * 3. Synchronise StateManager ('supplierEditMode' = false)
+   * 4. Change le titre du modal en "Ajouter un fournisseur" avec icône camion
+   * 5. Affiche le modal Bootstrap (#supplierFormModal)
+   * 6. Focus automatique sur #supplier-name après 500ms
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur bouton "Ajouter fournisseur"
+   * addSupplier();
+   * // → Modal s'ouvre avec formulaire vide
+   * // → Titre: "Ajouter un fournisseur"
+   * // → Focus sur champ Nom
+   */
+  addSupplier() {
+    this.clearSupplierForm();
+    this.editMode = false;
+    this.state.set('supplierEditMode', false);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#supplier-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-truck">&lt;/i> Ajouter un fournisseur';
+    }
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('supplierFormModal');
+    }
+
+    // Focus sur le premier champ
+    setTimeout(() => {
+      const nameInput = this.getElement('#supplier-name');
+      if (nameInput) nameInput.focus();
+    }, 500);
+
+    this.log('Add supplier form opened');
+  }
+
+  /**
+   * Charge un fournisseur existant dans le formulaire modal pour édition.
+   * Recherche le fournisseur par ID, pré-remplit le formulaire et affiche le modal.
+   *
+   * Workflow :
+   * 1. Recherche le fournisseur dans window.suppliers ou this.suppliers par ID
+   * 2. Si introuvable → NotificationSystem.error + return
+   * 3. Active editMode (mode modification)
+   * 4. Synchronise StateManager ('supplierEditMode' = true)
+   * 5. Change le titre du modal en "Modifier le fournisseur" avec icône edit
+   * 6. Pré-remplit tous les 11 champs du formulaire avec setValue()
+   * 7. Affiche le modal Bootstrap (#supplierFormModal)
+   *
+   * @public
+   * @param {number|string} id - ID du fournisseur à éditer
+   * @returns {void}
+   * @fires NotificationSystem#error Si le fournisseur n'est pas trouvé
+   *
+   * @example
+   * // Utilisateur clique sur icône "Modifier" du fournisseur ID=5
+   * editSupplier(5);
+   * // → Modal s'ouvre avec formulaire pré-rempli
+   * // → Titre: "Modifier le fournisseur"
+   * // → Tous les champs contiennent les données du fournisseur
+   */
+  editSupplier(id) {
+    console.log('🔍 EDIT SUPPLIER CALLED - ID:', id);
+
+    const suppliersSource = window.suppliers || this.suppliers;
+    const supplier = suppliersSource?.find(s => String(s.id) === String(id));
+
+    if (!supplier) {
+      console.error('❌ SUPPLIER NOT FOUND FOR ID:', id);
+      NotificationSystem.error('Fournisseur introuvable');
+      return;
+    }
+
+    this.editMode = true;
+    this.state.set('supplierEditMode', true);
+
+    // Changer le titre du modal
+    const formTitle = this.getElement('#supplier-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-edit">&lt;/i> Modifier le fournisseur';
+    }
+
+    // Remplir le formulaire
+    console.log('🔧 Remplissage du formulaire avec:', supplier);
+    this.setValue('#supplier-id', supplier.id);
+    this.setValue('#supplier-name', supplier.name || '');
+    this.setValue('#supplier-contact', supplier.contact || '');
+    this.setValue('#supplier-email', supplier.email || '');
+    this.setValue('#supplier-phone', supplier.phone || '');
+    this.setValue('#supplier-address', supplier.address || '');
+    this.setValue('#supplier-type', supplier.type || '');
+    this.setValue('#supplier-siret', supplier.siret || '');
+    this.setValue('#supplier-delivery-delay', supplier.deliveryDelay || '');
+    this.setValue('#supplier-website', supplier.website || '');
+    this.setValue('#supplier-notes', supplier.notes || '');
+
+    // Mettre à jour l'aperçu de l'icône du type
+    this.updateSupplierTypeIconPreview(supplier.type || '');
+
+    console.log('✅ Formulaire rempli complètement');
+
+    // Afficher le modal
+    if (this.formModal) {
+      ModalHelper.show('supplierFormModal');
+    }
+
+    this.log('Editing supplier:', supplier.name);
+  }
+
+  /**
+   * Sauvegarde un fournisseur (ajout ou modification selon editMode).
+   * Valide le formulaire, envoie via IPC, invalide le cache et rafraîchit.
+   *
+   * Workflow :
+   * 1. Récupère les 10 champs du formulaire (via getValue())
+   * 2. Validation : nom obligatoire (sinon error + return)
+   * 3. Récupère sessionToken pour authentification IPC
+   * 4. Si editMode = true :
+   *    - Récupère l'ID du fournisseur (#supplier-id)
+   *    - Appelle IPC 'updateSupplier' avec sessionToken + supplierData
+   *    - Émet événement 'updated' avec supplierData
+   * 5. Si editMode = false :
+   *    - Appelle IPC 'addSupplier' avec sessionToken + supplierData
+   *    - Émet événement 'added' avec supplierData
+   * 6. Invalide le cache DataCache ('suppliers')
+   * 7. Recharge les fournisseurs (loadSuppliers)
+   * 8. Rafraîchit le tableau (populateSuppliersTable)
+   * 9. Émet événement global 'suppliers:updated' (EventBus)
+   * 10. Nettoie le formulaire (clearSupplierForm)
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si nom manquant ou erreur IPC
+   * @fires NotificationSystem#success Si sauvegarde réussie
+   * @fires EventBus#added Après ajout réussi (avec supplierData)
+   * @fires EventBus#updated Après modification réussie (avec supplierData)
+   * @fires suppliers:updated Événement global pour notifier autres modules
+   *
+   * @example
+   * // Utilisateur remplit le formulaire et clique "Sauvegarder" (mode ajout)
+   * await saveSupplier();
+   * // → IPC 'addSupplier' appelé
+   * // → Cache invalidé
+   * // → Tableau rafraîchi
+   * // → "Fournisseur ajouté avec succès"
+   *
+   * @example
+   * // Utilisateur modifie un fournisseur existant et clique "Sauvegarder"
+   * await saveSupplier();
+   * // → IPC 'updateSupplier' appelé avec supplierData.id
+   * // → Cache invalidé
+   * // → "Fournisseur modifié avec succès"
+   */
+  async saveSupplier() {
+    try {
+      // Récupérer les valeurs du formulaire
+      const supplierData = {
+        name: this.getValue('#supplier-name'),
+        contact: this.getValue('#supplier-contact') || '',
+        email: this.getValue('#supplier-email') || '',
+        phone: this.getValue('#supplier-phone') || '',
+        address: this.getValue('#supplier-address') || '',
+        type: this.getValue('#supplier-type') || '',
+        siret: this.getValue('#supplier-siret') || '',
+        deliveryDelay: parseInt(this.getValue('#supplier-delivery-delay') || 0),
+        website: this.getValue('#supplier-website') || '',
+        notes: this.getValue('#supplier-notes') || ''
+      };
+
+      // Validation
+      if (!supplierData.name) {
+        NotificationSystem.error('Le nom du fournisseur est requis');
+        return;
+      }
+
+      const sessionToken = this.getSessionToken();
+
+      if (this.editMode) {
+        // Modification
+        const id = this.getValue('#supplier-id');
+        supplierData.id = id;
+
+        // 🔄 Sauvegarder l'ancien état pour Undo/Redo
+        const oldSupplier = this.suppliers.find(s => s.id == id);
+        const oldSupplierCopy = oldSupplier ? { ...oldSupplier } : null;
+
+        const result = await this.invokeAPI('updateSupplier', sessionToken, supplierData);
+
+        if (result.success) {
+          NotificationSystem.success('Fournisseur modifié avec succès');
+          this.emitEvent('updated', supplierData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; oldSupplierCopy) {
+            window.UndoRedoManager.record({
+              type: 'SUPPLIER_UPDATE',
+              description: `Modification fournisseur "${supplierData.name}"`,
+              undo: async () => {
+                await this.invokeAPI('updateSupplier', sessionToken, oldSupplierCopy);
+                DataCache.invalidate('suppliers');
+                await this.loadSuppliers();
+                this.populateSuppliersTable();
+                this.events.emit('suppliers:updated');
+              },
+              redo: async () => {
+                await this.invokeAPI('updateSupplier', sessionToken, supplierData);
+                DataCache.invalidate('suppliers');
+                await this.loadSuppliers();
+                this.populateSuppliersTable();
+                this.events.emit('suppliers:updated');
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || 'Erreur lors de la modification');
+        }
+      } else {
+        // Ajout
+        const result = await this.invokeAPI('addSupplier', sessionToken, supplierData);
+
+        if (result.success) {
+          NotificationSystem.success('Fournisseur ajouté avec succès');
+          this.emitEvent('added', supplierData);
+
+          // 🔄 Enregistrer l'action Undo/Redo
+          if (window.UndoRedoManager &amp;&amp; result.supplier) {
+            const newSupplierId = result.supplier.id || result.id;
+            window.UndoRedoManager.record({
+              type: 'SUPPLIER_CREATE',
+              description: `Création fournisseur "${supplierData.name}"`,
+              undo: async () => {
+                await this.invokeAPI('deleteSupplier', sessionToken, newSupplierId);
+                DataCache.invalidate('suppliers');
+                await this.loadSuppliers();
+                this.populateSuppliersTable();
+                this.events.emit('suppliers:updated');
+              },
+              redo: async () => {
+                await this.invokeAPI('addSupplier', sessionToken, supplierData);
+                DataCache.invalidate('suppliers');
+                await this.loadSuppliers();
+                this.populateSuppliersTable();
+                this.events.emit('suppliers:updated');
+              }
+            });
+          }
+        } else {
+          throw new Error(result.message || "Erreur lors de l'ajout");
+        }
+      }
+
+      // Recharger les fournisseurs
+      DataCache.invalidate('suppliers');
+      await this.loadSuppliers();
+
+      // Rafraîchir la table
+      this.populateSuppliersTable();
+
+      // Émettre un événement global pour que d'autres modules puissent réagir
+      this.events.emit('suppliers:updated');
+
+      // Nettoyer le formulaire
+      this.clearSupplierForm();
+
+    } catch (error) {
+      this.error('Error saving supplier:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la sauvegarde');
+    }
+  }
+
+  /**
+   * Affiche le modal de confirmation pour supprimer un fournisseur.
+   * Recherche le fournisseur, stocke son ID, personnalise le message et affiche le modal.
+   *
+   * Workflow :
+   * 1. Recherche le fournisseur dans window.suppliers ou this.suppliers par ID
+   * 2. Si introuvable → NotificationSystem.error + return
+   * 3. Stocke l'ID dans this.supplierToDeleteId (utilisé par confirmDeleteSupplierBtn)
+   * 4. Synchronise StateManager ('supplierToDeleteId')
+   * 5. Met à jour le message du modal (#deleteSupplierMessage) :
+   *    "Êtes-vous sûr de vouloir supprimer "[nom]" ?"
+   * 6. Affiche le modal Bootstrap (#deleteSupplierModal)
+   *
+   * @public
+   * @param {number|string} id - ID du fournisseur à supprimer
+   * @returns {void}
+   * @fires NotificationSystem#error Si le fournisseur n'est pas trouvé
+   *
+   * @example
+   * // Utilisateur clique sur icône "Supprimer" du fournisseur ID=3
+   * askDeleteSupplier(3);
+   * // → Modal de confirmation s'affiche
+   * // → Message: "Êtes-vous sûr de vouloir supprimer "BatiPro" ?"
+   * // → Bouton "Confirmer" → appelle deleteSupplier(3)
+   */
+  askDeleteSupplier(id) {
+    const suppliersSource = window.suppliers || this.suppliers;
+    const supplier = suppliersSource.find(s => String(s.id) === String(id));
+
+    if (!supplier) {
+      NotificationSystem.error('Fournisseur introuvable');
+      return;
+    }
+
+    this.supplierToDeleteId = id;
+    this.state.set('supplierToDeleteId', id);
+
+    // Mettre à jour le message du modal
+    const deleteMessage = this.getElement('#deleteSupplierMessage');
+    if (deleteMessage) {
+      deleteMessage.textContent = `Êtes-vous sûr de vouloir supprimer "${supplier.name}" ?`;
+    }
+
+    // Afficher le modal
+    if (this.deleteModal) {
+      ModalHelper.show('deleteSupplierModal');
+    }
+
+    this.log('Delete confirmation requested for:', supplier.name);
+  }
+
+  /**
+   * Supprime définitivement un fournisseur après confirmation.
+   * Envoie la requête de suppression via IPC, invalide le cache et rafraîchit.
+   *
+   * Workflow :
+   * 1. Validation : ID non vide (sinon error + return)
+   * 2. Récupère sessionToken pour authentification IPC
+   * 3. Appelle IPC 'deleteSupplier' avec sessionToken + id
+   * 4. Si succès :
+   *    - Affiche NotificationSystem.success
+   *    - Émet événement 'deleted' avec id
+   *    - Ferme le modal de confirmation (#deleteSupplierModal)
+   *    - Invalide cache DataCache ('suppliers')
+   *    - Recharge les fournisseurs (loadSuppliers)
+   *    - Rafraîchit le tableau (populateSuppliersTable)
+   *    - Émet événement global 'suppliers:updated' (EventBus)
+   *    - Réinitialise this.supplierToDeleteId
+   * 5. Si erreur → throw Error
+   *
+   * @public
+   * @async
+   * @param {number|string} id - ID du fournisseur à supprimer
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si ID invalide ou erreur IPC
+   * @fires NotificationSystem#success Si suppression réussie
+   * @fires EventBus#deleted Après suppression réussie (avec id)
+   * @fires suppliers:updated Événement global pour notifier autres modules
+   *
+   * @example
+   * // Utilisateur confirme la suppression dans le modal
+   * await deleteSupplier(3);
+   * // → IPC 'deleteSupplier' appelé
+   * // → Cache invalidé
+   * // → Tableau rafraîchi
+   * // → Modal fermé
+   * // → "Fournisseur supprimé avec succès"
+   */
+  async deleteSupplier(id) {
+    try {
+      if (!id) {
+        this.error('deleteSupplier called with invalid ID:', id);
+        NotificationSystem.error('Erreur: ID de fournisseur invalide');
+        return;
+      }
+
+      // 🔄 Sauvegarder le fournisseur pour Undo/Redo
+      const supplierToDelete = this.suppliers.find(s => s.id == id);
+      const supplierCopy = supplierToDelete ? { ...supplierToDelete } : null;
+
+      const sessionToken = this.getSessionToken();
+      const result = await this.invokeAPI('deleteSupplier', sessionToken, id);
+
+      if (result.success) {
+        NotificationSystem.success('Fournisseur supprimé avec succès');
+        this.emitEvent('deleted', id);
+
+        // 🔄 Enregistrer l'action Undo/Redo
+        if (window.UndoRedoManager &amp;&amp; supplierCopy) {
+          window.UndoRedoManager.record({
+            type: 'SUPPLIER_DELETE',
+            description: `Suppression fournisseur "${supplierCopy.name}"`,
+            undo: async () => {
+              await this.invokeAPI('addSupplier', sessionToken, supplierCopy);
+              DataCache.invalidate('suppliers');
+              await this.loadSuppliers();
+              this.populateSuppliersTable();
+              this.events.emit('suppliers:updated');
+            },
+            redo: async () => {
+              await this.invokeAPI('deleteSupplier', sessionToken, id);
+              CacheKeys.invalidate(CacheKeys.SUPPLIERS);
+              await this.loadSuppliers();
+              this.populateSuppliersTable();
+              this.events.emit('suppliers:updated');
+            }
+          });
+        }
+
+        // Fermer le modal
+        if (this.deleteModal) {
+          ModalHelper.hide('deleteSupplierModal');
+        }
+
+        // Recharger les fournisseurs
+        CacheKeys.invalidate(CacheKeys.SUPPLIERS);
+        await this.loadSuppliers();
+
+        // Rafraîchir la table
+        this.populateSuppliersTable();
+
+        // Émettre un événement global pour que d'autres modules puissent réagir
+        this.events.emit('suppliers:updated');
+
+        this.supplierToDeleteId = null;
+      } else {
+        throw new Error(result.message || 'Erreur lors de la suppression');
+      }
+    } catch (error) {
+      this.error('Error deleting supplier:', error);
+      NotificationSystem.error(error.message || 'Erreur lors de la suppression');
+    }
+  }
+
+  /**
+   * Nettoie complètement le formulaire fournisseur et ferme le modal.
+   * Réinitialise tous les champs, désactive editMode et restaure le titre par défaut.
+   *
+   * Workflow :
+   * 1. Vide les 11 champs du formulaire via setValue('') :
+   *    - supplier-id, name, contact, email, phone, address, type,
+   *      siret, delivery-delay, website, notes
+   * 2. Désactive editMode (mode ajout)
+   * 3. Synchronise StateManager ('supplierEditMode' = false)
+   * 4. Ferme le modal Bootstrap (#supplierFormModal)
+   * 5. Réinitialise le titre du modal en "Ajouter un fournisseur"
+   *
+   * Appelé par :
+   * - addSupplier() : Pour préparer un formulaire vide
+   * - saveSupplier() : Après sauvegarde réussie
+   * - Bouton "Annuler" du modal (#cancel-supplier-btn)
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique "Annuler" dans le modal
+   * clearSupplierForm();
+   * // → Tous les champs vidés
+   * // → Modal fermé
+   * // → Titre réinitialisé
+   */
+  clearSupplierForm() {
+    this.setValue('#supplier-id', '');
+    this.setValue('#supplier-name', '');
+    this.setValue('#supplier-contact', '');
+    this.setValue('#supplier-email', '');
+    this.setValue('#supplier-phone', '');
+    this.setValue('#supplier-address', '');
+    this.setValue('#supplier-type', '');
+    this.setValue('#supplier-siret', '');
+    this.setValue('#supplier-delivery-delay', '');
+    this.setValue('#supplier-website', '');
+    this.setValue('#supplier-notes', '');
+
+    // Réinitialiser l'aperçu de l'icône du type
+    this.updateSupplierTypeIconPreview('');
+
+    this.editMode = false;
+    this.state.set('supplierEditMode', false);
+
+    // Fermer le modal
+    if (this.formModal) {
+      ModalHelper.hide('supplierFormModal');
+    }
+
+    // Réinitialiser le titre
+    const formTitle = this.getElement('#supplier-form-title');
+    if (formTitle) {
+      formTitle.innerHTML = '&lt;i class="fas fa-truck">&lt;/i> Ajouter un fournisseur';
+    }
+
+    this.log('Supplier form cleared');
+  }
+
+  /**
+   * Retourne la liste triée des noms de fournisseurs pour autocomplete.
+   * Utilisé par d'autres modules (ex: MaterialsModule) pour remplir les champs d'autocomplete.
+   *
+   * @public
+   * @returns {Array&lt;string>} Liste des noms de fournisseurs triés alphabétiquement
+   *
+   * @example
+   * // MaterialsModule veut afficher une liste d'autocomplete de fournisseurs
+   * const supplierNames = getSupplierNames();
+   * // → ["BatiPro", "ElecPlus", "MaçonMax", "PlombiPro"]
+   *
+   * @example
+   * // Utilisation dans un champ autocomplete
+   * const names = getSupplierNames();
+   * autocomplete(document.getElementById("supplier-input"), names);
+   */
+  getSupplierNames() {
+    const suppliersSource = window.suppliers || this.suppliers;
+    return suppliersSource.map(s => s.name).sort();
+  }
+
+  /**
+   * Bascule vers l'onglet Catalogue et filtre les matériaux par fournisseur.
+   * Utilise Bootstrap Tab API pour changer d'onglet et appelle filterBySupplier() du MaterialsModule.
+   *
+   * Workflow :
+   * 1. Récupère l'onglet #admin-tab (Catalogue)
+   * 2. Active l'onglet via Bootstrap Tab API (new bootstrap.Tab().show())
+   * 3. Attend 100ms pour laisser l'onglet se charger
+   * 4. Appelle window.filterBySupplier(supplierName) du MaterialsModule
+   * 5. Si fonction non disponible → affiche warning dans console
+   *
+   * Intégration :
+   * - Appelé par le bouton "Voir matériaux" dans le tableau des fournisseurs
+   * - Affiche le badge vert avec nombre de matériaux (ex: "12")
+   * - Nécessite que MaterialsModule expose filterBySupplier() en global
+   *
+   * @public
+   * @param {string} supplierName - Nom du fournisseur dont on veut voir les matériaux
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir matériaux" pour le fournisseur "BatiPro"
+   * viewSupplierMaterials("BatiPro");
+   * // → Bascule vers onglet Catalogue
+   * // → Filtre actif: supplier = "BatiPro"
+   * // → Affiche uniquement les 12 matériaux fournis par BatiPro
+   */
+  viewSupplierMaterials(supplierName) {
+    this.log(`Viewing materials for supplier: ${supplierName}`);
+
+    // Basculer vers l'onglet Catalogue
+    const catalogueTab = this.getElement('#admin-tab');
+    if (catalogueTab) {
+      // Activer l'onglet via Bootstrap
+      const tabTrigger = new bootstrap.Tab(catalogueTab);
+      tabTrigger.show();
+    }
+
+    // Appeler la fonction de filtrage du MaterialsModule
+    // avec un léger délai pour laisser l'onglet se charger
+    setTimeout(() => {
+      if (typeof window.filterBySupplier === 'function') {
+        window.filterBySupplier(supplierName);
+      } else {
+        this.warn('Fonction filterBySupplier non disponible dans MaterialsModule');
+      }
+    }, 100);
+  }
+
+  /**
+   * Affiche les détails complets d'un fournisseur dans un modal.
+   *
+   * Workflow :
+   * 1. Chercher le fournisseur par ID dans la liste
+   * 2. Si non trouvé : afficher erreur, arrêter
+   * 3. Remplir tous les champs du modal de détails
+   * 4. Afficher le modal 'supplierDetailsModal'
+   *
+   * @public
+   * @param {number|string} id - ID du fournisseur
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur clique sur "Voir détails" pour le fournisseur #3
+   * viewSupplierDetails(3);
+   * // → Modal affiché avec toutes les informations du fournisseur
+   */
+  viewSupplierDetails(id) {
+    this.log(`Viewing details for supplier ID: ${id}`);
+
+    // Chercher le fournisseur
+    const supplier = (window.suppliers || this.suppliers).find(s => String(s.id) === String(id));
+
+    if (!supplier) {
+      this.error('Fournisseur introuvable pour ID:', id);
+      NotificationSystem.error('Fournisseur introuvable');
+      return;
+    }
+
+    // Remplir tous les champs du modal
+    this.setTextContent('#detail-supplier-id', supplier.id ?? '-');
+    this.setTextContent('#detail-supplier-name', supplier.name ?? '-');
+    this.setTextContent('#detail-supplier-contact', supplier.contact ?? '-');
+    this.setTextContent('#detail-supplier-phone', supplier.phone ?? '-');
+    this.setTextContent('#detail-supplier-email', supplier.email ?? '-');
+    this.setTextContent('#detail-supplier-address', supplier.address ?? '-');
+    this.setTextContent('#detail-supplier-type', supplier.type ?? '-');
+    this.setTextContent('#detail-supplier-siret', supplier.siret ?? '-');
+    this.setTextContent('#detail-supplier-delivery', supplier.deliveryDelay ? `${supplier.deliveryDelay} jours` : '-');
+    this.setTextContent('#detail-supplier-website', supplier.website ?? '-');
+    this.setTextContent('#detail-supplier-notes', supplier.notes ?? '-');
+
+    // Afficher le modal
+    ModalHelper.show('supplierDetailsModal');
+    this.log('Supplier details modal displayed for:', supplier.name);
+  }
+
+  /**
+   * Définit le contenu textuel d'un élément (helper).
+   * @private
+   */
+  setTextContent(selector, value) {
+    const element = this.getElement(selector);
+    if (element) {
+      element.textContent = value;
+    } else {
+      this.warn(`Element not found: ${selector}`);
+    }
+  }
+
+  /**
+   * Change de page dans la pagination.
+   * @param {number} direction - Direction: -1 pour précédent, 1 pour suivant
+   * @private
+   */
+  changePage(direction) {
+    const newPage = this.pagination.currentPage + direction;
+    if (newPage >= 1 &amp;&amp; newPage &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = newPage;
+      this.applySupplierFilters();
+    }
+  }
+
+  /**
+   * Va à une page spécifique.
+   * @param {number} pageNumber - Numéro de page (1-indexed)
+   * @private
+   */
+  goToPage(pageNumber) {
+    if (pageNumber >= 1 &amp;&amp; pageNumber &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = pageNumber;
+      this.applySupplierFilters();
+    }
+  }
+
+  /**
+   * Met à jour les contrôles de pagination (info et boutons).
+   * @param {number} totalItems - Nombre total d'items
+   * @param {Array} displayedItems - Items affichés sur la page actuelle
+   * @private
+   */
+  updatePaginationControls(totalItems, displayedItems) {
+    // Mettre à jour l'info de pagination
+    const paginationInfo = this.getElement('#suppliers-pagination-info');
+    if (paginationInfo) {
+      if (totalItems === 0) {
+        paginationInfo.textContent = 'Aucun fournisseur';
+      } else {
+        const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage + 1;
+        const endIndex = startIndex + displayedItems.length - 1;
+        paginationInfo.textContent = `Affichage ${startIndex}-${endIndex} sur ${totalItems} fournisseurs`;
+      }
+    }
+
+    // Mettre à jour les boutons de pagination
+    const paginationControls = this.getElement('#suppliers-pagination-controls');
+    if (paginationControls &amp;&amp; totalItems > 0) {
+      const prevDisabled = this.pagination.currentPage === 1 ? 'disabled' : '';
+      const nextDisabled = this.pagination.currentPage === this.pagination.totalPages ? 'disabled' : '';
+
+      // Générer les numéros de page (max 5 pages visibles)
+      const pageNumbers = this.generatePageNumbers();
+
+      paginationControls.innerHTML = `
+        &lt;button class="btn btn-sm btn-outline-primary" ${prevDisabled} onclick="window.suppliersModule.changePage(-1)">
+          &lt;i class="fas fa-chevron-left">&lt;/i> Précédent
+        &lt;/button>
+        ${pageNumbers.map(page => {
+          if (page === '...') {
+            return '&lt;span class="mx-1">...&lt;/span>';
+          }
+          const active = page === this.pagination.currentPage ? 'btn-primary' : 'btn-outline-primary';
+          return `&lt;button class="btn btn-sm ${active}" onclick="window.suppliersModule.goToPage(${page})">${page}&lt;/button>`;
+        }).join('')}
+        &lt;button class="btn btn-sm btn-outline-primary" ${nextDisabled} onclick="window.suppliersModule.changePage(1)">
+          Suivant &lt;i class="fas fa-chevron-right">&lt;/i>
+        &lt;/button>
+      `;
+    } else if (paginationControls) {
+      paginationControls.innerHTML = '';
+    }
+  }
+
+  /**
+   * Génère les numéros de page à afficher (max 5 pages visibles avec ellipses).
+   * @returns {Array} - Array de numéros de page et ellipses
+   * @private
+   */
+  generatePageNumbers() {
+    const pages = [];
+    const total = this.pagination.totalPages;
+    const current = this.pagination.currentPage;
+
+    if (total &lt;= 7) {
+      // Afficher toutes les pages si &lt;= 7
+      for (let i = 1; i &lt;= total; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Toujours afficher la première page
+      pages.push(1);
+
+      if (current > 3) {
+        pages.push('...');
+      }
+
+      // Pages autour de la page actuelle
+      const start = Math.max(2, current - 1);
+      const end = Math.min(total - 1, current + 1);
+
+      for (let i = start; i &lt;= end; i++) {
+        pages.push(i);
+      }
+
+      if (current &lt; total - 2) {
+        pages.push('...');
+      }
+
+      // Toujours afficher la dernière page
+      pages.push(total);
+    }
+
+    return pages;
+  }
+
+  /**
+   * ==========================================
+   * OPÉRATIONS BULK (SÉLECTION MULTIPLE)
+   * ==========================================
+   */
+
+  /**
+   * Supprime plusieurs fournisseurs en une seule opération.
+   * Appelé par BulkActionsManager lors de la suppression groupée.
+   *
+   * Workflow :
+   * 1. Validation des IDs fournis
+   * 2. Récupération des fournisseurs à supprimer (pour Undo)
+   * 3. Suppression via API pour chaque fournisseur
+   * 4. Invalidation du cache et rechargement
+   * 5. Notification de succès
+   *
+   * @public
+   * @async
+   * @param {Array&lt;string|number>} supplierIds - Liste des IDs de fournisseurs à supprimer
+   * @returns {Promise&lt;Object>} Résultat de l'opération avec callbacks undo/redo
+   * @fires NotificationSystem#success Si suppression réussie
+   * @fires NotificationSystem#error Si erreur lors de la suppression
+   *
+   * @example
+   * await bulkDeleteSuppliers([1, 3, 5]);
+   * // → Supprime les fournisseurs avec IDs 1, 3, 5
+   * // → Notification: "3 fournisseur(s) supprimé(s)"
+   */
+  async bulkDeleteSuppliers(supplierIds) {
+    try {
+      if (!supplierIds || supplierIds.length === 0) {
+        NotificationSystem.error('Aucun fournisseur sélectionné');
+        return { success: false };
+      }
+
+      const sessionToken = this.getSessionToken();
+      const deletedSuppliers = [];
+
+      // Récupérer les données complètes des fournisseurs avant suppression (pour Undo)
+      for (const id of supplierIds) {
+        const supplier = this.suppliers.find(s => String(s.id) === String(id));
+        if (supplier) {
+          deletedSuppliers.push({ ...supplier });
+        }
+      }
+
+      // Supprimer chaque fournisseur
+      let successCount = 0;
+      let errorCount = 0;
+
+      for (const id of supplierIds) {
+        try {
+          const result = await this.invokeAPI('deleteSupplier', sessionToken, id);
+          if (result.success) {
+            successCount++;
+          } else {
+            errorCount++;
+            this.error(`Failed to delete supplier ${id}:`, result.message);
+          }
+        } catch (err) {
+          errorCount++;
+          this.error(`Error deleting supplier ${id}:`, err);
+        }
+      }
+
+      // Recharger les données
+      CacheKeys.invalidate(CacheKeys.SUPPLIERS);
+      await this.loadSuppliers();
+      this.populateSuppliersTable();
+      this.events.emit('suppliers:updated');
+
+      // Notification
+      if (successCount > 0) {
+        NotificationSystem.success(`${successCount} fournisseur(s) supprimé(s) avec succès`);
+      }
+      if (errorCount > 0) {
+        NotificationSystem.error(`${errorCount} fournisseur(s) n'ont pas pu être supprimés`);
+      }
+
+      // Retourner les callbacks pour Undo/Redo
+      return {
+        success: successCount > 0,
+        deletedItems: deletedSuppliers,
+        undoCallback: async () => {
+          // Restaurer les fournisseurs supprimés
+          for (const supplier of deletedSuppliers) {
+            await this.invokeAPI('addSupplier', sessionToken, supplier);
+          }
+          CacheKeys.invalidate(CacheKeys.SUPPLIERS);
+          await this.loadSuppliers();
+          this.populateSuppliersTable();
+          this.events.emit('suppliers:updated');
+        },
+        redoCallback: async () => {
+          // Re-supprimer les fournisseurs
+          for (const id of supplierIds) {
+            await this.invokeAPI('deleteSupplier', sessionToken, id);
+          }
+          CacheKeys.invalidate(CacheKeys.SUPPLIERS);
+          await this.loadSuppliers();
+          this.populateSuppliersTable();
+          this.events.emit('suppliers:updated');
+        }
+      };
+    } catch (error) {
+      this.error('Error in bulkDeleteSuppliers:', error);
+      NotificationSystem.error('Erreur lors de la suppression groupée');
+      return { success: false };
+    }
+  }
+
+  /**
+   * Exporte plusieurs fournisseurs au format CSV.
+   * Appelé par BulkActionsManager lors de l'export groupé.
+   *
+   * Workflow :
+   * 1. Validation des IDs fournis
+   * 2. Récupération des fournisseurs correspondants
+   * 3. Génération du CSV via generateCSV()
+   * 4. Téléchargement automatique du fichier
+   * 5. Notification de succès
+   *
+   * @public
+   * @async
+   * @param {Array&lt;string|number>} supplierIds - Liste des IDs de fournisseurs à exporter
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#success Si export réussi
+   * @fires NotificationSystem#error Si erreur lors de l'export
+   *
+   * @example
+   * await bulkExportSuppliers([1, 3, 5]);
+   * // → Génère un fichier CSV avec les 3 fournisseurs
+   * // → Téléchargement automatique: "fournisseurs_2025-11-03.csv"
+   */
+  async bulkExportSuppliers(supplierIds) {
+    try {
+      if (!supplierIds || supplierIds.length === 0) {
+        NotificationSystem.error('Aucun fournisseur sélectionné');
+        return;
+      }
+
+      // Récupérer les fournisseurs complets
+      const suppliersToExport = this.suppliers.filter(s =>
+        supplierIds.includes(String(s.id)) || supplierIds.includes(s.id)
+      );
+
+      if (suppliersToExport.length === 0) {
+        NotificationSystem.error('Aucun fournisseur trouvé pour l\'export');
+        return;
+      }
+
+      // Générer le CSV
+      const csvContent = this.generateCSV(suppliersToExport);
+
+      // Créer un blob et télécharger
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+
+      const timestamp = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+      link.setAttribute('href', url);
+      link.setAttribute('download', `fournisseurs_${timestamp}.csv`);
+      link.style.visibility = 'hidden';
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      NotificationSystem.success(`${suppliersToExport.length} fournisseur(s) exporté(s)`);
+      this.log(`Exported ${suppliersToExport.length} suppliers to CSV`);
+
+    } catch (error) {
+      this.error('Error in bulkExportSuppliers:', error);
+      NotificationSystem.error('Erreur lors de l\'export CSV');
+    }
+  }
+
+  /**
+   * Génère une chaîne CSV à partir d'une liste de fournisseurs.
+   * Inclut tous les champs du fournisseur avec headers.
+   *
+   * Format CSV :
+   * - Séparateur: point-virgule (;)
+   * - Encodage: UTF-8 avec BOM
+   * - Guillemets: doubles quotes pour les champs contenant ; ou "
+   * - Headers: ID, Nom, Contact, Email, Téléphone, Adresse, Type, SIRET, Délai de livraison, Site web, Notes
+   *
+   * @public
+   * @param {Array&lt;Object>} suppliers - Liste des fournisseurs à exporter
+   * @returns {string} Contenu CSV prêt à être téléchargé
+   *
+   * @example
+   * const csv = generateCSV([
+   *   { id: 1, name: "BatiPro", contact: "Jean Dupont", email: "j.dupont@batipro.fr", ... }
+   * ]);
+   * // → "ID;Nom;Contact;Email;..."
+   * // → "1;BatiPro;Jean Dupont;j.dupont@batipro.fr;..."
+   */
+  generateCSV(suppliers) {
+    if (!suppliers || !Array.isArray(suppliers) || suppliers.length === 0) {
+      return 'ID;Nom;Contact;Email;Téléphone;Adresse;Type;SIRET;Délai de livraison (jours);Site web;Notes';
+    }
+
+    // Headers CSV
+    const headers = [
+      'ID',
+      'Nom',
+      'Contact',
+      'Email',
+      'Téléphone',
+      'Adresse',
+      'Type',
+      'SIRET',
+      'Délai de livraison (jours)',
+      'Site web',
+      'Notes'
+    ];
+
+    // Fonction helper pour échapper les champs CSV
+    const escapeCSV = (value) => {
+      if (value == null || value === '') return '';
+      const stringValue = String(value);
+      // Si le champ contient un point-virgule, des guillemets ou un saut de ligne, on l'entoure de guillemets
+      if (stringValue.includes(';') || stringValue.includes('"') || stringValue.includes('\n')) {
+        return `"${stringValue.replace(/"/g, '""')}"`;
+      }
+      return stringValue;
+    };
+
+    // Construire le CSV
+    const rows = [headers.join(';')];
+
+    suppliers.forEach(supplier => {
+      const row = [
+        escapeCSV(supplier.id),
+        escapeCSV(supplier.name),
+        escapeCSV(supplier.contact),
+        escapeCSV(supplier.email),
+        escapeCSV(supplier.phone),
+        escapeCSV(supplier.address),
+        escapeCSV(supplier.type),
+        escapeCSV(supplier.siret),
+        escapeCSV(supplier.deliveryDelay),
+        escapeCSV(supplier.website),
+        escapeCSV(supplier.notes)
+      ];
+      rows.push(row.join(';'));
+    });
+
+    // Ajouter le BOM UTF-8 pour Excel
+    return '\ufeff' + rows.join('\n');
+  }
+}
+
+export default SuppliersModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

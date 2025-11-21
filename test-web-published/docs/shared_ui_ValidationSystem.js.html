@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> shared/ui/ValidationSystem.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>shared/ui/ValidationSystem.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// ==========================================
+// SYSTÈME DE VALIDATION DES FORMULAIRES
+// AutoCalc OptiDevis v2.6.5
+// ==========================================
+
+const ValidationSystem = {
+  // Règles de validation
+  rules: {
+    required: (value) => value &amp;&amp; value.toString().trim() !== '',
+    email: (value) => {
+      if (!value || typeof value !== 'string') return false;
+      const trimmed = value.trim();
+      if (trimmed.length > 254) return false; // RFC 5321
+      // RFC 5322 simplifié
+      return /^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(trimmed);
+    },
+    optionalEmail: (value) => {
+      if (!value || value.toString().trim() === '') return true;
+      return ValidationSystem.rules.email(value);
+    },
+    phone: (value) => {
+      if (!value || typeof value !== 'string') return false;
+      // Retirer tous les caractères non numériques sauf le +
+      const cleaned = value.replace(/[^\d+]/g, '');
+
+      // Formats acceptés: +33XXXXXXXXX (12 chars), 0033XXXXXXXXX (13 chars), 0XXXXXXXXX (10 chars)
+      if (cleaned.startsWith('+33')) {
+        return cleaned.length === 12 &amp;&amp; /^\+33[1-9]\d{8}$/.test(cleaned);
+      } else if (cleaned.startsWith('0033')) {
+        return cleaned.length === 13 &amp;&amp; /^0033[1-9]\d{8}$/.test(cleaned);
+      } else if (cleaned.startsWith('0')) {
+        return cleaned.length === 10 &amp;&amp; /^0[1-9]\d{8}$/.test(cleaned);
+      }
+
+      return false;
+    },
+    number: (value) => !isNaN(parseFloat(value)) &amp;&amp; isFinite(value),
+    positiveNumber: (value) => !isNaN(parseFloat(value)) &amp;&amp; parseFloat(value) > 0,
+    optionalNumber: (value) => !value || value.toString().trim() === '' || (!isNaN(parseFloat(value)) &amp;&amp; isFinite(value)),
+    minLength: (value, min) => value &amp;&amp; value.length >= min,
+    maxLength: (value, max) => value &amp;&amp; value.length &lt;= max,
+    url: (value) => /^https?:\/\/.+/.test(value),
+
+    // Algorithme Luhn pour validation SIRET
+    luhnCheck: (value) => {
+      if (!value || typeof value !== 'string') return false;
+      const digits = value.replace(/\s/g, '').split('');
+      let sum = 0;
+
+      for (let i = 0; i &lt; digits.length; i++) {
+        let digit = parseInt(digits[i]);
+
+        // En partant de la droite, multiplier par 2 les positions paires (index impairs)
+        if (i % 2 === 0) {
+          digit *= 2;
+          if (digit > 9) digit -= 9;
+        }
+
+        sum += digit;
+      }
+
+      return sum % 10 === 0;
+    },
+
+    siret: (value) => {
+      if (!value || typeof value !== 'string') return false;
+      const cleaned = value.replace(/\s/g, '');
+
+      // Vérifier 14 chiffres
+      if (!/^\d{14}$/.test(cleaned)) return false;
+
+      // Vérifier Luhn
+      return ValidationSystem.rules.luhnCheck(cleaned);
+    },
+
+    password: (value) => value &amp;&amp; value.length >= 6,
+    passwordMatch: (value, confirmValue) => value === confirmValue
+  },
+
+  // Messages d'erreur par défaut
+  messages: {
+    required: 'Ce champ est requis',
+    email: 'Email invalide (format attendu: nom@domaine.fr)',
+    optionalEmail: 'Email invalide (format attendu: nom@domaine.fr)',
+    phone: 'Numéro de téléphone invalide (format: 0X XX XX XX XX)',
+    number: 'Doit être un nombre valide',
+    positiveNumber: 'Doit être un nombre positif',
+    optionalNumber: 'Doit être un nombre valide',
+    minLength: (min) => `Minimum ${min} caractères`,
+    maxLength: (max) => `Maximum ${max} caractères`,
+    url: 'URL invalide',
+    siret: 'SIRET invalide (14 chiffres avec checksum Luhn valide)',
+    password: 'Minimum 6 caractères',
+    passwordMatch: 'Les mots de passe ne correspondent pas'
+  },
+
+  /**
+   * Valide un champ selon des règles
+   * @param {HTMLElement} input - L'élément input à valider
+   * @param {Array} rules - Tableau de règles à appliquer
+   * @param {String} customMessage - Message personnalisé (optionnel)
+   * @returns {Boolean} - true si valide
+   */
+  validateField(input, rules = [], customMessage = null) {
+    if (!input) return true;
+
+    const value = input.value;
+    let isValid = true;
+    let errorMessage = '';
+
+    // Parcourt toutes les règles
+    for (const rule of rules) {
+      if (typeof rule === 'string') {
+        // Règle simple (ex: 'required', 'email')
+        if (!this.rules[rule](value)) {
+          isValid = false;
+          errorMessage = customMessage || this.messages[rule];
+          break;
+        }
+      } else if (typeof rule === 'object') {
+        // Règle avec paramètres (ex: { rule: 'minLength', param: 6 })
+        if (!this.rules[rule.rule](value, rule.param)) {
+          isValid = false;
+          errorMessage = customMessage || this.messages[rule.rule](rule.param);
+          break;
+        }
+      } else if (typeof rule === 'function') {
+        // Règle personnalisée
+        const result = rule(value, input);
+        if (!result.valid) {
+          isValid = false;
+          errorMessage = result.message || 'Valeur invalide';
+          break;
+        }
+      }
+    }
+
+    // Applique le style visuel
+    this.updateFieldUI(input, isValid, errorMessage);
+    return isValid;
+  },
+
+  /**
+   * Met à jour l'interface du champ (bordure, message d'erreur)
+   */
+  updateFieldUI(input, isValid, errorMessage) {
+    // Retire les classes existantes
+    input.classList.remove('is-valid', 'is-invalid');
+
+    // Cherche ou crée le conteneur de message d'erreur
+    let feedback = input.parentElement.querySelector('.invalid-feedback');
+    if (!feedback) {
+      feedback = document.createElement('div');
+      feedback.className = 'invalid-feedback';
+      input.parentElement.appendChild(feedback);
+    }
+
+    if (!isValid) {
+      input.classList.add('is-invalid');
+      feedback.textContent = errorMessage;
+      feedback.style.display = 'block';
+    } else {
+      input.classList.add('is-valid');
+      feedback.style.display = 'none';
+    }
+  },
+
+  /**
+   * Valide un formulaire complet
+   * @param {String} formId - ID du formulaire
+   * @param {Object} fieldRules - Objet des règles par champ
+   * @returns {Boolean} - true si tout est valide
+   */
+  validateForm(formId, fieldRules) {
+    let isFormValid = true;
+
+    for (const [fieldId, rules] of Object.entries(fieldRules)) {
+      const input = document.getElementById(fieldId);
+      if (input) {
+        const isValid = this.validateField(input, rules);
+        if (!isValid) isFormValid = false;
+      }
+    }
+
+    return isFormValid;
+  },
+
+  /**
+   * Attache la validation en temps réel à un champ
+   */
+  attachRealTimeValidation(inputId, rules, customMessage = null) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+
+    // Validation au blur (perte de focus)
+    input.addEventListener('blur', () => {
+      this.validateField(input, rules, customMessage);
+    });
+
+    // Validation à la saisie (avec debounce)
+    let timeout;
+    input.addEventListener('input', () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        this.validateField(input, rules, customMessage);
+      }, 500);
+    });
+  },
+
+  /**
+   * Réinitialise la validation d'un champ
+   */
+  resetField(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+
+    input.classList.remove('is-valid', 'is-invalid');
+    const feedback = input.parentElement.querySelector('.invalid-feedback');
+    if (feedback) feedback.style.display = 'none';
+  },
+
+  /**
+   * Réinitialise tous les champs d'un formulaire
+   */
+  resetForm(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      input.classList.remove('is-valid', 'is-invalid');
+      const feedback = input.parentElement.querySelector('.invalid-feedback');
+      if (feedback) feedback.style.display = 'none';
+    });
+  }
+};
+
+// ==========================================
+// RÈGLES DE VALIDATION PAR FORMULAIRE
+// ==========================================
+
+const FormValidationRules = {
+  // Formulaire de recherche/ajout au devis
+  searchQuote: {
+    'surface-input': [
+      (value, input) => {
+        const unit = document.getElementById('unit-select')?.value;
+        if (unit === 'm²' &amp;&amp; (!value || parseFloat(value) &lt;= 0)) {
+          return { valid: false, message: 'Surface requise pour l\'unité m²' };
+        }
+        return { valid: true };
+      }
+    ],
+    'thickness-input': [
+      (value, input) => {
+        const unit = document.getElementById('unit-select')?.value;
+        if (unit === 'm³' &amp;&amp; (!value || parseFloat(value) &lt;= 0)) {
+          return { valid: false, message: 'Épaisseur requise pour l\'unité m³' };
+        }
+        return { valid: true };
+      }
+    ],
+    'length-input': [
+      (value, input) => {
+        const unit = document.getElementById('unit-select')?.value;
+        if (unit === 'm' &amp;&amp; (!value || parseFloat(value) &lt;= 0)) {
+          return { valid: false, message: 'Longueur requise pour l\'unité m' };
+        }
+        return { valid: true };
+      }
+    ],
+    'unit-input': [
+      (value, input) => {
+        const unit = document.getElementById('unit-select')?.value;
+        if (unit === 'unités' &amp;&amp; (!value || parseInt(value) &lt;= 0)) {
+          return { valid: false, message: 'Nombre d\'unités requis' };
+        }
+        return { valid: true };
+      }
+    ]
+  },
+
+  // Formulaire client
+  clientInfo: {
+    'client-name': ['required', { rule: 'minLength', param: 2 }],
+    'client-phone': ['phone'],
+    'client-email': ['optionalEmail'],
+    'client-address': ['required', { rule: 'minLength', param: 5 }],
+    'quote-date': ['required']
+  },
+
+  // Formulaire ajout/modification matériau
+  material: {
+    'material-name': ['required', { rule: 'minLength', param: 2 }],
+    'material-price': ['required', 'positiveNumber'],
+    'material-coverage': ['optionalNumber'],
+    'material-stock': ['optionalNumber'],
+    'material-barcode': [],
+    'material-type': ['required'],
+    'material-density': ['optionalNumber'],
+    'material-unit-weight': ['optionalNumber'],
+    'material-tva-rate': ['required', 'positiveNumber']
+  },
+
+  // Configuration SMTP
+  smtp: {
+    'smtp-service': ['required'],
+    'smtp-user': ['required', 'email'],
+    'smtp-pass': ['required', { rule: 'minLength', param: 6 }]
+  },
+
+  // Configuration en-tête
+  header: {
+    'company-name': ['required', { rule: 'minLength', param: 2 }],
+    'company-address': ['required'],
+    'company-phone': ['phone'],
+    'company-email': ['email'],
+    'company-siret': ['siret']
+  },
+
+  // Changement de mot de passe
+  password: {
+    'admin-password': ['password'],
+    'admin-password-confirm': [
+      'required',
+      (value, input) => {
+        const password = document.getElementById('admin-password')?.value;
+        if (value !== password) {
+          return { valid: false, message: 'Les mots de passe ne correspondent pas' };
+        }
+        return { valid: true };
+      }
+    ]
+  }
+};
+
+// ==========================================
+// INITIALISATION DE LA VALIDATION
+// ==========================================
+
+function initializeValidation() {
+  console.log('Initialisation du système de validation...');
+
+  // Validation en temps réel pour le formulaire client
+  Object.keys(FormValidationRules.clientInfo).forEach(fieldId => {
+    ValidationSystem.attachRealTimeValidation(
+      fieldId,
+      FormValidationRules.clientInfo[fieldId]
+    );
+  });
+
+  // Validation en temps réel pour le formulaire matériau
+  Object.keys(FormValidationRules.material).forEach(fieldId => {
+    ValidationSystem.attachRealTimeValidation(
+      fieldId,
+      FormValidationRules.material[fieldId]
+    );
+  });
+
+  // Validation en temps réel pour le formulaire SMTP
+  Object.keys(FormValidationRules.smtp).forEach(fieldId => {
+    ValidationSystem.attachRealTimeValidation(
+      fieldId,
+      FormValidationRules.smtp[fieldId]
+    );
+  });
+
+  // Validation en temps réel pour le formulaire en-tête
+  Object.keys(FormValidationRules.header).forEach(fieldId => {
+    ValidationSystem.attachRealTimeValidation(
+      fieldId,
+      FormValidationRules.header[fieldId]
+    );
+  });
+
+  // Validation en temps réel pour le changement de mot de passe
+  Object.keys(FormValidationRules.password).forEach(fieldId => {
+    ValidationSystem.attachRealTimeValidation(
+      fieldId,
+      FormValidationRules.password[fieldId]
+    );
+  });
+
+  // Validation dynamique des champs de calcul
+  ['surface-input', 'thickness-input', 'length-input', 'unit-input'].forEach(fieldId => {
+    const input = document.getElementById(fieldId);
+    if (input) {
+      input.addEventListener('input', () => {
+        ValidationSystem.validateField(
+          input,
+          FormValidationRules.searchQuote[fieldId]
+        );
+      });
+    }
+  });
+
+  // Validation lors du changement d'unité
+  const unitSelect = document.getElementById('unit-select');
+  if (unitSelect) {
+    unitSelect.addEventListener('change', () => {
+      ['surface-input', 'thickness-input', 'length-input', 'unit-input'].forEach(fieldId => {
+        const input = document.getElementById(fieldId);
+        if (input) {
+          ValidationSystem.validateField(
+            input,
+            FormValidationRules.searchQuote[fieldId]
+          );
+        }
+      });
+    });
+  }
+
+  console.log('Système de validation initialisé');
+}
+
+// ==========================================
+// INTÉGRATION AVEC LES FONCTIONS EXISTANTES
+// ==========================================
+
+/**
+ * Wrapper pour valider avant d'ajouter au devis
+ */
+function validateBeforeAddToQuote() {
+  if (!window.selectedMaterial &amp;&amp; !selectedMaterial) {
+    if (window.NotificationSystem) {
+      window.NotificationSystem.error('Veuillez sélectionner un matériau');
+    }
+    return false;
+  }
+
+  const unit = document.getElementById('unit-select')?.value;
+  const surfaceInput = document.getElementById('surface-input');
+  const thicknessInput = document.getElementById('thickness-input');
+  const lengthInput = document.getElementById('length-input');
+  const unitInput = document.getElementById('unit-input');
+
+  let isValid = true;
+
+  // Validation selon l'unité sélectionnée
+  if (unit === 'm²') {
+    isValid = ValidationSystem.validateField(surfaceInput, ['required', 'positiveNumber']);
+  } else if (unit === 'm³') {
+    isValid = ValidationSystem.validateField(surfaceInput, ['required', 'positiveNumber']) &amp;&amp;
+              ValidationSystem.validateField(thicknessInput, ['required', 'positiveNumber']);
+  } else if (unit === 'm') {
+    isValid = ValidationSystem.validateField(lengthInput, ['required', 'positiveNumber']);
+  } else if (unit === 'unités') {
+    isValid = ValidationSystem.validateField(unitInput, ['required', 'positiveNumber']);
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider avant export PDF
+ */
+function validateBeforeExport() {
+  if (!window.quoteItems || window.quoteItems.length === 0) {
+    if (window.NotificationSystem) {
+      window.NotificationSystem.error('Aucun élément dans le devis');
+    }
+    return false;
+  }
+
+  const clientRules = FormValidationRules.clientInfo;
+  const isValid = ValidationSystem.validateForm('quote', clientRules);
+
+  if (!isValid &amp;&amp; window.NotificationSystem) {
+    window.NotificationSystem.error('Veuillez remplir correctement les informations du client');
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider avant envoi email
+ */
+function validateBeforeSendEmail() {
+  if (!validateBeforeExport()) return false;
+
+  const emailInput = document.getElementById('client-email');
+  const isValid = ValidationSystem.validateField(emailInput, ['required', 'email']);
+
+  if (!isValid &amp;&amp; window.NotificationSystem) {
+    window.NotificationSystem.error('Email du client requis et valide');
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider avant ajout/modification matériau
+ */
+function validateBeforeSaveMaterial() {
+  const materialRules = FormValidationRules.material;
+  const isValid = ValidationSystem.validateForm('add-material-form', materialRules);
+
+  if (!isValid &amp;&amp; window.NotificationSystem) {
+    window.NotificationSystem.error('Veuillez remplir correctement tous les champs obligatoires');
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider la config SMTP
+ */
+function validateSMTPConfig() {
+  const smtpRules = FormValidationRules.smtp;
+  const fields = {
+    'smtp-service': smtpRules['smtp-service'],
+    'smtp-user': smtpRules['smtp-user'],
+    'smtp-pass': smtpRules['smtp-pass']
+  };
+
+  let isValid = true;
+  for (const [fieldId, rules] of Object.entries(fields)) {
+    const input = document.getElementById(fieldId);
+    if (!ValidationSystem.validateField(input, rules)) {
+      isValid = false;
+    }
+  }
+
+  if (!isValid &amp;&amp; window.NotificationSystem) {
+    window.NotificationSystem.error('Configuration SMTP incomplète ou invalide');
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider la config en-tête
+ */
+function validateHeaderConfig() {
+  const headerRules = FormValidationRules.header;
+  const isValid = ValidationSystem.validateForm('config', headerRules);
+
+  if (!isValid &amp;&amp; window.NotificationSystem) {
+    window.NotificationSystem.error('Veuillez remplir correctement les informations de l\'entreprise');
+  }
+
+  return isValid;
+}
+
+/**
+ * Wrapper pour valider le changement de mot de passe
+ */
+function validatePasswordChange() {
+  const passwordInput = document.getElementById('admin-password');
+  const confirmInput = document.getElementById('admin-password-confirm');
+
+  const isPasswordValid = ValidationSystem.validateField(passwordInput, ['required', 'password']);
+  const isConfirmValid = ValidationSystem.validateField(confirmInput, FormValidationRules.password['admin-password-confirm']);
+
+  if (!isPasswordValid || !isConfirmValid) {
+    if (window.NotificationSystem) {
+      window.NotificationSystem.error('Mot de passe invalide ou non identique');
+    }
+    return false;
+  }
+
+  return true;
+}
+
+// Export pour utilisation globale
+window.ValidationSystem = ValidationSystem;
+window.FormValidationRules = FormValidationRules;
+window.initializeValidation = initializeValidation;
+window.validateBeforeAddToQuote = validateBeforeAddToQuote;
+window.validateBeforeExport = validateBeforeExport;
+window.validateBeforeSendEmail = validateBeforeSendEmail;
+window.validateBeforeSaveMaterial = validateBeforeSaveMaterial;
+window.validateSMTPConfig = validateSMTPConfig;
+window.validateHeaderConfig = validateHeaderConfig;
+window.validatePasswordChange = validatePasswordChange;
+
+export { ValidationSystem, FormValidationRules, initializeValidation };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

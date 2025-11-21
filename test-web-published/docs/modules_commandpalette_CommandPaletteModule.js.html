@@ -1,0 +1,1027 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/commandpalette/CommandPaletteModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/commandpalette/CommandPaletteModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * COMMAND PALETTE MODULE
+ *
+ * Palette de commandes universelle inspirée de VS Code, Linear, GitHub.
+ * Permet d'accéder à n'importe quelle fonction de l'app via Ctrl+K.
+ *
+ * Fonctionnalités :
+ * - Recherche fuzzy ultra-rapide (fuzzysort)
+ * - Actions contextuelles selon l'onglet actif
+ * - Historique des commandes récentes
+ * - Navigation clavier (↑↓ Entrée Esc)
+ * - Support souris (clic sur résultats)
+ * - Thème adaptatif (dark mode support)
+ *
+ * Architecture :
+ * - Chaque module peut enregistrer ses commandes via registerCommand()
+ * - Les commandes sont filtrées en temps réel selon le contexte
+ * - Priorités pour contrôler l'ordre d'affichage
+ *
+ * @version 1.0.0
+ * @author AutoCalc OptiDevis v3.0 - UX Phase 2
+ *
+ * @example
+ * // Enregistrer une commande depuis un module
+ * window.CommandPalette.registerCommand('create-quote', {
+ *   label: '✨ Créer un nouveau devis',
+ *   keywords: ['créer', 'nouveau', 'devis', 'quote'],
+ *   category: 'Actions',
+ *   action: async () => {
+ *     document.getElementById('new-quote-tab').click();
+ *   }
+ * });
+ *
+ * @example
+ * // Ouvrir la palette
+ * window.CommandPalette.open();
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+
+class CommandPaletteModule extends BaseModule {
+  constructor(state, events) {
+    super('commandpalette', state, events);
+
+    /**
+     * Map de toutes les commandes enregistrées
+     * @type {Map&lt;string, Command>}
+     * @private
+     */
+    this.commands = new Map();
+
+    /**
+     * Historique des commandes récemment exécutées (max 10)
+     * @type {string[]} Array de command IDs
+     * @private
+     */
+    this.history = this.loadHistory();
+
+    /**
+     * État d'ouverture de la palette
+     * @type {boolean}
+     * @private
+     */
+    this.isOpen = false;
+
+    /**
+     * Index de l'élément sélectionné dans les résultats
+     * @type {number}
+     * @private
+     */
+    this.selectedIndex = 0;
+
+    /**
+     * Résultats de recherche filtrés actuels
+     * @type {Command[]}
+     * @private
+     */
+    this.filteredCommands = [];
+
+    /**
+     * Input element
+     * @type {HTMLInputElement|null}
+     * @private
+     */
+    this.inputElement = null;
+
+    /**
+     * Results container element
+     * @type {HTMLElement|null}
+     * @private
+     */
+    this.resultsElement = null;
+
+    /**
+     * Modal instance Bootstrap
+     * @type {bootstrap.Modal|null}
+     * @private
+     */
+    this.modal = null;
+
+    /**
+     * Contexte actuel pour les commandes contextuelles
+     * @type {Object}
+     * @private
+     */
+    this.context = {};
+  }
+
+  /**
+   * Initialise le Command Palette Module
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async init() {
+    this.log('Initializing Command Palette Module...');
+
+    // Créer l'UI
+    this.createUI();
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    // Enregistrer les commandes de base (navigation, etc.)
+    this.registerDefaultCommands();
+
+    // Exposer au scope global
+    this.exposeToGlobal({
+      registerCommand: this.registerCommand,
+      unregisterCommand: this.unregisterCommand,
+      open: this.open,
+      close: this.close,
+      execute: this.execute,
+      getCommands: this.getCommands,
+      clearHistory: this.clearHistory,
+      setContext: this.setContext
+    });
+
+    // 🆕 Exposer aussi comme objet global window.CommandPalette
+    window.CommandPalette = {
+      registerCommand: this.registerCommand.bind(this),
+      unregisterCommand: this.unregisterCommand.bind(this),
+      open: this.open.bind(this),
+      close: this.close.bind(this),
+      execute: this.execute.bind(this),
+      getCommands: this.getCommands.bind(this),
+      clearHistory: this.clearHistory.bind(this),
+      setContext: this.setContext.bind(this)
+    };
+
+    this.log('Command Palette Module initialized successfully');
+    this.emitEvent('initialized');
+
+    // 🆕 Émettre événement global pour que les modules enregistrent leurs commandes
+    setTimeout(() => {
+      this.events.emit('commandpalette:ready');
+      this.log('📢 Command Palette ready - modules can now register commands');
+    }, 100);
+  }
+
+  /**
+   * Charge l'historique depuis localStorage
+   * @private
+   * @returns {string[]}
+   */
+  loadHistory() {
+    try {
+      const saved = localStorage.getItem('commandPaletteHistory');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      this.warn('Error loading command history:', e);
+      return [];
+    }
+  }
+
+  /**
+   * Sauvegarde l'historique dans localStorage
+   * @private
+   */
+  saveHistory() {
+    try {
+      localStorage.setItem('commandPaletteHistory', JSON.stringify(this.history));
+    } catch (e) {
+      this.warn('Error saving command history:', e);
+    }
+  }
+
+  /**
+   * Crée l'UI du Command Palette (modal + input + results)
+   * @private
+   */
+  createUI() {
+    // Vérifier si le modal existe déjà
+    if (document.getElementById('commandPaletteModal')) {
+      this.log('Command Palette UI already exists');
+      return;
+    }
+
+    const modalHTML = `
+      &lt;!-- Command Palette Modal -->
+      &lt;div class="modal fade" id="commandPaletteModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        &lt;div class="modal-dialog modal-dialog-centered command-palette-dialog">
+          &lt;div class="modal-content command-palette">
+
+            &lt;!-- Input de recherche -->
+            &lt;div class="command-palette-header">
+              &lt;div class="command-palette-input">
+                &lt;i class="fas fa-search command-palette-icon">&lt;/i>
+                &lt;input
+                  type="text"
+                  id="commandPaletteInput"
+                  class="command-palette-search"
+                  placeholder="Que voulez-vous faire ? (Ctrl+Shift+P)"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+                &lt;kbd class="command-palette-kbd">Esc&lt;/kbd>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;!-- Liste des résultats -->
+            &lt;div class="command-palette-body">
+              &lt;div class="command-palette-results" id="commandPaletteResults">
+                &lt;!-- Résultats injectés dynamiquement -->
+              &lt;/div>
+            &lt;/div>
+
+            &lt;!-- Footer avec tips -->
+            &lt;div class="command-palette-footer">
+              &lt;span class="command-palette-tip">
+                &lt;kbd>↑&lt;/kbd> &lt;kbd>↓&lt;/kbd> Naviguer
+              &lt;/span>
+              &lt;span class="command-palette-tip">
+                &lt;kbd>↵&lt;/kbd> Sélectionner
+              &lt;/span>
+              &lt;span class="command-palette-tip">
+                &lt;kbd>Esc&lt;/kbd> Fermer
+              &lt;/span>
+            &lt;/div>
+
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    `;
+
+    // Injecter dans le DOM
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    // Récupérer les éléments
+    this.inputElement = document.getElementById('commandPaletteInput');
+    this.resultsElement = document.getElementById('commandPaletteResults');
+
+    // Initialiser le modal Bootstrap
+    const modalElement = document.getElementById('commandPaletteModal');
+    if (modalElement &amp;&amp; typeof bootstrap !== 'undefined') {
+      this.modal = new bootstrap.Modal(modalElement, {
+        backdrop: 'static',
+        keyboard: false // On gère Esc nous-mêmes
+      });
+      this.log('Command Palette UI created successfully');
+    } else {
+      this.error('Bootstrap not loaded or modal element not found');
+    }
+  }
+
+  /**
+   * Attache les event listeners (clavier, input, etc.)
+   * @private
+   */
+  attachEventListeners() {
+    // Raccourci global Ctrl+Shift+P (standard VS Code, Chrome DevTools)
+    document.addEventListener('keydown', (e) => {
+      // Ctrl+Shift+P ou Cmd+Shift+P (Mac)
+      if ((e.ctrlKey || e.metaKey) &amp;&amp; e.shiftKey &amp;&amp; e.key === 'P') {
+        e.preventDefault();
+        this.open();
+      }
+    });
+
+    // Input : recherche en temps réel
+    if (this.inputElement) {
+      this.inputElement.addEventListener('input', (e) => {
+        this.handleInput(e.target.value);
+      });
+
+      // Navigation clavier dans la palette
+      this.inputElement.addEventListener('keydown', (e) => {
+        this.handleKeyboard(e);
+      });
+    }
+
+    // Clic sur un résultat
+    if (this.resultsElement) {
+      this.resultsElement.addEventListener('click', (e) => {
+        const commandItem = e.target.closest('.command-item');
+        if (commandItem) {
+          const commandId = commandItem.dataset.commandId;
+          this.execute(commandId);
+        }
+      });
+    }
+
+    // Événement d'ouverture du modal (focus input)
+    const modalElement = document.getElementById('commandPaletteModal');
+    if (modalElement) {
+      modalElement.addEventListener('shown.bs.modal', () => {
+        this.inputElement?.focus();
+        this.renderResults(''); // Afficher historique par défaut
+      });
+
+      modalElement.addEventListener('hidden.bs.modal', () => {
+        this.isOpen = false;
+        this.inputElement.value = '';
+      });
+    }
+
+    this.log('Event listeners attached');
+  }
+
+  /**
+   * Ouvre la palette de commandes
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * window.CommandPalette.open();
+   */
+  open() {
+    if (this.isOpen) return;
+
+    this.isOpen = true;
+    this.selectedIndex = 0;
+    this.updateContext();
+
+    if (this.modal) {
+      this.modal.show();
+      this.log('Command Palette opened');
+    }
+  }
+
+  /**
+   * Ferme la palette de commandes
+   * @public
+   * @returns {void}
+   */
+  close() {
+    if (!this.isOpen) return;
+
+    this.isOpen = false;
+
+    if (this.modal) {
+      this.modal.hide();
+      this.log('Command Palette closed');
+    }
+  }
+
+  /**
+   * Met à jour le contexte actuel (onglet actif, sélections, permissions, etc.)
+   * @private
+   */
+  updateContext() {
+    // Onglet actif
+    const activeTab = document.querySelector('.nav-link.active');
+    this.context.activeTab = activeTab ? activeTab.id : null;
+
+    // 🔐 Permissions (Mode Vendeur vs Admin)
+    this.context.isGuestMode = window.isGuestMode ?? true;
+    this.context.isAdmin = window.isAuthenticatedThisSession ?? false;
+
+    // Client sélectionné (si disponible)
+    this.context.selectedClient = window.appState?.get('selectedClient') || null;
+
+    // Devis en cours (si disponible)
+    this.context.currentQuote = window.quoteItems || null;
+
+    this.log('Context updated:', this.context);
+  }
+
+  /**
+   * Définit le contexte manuellement (pour commandes contextuelles avancées)
+   * @public
+   * @param {Object} context - Contexte à définir
+   */
+  setContext(context) {
+    this.context = { ...this.context, ...context };
+  }
+
+  /**
+   * Gère la saisie dans l'input (recherche en temps réel)
+   * @private
+   * @param {string} query - Texte saisi
+   */
+  handleInput(query) {
+    this.selectedIndex = 0;
+    this.renderResults(query);
+  }
+
+  /**
+   * Gère la navigation clavier (↑↓ Entrée Esc)
+   * @private
+   * @param {KeyboardEvent} e
+   */
+  handleKeyboard(e) {
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        this.selectedIndex = Math.min(this.selectedIndex + 1, this.filteredCommands.length - 1);
+        this.updateSelection();
+        break;
+
+      case 'ArrowUp':
+        e.preventDefault();
+        this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+        this.updateSelection();
+        break;
+
+      case 'Enter':
+        e.preventDefault();
+        if (this.filteredCommands.length > 0) {
+          const command = this.filteredCommands[this.selectedIndex];
+          this.execute(command.id);
+        }
+        break;
+
+      case 'Escape':
+        e.preventDefault();
+        this.close();
+        break;
+    }
+  }
+
+  /**
+   * Met à jour visuellement la sélection (classe .selected)
+   * @private
+   */
+  updateSelection() {
+    const items = this.resultsElement.querySelectorAll('.command-item');
+    items.forEach((item, index) => {
+      if (index === this.selectedIndex) {
+        item.classList.add('selected');
+        item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      } else {
+        item.classList.remove('selected');
+      }
+    });
+  }
+
+  /**
+   * Rend les résultats de recherche
+   * @private
+   * @param {string} query - Requête de recherche
+   */
+  renderResults(query) {
+    if (!query || query.trim() === '') {
+      // Afficher l'historique + commandes fréquentes
+      this.renderHistory();
+    } else {
+      // Recherche fuzzy
+      this.renderSearchResults(query);
+    }
+  }
+
+  /**
+   * Rend l'historique des commandes récentes
+   * @private
+   */
+  renderHistory() {
+    const historyCommands = this.history
+      .map(id => this.commands.get(id))
+      .filter(cmd => cmd &amp;&amp; this.shouldShowCommand(cmd));
+
+    const allCommands = Array.from(this.commands.values())
+      .filter(cmd => this.shouldShowCommand(cmd))
+      .sort((a, b) => (b.priority || 0) - (a.priority || 0))
+      .slice(0, 10);
+
+    this.filteredCommands = historyCommands.length > 0 ? historyCommands : allCommands;
+
+    let html = '';
+
+    if (historyCommands.length > 0) {
+      html += `&lt;div class="command-section">`;
+      html += `&lt;div class="command-section-title">Récent&lt;/div>`;
+      historyCommands.forEach((cmd, index) => {
+        html += this.renderCommandItem(cmd, index === 0);
+      });
+      html += `&lt;/div>`;
+    }
+
+    if (allCommands.length > 0) {
+      html += `&lt;div class="command-section">`;
+      html += `&lt;div class="command-section-title">Actions&lt;/div>`;
+      allCommands.slice(0, 8).forEach((cmd, index) => {
+        html += this.renderCommandItem(cmd, historyCommands.length === 0 &amp;&amp; index === 0);
+      });
+      html += `&lt;/div>`;
+    }
+
+    this.resultsElement.innerHTML = html || '&lt;div class="command-empty">Aucune commande disponible&lt;/div>';
+    this.updateSelection();
+  }
+
+  /**
+   * Rend les résultats de recherche fuzzy
+   * @private
+   * @param {string} query
+   */
+  renderSearchResults(query) {
+    // Recherche simple (fuzzy search basique)
+    const results = this.searchCommands(query);
+
+    this.filteredCommands = results;
+
+    if (results.length === 0) {
+      const safeQuery = TextFormatter.escapeHtml(query);
+      this.resultsElement.innerHTML = `
+        &lt;div class="command-empty">
+          &lt;i class="fas fa-search">&lt;/i>
+          &lt;p>Aucun résultat pour "${safeQuery}"&lt;/p>
+        &lt;/div>
+      `;
+      return;
+    }
+
+    // Grouper par catégorie
+    const categories = {};
+    results.forEach(cmd => {
+      const category = cmd.category || 'Autres';
+      if (!categories[category]) {
+        categories[category] = [];
+      }
+      categories[category].push(cmd);
+    });
+
+    let html = '';
+    Object.keys(categories).forEach(category => {
+      html += `&lt;div class="command-section">`;
+      html += `&lt;div class="command-section-title">${category}&lt;/div>`;
+      categories[category].forEach((cmd, index) => {
+        const isFirst = Object.keys(categories)[0] === category &amp;&amp; index === 0;
+        html += this.renderCommandItem(cmd, isFirst);
+      });
+      html += `&lt;/div>`;
+    });
+
+    this.resultsElement.innerHTML = html;
+    this.updateSelection();
+  }
+
+  /**
+   * Rend un item de commande (HTML)
+   * @private
+   * @param {Command} command
+   * @param {boolean} selected
+   * @returns {string} HTML
+   */
+  renderCommandItem(command, selected = false) {
+    const label = typeof command.label === 'function'
+      ? command.label(this.context)
+      : command.label;
+
+    const shortcut = command.shortcut || '';
+
+    // Escape all user-facing strings to prevent XSS
+    const safeLabel = TextFormatter.escapeHtml(label);
+    const safeShortcut = TextFormatter.escapeHtml(shortcut);
+    const safeIcon = TextFormatter.escapeHtml(command.icon || '▸');
+
+    return `
+      &lt;div class="command-item ${selected ? 'selected' : ''}" data-command-id="${command.id}">
+        &lt;span class="command-icon">${safeIcon}&lt;/span>
+        &lt;span class="command-label">${safeLabel}&lt;/span>
+        ${safeShortcut ? `&lt;span class="command-shortcut">${safeShortcut}&lt;/span>` : ''}
+      &lt;/div>
+    `;
+  }
+
+  /**
+   * Recherche fuzzy simple (sans dépendance externe)
+   * @private
+   * @param {string} query
+   * @returns {Command[]}
+   */
+  searchCommands(query) {
+    const lowerQuery = query.toLowerCase();
+
+    return Array.from(this.commands.values())
+      .filter(cmd => this.shouldShowCommand(cmd))
+      .filter(cmd => {
+        const label = typeof cmd.label === 'function' ? cmd.label(this.context) : cmd.label;
+        const keywords = cmd.keywords || [];
+        const searchString = `${label} ${keywords.join(' ')}`.toLowerCase();
+        return searchString.includes(lowerQuery);
+      })
+      .sort((a, b) => {
+        // Prioriser les correspondances exactes au début
+        const aLabel = (typeof a.label === 'function' ? a.label(this.context) : a.label).toLowerCase();
+        const bLabel = (typeof b.label === 'function' ? b.label(this.context) : b.label).toLowerCase();
+
+        const aStarts = aLabel.startsWith(lowerQuery);
+        const bStarts = bLabel.startsWith(lowerQuery);
+
+        if (aStarts &amp;&amp; !bStarts) return -1;
+        if (!aStarts &amp;&amp; bStarts) return 1;
+
+        // Puis par priorité
+        return (b.priority || 0) - (a.priority || 0);
+      });
+  }
+
+  /**
+   * Vérifie si une commande doit être affichée selon le contexte
+   * @private
+   * @param {Command} command
+   * @returns {boolean}
+   */
+  shouldShowCommand(command) {
+    if (!command) return false;
+    if (typeof command.condition === 'function') {
+      return command.condition(this.context);
+    }
+    return true;
+  }
+
+  /**
+   * Enregistre une nouvelle commande
+   * @public
+   * @param {string} id - ID unique de la commande
+   * @param {CommandConfig} config - Configuration de la commande
+   * @returns {void}
+   *
+   * @example
+   * CommandPalette.registerCommand('create-quote', {
+   *   label: '✨ Créer un nouveau devis',
+   *   keywords: ['créer', 'nouveau', 'devis'],
+   *   category: 'Actions',
+   *   icon: '✨',
+   *   priority: 10,
+   *   action: async () => { ... },
+   *   condition: (context) => true,
+   *   shortcut: 'Ctrl+N'
+   * });
+   */
+  registerCommand(id, config) {
+    if (this.commands.has(id)) {
+      this.warn(`Command "${id}" already registered, overwriting...`);
+    }
+
+    this.commands.set(id, {
+      id,
+      label: config.label,
+      keywords: config.keywords || [],
+      category: config.category || 'Autres',
+      icon: config.icon || '▸',
+      action: config.action,
+      condition: config.condition || (() => true),
+      priority: config.priority || 0,
+      shortcut: config.shortcut || ''
+    });
+
+    this.log(`Command registered: ${id}`);
+  }
+
+  /**
+   * Désenregistre une commande
+   * @public
+   * @param {string} id - ID de la commande
+   */
+  unregisterCommand(id) {
+    if (this.commands.has(id)) {
+      this.commands.delete(id);
+      this.log(`Command unregistered: ${id}`);
+    }
+  }
+
+  /**
+   * Exécute une commande par son ID
+   * @public
+   * @param {string} commandId - ID de la commande
+   * @returns {Promise&lt;void>}
+   */
+  async execute(commandId) {
+    const command = this.commands.get(commandId);
+
+    if (!command) {
+      this.error(`Command not found: ${commandId}`);
+      return;
+    }
+
+    this.log(`Executing command: ${commandId}`);
+
+    // Ajouter à l'historique
+    this.history = [commandId, ...this.history.filter(id => id !== commandId)].slice(0, 10);
+    this.saveHistory();
+
+    // Fermer la palette
+    this.close();
+
+    // Exécuter l'action
+    try {
+      await command.action(this.context);
+      this.emitEvent('command-executed', { commandId, command });
+    } catch (error) {
+      this.error(`Error executing command ${commandId}:`, error);
+      window.NotificationSystem?.error(`Erreur lors de l'exécution de la commande`);
+    }
+  }
+
+  /**
+   * Retourne toutes les commandes enregistrées
+   * @public
+   * @returns {Map&lt;string, Command>}
+   */
+  getCommands() {
+    return this.commands;
+  }
+
+  /**
+   * Efface l'historique des commandes
+   * @public
+   */
+  clearHistory() {
+    this.history = [];
+    this.saveHistory();
+    this.log('Command history cleared');
+  }
+
+  /**
+   * Enregistre les commandes par défaut (navigation, etc.)
+   * @private
+   */
+  registerDefaultCommands() {
+    // Navigation - Onglets
+    this.registerCommand('goto-dashboard', {
+      label: '📊 Ouvrir Tableau de bord',
+      keywords: ['dashboard', 'tableau', 'bord', 'stats', 'statistiques'],
+      category: 'Navigation',
+      icon: '📊',
+      priority: 10,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('dashboard-tab')?.click()
+    });
+
+    this.registerCommand('goto-home', {
+      label: '🏠 Ouvrir Accueil',
+      keywords: ['accueil', 'home', 'début'],
+      category: 'Navigation',
+      icon: '🏠',
+      priority: 10,
+      action: () => document.getElementById('accueil-tab')?.click()
+    });
+
+    this.registerCommand('goto-search', {
+      label: '🔍 Ouvrir Recherche',
+      keywords: ['recherche', 'search', 'chercher', 'trouver'],
+      category: 'Navigation',
+      icon: '🔍',
+      priority: 10,
+      action: () => {
+        document.getElementById('search-tab')?.click();
+        setTimeout(() => document.getElementById('searchMaterialInput')?.focus(), 100);
+      }
+    });
+
+    this.registerCommand('goto-new-quote', {
+      label: '📝 Ouvrir Nouveau Devis',
+      keywords: ['nouveau', 'devis', 'créer'],
+      category: 'Navigation',
+      icon: '📝',
+      priority: 10,
+      action: () => document.getElementById('new-quote-tab')?.click()
+    });
+
+    this.registerCommand('goto-quotes', {
+      label: '📋 Ouvrir Devis',
+      keywords: ['devis', 'quotes', 'liste'],
+      category: 'Navigation',
+      icon: '📋',
+      priority: 10,
+      action: () => document.getElementById('quotes-tab')?.click()
+    });
+
+    this.registerCommand('goto-invoices', {
+      label: '💰 Ouvrir Factures',
+      keywords: ['factures', 'invoices', 'facturation'],
+      category: 'Navigation',
+      icon: '💰',
+      priority: 10,
+      action: () => document.getElementById('invoices-tab')?.click()
+    });
+
+    this.registerCommand('goto-revenue', {
+      label: '💵 Ouvrir CA du Mois',
+      keywords: ['ca', 'chiffre', 'affaires', 'revenue', 'revenus'],
+      category: 'Navigation',
+      icon: '💵',
+      priority: 10,
+      action: () => document.getElementById('revenue-tab')?.click()
+    });
+
+    this.registerCommand('goto-catalog', {
+      label: '📦 Ouvrir Catalogue',
+      keywords: ['catalogue', 'matériaux', 'materials', 'admin'],
+      category: 'Navigation',
+      icon: '📦',
+      priority: 10,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('admin-tab')?.click()
+    });
+
+    this.registerCommand('goto-suppliers', {
+      label: '🚚 Ouvrir Fournisseurs',
+      keywords: ['fournisseurs', 'suppliers', 'vendeurs'],
+      category: 'Navigation',
+      icon: '🚚',
+      priority: 10,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('suppliers-tab')?.click()
+    });
+
+    this.registerCommand('goto-clients', {
+      label: '👥 Ouvrir Clients',
+      keywords: ['clients', 'customers', 'utilisateurs'],
+      category: 'Navigation',
+      icon: '👥',
+      priority: 10,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('clients-tab')?.click()
+    });
+
+    this.registerCommand('goto-templates', {
+      label: '📄 Ouvrir Templates',
+      keywords: ['templates', 'modèles'],
+      category: 'Navigation',
+      icon: '📄',
+      priority: 5,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('templates-tab')?.click()
+    });
+
+    this.registerCommand('goto-config', {
+      label: '⚙️ Ouvrir Configuration',
+      keywords: ['configuration', 'config', 'paramètres', 'settings'],
+      category: 'Navigation',
+      icon: '⚙️',
+      priority: 5,
+      condition: (ctx) => ctx.isAdmin === true, // 🔐 Admin seulement
+      action: () => document.getElementById('config-tab')?.click()
+    });
+
+    // Actions rapides
+    this.registerCommand('refresh-current-tab', {
+      label: '🔄 Rafraîchir l\'onglet actuel',
+      keywords: ['refresh', 'rafraîchir', 'recharger', 'actualiser'],
+      category: 'Actions',
+      icon: '🔄',
+      priority: 8,
+      action: async () => {
+        const activeTab = document.querySelector('.nav-link.active');
+        if (activeTab &amp;&amp; window.TabRefreshManager) {
+          await window.TabRefreshManager.forceRefresh(activeTab.id);
+          window.NotificationSystem?.success('Onglet rafraîchi');
+        }
+      }
+    });
+
+    this.log('Default commands registered');
+  }
+
+  /**
+   * Nettoie les ressources
+   */
+  destroy() {
+    if (this.modal) {
+      this.modal.dispose();
+    }
+    const modalElement = document.getElementById('commandPaletteModal');
+    if (modalElement) {
+      modalElement.remove();
+    }
+    this.log('Command Palette Module destroyed');
+  }
+}
+
+export default CommandPaletteModule;
+
+/**
+ * @typedef {Object} CommandConfig
+ * @property {string|Function} label - Label affiché (peut être fonction pour contexte)
+ * @property {string[]} keywords - Mots-clés pour recherche
+ * @property {string} category - Catégorie (Navigation, Actions, etc.)
+ * @property {string} icon - Emoji ou icon
+ * @property {Function} action - Fonction async à exécuter
+ * @property {Function} [condition] - Condition pour afficher (contexte)
+ * @property {number} [priority] - Priorité d'affichage (défaut 0)
+ * @property {string} [shortcut] - Raccourci clavier (affiché uniquement)
+ */
+
+/**
+ * @typedef {Object} Command
+ * @property {string} id
+ * @property {string|Function} label
+ * @property {string[]} keywords
+ * @property {string} category
+ * @property {string} icon
+ * @property {Function} action
+ * @property {Function} condition
+ * @property {number} priority
+ * @property {string} shortcut
+ */
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

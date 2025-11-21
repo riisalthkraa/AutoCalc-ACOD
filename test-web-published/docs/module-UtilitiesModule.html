@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> UtilitiesModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>UtilitiesModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><h1>========================================
+UTILITIES MODULE - Protection anti-double-clic</h1>
+<p>Module utilitaire pour AutoCalc OptiDevis qui protège tous les boutons de l'application
+contre les clics multiples accidentels (double-clic, triple-clic, spam).</p>
+<p>Architecture :
+Le module gère une protection globale des boutons avec :</p>
+<ul>
+<li><strong>Protection automatique</strong> : Tous les boutons sont protégés au chargement</li>
+<li><strong>MutationObserver</strong> : Détection et protection des boutons ajoutés dynamiquement</li>
+<li><strong>Cooldowns configurables</strong> : Temps d'attente adapté au type de bouton</li>
+<li><strong>Phase de capture</strong> : Interception des clics avant propagation (event.stopImmediatePropagation)</li>
+<li><strong>Attributs data-</strong>* : Gestion d'état avec data-protected, data-clicking, data-no-protect</li>
+</ul>
+<h1>==========================================
+PROBLÈME RÉSOLU</h1>
+<p><strong>Problème</strong> : Double-clic accidentel des utilisateurs</p>
+<ul>
+<li>Utilisateur clique &quot;Sauvegarder&quot; 2 fois rapidement → 2 sauvegardes</li>
+<li>Utilisateur clique &quot;Supprimer&quot; 2 fois → Suppression en double</li>
+<li>Utilisateur impatient clique &quot;Créer PDF&quot; 3 fois → 3 PDFs générés</li>
+</ul>
+<p><strong>Solution</strong> : Protection automatique avec cooldown</p>
+<ul>
+<li>Premier clic : Exécuté normalement</li>
+<li>Clics suivants pendant cooldown : Bloqués (preventDefault + stopImmediatePropagation)</li>
+<li>Après cooldown : Bouton réactivé</li>
+</ul>
+<p><strong>Avantages</strong> :</p>
+<ul>
+<li>Pas de modifications des autres modules (protection transparente)</li>
+<li>Pas besoin de gérer manuellement dans chaque fonction</li>
+<li>Fonctionne automatiquement pour les boutons dynamiques</li>
+<li>UX améliorée (évite erreurs, doublons, consommation API)</li>
+</ul>
+<h1>==========================================
+COOLDOWNS PAR TYPE DE BOUTON</h1>
+<p><strong>Boutons de suppression</strong> : 1500ms (1,5 seconde)</p>
+<ul>
+<li>Détection : button.id.includes('delete') OU button.classList.contains('btn-danger')</li>
+<li>Exemples : #delete-material-btn, .btn-danger</li>
+<li>Raison : Éviter suppression accidentelle, action irréversible</li>
+</ul>
+<p><strong>Boutons de sauvegarde</strong> : 1200ms (1,2 seconde)</p>
+<ul>
+<li>Détection : button.id.includes('save') OU button.classList.contains('btn-success')</li>
+<li>Exemples : #save-quote-btn, .btn-success</li>
+<li>Raison : Éviter doublons de données (quotes, invoices, materials)</li>
+</ul>
+<p><strong>Boutons standard</strong> : 1000ms (1 seconde)</p>
+<ul>
+<li>Tous les autres boutons</li>
+<li>Exemples : #create-pdf-btn, #search-btn, etc.</li>
+<li>Raison : Protection générale suffisante</li>
+</ul>
+<h1>==========================================
+FONCTIONNEMENT DE LA PROTECTION</h1>
+<p><strong>Phase 1 : Protection initiale</strong> (protectAllButtons)</p>
+<ol>
+<li>Au chargement du module (DOMContentLoaded ou readyState !== 'loading')</li>
+<li>Sélection de tous les boutons : document.querySelectorAll('button:not([data-no-protect])')</li>
+<li>Pour chaque bouton :
+a. Détermination du cooldown selon type (1000ms, 1200ms ou 1500ms)
+b. Appel protectButton(button, cooldown)</li>
+<li>Log : &quot;🛡️ Protection appliquée à X boutons&quot;</li>
+</ol>
+<p><strong>Phase 2 : Protection d'un bouton</strong> (protectButton)</p>
+<ol>
+<li>Vérification : Si déjà protégé (data-protected='true') → return</li>
+<li>Marquage : button.dataset.protected = 'true'</li>
+<li>Ajout listener click en phase de capture (addEventListener(..., true))</li>
+<li>Callback click :
+a. Si button.disabled OU data-clicking='true' :
+<ul>
+<li>e.preventDefault() : Annule action par défaut</li>
+<li>e.stopImmediatePropagation() : Bloque tous les autres listeners</li>
+<li>return false
+b. Sinon (premier clic) :</li>
+<li>button.dataset.clicking = 'true'</li>
+<li>button.disabled = true (désactive visuellement le bouton)</li>
+<li>setTimeout(cooldown) : Réactive après délai</li>
+</ul>
+</li>
+</ol>
+<p><strong>Phase 3 : Observation dynamique</strong> (observeNewButtons)</p>
+<ol>
+<li>Création MutationObserver sur document.body</li>
+<li>Configuration : { childList: true, subtree: true } (écoute tous les ajouts DOM)</li>
+<li>Callback mutation.addedNodes :
+a. Si node.tagName === 'BUTTON' → protectButton(node)
+b. Si node contient des boutons enfants → node.querySelectorAll('button') → protectButton()</li>
+<li>Protection automatique des boutons ajoutés par JavaScript (modals, tableaux, etc.)</li>
+</ol>
+<h1>==========================================
+PHASE DE CAPTURE (CAPTURE PHASE)</h1>
+<p><strong>Pourquoi addEventListener(..., true) ?</strong></p>
+<ul>
+<li>Event propagation : Capture → Target → Bubbling</li>
+<li>true = Phase de capture (avant que l'événement atteigne le bouton)</li>
+<li>false = Phase de bubbling (après le bouton, par défaut)</li>
+</ul>
+<p><strong>Avantage phase de capture</strong> :</p>
+<ul>
+<li>Le listener de protection s'exécute EN PREMIER</li>
+<li>Peut bloquer TOUS les autres listeners avec stopImmediatePropagation()</li>
+<li>Même les listeners ajoutés directement sur le bouton (onclick) sont bloqués</li>
+</ul>
+<p><strong>Ordre d'exécution</strong> :</p>
+<ol>
+<li>Listener de protection (phase capture) ← NOTRE PROTECTION</li>
+<li>Listeners sur le bouton (phase target)</li>
+<li>Listeners sur les parents (phase bubbling)</li>
+</ol>
+<p>Si protection bloque (preventDefault + stopImmediatePropagation) :
+→ Étapes 2 et 3 ne s'exécutent JAMAIS</p>
+<h1>==========================================
+ATTRIBUTS DATA-*** UTILISÉS</h1>
+<p><strong>data-protected=&quot;true&quot;</strong> :</p>
+<ul>
+<li>Indique que le bouton a déjà été protégé</li>
+<li>Évite de protéger 2 fois le même bouton (double listener)</li>
+<li>Ajouté par protectButton()</li>
+</ul>
+<p><strong>data-clicking=&quot;true&quot;</strong> :</p>
+<ul>
+<li>Indique qu'un clic est en cours de traitement (cooldown actif)</li>
+<li>Utilisé pour bloquer les clics suivants</li>
+<li>true pendant le cooldown, false après</li>
+</ul>
+<p><strong>data-no-protect</strong> :</p>
+<ul>
+<li>Attribut optionnel pour exclure un bouton de la protection</li>
+<li>Usage : <button data-no-protect>Bouton sans protection</button></li>
+<li>Cas d'usage : Boutons nécessitant clics multiples rapides (rare)</li>
+</ul>
+<h1>==========================================
+MUTATIONOBSERVER</h1>
+<p><strong>Qu'est-ce que MutationObserver ?</strong></p>
+<ul>
+<li>API native JavaScript pour observer les changements du DOM</li>
+<li>Appelé automatiquement lors d'ajout/suppression d'éléments</li>
+<li>Performance : Meilleur que setInterval pour surveiller le DOM</li>
+</ul>
+<p><strong>Configuration</strong> :</p>
+<ul>
+<li>target : document.body (observe tout le document)</li>
+<li>childList : true (détecte ajouts/suppressions de nœuds enfants)</li>
+<li>subtree : true (observe récursivement tous les descendants)</li>
+</ul>
+<p><strong>Cas d'usage dans l'application</strong> :</p>
+<ul>
+<li>Modals Bootstrap : Boutons créés dynamiquement lors de l'ouverture</li>
+<li>Tableaux : Boutons &quot;Modifier&quot; / &quot;Supprimer&quot; générés via innerHTML</li>
+<li>Notifications : Boutons de toast générés dynamiquement</li>
+<li>Templates : Boutons ajoutés après chargement d'un template</li>
+</ul>
+<p>Sans MutationObserver → Ces boutons ne seraient PAS protégés !</p>
+<h1>==========================================
+INTÉGRATIONS</h1>
+<ul>
+<li><strong>Tous les modules</strong> : Protection automatique de tous les boutons HTML</li>
+<li><strong>Bootstrap 5.3.3</strong> : Compatible avec modals, dropdowns, boutons Bootstrap</li>
+<li><strong>NotificationSystem</strong> : Protection des boutons de toast</li>
+<li><strong>Tous les tableaux</strong> : Protection des boutons d'action (Modifier, Supprimer)</li>
+</ul>
+<h1>==========================================
+PERFORMANCE</h1>
+<p><strong>MutationObserver</strong> :</p>
+<ul>
+<li>Très performant (API native optimisée)</li>
+<li>Ne bloque pas le thread principal</li>
+<li>Overhead négligeable (&lt; 1ms par mutation)</li>
+</ul>
+<p><strong>Event listeners</strong> :</p>
+<ul>
+<li>Phase de capture : Aucun impact performance</li>
+<li>setTimeout() : Non-bloquant (asynchrone)</li>
+<li>Pas de fuite mémoire (listeners nettoyés dans destroy())</li>
+</ul>
+<h1>==========================================
+SÉCURITÉ &amp; BONNES PRATIQUES</h1>
+<p><strong>Cleanup</strong> :</p>
+<ul>
+<li>destroy() déconnecte MutationObserver (évite fuite mémoire)</li>
+<li>super.destroy() nettoie les listeners (BaseModule)</li>
+</ul>
+<p><strong>Exclusions</strong> :</p>
+<ul>
+<li>data-no-protect permet d'exclure certains boutons si nécessaire</li>
+<li>Recommandé seulement pour cas très spécifiques</li>
+</ul>
+<p><strong>Disabled state</strong> :</p>
+<ul>
+<li>button.disabled = true fournit feedback visuel (curseur interdit, opacité)</li>
+<li>Bootstrap applique automatiquement le style .disabled</li>
+</ul></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>AutoCalc OptiDevis</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utilities_UtilitiesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utilities_UtilitiesModule.js.html">modules/utilities/UtilitiesModule.js</a>, <a href="modules_utilities_UtilitiesModule.js.html#line1">line 1</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="BaseModule.html">BaseModule</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

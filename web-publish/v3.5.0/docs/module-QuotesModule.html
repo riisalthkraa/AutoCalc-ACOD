@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> QuotesModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>QuotesModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><h1>========================================
+QUOTES MODULE - Gestion des devis</h1>
+<p>Module de gestion complète du cycle de vie des devis pour l'application AutoCalc OptiDevis.
+Gère la création, modification, sauvegarde, chargement, duplication, suppression, changement
+de statut, impression et conversion en facture des devis.</p>
+<p>Architecture :
+Le module orchestre toutes les opérations liées aux devis et gère les permissions
+selon le mode utilisateur (Admin vs Vendeur/Conseil).</p>
+<p>Cycle de vie d'un devis :</p>
+<ol>
+<li><strong>Brouillon</strong> - Devis en cours de rédaction</li>
+<li><strong>En attente</strong> - Devis soumis pour validation (Vendeur → Admin)</li>
+<li><strong>Validé</strong> - Devis approuvé et envoyé au client (Admin uniquement)</li>
+<li><strong>Accepté</strong> - Devis signé par le client (Admin uniquement)</li>
+<li><strong>Facturé</strong> - Facture créée depuis le devis accepté (Admin uniquement)</li>
+<li><strong>Refusé</strong> - Devis rejeté (Admin uniquement)</li>
+</ol>
+<p>Workflow principal - Sauvegarde d'un devis :</p>
+<ol>
+<li>Utilisateur clique &quot;Sauvegarder le devis&quot;</li>
+<li>Vérification : devis non vide</li>
+<li>Modal s'affiche avec nom suggéré</li>
+<li>Utilisateur saisit/valide le nom</li>
+<li>Synchronisation clientInfo depuis formulaire</li>
+<li>Calcul des totaux (HT, TVA, TTC)</li>
+<li>Appel IPC 'save-quote' avec authToken + données</li>
+<li>Si succès : notification + ID du devis stocké</li>
+</ol>
+<p>Workflow principal - Chargement d'un devis :</p>
+<ol>
+<li>Utilisateur clique &quot;Charger&quot; sur un devis</li>
+<li>Si devis en cours : demander confirmation (modal)</li>
+<li>Appel IPC 'load-saved-quote' avec ID</li>
+<li>Vérification : devis facturé → refus chargement (lecture seule)</li>
+<li>Restauration : clientInfo, quoteItems, headerConfig</li>
+<li>Mise à jour date → aujourd'hui</li>
+<li>Remplissage du formulaire client</li>
+<li>Restauration de la remise</li>
+<li>Rafraîchissement du tableau</li>
+<li>Si accepté : verrouiller les champs (lecture seule)</li>
+</ol>
+<p>Workflow principal - Changement de statut :</p>
+<ol>
+<li>Utilisateur clique &quot;Changer le statut&quot;</li>
+<li>Chargement du devis pour obtenir statut actuel</li>
+<li>Modal avec select de statut</li>
+<li><strong>Permissions Vendeur/Conseil</strong> : uniquement brouillon → en_attente</li>
+<li><strong>Permissions Admin</strong> : toutes les transitions autorisées</li>
+<li>Si accepté : afficher champ date de signature</li>
+<li>Utilisateur sélectionne nouveau statut</li>
+<li>Validation des transitions autorisées</li>
+<li>Appel IPC 'update-quote-status' avec authToken + payload</li>
+<li>Rafraîchissement des listes + dashboard</li>
+</ol>
+<p>Workflow principal - Conversion en facture :</p>
+<ol>
+<li><strong>Admin uniquement</strong> - Vérification isAuthenticatedThisSession</li>
+<li>Utilisateur clique &quot;Facturer&quot; sur un devis accepté</li>
+<li>Vérifications : statut = accepté, pas déjà facturé</li>
+<li>Modal de confirmation avec récap (nom, client, total TTC)</li>
+<li>Utilisateur confirme</li>
+<li>Appel IPC 'create-invoice-from-quote' avec authToken + quoteId</li>
+<li>Si succès : création facture + maj statut devis → facturé</li>
+<li>Rafraîchissement listes devis + factures</li>
+</ol>
+<p>Système de permissions :</p>
+<ul>
+<li>
+<p><strong>Mode Vendeur/Conseil</strong> (window.isGuestMode = true) :</p>
+<ul>
+<li>Peut : créer, sauvegarder, charger, dupliquer, supprimer devis</li>
+<li>Peut : passer statut brouillon → en_attente uniquement</li>
+<li>Ne peut pas : valider, accepter, refuser, facturer</li>
+<li>Ne peut pas : imprimer (sauf devis validé)</li>
+</ul>
+</li>
+<li>
+<p><strong>Mode Admin</strong> (window.isAuthenticatedThisSession = true) :</p>
+<ul>
+<li>Peut : toutes les opérations</li>
+<li>Peut : toutes les transitions de statut</li>
+<li>Peut : créer factures depuis devis acceptés</li>
+<li>Peut : imprimer tous les devis</li>
+</ul>
+</li>
+</ul>
+<p>Transitions de statut autorisées :</p>
+<ul>
+<li>brouillon → en_attente, refusé</li>
+<li>en_attente → validé, refusé</li>
+<li>validé → accepté, refusé</li>
+<li>accepté → facturé</li>
+<li>refusé → (aucune transition)</li>
+<li>facturé → (aucune transition)</li>
+</ul>
+<p>Verrouillage des devis :</p>
+<ul>
+<li><strong>Devis accepté</strong> : champs verrouillés (lecture seule) jusqu'à déverrouillage manuel</li>
+<li><strong>Devis facturé</strong> : verrouillé définitivement (impossible de charger pour modifier)</li>
+<li>Actions autorisées sur devis verrouillés : Imprimer, Dupliquer, Supprimer</li>
+</ul>
+<p>Compatibilité avec legacy code :</p>
+<ul>
+<li>Exposé via window.quoteItems, window.clientInfo, window.headerConfig</li>
+<li>Synchronisation bidirectionnelle avec variables globales</li>
+<li>Fonctions exposées au scope global via exposeToGlobal()</li>
+</ul>
+<p>Événements émis :</p>
+<ul>
+<li>'quotes:initialized' - Module initialisé</li>
+<li>(Pas d'autres événements définis explicitement, mais les opérations déclenchent des mises à jour UI)</li>
+</ul>
+<p>Canaux IPC utilisés :</p>
+<ul>
+<li>'save-quote' - Sauvegarder un devis (nécessite authToken)</li>
+<li>'list-saved-quotes' - Lister tous les devis</li>
+<li>'load-saved-quote' - Charger un devis par ID</li>
+<li>'delete-saved-quote' - Supprimer un devis (nécessite authToken)</li>
+<li>'update-quote-status' - Changer le statut d'un devis (nécessite authToken)</li>
+<li>'create-invoice-from-quote' - Créer une facture depuis un devis accepté (nécessite authToken)</li>
+</ul>
+<p>Intégrations :</p>
+<ul>
+<li>InvoicesModule : Création de factures depuis devis acceptés</li>
+<li>QuoteBuilderModule : Construction des articles du devis</li>
+<li>DashboardModule : Affichage des devis en attente (vendeur)</li>
+<li>PDFModule : Impression des devis</li>
+</ul></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>AutoCalc OptiDevis</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1">line 1</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="BaseModule.html">BaseModule</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,4037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> QuotesModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>QuotesModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-QuotesModule.html">QuotesModule</a>~</span>QuotesModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="QuotesModule">
+        <a class="href-link" href="#QuotesModule">#</a>
+        
+        <span class="code-name">
+            
+                new QuotesModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module Quotes.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements pour communication inter-modules</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line133">line 133</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="askChangeQuoteStatus">
+    <a class="href-link" href="#askChangeQuoteStatus">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        askChangeQuoteStatus
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Demande le changement de statut d'un devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken (Vendeur/Conseil autorisé pour brouillon → en_attente uniquement)</li>
+<li>Charger le devis via IPC 'load-saved-quote' pour obtenir le statut actuel</li>
+<li>Stocker le devis dans this.currentQuoteForStatus</li>
+<li>Remplir le modal :
+<ul>
+<li>Nom du devis</li>
+<li>Statut actuel (badge formaté)</li>
+<li>Select de nouveau statut</li>
+</ul>
+</li>
+<li><strong>Gestion des permissions</strong> :
+<ul>
+<li><strong>Vendeur</strong> : pré-sélectionner &quot;en_attente&quot;, désactiver toutes les autres options</li>
+<li><strong>Admin</strong> : pré-sélectionner statut actuel, désactiver les transitions non autorisées</li>
+</ul>
+</li>
+<li>Si statut actuel = accepté : afficher champ date de signature</li>
+<li>Afficher le modal Bootstrap</li>
+</ol>
+<p>Transitions autorisées (voir canTransitionTo) :</p>
+<ul>
+<li>brouillon → en_attente, refusé</li>
+<li>en_attente → validé, refusé</li>
+<li>validé → accepté, refusé</li>
+<li>accepté → facturé</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1580">line 1580</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.askChangeQuoteStatus('quote_123');
+// → Modal s'affiche avec select de statut (permissions appliquées)</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="askCreateInvoice">
+    <a class="href-link" href="#askCreateInvoice">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        askCreateInvoice
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Demande la création d'une facture depuis un devis accepté.</p>
+<p><strong>ADMIN UNIQUEMENT</strong> - Mode Administrateur requis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Vérifier l'authentification admin (window.isAuthenticatedThisSession)</li>
+<li>Si non authentifié : notification + arrêt</li>
+<li>Charger le devis via IPC 'load-saved-quote'</li>
+<li>Stocker le devis dans this.currentQuoteForInvoice</li>
+<li><strong>Vérifications</strong> :
+<ul>
+<li>Statut doit être &quot;accepté&quot; (sinon erreur)</li>
+<li>Pas déjà facturé (vérifier invoiceId via hasValidInvoiceId)</li>
+</ul>
+</li>
+<li>Remplir le modal de confirmation :
+<ul>
+<li>Nom du devis</li>
+<li>Nom du client</li>
+<li>Total TTC</li>
+</ul>
+</li>
+<li>Afficher le modal Bootstrap</li>
+</ol>
+<p>L'utilisateur peut ensuite confirmer (→ confirmCreateInvoice) ou annuler.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1802">line 1802</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.askCreateInvoice('quote_123');
+// → Modal de confirmation s'affiche avec récap du devis</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="askDeleteSavedQuote">
+    <a class="href-link" href="#askDeleteSavedQuote">#</a>
+    
+    <span class="code-name">
+        askDeleteSavedQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Demande confirmation avant suppression d'un devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Stocker quoteId dans this.quoteToDeleteId</li>
+<li>Stocker quoteName dans this.quoteToDeleteName</li>
+<li>Mettre à jour le texte du modal avec le nom du devis</li>
+<li>Afficher le modal Bootstrap de confirmation</li>
+</ol>
+<p>L'utilisateur peut ensuite confirmer (→ deleteSavedQuote) ou annuler.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1460">line 1460</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.askDeleteSavedQuote('quote_123', 'Devis Client ABC');
+// → Modal de confirmation s'affiche : "Supprimer 'Devis Client ABC' ?"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="confirmChangeQuoteStatus">
+    <a class="href-link" href="#confirmChangeQuoteStatus">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        confirmChangeQuoteStatus
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Confirme le changement de statut d'un devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken</li>
+<li>Vérifier que this.currentQuoteForStatus est défini</li>
+<li>Récupérer le nouveau statut depuis le select</li>
+<li><strong>Validation des permissions Vendeur</strong> :
+<ul>
+<li>Si mode Vendeur : vérifier statut actuel = brouillon ET nouveau statut = en_attente</li>
+<li>Sinon : erreur + arrêt</li>
+</ul>
+</li>
+<li>Préparer les données additionnelles :
+<ul>
+<li>Si nouveau statut = accepté : inclure date de signature</li>
+</ul>
+</li>
+<li>Appeler IPC 'update-quote-status' avec authToken + {quoteId, status, additionalData}</li>
+<li>Si succès :
+<ul>
+<li>Notification de succès</li>
+<li>Fermer le modal</li>
+<li>Attendre 300ms</li>
+<li>Rafraîchir les listes (modal + onglet)</li>
+<li>Mettre à jour dashboard vendeur si mode Vendeur (window.updateVendeurPendingQuotes)</li>
+</ul>
+</li>
+<li>Réinitialiser this.currentQuoteForStatus</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1688">line 1688</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur confirme le changement de statut
+await quotesModule.confirmChangeQuoteStatus();
+// → Statut mis à jour, listes rafraîchies</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="confirmCreateInvoice">
+    <a class="href-link" href="#confirmCreateInvoice">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        confirmCreateInvoice
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Confirme la création de la facture depuis un devis accepté.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken</li>
+<li>Vérifier qu'il existe (sinon erreur)</li>
+<li>Vérifier que this.currentQuoteForInvoice est défini</li>
+<li>Appeler IPC 'create-invoice-from-quote' avec authToken + quoteId</li>
+<li>Si succès :
+<ul>
+<li>Notification de succès avec numéro de facture</li>
+<li>Fermer le modal</li>
+<li>Attendre 300ms</li>
+<li>Rafraîchir les listes de devis (modal + onglet)</li>
+<li>Rafraîchir la liste des factures si on est sur cet onglet</li>
+</ul>
+</li>
+<li>Réinitialiser this.currentQuoteForInvoice</li>
+</ol>
+<p>Note : Le backend crée automatiquement la facture et met à jour
+le statut du devis → facturé + stocke l'invoiceId.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1897">line 1897</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur confirme la création de facture
+await quotesModule.confirmCreateInvoice();
+// → Facture créée, statut devis → facturé, listes rafraîchies</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="createNewQuote">
+    <a class="href-link" href="#createNewQuote">#</a>
+    
+    <span class="code-name">
+        createNewQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Crée un nouveau devis vierge.</p>
+<p>Workflow :</p>
+<ol>
+<li>Vider window.quoteItems (tableau d'articles)</li>
+<li>Réinitialiser window.clientInfo (nom, téléphone, email, adresse, émetteur vides)</li>
+<li>Définir la date du devis → aujourd'hui</li>
+<li>Réinitialiser le formulaire client (form.reset())</li>
+<li>Définir la date dans l'input date</li>
+<li>Rafraîchir le tableau des articles (window.updateQuoteTable)</li>
+<li>Notification info &quot;Nouveau devis créé&quot;</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1397">line 1397</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.createNewQuote();
+// → Nouveau devis vierge, prêt à être rempli</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="deleteSavedQuote">
+    <a class="href-link" href="#deleteSavedQuote">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        deleteSavedQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Supprime un devis sauvegardé après confirmation.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken (Vendeur/Conseil autorisé)</li>
+<li>Vérifier que this.quoteToDeleteId est défini</li>
+<li>Appeler IPC 'delete-saved-quote' avec authToken + quoteId</li>
+<li>Si succès :
+<ul>
+<li>Notification de succès</li>
+<li>Déplacer le focus vers le modal de liste (pour accessibilité)</li>
+<li>Fermer le modal de confirmation</li>
+<li>Attendre 300ms</li>
+<li>Rafraîchir uniquement le tableau (refreshSavedQuotesTable)</li>
+<li>Rafraîchir aussi l'onglet Devis si actif</li>
+</ul>
+</li>
+<li>Réinitialiser this.quoteToDeleteId et this.quoteToDeleteName</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1496">line 1496</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur confirme la suppression
+await quotesModule.deleteSavedQuote();
+// → Devis supprimé, listes rafraîchies, modal de confirmation fermé</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="duplicateQuote">
+    <a class="href-link" href="#duplicateQuote">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        duplicateQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Duplique un devis existant.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken (Vendeur/Conseil autorisé)</li>
+<li>Charger le devis à dupliquer via IPC 'load-saved-quote'</li>
+<li>Créer une copie avec nouveau nom : &quot;{nom original} - Copie&quot;</li>
+<li>Recalculer les totaux si manquants</li>
+<li>Sauvegarder la copie via IPC 'save-quote' (nouveau ID, nouvelle date)</li>
+<li>Si succès : notification + rafraîchir les listes (modal + onglet)</li>
+</ol>
+<p>Note : Toutes les données sont copiées (clientInfo, quoteItems, totals, headerConfig)
+sauf l'ID et les dates qui sont régénérés.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1318">line 1318</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.duplicateQuote('quote_123');
+// → Nouveau devis créé "Devis Client ABC - Copie"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="getQuoteStatusBadge">
+    <a class="href-link" href="#getQuoteStatusBadge">#</a>
+    
+    <span class="code-name">
+        getQuoteStatusBadge
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Retourne le badge HTML Bootstrap pour un statut de devis.</p>
+<p>Statuts supportés (avec couleurs) :</p>
+<ul>
+<li><strong>brouillon</strong> → Gris (bg-secondary)</li>
+<li><strong>en_attente</strong> → Jaune (bg-warning text-dark)</li>
+<li><strong>validé</strong> → Bleu (bg-primary)</li>
+<li><strong>accepté</strong> → Vert (bg-success)</li>
+<li><strong>refusé</strong> → Rouge (bg-danger)</li>
+<li><strong>facturé</strong> → Cyan (bg-info)</li>
+</ul>
+<p>Anciens statuts (compatibilité) :</p>
+<ul>
+<li>envoyé → affiché comme &quot;Validé&quot;</li>
+<li>signé → affiché comme &quot;Accepté&quot;</li>
+<li>abandonné → affiché comme &quot;Refusé&quot;</li>
+<li>expiré → affiché comme &quot;Refusé&quot;</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2262">line 2262</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const badge = quotesModule.getQuoteStatusBadge('accepté');
+// → '&lt;span class="badge bg-success">Accepté&lt;/span>'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="loadQuotesInTab">
+    <a class="href-link" href="#loadQuotesInTab">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        loadQuotesInTab
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Charge les devis dans l'onglet Devis avec filtrage optionnel.</p>
+<p>Workflow :</p>
+<ol>
+<li>Appeler IPC 'list-saved-quotes' pour récupérer tous les devis</li>
+<li>Appliquer filtres de recherche (nom ou client, insensible à la casse)</li>
+<li>Appliquer filtre de statut (exact)</li>
+<li>Si aucun devis : afficher message &quot;Aucun devis trouvé&quot;</li>
+<li>Sinon : générer HTML avec renderQuoteRowForTab() pour chaque devis</li>
+<li>Injecter dans le tbody de la table</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line946">line 946</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+    
+        <pre class="prettyprint"><code>// Charger tous les devis
+await quotesModule.loadQuotesInTab();</code></pre>
+    
+
+    
+        <pre class="prettyprint"><code>// Charger uniquement les devis en attente contenant "ABC"
+await quotesModule.loadQuotesInTab('ABC', 'en_attente');</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="loadSavedQuote">
+    <a class="href-link" href="#loadSavedQuote">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        loadSavedQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Charge un devis sauvegardé (avec confirmation si devis en cours).</p>
+<p>Workflow :</p>
+<ol>
+<li>Vérifier si un devis est en cours (window.quoteItems.length &gt; 0)</li>
+<li>Si oui : stocker quoteId dans this.pendingQuoteToLoad</li>
+<li>Afficher modal de confirmation &quot;Écraser le devis en cours ?&quot;</li>
+<li>Si non : appeler directement proceedLoadSavedQuote()</li>
+</ol>
+<p>L'utilisateur peut ensuite confirmer (→ proceedLoadSavedQuote) ou annuler.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1158">line 1158</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.loadSavedQuote('quote_123');
+// → Modal de confirmation si devis en cours, sinon chargement direct</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="printQuoteFromList">
+    <a class="href-link" href="#printQuoteFromList">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        printQuoteFromList
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Imprime un devis depuis la liste sans le charger dans l'interface.</p>
+<p><strong>Utilisé principalement pour les devis facturés ou acceptés (lecture seule).</strong></p>
+<p>Workflow :</p>
+<ol>
+<li>Charger le devis via IPC 'load-saved-quote'</li>
+<li><strong>Sauvegarder</strong> les variables globales actuelles :
+<ul>
+<li>window.quoteItems, window.clientInfo, window.headerConfig</li>
+<li>Valeurs des champs HTML du formulaire client</li>
+</ul>
+</li>
+<li><strong>Charger temporairement</strong> les données du devis :
+<ul>
+<li>Copier quoteItems, clientInfo dans window.*</li>
+<li>Remplir les champs HTML avec les valeurs du devis</li>
+</ul>
+</li>
+<li>Appeler window.printQuote() pour générer et imprimer le PDF</li>
+<li><strong>Restaurer</strong> les variables globales et champs HTML</li>
+<li>Rafraîchir le tableau (window.updateQuoteTable)</li>
+</ol>
+<p>Grâce à cette méthode, l'utilisateur peut imprimer un devis sans perturber
+le devis actuellement en cours de modification dans l'interface.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1985">line 1985</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.printQuoteFromList('quote_123');
+// → Devis imprimé, interface non modifiée</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="proceedLoadSavedQuote">
+    <a class="href-link" href="#proceedLoadSavedQuote">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        proceedLoadSavedQuote
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Procède au chargement effectif du devis (après confirmation ou directement).</p>
+<p>Workflow :</p>
+<ol>
+<li>Appeler IPC 'load-saved-quote' avec quoteId</li>
+<li>Vérifier : si statut = facturé → refus + notification (lecture seule)</li>
+<li>Stocker ID, nom, date création, statut dans window.*</li>
+<li>Restaurer clientInfo, quoteItems depuis le devis</li>
+<li>Mettre à jour la date du devis → aujourd'hui</li>
+<li>Remplir tous les champs du formulaire client</li>
+<li>Restaurer la remise si elle existe</li>
+<li>Rafraîchir le tableau des articles (window.updateQuoteTable)</li>
+<li>Fermer les modals (confirmation + liste)</li>
+<li>Afficher bouton &quot;Changer le statut&quot;</li>
+<li>Si statut = accepté : verrouiller les champs (setQuoteFieldsLocked)</li>
+<li>Notification de succès ou avertissement (si accepté)</li>
+<li>Réinitialiser this.pendingQuoteToLoad</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1207">line 1207</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.proceedLoadSavedQuote('quote_123');
+// → Devis chargé, formulaire rempli, tableau rafraîchi</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="refreshSavedQuotesTable">
+    <a class="href-link" href="#refreshSavedQuotesTable">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        refreshSavedQuotesTable
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Rafraîchit uniquement le tableau des devis du modal sans fermer/rouvrir le modal.</p>
+<p>Utilisé après une modification (suppression, changement de statut, création de facture)
+pour mettre à jour la liste sans perturber l'utilisateur.</p>
+<p>Workflow :</p>
+<ol>
+<li>Appeler IPC 'list-saved-quotes'</li>
+<li>Régénérer le HTML de la table</li>
+<li>Injecter dans le tbody (le modal reste ouvert)</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1110">line 1110</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="renderQuoteRow">
+    <a class="href-link" href="#renderQuoteRow">#</a>
+    
+    <span class="code-name">
+        renderQuoteRow
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Génère le HTML pour une ligne de devis dans le tableau du modal &quot;Devis sauvegardés&quot;.</p>
+<p>LOGIQUE COMPLEXE DES BOUTONS :</p>
+<ul>
+<li>Devis facturé/accepté → Lecture seule (Imprimer + Dupliquer uniquement)</li>
+<li>Devis modifiable → Charger + Dupliquer + actions selon rôle</li>
+<li>Mode Vendeur → Accès limité (seulement brouillon → en_attente)</li>
+<li>Mode Admin → Accès complet + bouton Facturer si accepté</li>
+</ul>
+<p>Badges et indicateurs :</p>
+<ul>
+<li>Badge &quot;Récent&quot; (vert) si modifié dans les dernières 24h</li>
+<li>Badge de statut (couleur selon statut)</li>
+<li>Temps relatif (&quot;Il y a 2h&quot;, &quot;Il y a 3j&quot;)</li>
+</ul>
+<p>Boutons selon statut :</p>
+<ul>
+<li><strong>Facturé ou Accepté</strong> : Imprimer, Dupliquer</li>
+<li><strong>Validé</strong> : Statut (Admin), Imprimer, Dupliquer</li>
+<li><strong>Brouillon ou En attente</strong> : Charger, Statut, Dupliquer</li>
+<li><strong>Admin uniquement</strong> : Bouton Facturer (si accepté et pas encore facturé)</li>
+<li><strong>Tous</strong> : Bouton Supprimer</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line763">line 763</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const quote = {
+  id: 'quote_123',
+  name: 'Devis Client ABC',
+  clientName: 'ABC Corp',
+  status: 'accepté',
+  itemsCount: 5,
+  totalTTC: 1500.00,
+  modifiedAt: '2025-01-15T10:30:00Z'
+};
+const html = quotesModule.renderQuoteRow(quote);
+// → &lt;tr>...badges, boutons...&lt;/tr></code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="renderQuoteRowForTab">
+    <a class="href-link" href="#renderQuoteRowForTab">#</a>
+    
+    <span class="code-name">
+        renderQuoteRowForTab
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Génère une ligne de tableau pour l'onglet Devis.</p>
+<p>Identique à renderQuoteRow() mais pour l'onglet &quot;Devis&quot; (au lieu du modal).
+Affiche une colonne supplémentaire : Date de création.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>renderQuoteRow</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line848">line 848</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="saveQuoteManually">
+    <a class="href-link" href="#saveQuoteManually">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        saveQuoteManually
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Sauvegarde un devis manuellement.</p>
+<p>Workflow :</p>
+<ol>
+<li>Synchroniser clientInfo depuis le formulaire</li>
+<li>Récupérer authToken (Vendeur/Conseil autorisé)</li>
+<li>Valider : nom non vide, devis non vide (≥1 article)</li>
+<li>Calculer les totaux (HT, TVA, TTC)</li>
+<li>Préparer les données (id, name, createdAt, clientInfo, quoteItems, headerConfig, discount, totals)</li>
+<li>Appeler IPC 'save-quote' avec authToken + données</li>
+<li>Si succès : notification + retour {success: true, id}</li>
+<li>Si échec : notification erreur + retour {success: false}</li>
+</ol>
+<p>Note : Si existingId fourni, le devis est mis à jour (conserve createdAt).
+Sinon, un nouveau devis est créé avec nouvel ID et date de création.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line596">line 596</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const result = await quotesModule.saveQuoteManually('Devis Client ABC', null);
+if (result.success) {
+  console.log('Devis sauvegardé avec ID:', result.id);
+}</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="setQuoteFieldsLocked">
+    <a class="href-link" href="#setQuoteFieldsLocked">#</a>
+    
+    <span class="code-name">
+        setQuoteFieldsLocked
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Verrouille ou déverrouille les champs du devis.</p>
+<p><strong>Utilisé pour les devis acceptés (signés) afin de les rendre lecture seule.</strong></p>
+<p>Champs verrouillés :</p>
+<ul>
+<li>Formulaire client : nom, téléphone, email, adresse, date, émetteur</li>
+<li>Remise</li>
+<li>Boutons d'action : ajouter article, ajout rapide, sauvegarder</li>
+<li>Boutons de modification/suppression dans le tableau des articles</li>
+</ul>
+<p>Champs toujours actifs (même verrouillés) :</p>
+<ul>
+<li>Bouton &quot;Récupérer Devis&quot;</li>
+<li>Bouton &quot;Vider Devis&quot;</li>
+</ul>
+<p>Styles appliqués quand verrouillé :</p>
+<ul>
+<li>Champs : backgroundColor = #f5f5f5, cursor = not-allowed</li>
+<li>Boutons : opacity = 0.5, cursor = not-allowed</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2104">line 2104</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+    
+        <pre class="prettyprint"><code>// Verrouiller le devis (devis accepté chargé)
+quotesModule.setQuoteFieldsLocked(true);
+// → Tous les champs sont en lecture seule</code></pre>
+    
+
+    
+        <pre class="prettyprint"><code>// Déverrouiller le devis
+quotesModule.setQuoteFieldsLocked(false);
+// → Tous les champs sont modifiables</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="showSaveQuoteModal">
+    <a class="href-link" href="#showSaveQuoteModal">#</a>
+    
+    <span class="code-name">
+        showSaveQuoteModal
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Affiche le modal de sauvegarde de devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Vérifier que le devis n'est pas vide (≥1 article)</li>
+<li>Si vide : notification erreur + arrêt</li>
+<li>Générer un nom suggéré :
+<ul>
+<li>Si devis chargé : nom original (window.currentQuoteName)</li>
+<li>Sinon : &quot;Devis {Client} - {Date}&quot; ou &quot;Devis {Date}&quot;</li>
+</ul>
+</li>
+<li>Pré-remplir le champ nom dans le modal</li>
+<li>Afficher le modal Bootstrap</li>
+</ol>
+<p>L'utilisateur peut ensuite modifier le nom et confirmer la sauvegarde.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line693">line 693</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.showSaveQuoteModal();
+// → Modal s'affiche avec nom suggéré "Devis Client XYZ - 15/01/2025"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="showSavedQuotesModal">
+    <a class="href-link" href="#showSavedQuotesModal">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        showSavedQuotesModal
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Affiche le modal de gestion des devis sauvegardés.</p>
+<p>Workflow :</p>
+<ol>
+<li>Appeler IPC 'list-saved-quotes' pour récupérer tous les devis</li>
+<li>Si aucun devis : afficher message &quot;Aucun devis sauvegardé&quot;</li>
+<li>Sinon : générer HTML avec renderQuoteRow() pour chaque devis</li>
+<li>Injecter dans le tbody de la table</li>
+<li>Afficher le modal Bootstrap</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1065">line 1065</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.showSavedQuotesModal();
+// → Modal s'affiche avec la liste de tous les devis</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="bulkDeleteQuotes">
+        <a class="href-link" href="#bulkDeleteQuotes">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                bulkDeleteQuotes<span class="signature">(quoteIds)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Supprime plusieurs devis en masse (opération bulk).</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer authToken (Vendeur/Conseil autorisé)</li>
+<li>Pour chaque quoteId dans le tableau :
+<ul>
+<li>Appeler IPC 'delete-saved-quote' avec authToken + quoteId</li>
+</ul>
+</li>
+<li>Si succès : notification + rafraîchissement de la liste</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>quoteIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;string></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Tableau des IDs des devis à supprimer</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2536">line 2536</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.bulkDeleteQuotes(['quote_123', 'quote_456']);
+// → Devis supprimés, notification affichée, liste rafraîchie</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="bulkExportQuotes">
+        <a class="href-link" href="#bulkExportQuotes">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                bulkExportQuotes<span class="signature">(quoteIds)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Exporte plusieurs devis en masse au format CSV.</p>
+<p>Workflow :</p>
+<ol>
+<li>Pour chaque quoteId :
+<ul>
+<li>Charger les données complètes du devis</li>
+</ul>
+</li>
+<li>Générer un fichier CSV avec tous les devis sélectionnés</li>
+<li>Télécharger le fichier CSV</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>quoteIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;string></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Tableau des IDs des devis à exporter</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2597">line 2597</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await quotesModule.bulkExportQuotes(['quote_123', 'quote_456']);
+// → Fichier CSV téléchargé avec les 2 devis</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="canTransitionTo">
+        <a class="href-link" href="#canTransitionTo">#</a>
+        
+        <span class="code-name">
+            
+                canTransitionTo<span class="signature">(currentStatus, newStatus)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Vérifie si une transition de statut est autorisée.</p>
+<p>Règles de transition (workflow métier) :</p>
+<ul>
+<li><strong>brouillon</strong> → en_attente, refusé</li>
+<li><strong>en_attente</strong> → validé, refusé</li>
+<li><strong>validé</strong> → accepté, refusé</li>
+<li><strong>accepté</strong> → facturé</li>
+<li><strong>refusé</strong> → (aucune transition possible)</li>
+<li><strong>facturé</strong> → (aucune transition possible)</li>
+</ul>
+<p>Note : En mode Vendeur/Conseil, seule la transition brouillon → en_attente
+est autorisée (vérifiée dans confirmChangeQuoteStatus).</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>currentStatus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Statut actuel du devis</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>newStatus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Nouveau statut souhaité</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2328">line 2328</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>true si la transition est autorisée, false sinon</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.canTransitionTo('brouillon', 'en_attente'); // → true
+quotesModule.canTransitionTo('brouillon', 'facturé'); // → false
+quotesModule.canTransitionTo('facturé', 'accepté'); // → false</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="escapeHtml">
+        <a class="href-link" href="#escapeHtml">#</a>
+        
+        <span class="code-name">
+            
+                escapeHtml<span class="signature">(text)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Échappe les caractères HTML pour prévenir les attaques XSS.</p>
+<p>Remplace les caractères spéciaux HTML par leurs entités :</p>
+<ul>
+<li>&amp; → &amp;</li>
+<li>&lt; → &lt;</li>
+<li>
+<blockquote>
+<p>→ &gt;</p>
+</blockquote>
+</li>
+<li>&quot; → &quot;</li>
+<li>' → '</li>
+<li>/ → /</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>text</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Texte à échapper</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2360">line 2360</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Texte échappé sécurisé pour insertion HTML</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.escapeHtml('&lt;script>alert("XSS")&lt;/script>');
+// → '&amp;lt;script&amp;gt;alert(&amp;quot;XSS&amp;quot;)&amp;lt;&amp;#x2F;script&amp;gt;'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="formatCurrency">
+        <a class="href-link" href="#formatCurrency">#</a>
+        
+        <span class="code-name">
+            
+                formatCurrency<span class="signature">(amount)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Formate un montant en devise française (EUR).</p>
+<p>Utilise l'API Intl.NumberFormat pour un formatage localisé.
+Format : 1 234,56 €</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>amount</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Montant à formater</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2809">line 2809</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Montant formaté avec symbole € ou '0,00 €' si invalide</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Examples</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.formatCurrency(1234.56);
+// → '1 234,56 €'</code></pre>
+    
+
+    
+        <pre class="prettyprint"><code>quotesModule.formatCurrency(null);
+// → '0,00 €'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="formatDate">
+        <a class="href-link" href="#formatDate">#</a>
+        
+        <span class="code-name">
+            
+                formatDate<span class="signature">(dateString)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Formate une date ISO au format français (JJ/MM/AAAA).</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>dateString</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Date au format ISO (YYYY-MM-DDTHH:mm:ss.sssZ)</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2381">line 2381</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Date formatée (DD/MM/YYYY) ou chaîne originale si erreur</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.formatDate('2025-01-15T10:30:00Z');
+// → '15/01/2025'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="generateCSV">
+        <a class="href-link" href="#generateCSV">#</a>
+        
+        <span class="code-name">
+            
+                generateCSV<span class="signature">(quotes)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Génère un fichier CSV à partir d'un tableau de devis.</p>
+<p>Format CSV :</p>
+<ul>
+<li>Séparateur : point-virgule (;)</li>
+<li>Encodage : UTF-8</li>
+<li>Colonnes : Nom, Client, Statut, Date de création, Date de modification, Total HT, Total TVA, Total TTC, Nombre d'articles</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>quotes</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;Object></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Tableau des devis à exporter</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2661">line 2661</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Contenu CSV</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const csv = quotesModule.generateCSV([quote1, quote2]);
+// → "Nom;Client;Statut;Date de création;..."</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="hasValidInvoiceId">
+        <a class="href-link" href="#hasValidInvoiceId">#</a>
+        
+        <span class="code-name">
+            
+                hasValidInvoiceId<span class="signature">(invoiceId)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Vérifie si un invoiceId est valide.</p>
+<p>Un invoiceId est considéré valide s'il n'est pas :</p>
+<ul>
+<li>null</li>
+<li>undefined</li>
+<li>la chaîne &quot;null&quot; (cas de sérialisation JSON incorrecte)</li>
+</ul>
+<p>Utilisé pour vérifier si un devis a déjà été facturé avant d'autoriser
+la création d'une nouvelle facture.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>invoiceId</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">*</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID de facture à vérifier</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line2301">line 2301</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>true si l'ID est valide, false sinon</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>quotesModule.hasValidInvoiceId('invoice_123'); // → true
+quotesModule.hasValidInvoiceId(null); // → false
+quotesModule.hasValidInvoiceId('null'); // → false
+quotesModule.hasValidInvoiceId(undefined); // → false</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module Quotes.</p>
+<p>Workflow d'initialisation :</p>
+<ol>
+<li>Récupérer quoteItems existants depuis window ou state</li>
+<li>Synchroniser avec window.quoteItems pour compatibilité</li>
+<li>Attacher les event listeners (boutons, onglets, recherche)</li>
+<li>Exposer les fonctions au scope global (compatibilité legacy)</li>
+<li>Émettre l'événement 'quotes:initialized'</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line294">line 294</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const quotesModule = new QuotesModule(state, eventBus);
+await quotesModule.init();
+// → Module initialisé, devis chargés, listeners actifs</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateStatusFilterCounts">
+        <a class="href-link" href="#updateStatusFilterCounts">#</a>
+        
+        <span class="code-name">
+            
+                updateStatusFilterCounts<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Met à jour les compteurs dans le menu déroulant de filtrage par statut.
+Compte le nombre de devis pour chaque statut et met à jour les labels des options.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_quotes_QuotesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_quotes_QuotesModule.js.html">modules/quotes/QuotesModule.js</a>, <a href="modules_quotes_QuotesModule.js.html#line1011">line 1011</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

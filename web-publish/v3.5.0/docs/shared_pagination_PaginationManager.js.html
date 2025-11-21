@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> shared/pagination/PaginationManager.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>shared/pagination/PaginationManager.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * PAGINATION MANAGER - Gestionnaire de pagination réutilisable
+ * ========================================
+ *
+ * Classe utilitaire pour gérer la pagination des tableaux de données.
+ * Peut être réutilisée dans tous les modules (Materials, Clients, Suppliers, Quotes, Invoices).
+ *
+ * Fonctionnalités :
+ * - Pagination configurable (10/25/50/100 items par page)
+ * - Navigation entre les pages (Précédent/Suivant)
+ * - Navigation directe vers une page spécifique
+ * - Génération automatique des numéros de page avec ellipses
+ * - Préservation des filtres lors des changements de page
+ * - Affichage du statut "Affichage X-Y sur Z items"
+ *
+ * @class PaginationManager
+ * @version 1.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+class PaginationManager {
+  /**
+   * Crée une instance de PaginationManager.
+   *
+   * @param {Object} config - Configuration de la pagination
+   * @param {string} config.infoElementId - ID de l'élément affichant les infos (ex: "Affichage 1-25 sur 100")
+   * @param {string} config.controlsElementId - ID de l'élément contenant les boutons de pagination
+   * @param {string} [config.itemsPerPageSelectId] - ID du select "items par page" (optionnel)
+   * @param {Function} config.onPageChange - Callback appelé lors du changement de page
+   * @param {number} [config.defaultItemsPerPage=25] - Nombre d'items par page par défaut
+   */
+  constructor(config) {
+    this.config = config;
+
+    /**
+     * État actuel de la pagination.
+     * @type {Object}
+     */
+    this.state = {
+      currentPage: 1,
+      itemsPerPage: config.defaultItemsPerPage || 25,
+      totalItems: 0,
+      totalPages: 0
+    };
+
+    // Attacher le listener pour le select items-per-page si fourni
+    if (config.itemsPerPageSelectId) {
+      const select = document.getElementById(config.itemsPerPageSelectId);
+      if (select) {
+        select.addEventListener('change', (e) => {
+          this.setItemsPerPage(parseInt(e.target.value));
+        });
+      }
+    }
+  }
+
+  /**
+   * Définit le nombre d'items par page et réinitialise à la page 1.
+   * @param {number} itemsPerPage - Nombre d'items par page
+   */
+  setItemsPerPage(itemsPerPage) {
+    this.state.itemsPerPage = itemsPerPage;
+    this.state.currentPage = 1;
+    this.config.onPageChange();
+  }
+
+  /**
+   * Change de page (direction relative).
+   * @param {number} direction - Direction: -1 pour précédent, 1 pour suivant
+   */
+  changePage(direction) {
+    const newPage = this.state.currentPage + direction;
+    if (newPage >= 1 &amp;&amp; newPage &lt;= this.state.totalPages) {
+      this.state.currentPage = newPage;
+      this.config.onPageChange();
+    }
+  }
+
+  /**
+   * Va à une page spécifique.
+   * @param {number} pageNumber - Numéro de page (1-indexed)
+   */
+  goToPage(pageNumber) {
+    if (pageNumber >= 1 &amp;&amp; pageNumber &lt;= this.state.totalPages) {
+      this.state.currentPage = pageNumber;
+      this.config.onPageChange();
+    }
+  }
+
+  /**
+   * Calcule les données paginées à partir d'un tableau complet.
+   * @param {Array} allItems - Tous les items (filtrés ou non)
+   * @returns {Object} - { paginatedItems, startIndex, endIndex }
+   */
+  paginate(allItems) {
+    // Mettre à jour l'état
+    this.state.totalItems = allItems.length;
+    this.state.totalPages = Math.ceil(allItems.length / this.state.itemsPerPage);
+
+    // S'assurer que currentPage est dans les limites
+    if (this.state.currentPage > this.state.totalPages &amp;&amp; this.state.totalPages > 0) {
+      this.state.currentPage = this.state.totalPages;
+    }
+    if (this.state.currentPage &lt; 1) {
+      this.state.currentPage = 1;
+    }
+
+    // Calculer les indices
+    const startIndex = (this.state.currentPage - 1) * this.state.itemsPerPage;
+    const endIndex = startIndex + this.state.itemsPerPage;
+    const paginatedItems = allItems.slice(startIndex, endIndex);
+
+    return {
+      paginatedItems,
+      startIndex,
+      endIndex: startIndex + paginatedItems.length
+    };
+  }
+
+  /**
+   * Met à jour l'affichage des contrôles de pagination.
+   * @param {number} totalItems - Nombre total d'items
+   * @param {number} displayedCount - Nombre d'items affichés sur la page actuelle
+   * @param {string} itemName - Nom des items (ex: "matériaux", "clients", "fournisseurs")
+   */
+  updateControls(totalItems, displayedCount, itemName = 'items') {
+    // Mettre à jour l'info de pagination
+    const infoElement = document.getElementById(this.config.infoElementId);
+    if (infoElement) {
+      if (totalItems === 0) {
+        infoElement.textContent = `Aucun ${itemName}`;
+      } else {
+        const startIndex = (this.state.currentPage - 1) * this.state.itemsPerPage + 1;
+        const endIndex = startIndex + displayedCount - 1;
+        infoElement.textContent = `Affichage ${startIndex}-${endIndex} sur ${totalItems} ${itemName}`;
+      }
+    }
+
+    // Mettre à jour les boutons de pagination
+    const controlsElement = document.getElementById(this.config.controlsElementId);
+    if (controlsElement &amp;&amp; totalItems > 0) {
+      const prevDisabled = this.state.currentPage === 1 ? 'disabled' : '';
+      const nextDisabled = this.state.currentPage === this.state.totalPages ? 'disabled' : '';
+
+      // Générer les numéros de page
+      const pageNumbers = this.generatePageNumbers();
+
+      // Note: les onclick utilisent window[uniqueId] pour permettre l'appel depuis le HTML
+      const uniqueId = this.config.uniqueId || 'paginationManager';
+
+      controlsElement.innerHTML = `
+        &lt;button class="btn btn-sm btn-outline-primary" ${prevDisabled} onclick="window.${uniqueId}.changePage(-1)">
+          &lt;i class="fas fa-chevron-left">&lt;/i> Précédent
+        &lt;/button>
+        ${pageNumbers.map(page => {
+          if (page === '...') {
+            return '&lt;span class="mx-1">...&lt;/span>';
+          }
+          const active = page === this.state.currentPage ? 'btn-primary' : 'btn-outline-primary';
+          return `&lt;button class="btn btn-sm ${active}" onclick="window.${uniqueId}.goToPage(${page})">${page}&lt;/button>`;
+        }).join('')}
+        &lt;button class="btn btn-sm btn-outline-primary" ${nextDisabled} onclick="window.${uniqueId}.changePage(1)">
+          Suivant &lt;i class="fas fa-chevron-right">&lt;/i>
+        &lt;/button>
+      `;
+    } else if (controlsElement) {
+      controlsElement.innerHTML = '';
+    }
+  }
+
+  /**
+   * Génère les numéros de page à afficher (max 7 pages visibles avec ellipses).
+   * Logique d'affichage intelligente:
+   * - Si total &lt;= 7: afficher toutes les pages
+   * - Sinon: afficher 1 ... pages_autour_de_current ... total
+   * @returns {Array} - Array de numéros de page et ellipses ('...')
+   */
+  generatePageNumbers() {
+    const pages = [];
+    const total = this.state.totalPages;
+    const current = this.state.currentPage;
+
+    if (total &lt;= 7) {
+      // Afficher toutes les pages si &lt;= 7
+      for (let i = 1; i &lt;= total; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Toujours afficher la première page
+      pages.push(1);
+
+      if (current > 3) {
+        pages.push('...');
+      }
+
+      // Pages autour de la page actuelle
+      const start = Math.max(2, current - 1);
+      const end = Math.min(total - 1, current + 1);
+
+      for (let i = start; i &lt;= end; i++) {
+        pages.push(i);
+      }
+
+      if (current &lt; total - 2) {
+        pages.push('...');
+      }
+
+      // Toujours afficher la dernière page
+      pages.push(total);
+    }
+
+    return pages;
+  }
+
+  /**
+   * Obtient la page actuelle.
+   * @returns {number}
+   */
+  getCurrentPage() {
+    return this.state.currentPage;
+  }
+
+  /**
+   * Obtient le nombre d'items par page.
+   * @returns {number}
+   */
+  getItemsPerPage() {
+    return this.state.itemsPerPage;
+  }
+
+  /**
+   * Réinitialise la pagination à la page 1.
+   */
+  reset() {
+    this.state.currentPage = 1;
+  }
+}
+
+export default PaginationManager;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

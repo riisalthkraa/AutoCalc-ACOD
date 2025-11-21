@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Templates Excel AutoCalc OptiDevis - Importez vos clients, fournisseurs et catalogue matériaux en 1 clic">
+    <title>Templates & Catalogues - AutoCalc OptiDevis</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .template-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        .template-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition-normal);
+        }
+        .template-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+        }
+        .template-card:hover::before {
+            transform: scaleX(1);
+        }
+        .template-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .feature-list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gray);
+            border-bottom: 1px solid var(--gray-lighter);
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li i {
+            color: var(--success);
+            font-size: 1.25rem;
+        }
+        .info-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid var(--primary-solid);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link active">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh; padding: 8rem 0 4rem;">
+        <div class="container">
+            <div class="text-center" style="max-width: 900px; margin: 0 auto;">
+                <div class="badge mb-2">
+                    <i class="fas fa-file-excel"></i>
+                    Nouveauté v3.5.0
+                </div>
+                <h1>Templates Excel & Catalogues Prêts à l'Emploi</h1>
+                <p style="font-size: 1.25rem; color: var(--gray); margin-bottom: 2rem;">
+                    Gagnez un temps précieux avec nos templates Excel optimisés.
+                    Importez vos clients, fournisseurs et catalogue matériaux en 1 clic.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
+                    <div class="glass-card text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-users" style="color: var(--primary-solid);"></i>
+                        </div>
+                        <div style="font-size: 1.125rem; font-weight: 600;">Template Clients</div>
+                    </div>
+                    <div class="glass-card text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-truck" style="color: var(--primary-solid);"></i>
+                        </div>
+                        <div style="font-size: 1.125rem; font-weight: 600;">Template Fournisseurs</div>
+                    </div>
+                    <div class="glass-card text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-boxes" style="color: var(--primary-solid);"></i>
+                        </div>
+                        <div style="font-size: 1.125rem; font-weight: 600;">Catalogue Matériaux</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Clients -->
+    <section id="clients" style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="template-card">
+                    <div class="template-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2 style="margin-bottom: 1rem;">Template Clients</h2>
+                    <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 2rem;">
+                        Importez rapidement l'intégralité de votre fichier clients dans AutoCalc OptiDevis
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Informations complètes</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Nom, prénom, entreprise, SIRET, TVA intracommunautaire</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Coordonnées détaillées</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Adresse complète, email, téléphone, fax</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Options commerciales</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Remise par défaut, conditions de paiement, notes</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Historique & statut</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Date de création, dernier achat, statut (actif/inactif)</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="docs/Template_Clients_AutoCalc.xlsx" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger le template
+                    </a>
+                </div>
+
+                <div>
+                    <div class="info-box">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-lightbulb" style="color: var(--warning); font-size: 1.5rem;"></i>
+                            Comment utiliser le template ?
+                        </h3>
+                        <ol style="padding-left: 1.5rem; line-height: 2; color: var(--gray);">
+                            <li>Téléchargez le fichier Excel ci-contre</li>
+                            <li>Remplissez les colonnes avec vos données clients</li>
+                            <li>Respectez le format des champs (dates, emails, codes postaux)</li>
+                            <li>Dans AutoCalc, allez dans <strong>Admin → Clients → Importer</strong></li>
+                            <li>Sélectionnez votre fichier et validez</li>
+                            <li>Vos clients sont automatiquement créés !</li>
+                        </ol>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i>
+                            Points d'attention
+                        </h4>
+                        <ul style="list-style: none; padding: 0; color: var(--gray);">
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-info-circle" style="color: var(--info); margin-top: 0.25rem;"></i>
+                                <div>Les emails doivent être valides et uniques</div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-info-circle" style="color: var(--info); margin-top: 0.25rem;"></i>
+                                <div>Les champs marqués * sont obligatoires</div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-info-circle" style="color: var(--info); margin-top: 0.25rem;"></i>
+                                <div>Format date : JJ/MM/AAAA (ex: 24/10/2025)</div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-info-circle" style="color: var(--info); margin-top: 0.25rem;"></i>
+                                <div>Ne modifiez pas les en-têtes de colonnes</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Fournisseurs -->
+    <section id="fournisseurs" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 6rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <div class="info-box" style="background: white;">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: var(--warning); font-size: 1.5rem;"></i>
+                            Avantages du template
+                        </h3>
+                        <ul style="list-style: none; padding: 0; color: var(--gray);">
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                                <div>
+                                    <strong>Gain de temps massif</strong><br>
+                                    <span style="font-size: 0.9rem;">Importez 100+ fournisseurs en quelques secondes au lieu de les saisir un par un</span>
+                                </div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                                <div>
+                                    <strong>Données structurées</strong><br>
+                                    <span style="font-size: 0.9rem;">Format standardisé pour une cohérence parfaite de vos données</span>
+                                </div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                                <div>
+                                    <strong>Migration facilitée</strong><br>
+                                    <span style="font-size: 0.9rem;">Passez d'un ancien logiciel à AutoCalc sans ressaisie manuelle</span>
+                                </div>
+                            </li>
+                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
+                                <i class="fas fa-check" style="color: var(--success); margin-top: 0.25rem;"></i>
+                                <div>
+                                    <strong>Validation automatique</strong><br>
+                                    <span style="font-size: 0.9rem;">Détection des erreurs avant import (emails invalides, champs manquants...)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">Champs inclus</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; color: var(--gray);">
+                            <div>• Nom fournisseur</div>
+                            <div>• Contact principal</div>
+                            <div>• Téléphone</div>
+                            <div>• Email</div>
+                            <div>• Adresse complète</div>
+                            <div>• SIRET</div>
+                            <div>• TVA Intracom.</div>
+                            <div>• Délai livraison</div>
+                            <div>• Conditions paiement</div>
+                            <div>• Site web</div>
+                            <div>• Évaluation (1-5★)</div>
+                            <div>• Notes internes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h2 style="margin-bottom: 1rem;">Template Fournisseurs</h2>
+                    <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 2rem;">
+                        Gérez efficacement vos fournisseurs avec toutes leurs informations centralisées
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Informations essentielles</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Coordonnées complètes, contacts, informations légales</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Délais & conditions</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Délai de livraison moyen, conditions de paiement (30j, 60j...)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Évaluation fournisseur</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Notez vos fournisseurs sur 5 étoiles pour mieux les comparer</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Notes personnalisées</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Zone de texte libre pour remarques et annotations</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="docs/Template_Fournisseurs_AutoCalc.xlsx" class="btn btn-accent btn-lg" style="width: 100%; justify-content: center;" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger le template
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Matériaux -->
+    <section id="materiaux" style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="template-card">
+                    <div class="template-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h2 style="margin-bottom: 1rem;">Catalogue Matériaux</h2>
+                    <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 2rem;">
+                        Créez votre catalogue personnalisé avec des métadonnées riches pour des calculs automatiques intelligents
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Informations produit complètes</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Nom, référence, code-barres EAN, catégorie, type</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Tarification flexible</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Prix HT/TTC, coût d'achat, marge automatique, TVA (5.5%, 10%, 20%)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Unités & conversions</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Unité de vente, coverage (m²/m³), piecesPerM², density, weight</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Gestion stock</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Quantité en stock, seuil d'alerte, disponibilité</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Métadonnées avancées</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Pour calculs automatiques m²→pièces, m³→kg, etc.</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="docs/Template_Materiaux_AutoCalc.xlsx" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border: none;" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger le catalogue
+                    </a>
+                </div>
+
+                <div>
+                    <div class="info-box">
+                        <h3 style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-brain" style="color: var(--primary-solid); font-size: 1.5rem;"></i>
+                            Calculs Intelligents
+                        </h3>
+                        <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                            Grâce aux métadonnées riches, AutoCalc OptiDevis calcule automatiquement les quantités nécessaires :
+                        </p>
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Exemple : Plaques BA13</div>
+                            <div style="color: var(--gray); font-size: 0.95rem; line-height: 1.8;">
+                                Vous saisissez : <strong>"75m² plaque BA13"</strong><br>
+                                → Détecte <code>piecesPerM² = 1.05</code><br>
+                                → Calcule : <code>75 × 1.05 = 78.75</code><br>
+                                → Arrondit au supérieur : <strong style="color: var(--success);">79 plaques</strong><br>
+                                <span style="color: var(--success); font-weight: 600;">✓ Gain de temps : 90%</span>
+                            </div>
+                        </div>
+
+                        <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Exemple : Béton</div>
+                            <div style="color: var(--gray); font-size: 0.95rem; line-height: 1.8;">
+                                Vous saisissez : <strong>"10m³ béton"</strong><br>
+                                → Détecte <code>density = 2400 kg/m³</code><br>
+                                → Calcule : <code>10 × 2400 = 24000 kg</code><br>
+                                → Convertit : <strong style="color: var(--success);">480 sacs de 50kg</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-md); margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1.5rem;">Champs de métadonnées</h4>
+                        <table style="width: 100%; font-size: 0.9rem;">
+                            <tr style="border-bottom: 1px solid var(--gray-lighter);">
+                                <td style="padding: 0.75rem 0; font-weight: 600;">coverage</td>
+                                <td style="padding: 0.75rem 0; color: var(--gray);">Surface/volume couverte par unité (m²/m³)</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--gray-lighter);">
+                                <td style="padding: 0.75rem 0; font-weight: 600;">piecesPerM²</td>
+                                <td style="padding: 0.75rem 0; color: var(--gray);">Nombre de pièces au m² (ex: 1.05 pour BA13)</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--gray-lighter);">
+                                <td style="padding: 0.75rem 0; font-weight: 600;">density</td>
+                                <td style="padding: 0.75rem 0; color: var(--gray);">Densité en kg/m³ (pour béton, ciment...)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.75rem 0; font-weight: 600;">unitWeight</td>
+                                <td style="padding: 0.75rem 0; color: var(--gray);">Poids unitaire (pour sacs, cartons...)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 0;">
+        <div class="container text-center">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Prêt à démarrer avec AutoCalc OptiDevis ?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.95;">
+                Téléchargez les templates et lancez-vous en quelques minutes
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-download"></i>
+                    Essai gratuit 60 jours
+                </a>
+                <a href="documentation.html" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-book"></i>
+                    Voir la documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        La solution intelligente de gestion de devis et factures pour les professionnels du bâtiment
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer-link">Support technique</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem;">
+                            <i class="fas fa-flag"></i> Made in France
+                        </span>
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem; background: var(--success);">
+                            <i class="fas fa-shield-alt"></i> RGPD
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

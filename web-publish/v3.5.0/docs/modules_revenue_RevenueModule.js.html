@@ -1,0 +1,1464 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/revenue/RevenueModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/revenue/RevenueModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * REVENUE MODULE - Chiffre d'affaires et rentabilité
+ * ========================================
+ *
+ * Module de gestion du chiffre d'affaires (CA) et de la rentabilité pour AutoCalc OptiDevis.
+ * Permet le suivi mensuel du CA, l'analyse de rentabilité avec marges et taux de marque,
+ * la génération de rapports PDF et l'export Excel.
+ *
+ * Architecture :
+ * Le module gère le CA et la rentabilité avec :
+ * - **CA mensuel** : Calcul automatique basé sur factures payées (paymentDate)
+ * - **Historique 12 mois** : Graphique Chart.js en barres avec évolution
+ * - **KPIs de rentabilité** : Marge moyenne, marge totale, taux de marque, couverture données
+ * - **Rapports PDF** : Génération de rapports mensuels détaillés avec jsPDF
+ * - **Exports Excel** : CA mensuel et rentabilité détaillée avec XLSX.js
+ * - **Dashboards** : 3 KPIs CA + 4 KPIs rentabilité affichés dans l'UI
+ *
+ * ==========================================
+ * CHIFFRE D'AFFAIRES (CA)
+ * ==========================================
+ *
+ * **Définition CA** :
+ * - Somme des factures payées (status = 'payée')
+ * - Date de référence : paymentDate (pas invoiceDate)
+ * - Montant : totalTTC (TTC = HT + TVA)
+ *
+ * **Calcul mensuel** :
+ * - Regroupement par année-mois (ex: "2025-01")
+ * - Pour chaque mois : totalHT, totalTVA, totalTTC, count (nombre factures)
+ * - Tri par ordre décroissant (mois le plus récent en premier)
+ *
+ * **Période affichée** :
+ * - 12 derniers mois glissants (rolling 12 months)
+ * - Exemple en janvier 2025 : février 2024 → janvier 2025
+ *
+ * ==========================================
+ * KPIs CHIFFRE D'AFFAIRES
+ * ==========================================
+ *
+ * **1. CA Mois en Cours** (#revenue-current-month) :
+ * - Somme totalTTC des factures payées du mois actuel
+ * - Exemple : "12 450,00 €"
+ * - Période : 1er jour du mois → dernier jour du mois (#revenue-current-period)
+ *
+ * **2. Nombre de Factures** (#revenue-invoices-count) :
+ * - Nombre de factures payées dans le mois en cours
+ * - Exemple : "24"
+ *
+ * **3. CA Mois Dernier** (#revenue-last-month) :
+ * - Somme totalTTC du mois précédent (M-1)
+ * - Exemple : "10 800,00 €"
+ * - Période : 1er jour M-1 → dernier jour M-1 (#revenue-last-period)
+ *
+ * **4. Évolution** (#revenue-evolution) :
+ * - Variation % entre mois actuel et mois précédent
+ * - Formule : ((CA_actuel - CA_précédent) / CA_précédent) × 100
+ * - Couleur : Vert si ≥0%, Rouge si &lt;0%
+ * - Exemple : "+15.3%" (vert) ou "-8.2%" (rouge)
+ *
+ * ==========================================
+ * RENTABILITÉ
+ * ==========================================
+ *
+ * **Prérequis pour calculs de rentabilité** :
+ * - Champ "purchaseCost" (coût d'achat HT) renseigné dans les matériaux
+ * - Factures payées du mois en cours avec quoteItems
+ * - Structure : invoice.quoteItems[].material.purchaseCost
+ *
+ * **Formules de rentabilité** :
+ *
+ * **Marge par article** :
+ * - Marge (€) = Prix Vente HT - (Coût Achat HT × Quantité)
+ * - Marge (%) = (Marge / Prix Vente HT) × 100
+ *
+ * **Taux de Marque** :
+ * - Coefficient multiplicateur = Prix Vente HT / Coût Achat Total
+ * - Exemple : ×2.5 signifie que le prix de vente est 2,5× le coût d'achat
+ *
+ * **Couverture Données** :
+ * - % articles avec coût d'achat renseigné
+ * - Couverture = (Articles avec coût / Total articles) × 100
+ * - Indique la fiabilité des calculs de rentabilité
+ *
+ * ==========================================
+ * KPIs RENTABILITÉ
+ * ==========================================
+ *
+ * **1. Marge Moyenne** (#profitability-avg-margin) :
+ * - Marge moyenne en % sur tous les articles du mois
+ * - Couleur : Vert ≥30%, Orange ≥15%, Rouge &lt;15%
+ * - Détail : "Sur X articles" (#profitability-avg-margin-detail)
+ *
+ * **2. Marge Totale** (#profitability-total-margin) :
+ * - Somme des marges en euros (€)
+ * - Couleur : Vert si >0, Rouge si ≤0
+ * - Détail : "Ce mois-ci" (#profitability-total-margin-detail)
+ *
+ * **3. Couverture Données** (#profitability-data-coverage) :
+ * - % articles avec coût d'achat (0-100%)
+ * - Couleur : Vert ≥80%, Orange ≥50%, Jaune &lt;50%
+ * - Détail : "X / Y articles" (#profitability-coverage-detail)
+ *
+ * **4. Taux de Marque** (#profitability-markup-rate) :
+ * - Coefficient multiplicateur (ex: ×2.15)
+ * - Couleur : Vert ≥2.0, Orange ≥1.5, Rouge &lt;1.5
+ * - Détail : "Coefficient multiplicateur" (#profitability-markup-detail)
+ *
+ * ==========================================
+ * GRAPHIQUE CHART.JS
+ * ==========================================
+ *
+ * **Graphique CA Mensuel** (#chart-monthly-revenue) :
+ * - Type : Barres (Chart.js type: 'bar')
+ * - Données : 12 derniers mois glissants
+ * - Axe X : Mois (ex: "jan. 2025", "fév. 2025")
+ * - Axe Y : CA TTC en euros
+ * - Couleur : Bootstrap primary (rgba(13, 110, 253, 0.7))
+ * - Options : responsive, beginAtZero, tooltip personnalisé
+ *
+ * **Tooltip personnalisé** :
+ * - Format : "CA: 12450.00 €"
+ * - Affiche le montant exact au survol
+ *
+ * **Gestion instance Chart** :
+ * - Stockage dans this.monthlyRevenueChart
+ * - Destruction avant recréation (évite fuites mémoire)
+ * - Synchronisation avec window.monthlyRevenueChart
+ *
+ * ==========================================
+ * TABLEAU HISTORIQUE
+ * ==========================================
+ *
+ * **Tableau CA Mensuel** (#revenue-history-table) :
+ * - 8 colonnes :
+ *   1. Mois (ex: "Janvier 2025")
+ *   2. Période (ex: "1 - 31 janv.")
+ *   3. Nb Factures
+ *   4. CA HT (€)
+ *   5. TVA (€)
+ *   6. CA TTC (€)
+ *   7. Évolution vs mois précédent (% avec icône ↗/↘)
+ *   8. Actions (bouton "Imprimer" pour rapport PDF)
+ *
+ * **Tri** : Ordre décroissant (mois le plus récent en haut)
+ *
+ * **Calcul évolution** :
+ * - Évolution = ((CA_mois - CA_mois_précédent) / CA_mois_précédent) × 100
+ * - Icône : ↗ (vert) si positif, ↘ (rouge) si négatif
+ * - Première ligne : "-" (pas de mois précédent)
+ *
+ * ==========================================
+ * RAPPORTS PDF MENSUELS
+ * ==========================================
+ *
+ * **Rapport mensuel** (printMonthReport) :
+ * - Génération avec jsPDF (orientation portrait, A4)
+ * - Contenu :
+ *   - En-tête : "Rapport CA Mensuel" + nom du mois
+ *   - Résumé : Nb factures, CA HT, TVA, CA TTC
+ *   - Tableau détaillé : Liste toutes les factures du mois
+ *   - Totaux : Récapitulatif HT/TVA/TTC
+ *   - Pied de page : Date/heure de génération
+ *
+ * **Structure tableau PDF** :
+ * - 4 colonnes : N° Facture, Date paiement, Client, Montant TTC
+ * - Pagination automatique si >270mm (nouvelle page)
+ * - Limitation texte : 20 car pour facture, 30 car pour client
+ *
+ * **Sauvegarde** :
+ * - Nom fichier : rapport-ca-YYYY-MM.pdf (ex: rapport-ca-2025-01.pdf)
+ * - Boîte de dialogue native Electron (save-pdf IPC)
+ * - Notification succès avec chemin complet
+ *
+ * ==========================================
+ * EXPORTS EXCEL
+ * ==========================================
+ *
+ * **Export CA Mensuel** (exportRevenueToExcel) :
+ * - Bibliothèque : XLSX.js (SheetJS)
+ * - Feuille unique : "CA Mensuel"
+ * - Colonnes : Mois, Année, Nb Factures, CA HT, TVA, CA TTC
+ * - Tri : Décroissant (mois récent en haut)
+ * - Largeurs colonnes : Optimisées pour lisibilité
+ * - Nom fichier : ca-mensuel-YYYY-MM.xlsx
+ *
+ * **Export Rentabilité** (exportProfitabilityToExcel) :
+ * - 2 feuilles :
+ *   1. "Rentabilité" : Détail par article/facture
+ *      - 10 colonnes : N° Facture, Client, Date, Article, Quantité, Prix Vente HT, Coût Achat HT, Marge €, Marge %, Taux de Marque
+ *   2. "Synthèse" : KPIs globaux
+ *      - Marge moyenne, Marge totale, Couverture, Taux de marque, etc.
+ * - Gestion N/A : Articles sans coût d'achat affichent "N/A"
+ * - Nom fichier : rentabilite-YYYY-MM.xlsx
+ *
+ * **Sauvegarde Excel** :
+ * - Génération base64 : XLSX.write(..., type: 'base64')
+ * - Boîte de dialogue Electron (save-excel IPC)
+ * - Notification succès avec chemin
+ *
+ * ==========================================
+ * IPC CHANNELS (ELECTRON)
+ * ==========================================
+ *
+ * **list-invoices** :
+ * - Retour : { success, invoices: [...] }
+ * - Utilisé pour charger toutes les factures
+ *
+ * **get-materials** :
+ * - Retour : { success, data: [...] }
+ * - Utilisé pour récupérer purchaseCost des matériaux
+ *
+ * **save-pdf** :
+ * - Paramètres : { base64, filename, title }
+ * - Retour : { success, path, message }
+ * - Sauvegarde rapport PDF mensuel
+ *
+ * **save-excel** :
+ * - Paramètres : { base64, filename, title }
+ * - Retour : { success, path, message }
+ * - Sauvegarde fichier Excel
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **InvoicesModule** : Données sources (factures avec quoteItems)
+ * - **MaterialsModule** : purchaseCost pour calculs de rentabilité
+ * - **Chart.js v3+** : Graphique barres CA mensuel
+ * - **jsPDF + jsPDF-autotable** : Génération rapports PDF
+ * - **XLSX.js (SheetJS)** : Exports Excel
+ * - **NotificationSystem** : Feedback utilisateur
+ * - **Bootstrap 5.3.3** : UI (badges, cards, tables)
+ *
+ * ==========================================
+ * ÉVÉNEMENTS
+ * ==========================================
+ *
+ * **Tab click** (#revenue-tab) :
+ * - Déclenche loadRevenueData() après 100ms
+ * - Rafraîchit toutes les données CA et rentabilité
+ *
+ * @module RevenueModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+
+class RevenueModule extends BaseModule {
+  /**
+   * Crée une instance du module Revenue.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('revenue', state, eventBus);
+
+    /**
+     * Instance Chart.js du graphique CA mensuel (12 mois glissants).
+     * Détruit et recréé à chaque loadRevenueData() pour éviter fuites mémoire.
+     *
+     * @type {Chart|null}
+     * @private
+     */
+    this.monthlyRevenueChart = null;
+
+    this.log('RevenueModule instantiated');
+  }
+
+  /**
+   * Initialise le module Revenue.
+   * Attache les event listeners, expose les fonctions globales et synchronise window.monthlyRevenueChart.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si l'initialisation échoue
+   */
+  async init() {
+    try {
+      this.log('Initializing RevenueModule...');
+
+      // Attacher les event listeners
+      this.attachEventListeners();
+
+      // Exposer les fonctions au scope global
+      this.exposeToGlobal({
+        loadRevenueData: this.loadRevenueData,
+        calculateMonthlyRevenue: this.calculateMonthlyRevenue,
+        updateRevenueKPIs: this.updateRevenueKPIs,
+        createMonthlyRevenueChart: this.createMonthlyRevenueChart,
+        displayRevenueHistory: this.displayRevenueHistory,
+        printRevenueReport: this.printRevenueReport,
+        printMonthReport: this.printMonthReport,
+        calculateProfitabilityKPIs: this.calculateProfitabilityKPIs,
+        updateProfitabilityKPIs: this.updateProfitabilityKPIs,
+        exportRevenueToExcel: this.exportRevenueToExcel,
+        exportProfitabilityToExcel: this.exportProfitabilityToExcel
+      });
+
+      // Exposer la variable Chart au scope global
+      window.monthlyRevenueChart = this.monthlyRevenueChart;
+
+      // Enregistrer l'auto-refresh de l'onglet
+      this.registerTabRefresh();
+
+      this.initialized = true;
+      this.log('RevenueModule initialized successfully');
+
+    } catch (error) {
+      this.error('Error initializing RevenueModule:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * 🆕 Enregistre l'onglet CA du Mois pour auto-refresh automatique.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerTabRefresh() {
+    if (!window.TabRefreshManager) {
+      this.warn('TabRefreshManager not available - tab auto-refresh disabled');
+      return;
+    }
+
+    // Onglet "CA du Mois"
+    window.TabRefreshManager.registerTab('revenue-tab', async (force) => {
+      this.log('🔄 Auto-refreshing CA du Mois...');
+      await this.loadRevenueTab();
+    }, {
+      ttl: 30000, // 30 secondes
+      label: 'CA du Mois'
+    });
+
+    this.log('✅ Tab auto-refresh registered');
+  }
+
+  /**
+   * Charge les données de l'onglet CA du Mois (alias pour loadRevenueData).
+   * Utilisé par TabRefreshManager pour auto-refresh.
+   *
+   * @private
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async loadRevenueTab() {
+    await this.loadRevenueData();
+  }
+
+  /**
+   * Attache les event listeners du module Revenue.
+   * Configure le rechargement automatique des données au clic sur l'onglet.
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Event listener pour charger les données CA quand on clique sur l'onglet
+    const revenueTab = this.getElement('#revenue-tab');
+    if (revenueTab) {
+      this.addDOMListener('#revenue-tab', 'click', () => {
+        setTimeout(() => this.loadRevenueData(), 100);
+      });
+      this.log('Event listener attached for Revenue tab');
+    }
+
+    // Bouton Export Excel (CA mensuel)
+    this.addDOMListener('#export-revenue-excel-btn', 'click', () => {
+      this.exportRevenueToExcel();
+    });
+
+    // Bouton Export Rentabilité Détaillée
+    this.addDOMListener('#export-profitability-excel-btn', 'click', () => {
+      this.exportProfitabilityToExcel();
+    });
+
+    // Bouton Imprimer le Rapport
+    this.addDOMListener('#print-revenue-report-btn', 'click', () => {
+      this.printRevenueReport();
+    });
+  }
+
+  // ==========================================
+  // CHIFFRE D'AFFAIRES MENSUEL
+  // ==========================================
+
+  /**
+   * Charge et affiche toutes les données CA et rentabilité.
+   * Méthode principale qui orchestre tous les calculs et affichages.
+   *
+   * Workflow :
+   * 1. Charge toutes les factures via IPC 'list-invoices'
+   * 2. Calcule CA mensuel (calculateMonthlyRevenue)
+   * 3. Met à jour KPIs CA (updateRevenueKPIs)
+   * 4. Crée graphique Chart.js (createMonthlyRevenueChart)
+   * 5. Affiche tableau historique (displayRevenueHistory)
+   * 6. Calcule KPIs rentabilité (calculateProfitabilityKPIs)
+   * 7. Met à jour KPIs rentabilité (updateProfitabilityKPIs)
+   *
+   * Déclenchée par :
+   * - Clic sur onglet #revenue-tab (attachEventListeners)
+   * - Appel manuel depuis d'autres modules
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  loadRevenueData = async () => {
+    console.log('[Revenue] Chargement des données CA...');
+
+    try {
+      const result = await this.invoke('list-invoices');
+
+      if (!result.success) {
+        console.error('[Revenue] Erreur lors du chargement des factures');
+        return;
+      }
+
+      const invoices = result.invoices || [];
+      const monthlyData = this.calculateMonthlyRevenue(invoices);
+
+      this.updateRevenueKPIs(monthlyData);
+      this.createMonthlyRevenueChart(monthlyData);
+      this.displayRevenueHistory(monthlyData);
+
+      // Calculer et afficher les KPI de rentabilité
+      const profitabilityData = await this.calculateProfitabilityKPIs(invoices);
+      this.updateProfitabilityKPIs(profitabilityData);
+
+      console.log('[Revenue] Données CA et rentabilité chargées avec succès');
+    } catch (error) {
+      console.error('[Revenue] Erreur chargement données:', error);
+    }
+  }
+
+  /**
+   * Calculer le CA mensuel (factures payées)
+   * @param {Array} invoices - Liste des factures
+   * @returns {Object} Données mensuelles regroupées
+   */
+  calculateMonthlyRevenue = (invoices) => {
+    const monthlyData = {};
+
+    // Grouper les factures payées par mois
+    invoices.forEach(inv => {
+      if (inv.status === 'payée' &amp;&amp; inv.paymentDate) {
+        const paymentDate = new Date(inv.paymentDate);
+        const year = paymentDate.getFullYear();
+        const month = paymentDate.getMonth();
+        const key = `${year}-${String(month + 1).padStart(2, '0')}`;
+
+        if (!monthlyData[key]) {
+          monthlyData[key] = {
+            year,
+            month,
+            invoices: [],
+            totalHT: 0,
+            totalTVA: 0,
+            totalTTC: 0,
+            count: 0
+          };
+        }
+
+        monthlyData[key].invoices.push(inv);
+        monthlyData[key].totalHT += inv.totals?.totalHT || 0;
+        monthlyData[key].totalTVA += inv.totals?.totalTVA || 0;
+        monthlyData[key].totalTTC += inv.totals?.totalTTC || 0;
+        monthlyData[key].count++;
+      }
+    });
+
+    return monthlyData;
+  }
+
+  /**
+   * Mettre à jour les KPIs de CA
+   * @param {Object} monthlyData - Données mensuelles
+   */
+  updateRevenueKPIs = (monthlyData) => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth();
+    const currentKey = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}`;
+
+    const lastMonth = new Date(currentYear, currentMonth - 1, 1);
+    const lastMonthKey = `${lastMonth.getFullYear()}-${String(lastMonth.getMonth() + 1).padStart(2, '0')}`;
+
+    // Mois en cours
+    const currentData = monthlyData[currentKey] || { totalTTC: 0, count: 0 };
+    const currentMonthEl = this.getElement('#revenue-current-month');
+    if (currentMonthEl) {
+      currentMonthEl.textContent = `${currentData.totalTTC.toFixed(2)} €`;
+    }
+
+    const invoicesCountEl = this.getElement('#revenue-invoices-count');
+    if (invoicesCountEl) {
+      invoicesCountEl.textContent = currentData.count;
+    }
+
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    const currentPeriodEl = this.getElement('#revenue-current-period');
+    if (currentPeriodEl) {
+      currentPeriodEl.textContent =
+        `${firstDay.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })} - ${lastDay.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+    }
+
+    // Mois dernier
+    const lastMonthData = monthlyData[lastMonthKey] || { totalTTC: 0 };
+    const lastMonthEl = this.getElement('#revenue-last-month');
+    if (lastMonthEl) {
+      lastMonthEl.textContent = `${lastMonthData.totalTTC.toFixed(2)} €`;
+    }
+
+    const lastMonthFirst = new Date(lastMonth.getFullYear(), lastMonth.getMonth(), 1);
+    const lastMonthLast = new Date(lastMonth.getFullYear(), lastMonth.getMonth() + 1, 0);
+    const lastPeriodEl = this.getElement('#revenue-last-period');
+    if (lastPeriodEl) {
+      lastPeriodEl.textContent =
+        `${lastMonthFirst.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })} - ${lastMonthLast.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+    }
+
+    // Évolution
+    const evolution = lastMonthData.totalTTC > 0
+      ? ((currentData.totalTTC - lastMonthData.totalTTC) / lastMonthData.totalTTC) * 100
+      : 0;
+    const evolutionEl = this.getElement('#revenue-evolution');
+    if (evolutionEl) {
+      evolutionEl.textContent = `${evolution >= 0 ? '+' : ''}${evolution.toFixed(1)}%`;
+      evolutionEl.style.color = evolution >= 0 ? '#198754' : '#dc3545';
+    }
+  }
+
+  /**
+   * Créer le graphique d'évolution du CA mensuel (Chart.js)
+   * @param {Object} monthlyData - Données mensuelles
+   */
+  createMonthlyRevenueChart = (monthlyData) => {
+    const ctx = this.getElement('#chart-monthly-revenue');
+    if (!ctx) return;
+
+    // Détruire le chart existant
+    if (this.monthlyRevenueChart) {
+      this.monthlyRevenueChart.destroy();
+    }
+
+    // Préparer les 12 derniers mois
+    const months = [];
+    const now = new Date();
+    for (let i = 11; i >= 0; i--) {
+      const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+      months.push({
+        label: date.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }),
+        key,
+        data: monthlyData[key] || { totalTTC: 0 }
+      });
+    }
+
+    this.monthlyRevenueChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: months.map(m => m.label),
+        datasets: [{
+          label: 'CA TTC (€)',
+          data: months.map(m => m.data.totalTTC),
+          backgroundColor: 'rgba(13, 110, 253, 0.7)',
+          borderColor: '#0d6efd',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { beginAtZero: true }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: (context) => `CA: ${context.parsed.y.toFixed(2)} €`
+            }
+          }
+        }
+      }
+    });
+
+    // Synchroniser avec window
+    window.monthlyRevenueChart = this.monthlyRevenueChart;
+  }
+
+  /**
+   * Afficher l'historique mensuel dans le tableau
+   * @param {Object} monthlyData - Données mensuelles
+   */
+  displayRevenueHistory = (monthlyData) => {
+    const tbody = this.getElement('#revenue-history-table');
+    if (!tbody) return;
+
+    // Trier les mois par ordre décroissant
+    const sortedKeys = Object.keys(monthlyData).sort().reverse();
+
+    if (sortedKeys.length === 0) {
+      tbody.innerHTML = '&lt;tr>&lt;td colspan="8" class="text-center text-muted">Aucune donnée disponible&lt;/td>&lt;/tr>';
+      return;
+    }
+
+    tbody.innerHTML = sortedKeys.map((key, index) => {
+      const data = monthlyData[key];
+      const date = new Date(data.year, data.month, 1);
+      const monthName = date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+      const firstDay = new Date(data.year, data.month, 1);
+      const lastDay = new Date(data.year, data.month + 1, 0);
+      const period = `${firstDay.toLocaleDateString('fr-FR', { day: 'numeric' })} - ${lastDay.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })}`;
+
+      // Calculer l'évolution vs mois précédent
+      let evolutionHtml = '-';
+      if (index &lt; sortedKeys.length - 1) {
+        const prevKey = sortedKeys[index + 1];
+        const prevData = monthlyData[prevKey];
+        if (prevData.totalTTC > 0) {
+          const evolution = ((data.totalTTC - prevData.totalTTC) / prevData.totalTTC) * 100;
+          const color = evolution >= 0 ? 'success' : 'danger';
+          const icon = evolution >= 0 ? '↗' : '↘';
+          evolutionHtml = `&lt;span class="text-${color}">${icon} ${evolution.toFixed(1)}%&lt;/span>`;
+        }
+      }
+
+      return `
+        &lt;tr>
+          &lt;td>&lt;strong>${monthName.charAt(0).toUpperCase() + monthName.slice(1)}&lt;/strong>&lt;/td>
+          &lt;td>${period}&lt;/td>
+          &lt;td>${data.count}&lt;/td>
+          &lt;td>${data.totalHT.toFixed(2)} €&lt;/td>
+          &lt;td>${data.totalTVA.toFixed(2)} €&lt;/td>
+          &lt;td>&lt;strong>${data.totalTTC.toFixed(2)} €&lt;/strong>&lt;/td>
+          &lt;td>${evolutionHtml}&lt;/td>
+          &lt;td>
+            &lt;button class="btn btn-sm btn-info btn-icon" onclick="printMonthReport('${key}')" data-bs-toggle="tooltip" title="Générer le rapport PDF du mois">
+              &lt;i class="fas fa-print">&lt;/i>
+            &lt;/button>
+          &lt;/td>
+        &lt;/tr>
+      `;
+    }).join('');
+  }
+
+  /**
+   * Imprimer le rapport CA complet
+   */
+  printRevenueReport = () => {
+    window.print();
+  }
+
+  /**
+   * Imprimer le rapport d'un mois spécifique (PDF)
+   * @param {string} monthKey - Clé du mois (YYYY-MM)
+   */
+  printMonthReport = async (monthKey) => {
+    try {
+      const result = await this.invoke('list-invoices');
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des factures');
+        return;
+      }
+
+      const invoices = result.invoices || [];
+      const [year, month] = monthKey.split('-');
+
+      const monthInvoices = invoices.filter(inv => {
+        if (inv.status !== 'payée' || !inv.paymentDate) return false;
+        const paymentDate = new Date(inv.paymentDate);
+        return paymentDate.getFullYear() === parseInt(year) &amp;&amp;
+               paymentDate.getMonth() === parseInt(month) - 1;
+      });
+
+      if (monthInvoices.length === 0) {
+        NotificationSystem.warning('Aucune facture pour ce mois');
+        return;
+      }
+
+      // Générer un rapport PDF pour ce mois
+      const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+      const monthName = monthDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+      const firstDay = new Date(parseInt(year), parseInt(month) - 1, 1);
+      const lastDay = new Date(parseInt(year), parseInt(month), 0);
+
+      NotificationSystem.info(`Génération du rapport pour ${monthName}...`);
+
+      // Calculer les totaux
+      let totalHT = 0;
+      let totalTVA = 0;
+      let totalTTC = 0;
+
+      monthInvoices.forEach(inv => {
+        totalHT += inv.totals?.totalHT || 0;
+        totalTVA += inv.totals?.totalTVA || 0;
+        totalTTC += inv.totals?.totalTTC || 0;
+      });
+
+      // Générer le PDF avec jsPDF
+      const { jsPDF } = window.jspdf;
+      if (!jsPDF) {
+        NotificationSystem.error("Bibliothèque jsPDF non chargée !");
+        return;
+      }
+
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+
+      // En-tête
+      doc.setFontSize(20);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Rapport CA Mensuel', 105, 20, { align: 'center' });
+
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'normal');
+      doc.text(monthName, 105, 30, { align: 'center' });
+
+      doc.setFontSize(10);
+      doc.text(`Période: ${firstDay.toLocaleDateString('fr-FR')} au ${lastDay.toLocaleDateString('fr-FR')}`, 105, 37, { align: 'center' });
+
+      // Résumé
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Résumé du mois:', 20, 50);
+
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'normal');
+      doc.text(`Nombre de factures payées: ${monthInvoices.length}`, 20, 58);
+      doc.text(`CA HT: ${totalHT.toFixed(2)} €`, 20, 65);
+      doc.text(`TVA: ${totalTVA.toFixed(2)} €`, 20, 72);
+      doc.setFont('helvetica', 'bold');
+      doc.text(`CA TTC: ${totalTTC.toFixed(2)} €`, 20, 79);
+
+      // Liste des factures
+      let yPos = 95;
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Détail des factures:', 20, yPos);
+
+      yPos += 8;
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'normal');
+
+      // En-têtes de tableau
+      doc.setFont('helvetica', 'bold');
+      doc.text('N° Facture', 20, yPos);
+      doc.text('Date paiement', 60, yPos);
+      doc.text('Client', 95, yPos);
+      doc.text('Montant TTC', 165, yPos);
+      yPos += 2;
+      doc.line(20, yPos, 190, yPos);
+      yPos += 5;
+
+      doc.setFont('helvetica', 'normal');
+
+      // Lignes de factures
+      monthInvoices.forEach((inv, index) => {
+        if (yPos > 270) {
+          doc.addPage();
+          yPos = 20;
+        }
+
+        const invoiceNumber = inv.number || 'N/A';
+        const paymentDate = new Date(inv.paymentDate).toLocaleDateString('fr-FR');
+        const clientName = inv.clientInfo?.name || 'N/A';
+        const amount = (inv.totals?.totalTTC || 0).toFixed(2) + ' €';
+
+        doc.text(invoiceNumber.substring(0, 20), 20, yPos);
+        doc.text(paymentDate, 60, yPos);
+        doc.text(clientName.substring(0, 30), 95, yPos);
+        doc.text(amount, 165, yPos);
+
+        yPos += 6;
+      });
+
+      // Pied de page - Totaux
+      if (yPos > 250) {
+        doc.addPage();
+        yPos = 20;
+      }
+
+      yPos += 5;
+      doc.line(20, yPos, 190, yPos);
+      yPos += 7;
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(11);
+      doc.text('TOTAL HT:', 130, yPos);
+      doc.text(`${totalHT.toFixed(2)} €`, 165, yPos);
+      yPos += 6;
+      doc.text('TOTAL TVA:', 130, yPos);
+      doc.text(`${totalTVA.toFixed(2)} €`, 165, yPos);
+      yPos += 6;
+      doc.setFontSize(12);
+      doc.text('TOTAL TTC:', 130, yPos);
+      doc.text(`${totalTTC.toFixed(2)} €`, 165, yPos);
+
+      // Date de génération
+      yPos += 15;
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'italic');
+      const now = new Date();
+      doc.text(`Rapport généré le ${now.toLocaleDateString('fr-FR')} à ${now.toLocaleTimeString('fr-FR')}`, 105, yPos, { align: 'center' });
+
+      // Sauvegarder avec boîte de dialogue
+      const pdfBase64 = doc.output('datauristring').split(',')[1];
+      const filename = `rapport-ca-${year}-${String(month).padStart(2, '0')}.pdf`;
+
+      const saveResult = await this.invoke('save-pdf', {
+        base64: pdfBase64,
+        filename: filename,
+        title: 'Exporter le rapport CA mensuel'
+      });
+
+      if (saveResult.success) {
+        NotificationSystem.success(`Rapport sauvegardé: ${saveResult.path}`);
+      } else {
+        NotificationSystem.warning(saveResult.message || 'Sauvegarde annulée');
+      }
+
+    } catch (error) {
+      console.error('[Revenue] Erreur impression rapport:', error);
+      NotificationSystem.error('Erreur lors de la génération du rapport');
+    }
+  }
+
+  // ==========================================
+  // CALCULS DE RENTABILITÉ ET KPI AVANCÉS
+  // ==========================================
+
+  /**
+   * Calcule les KPIs de rentabilité à partir des factures et matériaux.
+   * Analyse les factures payées du mois en cours et calcule marges, taux de marque et couverture données.
+   *
+   * Workflow :
+   * 1. Charge matériaux via IPC 'get-materials' (pour purchaseCost)
+   * 2. Filtre factures payées du mois en cours
+   * 3. Pour chaque article des factures :
+   *    - Récupère purchaseCost depuis material
+   *    - Calcule marge : priceHT - (purchaseCost × quantity)
+   *    - Cumule totalMargin, totalPriceHT, totalPurchaseCost
+   * 4. Calcule KPIs finaux :
+   *    - Marge moyenne % = (totalMargin / totalPriceHT) × 100
+   *    - Taux de marque = totalPriceHT / totalPurchaseCost
+   *    - Couverture = (articles avec coût / total articles) × 100
+   *
+   * @public
+   * @async
+   * @param {Array} invoices - Liste de toutes les factures
+   * @returns {Promise&lt;Object>} KPIs de rentabilité
+   *
+   * Structure du retour :
+   * - totalMargin: Marge brute totale en euros
+   * - avgMarginPercent: Marge moyenne en pourcentage
+   * - dataCoverage: Taux de couverture (0-100%)
+   * - markupRate: Taux de marque (coefficient multiplicateur)
+   * - itemsWithCost: Nombre d'articles avec coût d'achat
+   * - totalItems: Nombre total d'articles vendus
+   * - totalPriceHT: CA HT total
+   * - totalPurchaseCost: Coût d'achat total
+   *
+   * @example
+   * const kpis = await calculateProfitabilityKPIs(allInvoices);
+   * // → { avgMarginPercent: 28.5, totalMargin: 3450.00, dataCoverage: 85.2, markupRate: 2.15, ... }
+   */
+  calculateProfitabilityKPIs = async (invoices) => {
+    try {
+      // Charger la liste des matériaux pour obtenir les purchaseCost
+      const materialsResult = await this.invoke('get-materials');
+
+      // Validation des données reçues
+      if (!materialsResult || !materialsResult.success || !Array.isArray(materialsResult.data)) {
+        console.error('[Profitability] Erreur chargement matériaux');
+        return {
+          totalMargin: 0,
+          avgMarginPercent: 0,
+          dataCoverage: 0,
+          markupRate: 0,
+          itemsWithCost: 0,
+          totalItems: 0,
+          totalPriceHT: 0,
+          totalPurchaseCost: 0
+        };
+      }
+
+      const materials = materialsResult.data;
+
+      // Créer un dictionnaire des matériaux par nom pour un accès rapide
+      const materialsMap = {};
+      materials.forEach(mat => {
+        materialsMap[mat.name] = mat;
+      });
+
+      // Filtrer les factures du mois en cours (payées uniquement)
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = now.getMonth();
+
+      const currentMonthInvoices = invoices.filter(inv => {
+        if (inv.status !== 'payée' || !inv.paymentDate) return false;
+        const paymentDate = new Date(inv.paymentDate);
+        return paymentDate.getFullYear() === currentYear &amp;&amp;
+               paymentDate.getMonth() === currentMonth;
+      });
+
+      // Initialisation des variables de calcul
+      let totalMargin = 0;
+      let totalPriceHT = 0;
+      let totalPurchaseCost = 0;
+      let itemsWithCost = 0;  // Articles ayant un coût d'achat
+      let totalItems = 0;      // Total des articles vendus
+
+      // Parcourir toutes les factures payées du mois
+      currentMonthInvoices.forEach(invoice => {
+        // IMPORTANT: Les factures utilisent "quoteItems" et non "items"
+        const items = invoice.quoteItems || invoice.items || [];
+
+        if (!Array.isArray(items) || items.length === 0) {
+          return;
+        }
+
+        items.forEach(item => {
+          totalItems++;
+
+          // Le nom du matériau est dans item.material.name (structure imbriquée)
+          const materialName = item.material?.name || item.materialName;
+          const purchaseCost = item.material?.purchaseCost;
+
+          // Si pas de nom ou pas de coût d'achat, on ignore cet article pour le calcul
+          if (!materialName || purchaseCost === null || purchaseCost === undefined) {
+            return;
+          }
+
+          // Calcul de la marge pour cet article
+          const priceHT = item.priceHT;
+          const itemPurchaseCost = purchaseCost * item.quantity;
+
+          totalPriceHT += priceHT;
+          totalPurchaseCost += itemPurchaseCost;
+          totalMargin += (priceHT - itemPurchaseCost);
+
+          itemsWithCost++;
+        });
+      });
+
+      // Calcul des indicateurs finaux
+      const dataCoverage = totalItems > 0 ? (itemsWithCost / totalItems) * 100 : 0;
+      const avgMarginPercent = totalPriceHT > 0 ? (totalMargin / totalPriceHT) * 100 : 0;
+      const markupRate = totalPurchaseCost > 0 ? totalPriceHT / totalPurchaseCost : 0;
+
+      return {
+        totalMargin,
+        avgMarginPercent,
+        dataCoverage,
+        markupRate,
+        itemsWithCost,
+        totalItems,
+        totalPriceHT,
+        totalPurchaseCost
+      };
+
+    } catch (error) {
+      console.error('[Profitability] Erreur calcul KPI:', error);
+      return {
+        totalMargin: 0,
+        avgMarginPercent: 0,
+        dataCoverage: 0,
+        markupRate: 0,
+        itemsWithCost: 0,
+        totalItems: 0,
+        totalPriceHT: 0,
+        totalPurchaseCost: 0
+      };
+    }
+  }
+
+  /**
+   * Mettre à jour l'interface avec les KPI de rentabilité
+   *
+   * Met à jour les 4 cartes d'indicateurs dans l'onglet "CA du Mois" :
+   * - Marge Moyenne (% avec code couleur : vert >30%, orange >15%, rouge &lt;15%)
+   * - Marge Totale (en euros)
+   * - Couverture Données (% articles avec coût d'achat)
+   * - Taux de Marque (coefficient multiplicateur)
+   *
+   * @param {Object} kpiData - Données calculées par calculateProfitabilityKPIs()
+   */
+  updateProfitabilityKPIs = (kpiData) => {
+    // Marge Moyenne
+    const avgMarginEl = this.getElement('#profitability-avg-margin');
+    const avgMarginDetailEl = this.getElement('#profitability-avg-margin-detail');
+
+    if (avgMarginEl) {
+      if (kpiData.itemsWithCost > 0) {
+        avgMarginEl.textContent = `${kpiData.avgMarginPercent.toFixed(1)}%`;
+        avgMarginEl.style.color = kpiData.avgMarginPercent >= 30 ? '#198754' :
+                                   kpiData.avgMarginPercent >= 15 ? '#fd7e14' : '#dc3545';
+      } else {
+        avgMarginEl.textContent = 'N/A';
+        avgMarginEl.style.color = '#6c757d';
+      }
+    }
+
+    if (avgMarginDetailEl) {
+      if (kpiData.itemsWithCost > 0) {
+        avgMarginDetailEl.textContent = `Sur ${kpiData.itemsWithCost} articles`;
+      } else {
+        avgMarginDetailEl.textContent = 'Aucune donnée de coût';
+      }
+    }
+
+    // Marge Totale
+    const totalMarginEl = this.getElement('#profitability-total-margin');
+    const totalMarginDetailEl = this.getElement('#profitability-total-margin-detail');
+
+    if (totalMarginEl) {
+      if (kpiData.itemsWithCost > 0) {
+        totalMarginEl.textContent = `${kpiData.totalMargin.toFixed(2)} €`;
+        totalMarginEl.style.color = kpiData.totalMargin > 0 ? '#198754' : '#dc3545';
+      } else {
+        totalMarginEl.textContent = 'N/A';
+        totalMarginEl.style.color = '#6c757d';
+      }
+    }
+
+    if (totalMarginDetailEl) {
+      if (kpiData.itemsWithCost > 0) {
+        totalMarginDetailEl.textContent = 'Ce mois-ci';
+      } else {
+        totalMarginDetailEl.textContent = 'Aucune donnée de coût';
+      }
+    }
+
+    // Couverture Données
+    const coverageEl = this.getElement('#profitability-data-coverage');
+    const coverageDetailEl = this.getElement('#profitability-coverage-detail');
+
+    if (coverageEl) {
+      coverageEl.textContent = `${kpiData.dataCoverage.toFixed(1)}%`;
+      coverageEl.style.color = kpiData.dataCoverage >= 80 ? '#198754' :
+                               kpiData.dataCoverage >= 50 ? '#fd7e14' : '#ffc107';
+    }
+
+    if (coverageDetailEl) {
+      coverageDetailEl.textContent = `${kpiData.itemsWithCost} / ${kpiData.totalItems} articles`;
+    }
+
+    // Taux de Marque
+    const markupEl = this.getElement('#profitability-markup-rate');
+    const markupDetailEl = this.getElement('#profitability-markup-detail');
+
+    if (markupEl) {
+      if (kpiData.itemsWithCost > 0 &amp;&amp; kpiData.markupRate > 0) {
+        markupEl.textContent = `×${kpiData.markupRate.toFixed(2)}`;
+        markupEl.style.color = kpiData.markupRate >= 2 ? '#198754' :
+                               kpiData.markupRate >= 1.5 ? '#fd7e14' : '#dc3545';
+      } else {
+        markupEl.textContent = 'N/A';
+        markupEl.style.color = '#6c757d';
+      }
+    }
+
+    if (markupDetailEl) {
+      if (kpiData.itemsWithCost > 0 &amp;&amp; kpiData.markupRate > 0) {
+        markupDetailEl.textContent = `Coefficient multiplicateur`;
+      } else {
+        markupDetailEl.textContent = 'Aucune donnée de coût';
+      }
+    }
+  }
+
+  // ==========================================
+  // EXPORT EXCEL - RENTABILITÉ
+  // ==========================================
+
+  /**
+   * Exporter les données de CA mensuel vers Excel
+   */
+  exportRevenueToExcel = async () => {
+    try {
+      NotificationSystem.info('Génération du fichier Excel...');
+
+      const result = await this.invoke('list-invoices');
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des factures');
+        return;
+      }
+
+      const invoices = result.invoices || [];
+      const monthlyData = this.calculateMonthlyRevenue(invoices);
+
+      // Préparer les données pour Excel
+      const excelData = [];
+
+      // Ligne d'en-tête
+      excelData.push(['Mois', 'Année', 'Nb Factures', 'CA HT (€)', 'TVA (€)', 'CA TTC (€)']);
+
+      // Trier les mois par date décroissante
+      const sortedKeys = Object.keys(monthlyData).sort().reverse();
+
+      sortedKeys.forEach(key => {
+        const data = monthlyData[key];
+        const monthName = new Date(data.year, data.month, 1).toLocaleDateString('fr-FR', { month: 'long' });
+
+        excelData.push([
+          monthName.charAt(0).toUpperCase() + monthName.slice(1),
+          data.year,
+          data.count,
+          data.totalHT.toFixed(2),
+          data.totalTVA.toFixed(2),
+          data.totalTTC.toFixed(2)
+        ]);
+      });
+
+      // Créer le workbook et la feuille
+      const XLSX = window.XLSX;
+      if (!XLSX) {
+        NotificationSystem.error('Bibliothèque XLSX non chargée');
+        return;
+      }
+
+      const wb = XLSX.utils.book_new();
+      const ws = XLSX.utils.aoa_to_sheet(excelData);
+
+      // Appliquer un style aux en-têtes (largeur de colonnes)
+      ws['!cols'] = [
+        { wch: 15 },  // Mois
+        { wch: 10 },  // Année
+        { wch: 12 },  // Nb Factures
+        { wch: 15 },  // CA HT
+        { wch: 12 },  // TVA
+        { wch: 15 }   // CA TTC
+      ];
+
+      XLSX.utils.book_append_sheet(wb, ws, 'CA Mensuel');
+
+      // Générer le fichier
+      const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'base64' });
+
+      // Sauvegarder avec l'API Electron
+      const now = new Date();
+      const filename = `ca-mensuel-${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}.xlsx`;
+
+      const saveResult = await this.invoke('save-excel', {
+        base64: wbout,
+        filename: filename,
+        title: 'Exporter CA Mensuel'
+      });
+
+      if (saveResult.success) {
+        NotificationSystem.success(`Fichier Excel sauvegardé: ${saveResult.path}`);
+      } else {
+        NotificationSystem.warning(saveResult.message || 'Export annulé');
+      }
+
+    } catch (error) {
+      console.error('[Export] Erreur export Excel CA:', error);
+      NotificationSystem.error('Erreur lors de l\'export Excel');
+    }
+  }
+
+  /**
+   * Exporter les données de rentabilité détaillées vers Excel
+   */
+  exportProfitabilityToExcel = async () => {
+    try {
+      NotificationSystem.info('Génération du fichier Excel de rentabilité...');
+
+      const result = await this.invoke('list-invoices');
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des factures');
+        return;
+      }
+
+      const invoices = result.invoices || [];
+
+      // Charger les matériaux
+      const materialsResult = await this.invoke('get-materials');
+
+      if (!materialsResult || !materialsResult.success || !Array.isArray(materialsResult.data)) {
+        NotificationSystem.error('Erreur lors du chargement des matériaux');
+        return;
+      }
+
+      const materials = materialsResult.data;
+
+      const materialsMap = {};
+      materials.forEach(mat => {
+        materialsMap[mat.name] = mat;
+      });
+
+      // Filtrer les factures du mois en cours
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = now.getMonth();
+
+      const currentMonthInvoices = invoices.filter(inv => {
+        if (inv.status !== 'payée' || !inv.paymentDate) return false;
+        const paymentDate = new Date(inv.paymentDate);
+        return paymentDate.getFullYear() === currentYear &amp;&amp;
+               paymentDate.getMonth() === currentMonth;
+      });
+
+      // Préparer les données pour Excel
+      const excelData = [];
+
+      // Ligne d'en-tête
+      excelData.push([
+        'N° Facture',
+        'Client',
+        'Date Paiement',
+        'Article',
+        'Quantité',
+        'Prix Vente HT (€)',
+        'Coût Achat HT (€)',
+        'Marge (€)',
+        'Marge (%)',
+        'Taux de Marque'
+      ]);
+
+      // Remplir les données
+      currentMonthInvoices.forEach(invoice => {
+        // Les factures ont un champ "quoteItems", pas "items"
+        const items = invoice.quoteItems || invoice.items || [];
+
+        if (!Array.isArray(items)) return;
+
+        items.forEach(item => {
+          // Dans quoteItems, le nom du matériau est dans item.material.name
+          const materialName = item.material?.name || item.materialName;
+          const purchaseCostValue = item.material?.purchaseCost;
+          const priceHT = item.priceHT;
+
+          if (!materialName) return;
+
+          let purchaseCost = 'N/A';
+          let itemPurchaseCost = 'N/A';
+          let margin = 'N/A';
+          let marginPercent = 'N/A';
+          let markupRate = 'N/A';
+
+          if (purchaseCostValue !== null &amp;&amp; purchaseCostValue !== undefined) {
+            purchaseCost = purchaseCostValue.toFixed(2);
+            const totalItemCost = purchaseCostValue * item.quantity;
+            itemPurchaseCost = totalItemCost.toFixed(2);
+            const marginValue = priceHT - totalItemCost;
+            margin = marginValue.toFixed(2);
+            marginPercent = ((marginValue / priceHT) * 100).toFixed(1);
+            markupRate = (priceHT / totalItemCost).toFixed(2);
+          }
+
+          excelData.push([
+            invoice.number || 'N/A',
+            invoice.clientInfo?.name || 'N/A',
+            new Date(invoice.paymentDate).toLocaleDateString('fr-FR'),
+            materialName,
+            item.quantity,
+            priceHT.toFixed(2),
+            purchaseCost,
+            margin,
+            marginPercent,
+            markupRate
+          ]);
+        });
+      });
+
+      // Créer le workbook et la feuille
+      const XLSX = window.XLSX;
+      if (!XLSX) {
+        NotificationSystem.error('Bibliothèque XLSX non chargée');
+        return;
+      }
+
+      const wb = XLSX.utils.book_new();
+      const ws = XLSX.utils.aoa_to_sheet(excelData);
+
+      // Appliquer un style aux en-têtes (largeur de colonnes)
+      ws['!cols'] = [
+        { wch: 15 },  // N° Facture
+        { wch: 20 },  // Client
+        { wch: 15 },  // Date Paiement
+        { wch: 30 },  // Article
+        { wch: 10 },  // Quantité
+        { wch: 15 },  // Prix Vente HT
+        { wch: 15 },  // Coût Achat HT
+        { wch: 12 },  // Marge
+        { wch: 12 },  // Marge %
+        { wch: 15 }   // Taux de Marque
+      ];
+
+      XLSX.utils.book_append_sheet(wb, ws, 'Rentabilité');
+
+      // Ajouter une feuille de synthèse
+      const kpiData = await this.calculateProfitabilityKPIs(invoices);
+      const summaryData = [
+        ['KPI', 'Valeur'],
+        ['Marge Moyenne (%)', kpiData.avgMarginPercent.toFixed(1)],
+        ['Marge Totale (€)', kpiData.totalMargin.toFixed(2)],
+        ['Couverture Données (%)', kpiData.dataCoverage.toFixed(1)],
+        ['Taux de Marque', kpiData.markupRate.toFixed(2)],
+        ['Articles avec coût', kpiData.itemsWithCost],
+        ['Total articles', kpiData.totalItems],
+        ['CA HT Total (€)', kpiData.totalPriceHT.toFixed(2)],
+        ['Coût Achat Total (€)', kpiData.totalPurchaseCost.toFixed(2)]
+      ];
+
+      const wsSummary = XLSX.utils.aoa_to_sheet(summaryData);
+      wsSummary['!cols'] = [{ wch: 25 }, { wch: 20 }];
+      XLSX.utils.book_append_sheet(wb, wsSummary, 'Synthèse');
+
+      // Générer le fichier
+      const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'base64' });
+
+      // Sauvegarder avec l'API Electron
+      const filename = `rentabilite-${currentYear}-${String(currentMonth + 1).padStart(2, '0')}.xlsx`;
+
+      const saveResult = await this.invoke('save-excel', {
+        base64: wbout,
+        filename: filename,
+        title: 'Exporter Rentabilité Détaillée'
+      });
+
+      if (saveResult.success) {
+        NotificationSystem.success(`Fichier Excel sauvegardé: ${saveResult.path}`);
+      } else {
+        NotificationSystem.warning(saveResult.message || 'Export annulé');
+      }
+
+    } catch (error) {
+      console.error('[Export] Erreur export Excel rentabilité:', error);
+      NotificationSystem.error('Erreur lors de l\'export Excel');
+    }
+  }
+}
+
+export default RevenueModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

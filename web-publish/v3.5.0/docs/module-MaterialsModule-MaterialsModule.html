@@ -1,0 +1,3682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> MaterialsModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>MaterialsModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-MaterialsModule.html">MaterialsModule</a>~</span>MaterialsModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="MaterialsModule">
+        <a class="href-link" href="#MaterialsModule">#</a>
+        
+        <span class="code-name">
+            
+                new MaterialsModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module Materials.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements pour communication inter-modules</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line131">line 131</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="addMaterial">
+        <a class="href-link" href="#addMaterial">#</a>
+        
+        <span class="code-name">
+            
+                addMaterial<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Prépare le formulaire pour ajouter un nouveau matériau.</p>
+<p>Workflow :</p>
+<ol>
+<li>Nettoyer le formulaire (clearMaterialForm)</li>
+<li>Passer en mode ajout (editMode = false)</li>
+<li>Changer le titre du modal → &quot;Ajouter un matériau&quot;</li>
+<li>Afficher le modal Bootstrap</li>
+<li>Focus sur le champ &quot;Nom&quot; après 500ms</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1598">line 1598</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur "Ajouter un matériau" (onglet Catalogue)
+materialsModule.addMaterial();
+// → Modal s'ouvre avec formulaire vide</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="applyMaterialFilters">
+        <a class="href-link" href="#applyMaterialFilters">#</a>
+        
+        <span class="code-name">
+            
+                applyMaterialFilters<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Applique les filtres sur les matériaux dans l'onglet Catalogue.</p>
+<p>Filtres cumulatifs appliqués (logique ET) :</p>
+<ol>
+<li>Recherche textuelle : nom, référence, type (insensible à la casse)</li>
+<li>Filtre par type : catégorie exacte</li>
+<li>Filtre par fournisseur : nom exact (si this.currentSupplierFilter est défini)</li>
+</ol>
+<p>Appelle populateMaterialsTable() avec les matériaux filtrés.
+Loggue le nombre de résultats trouvés.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1095">line 1095</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur tape "carrelage" dans la recherche et sélectionne type "Sol"
+this.applyMaterialFilters();
+// → Affiche uniquement les matériaux de type "Sol" contenant "carrelage"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="askDeleteMaterial">
+        <a class="href-link" href="#askDeleteMaterial">#</a>
+        
+        <span class="code-name">
+            
+                askDeleteMaterial<span class="signature">(id)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Demande confirmation pour supprimer un matériau.</p>
+<p>Workflow :</p>
+<ol>
+<li>Trouver le matériau par ID</li>
+<li>Si non trouvé : erreur + notification</li>
+<li>Stocker l'ID dans this.materialToDeleteId (utilisé lors de la confirmation)</li>
+<li>Mettre à jour le message du modal de confirmation avec le nom du matériau</li>
+<li>Afficher le modal Bootstrap de confirmation</li>
+</ol>
+<p>L'utilisateur peut ensuite confirmer (→ deleteMaterial) ou annuler.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+|
+
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID du matériau à supprimer</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1904">line 1904</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur "Supprimer" d'un matériau
+materialsModule.askDeleteMaterial(42);
+// → Modal de confirmation s'affiche : "Êtes-vous sûr de vouloir supprimer 'Carrelage XYZ' ?"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="bulkDeleteMaterials">
+        <a class="href-link" href="#bulkDeleteMaterials">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                bulkDeleteMaterials<span class="signature">(materialIds)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Suppression groupée de matériaux</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>materialIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;(string|number)></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>IDs des matériaux à supprimer</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2328">line 2328</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Objet contenant les matériaux supprimés et les callbacks undo/redo</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;Object></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="bulkExportMaterials">
+        <a class="href-link" href="#bulkExportMaterials">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                bulkExportMaterials<span class="signature">(materialIds)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Exportation groupée de matériaux</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>materialIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;(string|number)></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>IDs des matériaux à exporter</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2373">line 2373</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="clearMaterialForm">
+        <a class="href-link" href="#clearMaterialForm">#</a>
+        
+        <span class="code-name">
+            
+                clearMaterialForm<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Nettoie le formulaire matériau et le ferme.</p>
+<p>Workflow :</p>
+<ol>
+<li>Réinitialiser tous les champs du formulaire (vider les valeurs)</li>
+<li>Garder la TVA à 20% par défaut</li>
+<li>Passer en mode ajout (editMode = false)</li>
+<li>Fermer le modal Bootstrap</li>
+<li>Réinitialiser le titre → &quot;Ajouter un matériau&quot;</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2040">line 2040</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Annuler" ou après sauvegarde réussie
+materialsModule.clearMaterialForm();
+// → Formulaire vidé et fermé</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="clearSupplierFilter">
+        <a class="href-link" href="#clearSupplierFilter">#</a>
+        
+        <span class="code-name">
+            
+                clearSupplierFilter<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Réinitialise le filtre par fournisseur.</p>
+<p>Supprime le filtre fournisseur actif, masque l'indicateur visuel,
+et réapplique les autres filtres.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1203">line 1203</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>materialsModule.clearSupplierFilter();
+// → Affiche à nouveau tous les matériaux (selon autres filtres actifs)</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="deleteMaterial">
+        <a class="href-link" href="#deleteMaterial">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                deleteMaterial<span class="signature">(id)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Supprime un matériau après confirmation.</p>
+<p>Workflow :</p>
+<ol>
+<li>Valider l'ID (doit être non null/undefined)</li>
+<li>Récupérer le sessionToken pour autorisation</li>
+<li>Appeler IPC 'deleteMaterial' avec sessionToken + ID</li>
+<li>Si succès :
+<ul>
+<li>Notification de succès</li>
+<li>Émettre événement 'materials:deleted'</li>
+<li>Fermer le modal de confirmation</li>
+<li>Invalider le cache DataCache</li>
+<li>Recharger les matériaux depuis le backend</li>
+<li>Rafraîchir la table</li>
+<li>Réinitialiser this.materialToDeleteId</li>
+</ul>
+</li>
+<li>Si échec : afficher notification d'erreur</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+|
+
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID du matériau à supprimer</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1958">line 1958</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>materials:deleted - Émis quand un matériau est supprimé avec succès</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur confirme la suppression
+await materialsModule.deleteMaterial(42);
+// → Matériau #42 supprimé, table rafraîchie, modal fermé</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="editMaterial">
+        <a class="href-link" href="#editMaterial">#</a>
+        
+        <span class="code-name">
+            
+                editMaterial<span class="signature">(id)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Charge un matériau existant dans le formulaire pour édition.</p>
+<p>Workflow :</p>
+<ol>
+<li>Trouver le matériau par ID dans window.materials ou this.materials</li>
+<li>Si non trouvé : erreur + notification</li>
+<li>Passer en mode édition (editMode = true)</li>
+<li>Changer le titre du modal → &quot;Modifier le matériau&quot;</li>
+<li>Remplir tous les champs du formulaire avec les valeurs existantes</li>
+<li>Calculer le prix TTC à partir du HT pour l'affichage</li>
+<li>Afficher le modal Bootstrap</li>
+</ol>
+<p>Note : L'ID est stocké dans un champ caché (#material-id) pour
+identifier le matériau lors de la sauvegarde.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+|
+
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID du matériau à éditer</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1648">line 1648</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur "Modifier" d'un matériau
+materialsModule.editMaterial(42);
+// → Modal s'ouvre avec formulaire prérempli du matériau #42</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="filterBySupplier">
+        <a class="href-link" href="#filterBySupplier">#</a>
+        
+        <span class="code-name">
+            
+                filterBySupplier<span class="signature">(supplierName)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Filtre les matériaux par fournisseur.</p>
+<p>Cette méthode est généralement appelée depuis le SuppliersModule
+lorsque l'utilisateur clique sur &quot;Voir les matériaux&quot; d'un fournisseur.</p>
+<p>Workflow :</p>
+<ol>
+<li>Définir this.currentSupplierFilter = supplierName</li>
+<li>Réinitialiser les autres filtres (recherche, type)</li>
+<li>Appliquer les filtres (applyMaterialFilters)</li>
+<li>Afficher un indicateur visuel du filtre actif</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>supplierName</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Nom du fournisseur à filtrer (ou null pour réinitialiser)</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1138">line 1138</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Depuis SuppliersModule
+materialsModule.filterBySupplier('Leroy Merlin');
+// → Affiche uniquement les matériaux du fournisseur "Leroy Merlin"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="generateCSV">
+        <a class="href-link" href="#generateCSV">#</a>
+        
+        <span class="code-name">
+            
+                generateCSV<span class="signature">(materials)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Génère un CSV depuis un tableau de matériaux</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>materials</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;Object></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Matériaux à exporter</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2392">line 2392</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Contenu CSV</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module Materials.</p>
+<p>Workflow d'initialisation :</p>
+<ol>
+<li>Charger les matériaux depuis le backend (ou cache)</li>
+<li>Populer les filtres de type (onglets Recherche et Catalogue)</li>
+<li>Populer la table des matériaux (onglet Catalogue)</li>
+<li>Attacher les event listeners (recherche, filtres, boutons)</li>
+<li>Exposer les fonctions au scope global (compatibilité legacy)</li>
+<li>Initialiser les modals Bootstrap (suppression, formulaire)</li>
+<li>Initialiser le calcul automatique HT/TTC</li>
+<li>Écouter les mises à jour des fournisseurs</li>
+<li>Populer la liste des fournisseurs dans le formulaire</li>
+<li>Émettre l'événement 'materials:initialized'</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line268">line 268</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const materialsModule = new MaterialsModule(state, eventBus);
+await materialsModule.init();
+// → Matériaux chargés et interface prête</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="loadMaterials">
+        <a class="href-link" href="#loadMaterials">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                loadMaterials<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Charge les matériaux depuis le backend ou le cache.</p>
+<p>Workflow :</p>
+<ol>
+<li>Vérifier le cache DataCache (validité : 5 minutes)</li>
+<li>Si cache valide : charger depuis cache, exposer à window.materials, émettre event</li>
+<li>Si cache invalide/expiré : appeler IPC 'get-materials'</li>
+<li>Parser la réponse (peut être tableau direct ou {data: [...]} ou {materials: [...]})</li>
+<li><strong>Protection critique</strong> : si backend retourne [], mais matériaux déjà chargés → GARDER les existants</li>
+<li>Sinon : stocker dans this.materials + state.materials + window.materials</li>
+<li>Mettre en cache (si non vide)</li>
+<li>Émettre événement 'materials:loaded'</li>
+<li>Populer les filtres de type</li>
+</ol>
+<p>Protection contre l'écrasement accidentel :
+Si le backend retourne un tableau vide mais que des matériaux sont déjà chargés
+(dans window.materials ou this.materials), on conserve les matériaux existants
+au lieu de les écraser. Ceci évite la perte de données en cas d'erreur backend temporaire.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line789">line 789</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>materials:loaded - Émis quand les matériaux sont chargés avec succès</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>await materialsModule.loadMaterials();
+// → Matériaux chargés depuis cache ou backend
+// → window.materials, this.materials, state.materials sont synchronisés</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="loadMaterialsIntoTable">
+        <a class="href-link" href="#loadMaterialsIntoTable">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                loadMaterialsIntoTable<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Charge les matériaux dans la table (callback onglet).</p>
+<p>Méthode de convenance qui combine le chargement des matériaux
+et la population de la table en une seule opération.
+Utilisée comme callback lors de l'ouverture de l'onglet Catalogue.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line997">line 997</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="populateMaterialsTable">
+        <a class="href-link" href="#populateMaterialsTable">#</a>
+        
+        <span class="code-name">
+            
+                populateMaterialsTable<span class="signature">(filteredMaterials<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Populate la table des matériaux dans l'onglet Catalogue avec pagination.</p>
+<p>Affiche tous les matériaux ou un sous-ensemble filtré dans le tableau HTML.
+Les matériaux sont triés par ID numérique croissant pour un affichage cohérent.
+Applique la pagination si activée.</p>
+<p>Colonnes affichées :
+ID, Nom, Prix TTC, Rendement, Stock, Code-barres, Type, Fournisseur,
+Densité, Pièces/m², Unité, TVA, Actions (Modifier/Supprimer)</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>filteredMaterials</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array.&lt;Object></code>
+|
+
+<code class="param-type">null</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          null
+      
+      </td>
+  
+
+  <td class="description last"><p>Matériaux filtrés à afficher.
+Si null, affiche tous les matériaux.</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line899">line 899</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Examples</h5>
+    
+    
+        <pre class="prettyprint"><code>// Afficher tous les matériaux
+materialsModule.populateMaterialsTable();</code></pre>
+    
+
+    
+        <pre class="prettyprint"><code>// Afficher uniquement les matériaux filtrés
+const filtered = materials.filter(m => m.type === 'Carrelage');
+materialsModule.populateMaterialsTable(filtered);</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="populateSuppliersDatalist">
+        <a class="href-link" href="#populateSuppliersDatalist">#</a>
+        
+        <span class="code-name">
+            
+                populateSuppliersDatalist<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Populate le select des fournisseurs dans le formulaire matériau.</p>
+<p>Récupère la liste des fournisseurs depuis window.suppliers ou state.suppliers,
+génère les options du select HTML, et les trie alphabétiquement.</p>
+<p>Si aucun fournisseur n'est disponible, affiche &quot;Aucun fournisseur&quot;.
+Préserve la valeur actuellement sélectionnée si elle existe toujours.</p>
+<p>Cette méthode est appelée :</p>
+<ul>
+<li>Lors de l'initialisation du module</li>
+<li>Lors de l'événement 'suppliers:loaded'</li>
+<li>Lors de l'événement 'suppliers:updated'</li>
+</ul>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2096">line 2096</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Après chargement des fournisseurs
+this.populateSuppliersDatalist();
+// → Select contient "Aucun fournisseur", "Fournisseur A", "Fournisseur B", ...</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="saveMaterial">
+        <a class="href-link" href="#saveMaterial">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                saveMaterial<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Sauvegarde un matériau (ajout ou modification).</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupérer toutes les valeurs du formulaire</li>
+<li>Valider les champs obligatoires (nom, type)</li>
+<li>Si échec validation : afficher erreur, arrêter</li>
+<li>Récupérer le sessionToken pour autorisation</li>
+<li>Si editMode = true :
+<ul>
+<li>Appeler IPC 'updateMaterial' avec sessionToken + données</li>
+<li>Si succès : notification + événement 'materials:updated'</li>
+</ul>
+</li>
+<li>Si editMode = false :
+<ul>
+<li>Appeler IPC 'addMaterial' avec sessionToken + données</li>
+<li>Si succès : notification + événement 'materials:added'</li>
+</ul>
+</li>
+<li>Invalider le cache DataCache</li>
+<li>Recharger les matériaux depuis le backend</li>
+<li>Rafraîchir la table</li>
+<li>Nettoyer et fermer le formulaire</li>
+</ol>
+<p>En cas d'erreur : afficher notification d'erreur, garder le modal ouvert.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1752">line 1752</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>materials:added - Émis quand un matériau est ajouté avec succès</li>
+            
+                <li>materials:updated - Émis quand un matériau est modifié avec succès</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur remplit le formulaire et clique "Enregistrer"
+await materialsModule.saveMaterial();
+// → Matériau sauvegardé, table rafraîchie, modal fermé</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="selectMaterial">
+        <a class="href-link" href="#selectMaterial">#</a>
+        
+        <span class="code-name">
+            
+                selectMaterial<span class="signature">(id)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Sélectionne un matériau pour l'ajouter au devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Trouver le matériau par ID dans window.materials ou this.materials</li>
+<li>Vérifier que les matériaux sont chargés (sinon afficher erreur + recharger)</li>
+<li>Stocker le matériau dans state.selectedMaterial + window.selectedMaterial</li>
+<li>Tracker la recherche pour analytics (si window.trackMaterialSearch existe)</li>
+<li>Rafraîchir le dashboard Vendeur si on est sur l'onglet Accueil</li>
+<li>Nettoyer les champs de recherche</li>
+<li>Mettre à jour l'affichage du matériau sélectionné</li>
+<li>Mettre à jour l'aperçu du calcul (via window.updateCalculationPreview)</li>
+<li>Émettre événement 'materials:selected'</li>
+<li>Afficher une notification de succès</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+|
+
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID du matériau à sélectionner</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1462">line 1462</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>materials:selected - Émis quand un matériau est sélectionné avec succès</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Depuis l'onglet Recherche
+materialsModule.selectMaterial(42);
+// → Matériau #42 sélectionné, affiché dans le dashboard, prêt pour calcul devis</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="updateSelectedMaterialDisplay">
+        <a class="href-link" href="#updateSelectedMaterialDisplay">#</a>
+        
+        <span class="code-name">
+            
+                updateSelectedMaterialDisplay<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Met à jour l'affichage du matériau sélectionné dans le dashboard Vendeur.</p>
+<p>Affiche les informations du matériau actuellement sélectionné :</p>
+<ul>
+<li>Nom</li>
+<li>Référence</li>
+<li>Unité</li>
+<li>Prix unitaire HT</li>
+<li>TVA</li>
+<li>Prix unitaire TTC (calculé)</li>
+</ul>
+<p>Si aucun matériau n'est sélectionné, affiche &quot;Aucun&quot;.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line1551">line 1551</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Après sélection d'un matériau
+this.updateSelectedMaterialDisplay();
+// → Affiche "Matériau sélectionné : Carrelage XYZ | Réf : 12345 | ..."</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="viewMaterialDetails">
+        <a class="href-link" href="#viewMaterialDetails">#</a>
+        
+        <span class="code-name">
+            
+                viewMaterialDetails<span class="signature">(id)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Affiche les détails complets d'un matériau dans un modal.</p>
+<p>Workflow :</p>
+<ol>
+<li>Chercher le matériau par ID dans la liste</li>
+<li>Si non trouvé : afficher erreur, arrêter</li>
+<li>Calculer le prix TTC depuis le prix HT et la TVA</li>
+<li>Remplir tous les champs du modal de détails</li>
+<li>Afficher le modal 'materialDetailsModal'</li>
+</ol>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+|
+
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>ID du matériau</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_materials_MaterialsModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_materials_MaterialsModule.js.html">modules/materials/MaterialsModule.js</a>, <a href="modules_materials_MaterialsModule.js.html#line2156">line 2156</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur "Voir détails" pour le matériau #5
+viewMaterialDetails(5);
+// → Modal affiché avec toutes les informations du matériau</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

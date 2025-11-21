@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/backup/BackupModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/backup/BackupModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * BACKUP MODULE - Gestion des sauvegardes
+ * ========================================
+ *
+ * Module de gestion complète des backups pour l'application AutoCalc OptiDevis.
+ * Permet la sauvegarde et la restauration complète de toutes les données (matériaux,
+ * devis, factures, clients, fournisseurs, configuration).
+ *
+ * Architecture :
+ * Le module gère un système de backup/restore complet avec :
+ * - **Création de backups** : Snapshot complet de tous les fichiers JSON de données
+ * - **Liste des backups** : Affichage de tous les backups disponibles avec métadonnées
+ * - **Restauration** : Restauration complète avec confirmation et rechargement
+ * - **Gestion de modals** : 2 modals Bootstrap (sélection + confirmation)
+ * - **Authentification** : Réservé aux administrateurs uniquement
+ *
+ * ==========================================
+ * FONCTIONNALITÉS
+ * ==========================================
+ *
+ * **1. Création de Backup Complet** :
+ * - Sauvegarde tous les fichiers JSON de données dans un fichier .zip horodaté
+ * - Format : backup-YYYY-MM-DD-HHMMSS.zip
+ * - Fichiers sauvegardés :
+ *   - materials.json (catalogue)
+ *   - suppliers.json (fournisseurs)
+ *   - quotes.json (devis)
+ *   - invoices.json (factures)
+ *   - clients.json (clients)
+ *   - users.json (utilisateurs)
+ *   - config.json (configuration)
+ * - Affichage de la taille du backup (en MB)
+ * - Stockage dans dossier backups/ du répertoire app
+ *
+ * **2. Liste des Backups Disponibles** :
+ * - Récupération de tous les backups .zip du dossier backups/
+ * - Affichage dans tableau avec 4 colonnes :
+ *   1. Nom du fichier (ex: backup-2025-01-15-143022.zip)
+ *   2. Date formatée (ex: "15/01/2025 à 14:30:22")
+ *   3. Taille formatée (ex: "2.45 MB")
+ *   4. Bouton "Restaurer"
+ * - Tri par date décroissante (plus récent en premier)
+ *
+ * **3. Processus de Restauration** :
+ * - Workflow à double confirmation :
+ *   1. Utilisateur clique "Restaurer Backup"
+ *   2. Modal 1 (#restoreBackupModal) : Liste des backups disponibles
+ *   3. Utilisateur sélectionne un backup et clique "Restaurer"
+ *   4. Modal 2 (#confirmRestoreBackupModal) : Confirmation avec nom du fichier
+ *   5. Utilisateur confirme → Restauration via IPC
+ *   6. Fermeture automatique du modal
+ *   7. Rechargement des données (invalidation cache + reload modules)
+ *   8. Notification de succès
+ *
+ * **4. Sécurité et Authentification** :
+ * - Vérification du token admin pour toutes les opérations
+ * - Utilise window.getAuthToken() exposé par AuthModule
+ * - Bloquer les opérations si utilisateur non connecté ou non admin
+ * - Protection IPC côté backend (vérification token)
+ *
+ * ==========================================
+ * IPC CHANNELS (ELECTRON)
+ * ==========================================
+ *
+ * **create-full-backup** :
+ * - Paramètres : authToken
+ * - Retour : { success: boolean, size: number, message?: string }
+ * - Action : Crée un fichier .zip avec tous les JSON de données
+ *
+ * **list-backups** :
+ * - Paramètres : authToken
+ * - Retour : { success: boolean, backups: Array&lt;Object>, message?: string }
+ * - Structure backup : { filename, path, formattedDate, formattedSize, size, date }
+ * - Action : Liste tous les fichiers .zip du dossier backups/
+ *
+ * **restore-backup-from-file** :
+ * - Paramètres : authToken, backupPath (chemin complet du fichier)
+ * - Retour : { success: boolean, message?: string }
+ * - Action : Restaure tous les fichiers JSON depuis le .zip
+ *
+ * ==========================================
+ * MODALS BOOTSTRAP
+ * ==========================================
+ *
+ * **Modal Liste des Backups** (#restoreBackupModal) :
+ * - Titre : "Restaurer un Backup"
+ * - Contenu : Tableau avec liste des backups disponibles
+ * - Tableau : #backup-list-table-body
+ * - Boutons : "Restaurer" sur chaque ligne → appelle confirmRestoreBackup()
+ * - Fermeture automatique à la sélection d'un backup
+ *
+ * **Modal Confirmation** (#confirmRestoreBackupModal) :
+ * - Titre : "Confirmer la Restauration"
+ * - Message : "Êtes-vous sûr de vouloir restaurer le backup suivant ?"
+ * - Affichage : Nom du fichier dans #confirmRestoreBackupFilename
+ * - Boutons : "Confirmer" (#confirmRestoreBackupBtn), "Annuler"
+ * - Action "Confirmer" → appelle performRestore()
+ * - Délai d'ouverture : 300ms après fermeture du modal de liste (évite conflit)
+ *
+ * ==========================================
+ * WORKFLOW COMPLET - CRÉATION DE BACKUP
+ * ==========================================
+ *
+ * 1. Utilisateur clique bouton "Créer Backup Complet" (#create-backup-btn)
+ * 2. createFullBackup() appelé
+ * 3. Vérification authToken (getAuthToken())
+ * 4. Si non connecté/non admin → NotificationSystem.error + return
+ * 5. Affichage notification info "Création du backup en cours..."
+ * 6. Envoi IPC 'create-full-backup' avec authToken
+ * 7. Backend crée fichier .zip avec tous les JSON
+ * 8. Retour { success, size }
+ * 9. Calcul taille en MB : (size / 1024 / 1024).toFixed(2)
+ * 10. NotificationSystem.success avec taille
+ * 11. Émission événement 'backup-created' avec { size, sizeMB }
+ *
+ * ==========================================
+ * WORKFLOW COMPLET - RESTAURATION DE BACKUP
+ * ==========================================
+ *
+ * **Phase 1 : Affichage de la liste** (restoreFullBackup)
+ * 1. Utilisateur clique "Restaurer Backup" (#restore-backup-btn)
+ * 2. Vérification authToken
+ * 3. Envoi IPC 'list-backups' avec authToken
+ * 4. Retour { success, backups: [...] }
+ * 5. Génération HTML du tableau (#backup-list-table-body)
+ * 6. Affichage modal #restoreBackupModal via Bootstrap
+ * 7. Émission événement 'restore-modal-opened' avec { backupsCount }
+ *
+ * **Phase 2 : Confirmation** (confirmRestoreBackup)
+ * 8. Utilisateur clique "Restaurer" sur une ligne
+ * 9. Stockage temporaire : this.pendingRestoreBackupPath, this.pendingRestoreFilename
+ * 10. Fermeture modal liste (bootstrap.Modal.getInstance().hide())
+ * 11. Mise à jour #confirmRestoreBackupFilename avec nom du fichier
+ * 12. Attente 300ms (délai pour fermeture complète du modal liste)
+ * 13. Affichage modal confirmation #confirmRestoreBackupModal
+ *
+ * **Phase 3 : Exécution** (performRestore)
+ * 14. Utilisateur clique "Confirmer" (#confirmRestoreBackupBtn)
+ * 15. Récupération pendingRestoreBackupPath et pendingRestoreFilename
+ * 16. Vérification non nulles (sinon error + return)
+ * 17. Vérification authToken
+ * 18. Fermeture modal confirmation
+ * 19. NotificationSystem.info "Restauration en cours... Veuillez patienter."
+ * 20. Envoi IPC 'restore-backup-from-file' avec authToken + backupPath
+ * 21. Backend extrait .zip et écrase tous les JSON
+ * 22. Si succès :
+ *     - NotificationSystem.success "Restauration réussie ! Rechargement..."
+ *     - DataCache.invalidate('materials')
+ *     - window.loadMaterials() (rechargement MaterialsModule)
+ *     - window.populateMaterialsTable() (rafraîchissement UI)
+ *     - Émission événement 'backup-restored' avec { backupPath, filename }
+ *     - Réinitialisation pendingRestoreBackupPath et pendingRestoreFilename
+ * 23. Si erreur → NotificationSystem.error
+ *
+ * ==========================================
+ * ÉTAT TEMPORAIRE
+ * ==========================================
+ *
+ * **Variables de restauration** :
+ * - this.pendingRestoreBackupPath : Chemin complet du fichier .zip à restaurer
+ * - this.pendingRestoreFilename : Nom du fichier (affichage UI)
+ * - Réinitialisées après restauration réussie
+ * - Utilisées pour passer les données entre confirmRestoreBackup() et performRestore()
+ *
+ * ==========================================
+ * ÉVÉNEMENTS ÉMIS
+ * ==========================================
+ *
+ * **EventBus interne** :
+ * - 'backup-created' : Après création réussie (avec { size, sizeMB })
+ * - 'restore-modal-opened' : Après ouverture modal liste (avec { backupsCount })
+ * - 'backup-restored' : Après restauration réussie (avec { backupPath, filename })
+ *
+ * ==========================================
+ * INTÉGRATIONS
+ * ==========================================
+ *
+ * - **AuthModule** : Utilise window.getAuthToken() pour authentification admin
+ * - **MaterialsModule** : Recharge via window.loadMaterials() et populateMaterialsTable()
+ * - **DataCache** : Invalide cache 'materials' après restauration
+ * - **NotificationSystem** : Feedback utilisateur (info, success, error)
+ * - **Bootstrap 5.3.3** : Modals avec gestion d'instances multiples
+ * - **IPC Electron** : create-full-backup, list-backups, restore-backup-from-file
+ * - **TextFormatter** : Échappement HTML pour sécurité (escapeHtml)
+ *
+ * ==========================================
+ * DÉPENDANCES
+ * ==========================================
+ *
+ * - BaseModule : Classe parente avec lifecycle et helpers
+ * - NotificationSystem : Toasts de feedback utilisateur
+ * - TextFormatter : Formatage et échappement HTML sécurisé
+ * - DataCache : Gestion du cache avec invalidation
+ * - Bootstrap 5.3.3 : Modals interactifs
+ * - Electron IPC : Communication main/renderer
+ *
+ * @module BackupModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+import DataCache from '../../shared/ui/DataCache.js';
+import ModalHelper from '../../shared/ui/ModalHelper.js';
+import CacheKeys from '../../shared/cache/CacheKeys.js';
+
+class BackupModule extends BaseModule {
+  /**
+   * Délai entre la fermeture d'un modal et l'ouverture d'un autre (ms).
+   * Évite les conflits de transition Bootstrap lors du workflow de restauration.
+   *
+   * @constant {number}
+   * @static
+   */
+  static MODAL_TRANSITION_DELAY = 300;
+
+  /**
+   * Crée une instance du module Backup.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements
+   */
+  constructor(state, eventBus) {
+    super('backup', state, eventBus);
+
+    this.log('BackupModule instantiated');
+
+    /**
+     * Chemin complet du fichier de backup à restaurer (stockage temporaire).
+     * Utilisé pour transférer les données entre confirmRestoreBackup() et performRestore().
+     * Réinitialisé après restauration réussie.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.pendingRestoreBackupPath = null;
+
+    /**
+     * Nom du fichier de backup à restaurer (affichage UI).
+     * Utilisé pour afficher le nom dans le modal de confirmation.
+     * Réinitialisé après restauration réussie.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.pendingRestoreFilename = null;
+  }
+
+  /**
+   * Initialise le module Backup.
+   * Attache les event listeners et expose les fonctions globales pour compatibilité.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si l'initialisation échoue
+   *
+   * @example
+   * const backupModule = new BackupModule(state, eventBus);
+   * await backupModule.init();
+   * // Module prêt : listeners attachés, fonctions globales exposées
+   */
+  async init() {
+    try {
+      this.log('Initializing BackupModule...');
+
+      // Attacher les event listeners
+      this.attachEventListeners();
+
+      // Exposer les fonctions au scope global
+      this.exposeToGlobal({
+        createFullBackup: this.createFullBackup,
+        restoreFullBackup: this.restoreFullBackup,
+        confirmRestoreBackup: this.confirmRestoreBackup
+      });
+
+      this.initialized = true;
+      this.log('BackupModule initialized successfully');
+
+    } catch (error) {
+      this.error('Error initializing BackupModule:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Attache les event listeners aux boutons de backup.
+   * Configure les 3 boutons principaux du module (créer, restaurer, confirmer).
+   *
+   * Boutons gérés :
+   * - #create-backup-btn : Déclenche createFullBackup()
+   * - #restore-backup-btn : Déclenche restoreFullBackup()
+   * - #confirmRestoreBackupBtn : Déclenche performRestore()
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Bouton "Créer Backup Complet"
+    this.addDOMListener('#create-backup-btn', 'click', () => {
+      this.createFullBackup();
+    });
+
+    // Bouton "Restaurer Backup"
+    this.addDOMListener('#restore-backup-btn', 'click', () => {
+      this.restoreFullBackup();
+    });
+
+    // Bouton de confirmation de restauration dans le modal
+    this.addDOMListener('#confirmRestoreBackupBtn', 'click', () => {
+      this.performRestore();
+    });
+
+    this.log('Event listeners attached for Backup Module');
+  }
+
+  // ==========================================
+  // CRÉATION DE BACKUPS
+  // ==========================================
+
+  /**
+   * Crée un backup complet de toutes les données de l'application.
+   * Génère un fichier .zip horodaté contenant tous les fichiers JSON.
+   *
+   * Workflow :
+   * 1. Récupère authToken via window.getAuthToken() (AuthModule)
+   * 2. Si non connecté/non admin → NotificationSystem.error + return
+   * 3. Affiche notification info "Création du backup en cours..."
+   * 4. Envoie IPC 'create-full-backup' avec authToken
+   * 5. Backend crée fichier backup-YYYY-MM-DD-HHMMSS.zip avec tous les JSON
+   * 6. Si succès :
+   *    - Calcule taille en MB : (size / 1024 / 1024).toFixed(2)
+   *    - Affiche NotificationSystem.success "Backup créé avec succès ! Taille: X MB"
+   *    - Émet événement 'backup-created' avec { size, sizeMB }
+   * 7. Si erreur → NotificationSystem.error
+   *
+   * Fichiers sauvegardés :
+   * - materials.json (catalogue des matériaux)
+   * - suppliers.json (fournisseurs)
+   * - quotes.json (devis)
+   * - invoices.json (factures)
+   * - clients.json (clients)
+   * - users.json (utilisateurs)
+   * - config.json (configuration)
+   *
+   * Sécurité :
+   * - Réservé aux administrateurs uniquement (vérification authToken)
+   * - Protection IPC côté backend
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté ou non admin
+   * @fires NotificationSystem#info Pendant la création du backup
+   * @fires NotificationSystem#success Si backup créé avec succès
+   * @fires EventBus#backup-created Après création réussie (avec { size, sizeMB })
+   *
+   * @example
+   * // Admin clique sur "Créer Backup Complet"
+   * await createFullBackup();
+   * // → IPC 'create-full-backup' envoyé
+   * // → Fichier backup-2025-01-15-143022.zip créé
+   * // → "Backup créé avec succès ! Taille: 2.45 MB"
+   */
+  createFullBackup = async () => {
+    try {
+      this.log('Creating full backup...');
+
+      // Utiliser la fonction globale getAuthToken() exposée par AuthModule
+      const authToken = typeof window.getAuthToken === 'function' ? window.getAuthToken() : null;
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté en tant qu\'admin pour créer un backup');
+        return;
+      }
+
+      NotificationSystem.info('Création du backup en cours...');
+      const result = await this.invoke('create-full-backup', authToken);
+
+      if (result.success) {
+        const sizeMB = (result.size / 1024 / 1024).toFixed(2);
+        NotificationSystem.success(`Backup créé avec succès ! Taille: ${sizeMB} MB`);
+        this.log('Backup created successfully:', result);
+
+        // Émettre événement
+        this.emitEvent('backup-created', { size: result.size, sizeMB });
+      } else {
+        NotificationSystem.error(result.message || 'Erreur lors de la création du backup');
+        this.error('Backup creation failed:', result.message);
+      }
+
+    } catch (error) {
+      this.error('Error creating backup:', error);
+      NotificationSystem.error(`Erreur: ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // RESTAURATION DE BACKUPS
+  // ==========================================
+
+  /**
+   * Affiche le modal de sélection des backups disponibles.
+   * Charge la liste de tous les backups .zip et affiche le tableau de sélection.
+   *
+   * Workflow :
+   * 1. Récupère authToken via window.getAuthToken() (AuthModule)
+   * 2. Si non connecté/non admin → NotificationSystem.error + return
+   * 3. Envoie IPC 'list-backups' avec authToken
+   * 4. Backend retourne { success, backups: [...] }
+   * 5. Génère HTML du tableau #backup-list-table-body avec 4 colonnes :
+   *    - Nom du fichier (ex: backup-2025-01-15-143022.zip)
+   *    - Date formatée (ex: "15/01/2025 à 14:30:22")
+   *    - Taille formatée (ex: "2.45 MB")
+   *    - Bouton "Restaurer" → onclick confirmRestoreBackup(path, filename)
+   * 6. Si aucun backup → affiche "Aucun backup disponible"
+   * 7. Affiche modal #restoreBackupModal via Bootstrap
+   * 8. Émet événement 'restore-modal-opened' avec { backupsCount }
+   *
+   * Structure backup (backend) :
+   * - filename : Nom du fichier (backup-2025-01-15-143022.zip)
+   * - path : Chemin complet du fichier (avec échappement \\ → \\\\)
+   * - formattedDate : Date formatée (15/01/2025 à 14:30:22)
+   * - formattedSize : Taille formatée (2.45 MB)
+   * - size : Taille en octets
+   * - date : Timestamp de création
+   *
+   * Sécurité :
+   * - Réservé aux administrateurs uniquement
+   * - Échappement HTML via TextFormatter.escapeHtml()
+   * - Échappement path pour onclick (replace /\\/g, '\\\\')
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté, non admin ou erreur IPC
+   * @fires EventBus#restore-modal-opened Après ouverture modal (avec { backupsCount })
+   *
+   * @example
+   * // Admin clique sur "Restaurer Backup"
+   * await restoreFullBackup();
+   * // → IPC 'list-backups' envoyé
+   * // → Modal s'ouvre avec tableau de 5 backups disponibles
+   * // → Événement 'restore-modal-opened' émis avec { backupsCount: 5 }
+   */
+  restoreFullBackup = async () => {
+    try {
+      this.log('Opening restore backup modal...');
+
+      // Utiliser la fonction globale getAuthToken() exposée par AuthModule
+      const authToken = typeof window.getAuthToken === 'function' ? window.getAuthToken() : null;
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté en tant qu\'admin pour restaurer un backup');
+        return;
+      }
+
+      // Charger la liste des backups
+      const result = await this.invoke('list-backups', authToken);
+
+      if (!result.success) {
+        NotificationSystem.error(`Erreur : ${result.message}`);
+        return;
+      }
+
+      this.log('Backups loaded:', result.backups.length);
+
+      // Afficher le modal avec la liste des backups
+      const tableBody = this.getElement('#backup-list-table-body');
+      const modalElement = this.getElement('#restoreBackupModal');
+
+      if (!tableBody || !modalElement) {
+        NotificationSystem.error('Erreur d\'affichage du modal');
+        return;
+      }
+
+      if (result.backups.length === 0) {
+        tableBody.innerHTML = '&lt;tr>&lt;td colspan="4" class="text-center">Aucun backup disponible&lt;/td>&lt;/tr>';
+      } else {
+        tableBody.innerHTML = result.backups.map(backup => `
+          &lt;tr>
+            &lt;td>${TextFormatter.escapeHtml(backup.filename)}&lt;/td>
+            &lt;td>${TextFormatter.escapeHtml(backup.formattedDate)}&lt;/td>
+            &lt;td>${TextFormatter.escapeHtml(backup.formattedSize)}&lt;/td>
+            &lt;td>
+              &lt;button class="btn btn-warning btn-sm" onclick="confirmRestoreBackup('${backup.path.replace(/\\/g, '\\\\')}', '${TextFormatter.escapeHtml(backup.filename)}')">
+                &lt;i class="fas fa-upload">&lt;/i> Restaurer
+              &lt;/button>
+            &lt;/td>
+          &lt;/tr>
+        `).join('');
+      }
+
+      // Ouvrir le modal avec ModalHelper
+      modalElement.removeAttribute('inert');
+      ModalHelper.show('restoreBackupModal');
+
+      this.emitEvent('restore-modal-opened', { backupsCount: result.backups.length });
+
+    } catch (error) {
+      this.error('Error loading backups:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Affiche le modal de confirmation pour restaurer un backup sélectionné.
+   * Ferme le modal de liste, stocke les informations et affiche le modal de confirmation.
+   *
+   * Workflow :
+   * 1. Récupère authToken via window.getAuthToken()
+   * 2. Si non connecté/non admin → NotificationSystem.error + return
+   * 3. Stocke backupPath dans this.pendingRestoreBackupPath
+   * 4. Stocke filename dans this.pendingRestoreFilename
+   * 5. Ferme modal liste (#restoreBackupModal) via bootstrap.Modal.getInstance().hide()
+   * 6. Met à jour #confirmRestoreBackupFilename avec filename
+   * 7. Attente 300ms pour fermeture complète du modal liste (évite conflit Bootstrap)
+   * 8. Affiche modal confirmation (#confirmRestoreBackupModal) via getOrCreateInstance()
+   *
+   * Gestion des modals Bootstrap :
+   * - Utilise getInstance() pour récupérer l'instance existante du modal liste
+   * - Utilise getOrCreateInstance() pour le modal confirmation (évite multiples instances)
+   * - Délai 300ms obligatoire entre fermeture et ouverture (sinon conflit backdrop)
+   *
+   * Variables temporaires :
+   * - this.pendingRestoreBackupPath : Utilisé par performRestore()
+   * - this.pendingRestoreFilename : Affichage dans modal confirmation
+   *
+   * @public
+   * @async
+   * @param {string} backupPath - Chemin complet du fichier de backup (ex: C:\...\backup-2025-01-15-143022.zip)
+   * @param {string} filename - Nom du fichier de backup (ex: backup-2025-01-15-143022.zip)
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si non connecté ou non admin
+   *
+   * @example
+   * // Utilisateur clique "Restaurer" sur la ligne du backup
+   * confirmRestoreBackup('C:\\app\\backups\\backup-2025-01-15-143022.zip', 'backup-2025-01-15-143022.zip');
+   * // → Modal liste se ferme
+   * // → Attente 300ms
+   * // → Modal confirmation s'ouvre avec message
+   * // → "Êtes-vous sûr de vouloir restaurer le backup suivant ?"
+   * // → "backup-2025-01-15-143022.zip"
+   */
+  confirmRestoreBackup = async (backupPath, filename) => {
+    try {
+      this.log('Showing restore confirmation for:', filename);
+
+      // Utiliser la fonction globale getAuthToken() exposée par AuthModule
+      const authToken = typeof window.getAuthToken === 'function' ? window.getAuthToken() : null;
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté en tant qu\'admin');
+        return;
+      }
+
+      // Stocker les informations pour la restauration
+      this.pendingRestoreBackupPath = backupPath;
+      this.pendingRestoreFilename = filename;
+
+      // Fermer le modal de sélection avec ModalHelper
+      ModalHelper.hide('restoreBackupModal');
+
+      // Mettre à jour le nom du fichier dans le modal de confirmation
+      const filenameElement = this.getElement('#confirmRestoreBackupFilename');
+      if (filenameElement) {
+        filenameElement.textContent = filename;
+      }
+
+      // Attendre que le premier modal soit complètement fermé avant d'ouvrir le second
+      // ModalHelper gère automatiquement l'attente avec showAfterDelay
+      ModalHelper.showAfterDelay('confirmRestoreBackupModal', BackupModule.MODAL_TRANSITION_DELAY);
+
+    } catch (error) {
+      this.error('Error showing restore confirmation:', error);
+      NotificationSystem.error(`Erreur: ${error.message}`);
+    }
+  };
+
+  /**
+   * Effectue la restauration complète du backup après confirmation utilisateur.
+   * Restaure tous les fichiers JSON depuis le .zip, invalide le cache et recharge les modules.
+   *
+   * Workflow :
+   * 1. Récupère this.pendingRestoreBackupPath et this.pendingRestoreFilename
+   * 2. Validation : Si null → NotificationSystem.error "informations manquantes" + return
+   * 3. Récupère authToken via window.getAuthToken()
+   * 4. Si non connecté/non admin → NotificationSystem.error + return
+   * 5. Ferme modal confirmation (#confirmRestoreBackupModal)
+   * 6. Affiche NotificationSystem.info "Restauration en cours... Veuillez patienter."
+   * 7. Envoie IPC 'restore-backup-from-file' avec authToken + backupPath
+   * 8. Backend extrait .zip et écrase tous les fichiers JSON de données
+   * 9. Si succès :
+   *    - Affiche NotificationSystem.success "Restauration réussie ! Rechargement de l'application..."
+   *    - Invalide cache DataCache ('materials')
+   *    - Recharge MaterialsModule : window.loadMaterials()
+   *    - Rafraîchit UI : window.populateMaterialsTable()
+   *    - Émet événement 'backup-restored' avec { backupPath, filename }
+   *    - Réinitialise this.pendingRestoreBackupPath = null
+   *    - Réinitialise this.pendingRestoreFilename = null
+   * 10. Si erreur → NotificationSystem.error
+   *
+   * Rechargement des données :
+   * - Cache invalidé pour forcer le rechargement depuis les fichiers restaurés
+   * - MaterialsModule rechargé (autres modules se rechargeront au besoin)
+   * - Pas de rechargement complet de l'application (pas de location.reload())
+   *
+   * Impact sur l'application :
+   * - ATTENTION : Cette opération écrase TOUTES les données actuelles
+   * - Les modifications non sauvegardées seront perdues
+   * - Tous les fichiers JSON sont remplacés par ceux du backup
+   *
+   * @public
+   * @async
+   * @returns {Promise&lt;void>}
+   * @fires NotificationSystem#error Si informations manquantes, non admin ou erreur IPC
+   * @fires NotificationSystem#info Pendant la restauration
+   * @fires NotificationSystem#success Si restauration réussie
+   * @fires EventBus#backup-restored Après restauration réussie (avec { backupPath, filename })
+   *
+   * @example
+   * // Utilisateur clique "Confirmer" dans le modal de confirmation
+   * await performRestore();
+   * // → IPC 'restore-backup-from-file' envoyé avec chemin du backup
+   * // → Backend extrait backup-2025-01-15-143022.zip
+   * // → Tous les .json écrasés avec données du backup
+   * // → Cache invalidé
+   * // → MaterialsModule rechargé
+   * // → "Restauration réussie ! Rechargement de l'application..."
+   */
+  performRestore = async () => {
+    try {
+      const backupPath = this.pendingRestoreBackupPath;
+      const filename = this.pendingRestoreFilename;
+
+      if (!backupPath || !filename) {
+        NotificationSystem.error('Erreur: informations de backup manquantes');
+        return;
+      }
+
+      this.log('Performing restore for:', filename);
+
+      // Utiliser la fonction globale getAuthToken() exposée par AuthModule
+      const authToken = typeof window.getAuthToken === 'function' ? window.getAuthToken() : null;
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté en tant qu\'admin');
+        return;
+      }
+
+      // Fermer le modal de confirmation avec ModalHelper
+      ModalHelper.hide('confirmRestoreBackupModal');
+
+      NotificationSystem.info('Restauration en cours... Veuillez patienter.');
+      this.log('Restoring backup from:', backupPath);
+
+      const result = await this.invoke('restore-backup-from-file', authToken, backupPath);
+
+      if (result.success) {
+        NotificationSystem.success('Restauration réussie ! Rechargement de l\'application...');
+        this.log('Backup restored successfully');
+
+        // Invalider le cache avant de recharger
+        CacheKeys.invalidateAll(); // Restauration complète → invalide tous les caches
+
+        // Recharger les données via les autres modules
+        if (typeof window.loadMaterials === 'function') {
+          await window.loadMaterials();
+        }
+        if (typeof window.populateMaterialsTable === 'function') {
+          window.populateMaterialsTable();
+        }
+
+        // Émettre événement
+        this.emitEvent('backup-restored', { backupPath, filename });
+
+        // Réinitialiser les variables temporaires
+        this.pendingRestoreBackupPath = null;
+        this.pendingRestoreFilename = null;
+
+      } else {
+        NotificationSystem.error(result.message || 'Erreur lors de la restauration');
+        this.error('Backup restoration failed:', result.message);
+      }
+
+    } catch (error) {
+      this.error('Error restoring backup:', error);
+      NotificationSystem.error(`Erreur: ${error.message}`);
+    }
+  };
+}
+
+export default BackupModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

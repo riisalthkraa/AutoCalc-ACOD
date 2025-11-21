@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qualité et Tests AutoCalc OptiDevis v3.5.0 - 140 tests automatisés, score audit 75/100">
+    <title>Qualité & Tests - AutoCalc OptiDevis</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .score-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        .score-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+        }
+        .score-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+        }
+        .score-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: var(--primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .score-value {
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .score-label {
+            color: var(--gray);
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .test-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+        .test-item {
+            padding: 1.5rem;
+            background: var(--gray-lighter);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .test-item:last-child {
+            margin-bottom: 0;
+        }
+        .test-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .test-status.success {
+            background: var(--success);
+            color: white;
+        }
+        .progress-bar {
+            height: 12px;
+            background: var(--gray-lighter);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 0.75rem;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link active">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: auto; padding: 8rem 0 4rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container text-center">
+            <div class="badge mb-2" style="background: rgba(255,255,255,0.2);">
+                <i class="fas fa-certificate"></i>
+                Version 3.5.0 - 21 novembre 2025
+            </div>
+            <h1 style="color: white;">Qualité & Transparence</h1>
+            <p style="font-size: 1.25rem; color: white; opacity: 0.95; margin-top: 1rem;">
+                140 tests automatisés • Score d'audit 75/100 • 0 bug critique
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="web-publish/v3.5.0/home.html" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-solid);" target="_blank">
+                    <i class="fas fa-chart-bar"></i> Voir les rapports de tests
+                </a>
+                <a href="web-publish/v3.5.0/docs/index.html" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.2); border: none;" target="_blank">
+                    <i class="fas fa-code"></i> Documentation JSDoc
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scores principaux -->
+    <section style="background: white; padding: 0; margin-top: -4rem; position: relative; z-index: 10;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 4rem;">
+                <div class="score-card">
+                    <div class="score-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="score-value">140</div>
+                    <div class="score-label">Tests Réussis</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: var(--success);"></div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="score-value">75/100</div>
+                    <div class="score-label">Score Global</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="score-value">65/100</div>
+                    <div class="score-label">Sécurité</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="score-value">0</div>
+                    <div class="score-label">Bugs Critiques</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background: var(--success);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tests détaillés -->
+    <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tests Automatisés - 140/140 Réussis</h2>
+                <p class="section-subtitle">
+                    Chaque release est testée automatiquement avec Jest pour garantir la stabilité
+                </p>
+            </div>
+
+            <div class="test-section">
+                <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--success); font-size: 2rem;"></i>
+                    Modules Core (28 tests)
+                </h3>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Authentification & Sécurité</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Tests bcrypt, JWT, CSP, validation inputs</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 8/8
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Gestion Clients & Fournisseurs</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">CRUD, validation, recherche, export</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 12/12
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Catalogue Matériaux</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Calculs intelligents, conversions, métadonnées</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 8/8
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--success); font-size: 2rem;"></i>
+                    Devis & Facturation (45 tests)
+                </h3>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Création & Édition Devis</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Calculs TVA, remises, totaux, validations</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 18/18
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Conversion Devis → Facture</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Workflow, numérotation, statuts</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 12/12
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Export PDF Multi-formats</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">5 designs, multi-pages, logo, personnalisation</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 15/15
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--success); font-size: 2rem;"></i>
+                    Analytics & Reporting (32 tests)
+                </h3>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Dashboard KPIs</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">CA, taux conversion, top produits, tendances</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 15/15
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Graphiques Chart.js</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Évolution CA, répartition catégories, top 20</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 10/10
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Export Comptable FEC</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Format 18 colonnes, conformité réglementaire</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 7/7
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h3 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--success); font-size: 2rem;"></i>
+                    Import/Export & Backup (35 tests)
+                </h3>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Import Excel Templates</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Clients, fournisseurs, matériaux, validation</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 15/15
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Backup & Restauration</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">ZIP complet, intégrité données, restauration</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 12/12
+                    </div>
+                </div>
+
+                <div class="test-item">
+                    <div>
+                        <strong>Synchronisation Cloud</strong>
+                        <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.25rem;">Multi-postes, résolution conflits</div>
+                    </div>
+                    <div class="test-status success">
+                        <i class="fas fa-check"></i> 8/8
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit qualité -->
+    <section style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Audit Qualité Global - Score 75/100</h2>
+                <p class="section-subtitle">
+                    Audit professionnel effectué le 20 octobre 2025
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 2rem;">Détail des scores</h3>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Architecture & Modularité</span>
+                            <span style="font-weight: 700; color: var(--primary-solid);">85/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Qualité du Code</span>
+                            <span style="font-weight: 700; color: var(--primary-solid);">78/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Documentation</span>
+                            <span style="font-weight: 700; color: var(--primary-solid);">82/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Sécurité</span>
+                            <span style="font-weight: 700; color: var(--warning);">65/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%; background: var(--warning);"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Performance</span>
+                            <span style="font-weight: 700; color: var(--primary-solid);">72/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 72%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span style="font-weight: 600;">Maintenabilité</span>
+                            <span style="font-weight: 700; color: var(--success);">88/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%; background: var(--success);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 2rem;">Points forts</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Architecture modulaire ES6</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">20 modules indépendants et réutilisables</div>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Tests automatisés complets</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">140 tests Jest avec 100% de succès</div>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>ESLint 0 erreur</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">Code propre et standards respectés</div>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--gray-lighter); display: flex; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Documentation complète</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">200KB+ de docs techniques et utilisateur</div>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; display: flex; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Cache performant</strong>
+                                <div style="font-size: 0.9rem; color: var(--gray);">DataCache avec TTL et invalidation intelligente</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Stack Technologique</h2>
+                <p style="opacity: 0.95;">
+                    Technologies modernes et éprouvées pour un logiciel fiable
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Electron v38.3.0</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Framework desktop moderne et performant</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js v22+</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Backend rapide et scalable</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <h3>Bootstrap 5.3.3</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">UI components responsive</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Jest v29</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Tests automatisés</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Chart.js v4</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Graphiques analytics</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(20px); padding: 2rem; border-radius: 20px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>LowDB v3</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Base de données JSON locale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: white; padding: 6rem 0;">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 1rem;">Une qualité qui inspire confiance</h2>
+            <p style="font-size: 1.25rem; color: var(--gray); margin-bottom: 3rem;">
+                Testez AutoCalc OptiDevis et constatez par vous-même la qualité professionnelle du logiciel
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-download"></i>
+                    Essai gratuit 60 jours
+                </a>
+                <a href="documentation.html" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-book"></i>
+                    Voir la documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        La solution intelligente de gestion de devis et factures pour les professionnels du bâtiment
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="qualite.html" class="footer-link">Qualité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem;">
+                            <i class="fas fa-flag"></i> Made in France
+                        </span>
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem; background: var(--success);">
+                            <i class="fas fa-shield-alt"></i> RGPD
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

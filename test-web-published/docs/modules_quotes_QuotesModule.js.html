@@ -1,0 +1,2935 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/quotes/QuotesModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/quotes/QuotesModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * QUOTES MODULE - Gestion des devis
+ * ========================================
+ *
+ * Module de gestion complète du cycle de vie des devis pour l'application AutoCalc OptiDevis.
+ * Gère la création, modification, sauvegarde, chargement, duplication, suppression, changement
+ * de statut, impression et conversion en facture des devis.
+ *
+ * Architecture :
+ * Le module orchestre toutes les opérations liées aux devis et gère les permissions
+ * selon le mode utilisateur (Admin vs Vendeur/Conseil).
+ *
+ * Cycle de vie d'un devis :
+ * 1. **Brouillon** - Devis en cours de rédaction
+ * 2. **En attente** - Devis soumis pour validation (Vendeur → Admin)
+ * 3. **Validé** - Devis approuvé et envoyé au client (Admin uniquement)
+ * 4. **Accepté** - Devis signé par le client (Admin uniquement)
+ * 5. **Facturé** - Facture créée depuis le devis accepté (Admin uniquement)
+ * 6. **Refusé** - Devis rejeté (Admin uniquement)
+ *
+ * Workflow principal - Sauvegarde d'un devis :
+ * 1. Utilisateur clique "Sauvegarder le devis"
+ * 2. Vérification : devis non vide
+ * 3. Modal s'affiche avec nom suggéré
+ * 4. Utilisateur saisit/valide le nom
+ * 5. Synchronisation clientInfo depuis formulaire
+ * 6. Calcul des totaux (HT, TVA, TTC)
+ * 7. Appel IPC 'save-quote' avec authToken + données
+ * 8. Si succès : notification + ID du devis stocké
+ *
+ * Workflow principal - Chargement d'un devis :
+ * 1. Utilisateur clique "Charger" sur un devis
+ * 2. Si devis en cours : demander confirmation (modal)
+ * 3. Appel IPC 'load-saved-quote' avec ID
+ * 4. Vérification : devis facturé → refus chargement (lecture seule)
+ * 5. Restauration : clientInfo, quoteItems, headerConfig
+ * 6. Mise à jour date → aujourd'hui
+ * 7. Remplissage du formulaire client
+ * 8. Restauration de la remise
+ * 9. Rafraîchissement du tableau
+ * 10. Si accepté : verrouiller les champs (lecture seule)
+ *
+ * Workflow principal - Changement de statut :
+ * 1. Utilisateur clique "Changer le statut"
+ * 2. Chargement du devis pour obtenir statut actuel
+ * 3. Modal avec select de statut
+ * 4. **Permissions Vendeur/Conseil** : uniquement brouillon → en_attente
+ * 5. **Permissions Admin** : toutes les transitions autorisées
+ * 6. Si accepté : afficher champ date de signature
+ * 7. Utilisateur sélectionne nouveau statut
+ * 8. Validation des transitions autorisées
+ * 9. Appel IPC 'update-quote-status' avec authToken + payload
+ * 10. Rafraîchissement des listes + dashboard
+ *
+ * Workflow principal - Conversion en facture :
+ * 1. **Admin uniquement** - Vérification isAuthenticatedThisSession
+ * 2. Utilisateur clique "Facturer" sur un devis accepté
+ * 3. Vérifications : statut = accepté, pas déjà facturé
+ * 4. Modal de confirmation avec récap (nom, client, total TTC)
+ * 5. Utilisateur confirme
+ * 6. Appel IPC 'create-invoice-from-quote' avec authToken + quoteId
+ * 7. Si succès : création facture + maj statut devis → facturé
+ * 8. Rafraîchissement listes devis + factures
+ *
+ * Système de permissions :
+ * - **Mode Vendeur/Conseil** (window.isGuestMode = true) :
+ *   - Peut : créer, sauvegarder, charger, dupliquer, supprimer devis
+ *   - Peut : passer statut brouillon → en_attente uniquement
+ *   - Ne peut pas : valider, accepter, refuser, facturer
+ *   - Ne peut pas : imprimer (sauf devis validé)
+ *
+ * - **Mode Admin** (window.isAuthenticatedThisSession = true) :
+ *   - Peut : toutes les opérations
+ *   - Peut : toutes les transitions de statut
+ *   - Peut : créer factures depuis devis acceptés
+ *   - Peut : imprimer tous les devis
+ *
+ * Transitions de statut autorisées :
+ * - brouillon → en_attente, refusé
+ * - en_attente → validé, refusé
+ * - validé → accepté, refusé
+ * - accepté → facturé
+ * - refusé → (aucune transition)
+ * - facturé → (aucune transition)
+ *
+ * Verrouillage des devis :
+ * - **Devis accepté** : champs verrouillés (lecture seule) jusqu'à déverrouillage manuel
+ * - **Devis facturé** : verrouillé définitivement (impossible de charger pour modifier)
+ * - Actions autorisées sur devis verrouillés : Imprimer, Dupliquer, Supprimer
+ *
+ * Compatibilité avec legacy code :
+ * - Exposé via window.quoteItems, window.clientInfo, window.headerConfig
+ * - Synchronisation bidirectionnelle avec variables globales
+ * - Fonctions exposées au scope global via exposeToGlobal()
+ *
+ * Événements émis :
+ * - 'quotes:initialized' - Module initialisé
+ * - (Pas d'autres événements définis explicitement, mais les opérations déclenchent des mises à jour UI)
+ *
+ * Canaux IPC utilisés :
+ * - 'save-quote' - Sauvegarder un devis (nécessite authToken)
+ * - 'list-saved-quotes' - Lister tous les devis
+ * - 'load-saved-quote' - Charger un devis par ID
+ * - 'delete-saved-quote' - Supprimer un devis (nécessite authToken)
+ * - 'update-quote-status' - Changer le statut d'un devis (nécessite authToken)
+ * - 'create-invoice-from-quote' - Créer une facture depuis un devis accepté (nécessite authToken)
+ *
+ * Intégrations :
+ * - InvoicesModule : Création de factures depuis devis acceptés
+ * - QuoteBuilderModule : Construction des articles du devis
+ * - DashboardModule : Affichage des devis en attente (vendeur)
+ * - PDFModule : Impression des devis
+ *
+ * @module QuotesModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import { calculateQuantity } from '../../shared/utils/calculations.js';
+import BulkActionsManager from '../../shared/bulk/BulkActionsManager.js';
+
+class QuotesModule extends BaseModule {
+  /**
+   * Crée une instance du module Quotes.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements pour communication inter-modules
+   */
+  constructor(state, eventBus) {
+    super('quotes', state, eventBus);
+
+    /**
+     * Articles du devis en cours.
+     * Chaque article contient : {id, name, quantity, priceHT, tva, priceTTC, ...}
+     * Synchronisé avec window.quoteItems pour compatibilité legacy.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     */
+    this.quoteItems = [];
+
+    /**
+     * Informations client du devis en cours.
+     * Synchronisé avec les champs du formulaire client.
+     *
+     * @type {Object}
+     * @private
+     * @property {string} name - Nom du client
+     * @property {string} phone - Téléphone du client
+     * @property {string} email - Email du client
+     * @property {string} address - Adresse du client
+     * @property {string} quoteDate - Date du devis (YYYY-MM-DD)
+     * @property {string} issuer - Émetteur du devis
+     */
+    this.clientInfo = {};
+
+    /**
+     * Configuration de l'en-tête du devis (logo, etc.).
+     * Synchronisé avec window.headerConfig.
+     *
+     * @type {Object}
+     * @private
+     */
+    this.headerConfig = {};
+
+    /**
+     * ID du devis actuellement chargé.
+     * null si aucun devis n'est chargé (nouveau devis vierge).
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteId = null;
+
+    /**
+     * Date de création du devis actuellement chargé (ISO string).
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteCreatedAt = null;
+
+    /**
+     * Nom du devis actuellement chargé.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteName = null;
+
+    /**
+     * Statut du devis actuellement chargé.
+     * Valeurs possibles : 'brouillon', 'en_attente', 'validé', 'accepté', 'refusé', 'facturé'
+     *
+     * @type {string}
+     * @private
+     * @default 'brouillon'
+     */
+    this.currentQuoteStatus = 'brouillon';
+
+    /**
+     * ID du devis en attente de chargement (utilisé pour le modal de confirmation).
+     * Stocké temporairement quand l'utilisateur veut charger un devis alors qu'un autre est en cours.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.pendingQuoteToLoad = null;
+
+    /**
+     * ID du devis en attente de suppression (utilisé pour le modal de confirmation).
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.quoteToDeleteId = null;
+
+    /**
+     * Nom du devis en attente de suppression (pour affichage dans le modal).
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.quoteToDeleteName = null;
+
+    /**
+     * Objet devis pour lequel on change le statut (utilisé pour le modal de changement de statut).
+     *
+     * @type {Object|null}
+     * @private
+     */
+    this.currentQuoteForStatus = null;
+
+    /**
+     * Objet devis pour lequel on crée une facture (utilisé pour le modal de facturation).
+     *
+     * @type {Object|null}
+     * @private
+     */
+    this.currentQuoteForInvoice = null;
+
+    /**
+     * Configuration de pagination pour le tableau des devis.
+     * @type {Object}
+     * @private
+     */
+    this.pagination = {
+      currentPage: 1,
+      itemsPerPage: 25,
+      totalItems: 0,
+      totalPages: 0
+    };
+
+    /**
+     * Gestionnaire des opérations bulk (sélection multiple).
+     *
+     * @type {BulkActionsManager}
+     * @private
+     */
+    this.bulkActions = new BulkActionsManager({
+      moduleName: 'quotes',
+      tableId: 'quotes-table-body',
+      checkboxClass: 'quote-bulk-checkbox',
+      selectAllId: 'quotes-select-all',
+      bulkActionsId: 'quotes-bulk-actions',
+      undoRedoManager: window.undoRedoManager,
+      onDeleteCallback: this.bulkDeleteQuotes.bind(this),
+      onExportCallback: this.bulkExportQuotes.bind(this)
+    });
+  }
+
+  /**
+   * Initialise le module Quotes.
+   *
+   * Workflow d'initialisation :
+   * 1. Récupérer quoteItems existants depuis window ou state
+   * 2. Synchroniser avec window.quoteItems pour compatibilité
+   * 3. Attacher les event listeners (boutons, onglets, recherche)
+   * 4. Exposer les fonctions au scope global (compatibilité legacy)
+   * 5. Émettre l'événement 'quotes:initialized'
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * const quotesModule = new QuotesModule(state, eventBus);
+   * await quotesModule.init();
+   * // → Module initialisé, devis chargés, listeners actifs
+   */
+  async init() {
+    this.log('Initializing Quotes Module...');
+
+    // Récupérer quoteItems depuis le state ou window pour compatibilité
+    const existingQuoteItems = window.quoteItems || this.state.get('quoteItems') || [];
+    this.quoteItems = existingQuoteItems;
+
+    // Exposer au scope global pour compatibilité
+    window.quoteItems = this.quoteItems;
+
+    // Attacher les event listeners
+    this.attachEventListeners();
+
+    // Exposer les fonctions globales
+    this.exposeToGlobal({
+      saveQuoteManually: this.saveQuoteManually,
+      showSaveQuoteModal: this.showSaveQuoteModal,
+      loadSavedQuote: this.loadSavedQuote,
+      proceedLoadSavedQuote: this.proceedLoadSavedQuote,
+      duplicateQuote: this.duplicateQuote,
+      createNewQuote: this.createNewQuote,
+      loadQuotesInTab: this.loadQuotesInTab,
+      showSavedQuotesModal: this.showSavedQuotesModal,
+      renderQuoteRow: this.renderQuoteRow,
+      renderQuoteRowForTab: this.renderQuoteRowForTab,
+      deleteSavedQuote: this.deleteSavedQuote,
+      askDeleteSavedQuote: this.askDeleteSavedQuote,
+      askChangeQuoteStatus: this.askChangeQuoteStatus,
+      confirmChangeQuoteStatus: this.confirmChangeQuoteStatus,
+      askCreateInvoice: this.askCreateInvoice,
+      confirmCreateInvoice: this.confirmCreateInvoice,
+      printQuoteFromList: this.printQuoteFromList,
+      setQuoteFieldsLocked: this.setQuoteFieldsLocked,
+      refreshSavedQuotesTable: this.refreshSavedQuotesTable,
+      getQuoteStatusBadge: this.getQuoteStatusBadge
+    });
+
+    // Exposer l'instance du module pour les méthodes de pagination
+    window.quotesModule = this;
+
+    // 🆕 Enregistrer l'onglet Devis pour auto-refresh
+    this.registerTabRefresh();
+
+    // 🆕 Enregistrer les commandes Command Palette (quand prêt)
+    if (window.CommandPalette) {
+      this.registerCommands();
+    } else {
+      // Attendre que Command Palette soit prêt
+      this.events.on('commandpalette:ready', () => {
+        this.registerCommands();
+      });
+    }
+
+    // Initialiser le gestionnaire des opérations bulk
+    this.bulkActions.initialize();
+
+    this.log('Quotes Module initialized successfully');
+    this.emitEvent('initialized');
+  }
+
+  /**
+   * 🆕 Enregistre l'onglet Devis pour auto-refresh automatique.
+   *
+   * @private
+   * @returns {void}
+   */
+  registerTabRefresh() {
+    if (!window.TabRefreshManager) {
+      this.warn('TabRefreshManager not available - tab auto-refresh disabled');
+      return;
+    }
+
+    // Onglet "Devis"
+    window.TabRefreshManager.registerTab('quotes-tab', async (force) => {
+      this.log('🔄 Auto-refreshing Quotes...');
+      await this.loadQuotesInTab();
+    }, {
+      ttl: 30000, // 30 secondes
+      label: 'Devis'
+    });
+
+    this.log('✅ Tab auto-refresh registered');
+  }
+
+  /**
+   * 🆕 Enregistre les commandes Command Palette pour le module Quotes.
+   *
+   * @private
+   */
+  registerCommands() {
+    if (!window.CommandPalette) return;
+
+    // Créer un devis
+    window.CommandPalette.registerCommand('quotes-create', {
+      label: '✨ Créer un nouveau devis',
+      keywords: ['créer', 'nouveau', 'devis', 'quote'],
+      category: 'Devis',
+      icon: '✨',
+      priority: 15,
+      action: () => document.getElementById('new-quote-tab')?.click()
+    });
+
+    // Voir les devis
+    window.CommandPalette.registerCommand('quotes-list', {
+      label: '📋 Voir tous les devis',
+      keywords: ['devis', 'liste', 'quotes', 'voir', 'tous'],
+      category: 'Devis',
+      icon: '📋',
+      priority: 12,
+      action: () => document.getElementById('quotes-tab')?.click()
+    });
+
+    // Sauvegarder le devis en cours
+    window.CommandPalette.registerCommand('quotes-save-current', {
+      label: '💾 Sauvegarder le devis en cours',
+      keywords: ['sauvegarder', 'save', 'devis', 'enregistrer'],
+      category: 'Devis',
+      icon: '💾',
+      priority: 10,
+      condition: (ctx) => ctx.activeTab === 'new-quote-tab',
+      action: () => window.showSaveQuoteModal?.()
+    });
+
+    this.log('✅ Command Palette commands registered');
+  }
+
+  /**
+   * Attache les event listeners aux boutons de gestion des devis.
+   *
+   * Listeners attachés :
+   * - Bouton "Sauvegarder le devis" → showSaveQuoteModal()
+   * - Bouton "Récupérer devis" → showSavedQuotesModal()
+   * - Bouton "Vider le devis" → window.askClearQuote()
+   * - Bouton "Confirmer chargement" → proceedLoadSavedQuote()
+   * - Ouverture onglet "Devis" → loadQuotesInTab()
+   * - Champ de recherche (onglet Devis) → loadQuotesInTab() avec filtrage
+   * - Filtre de statut (onglet Devis) → loadQuotesInTab() avec filtrage
+   * - Bouton "Rafraîchir" (onglet Devis) → loadQuotesInTab()
+   *
+   * @private
+   * @returns {void}
+   */
+  attachEventListeners() {
+    // Bouton "Sauvegarder le devis"
+    this.addDOMListener('#save-quote-btn', 'click', () => {
+      this.showSaveQuoteModal();
+    });
+
+    // Bouton "Récupérer devis"
+    this.addDOMListener('#load-quote-btn', 'click', () => {
+      this.showSavedQuotesModal();
+    });
+
+    // Bouton "Vider le devis"
+    this.addDOMListener('#clear-quote-btn', 'click', () => {
+      window.askClearQuote();
+    });
+
+    // Bouton "Changer le statut" (page principale)
+    this.addDOMListener('#change-current-quote-status-btn', 'click', () => {
+      if (window.currentQuoteId) {
+        this.askChangeQuoteStatus(window.currentQuoteId);
+      } else {
+        NotificationSystem.warning('Aucun devis chargé');
+      }
+    });
+
+    // Bouton de confirmation de chargement de devis
+    this.addDOMListener('#confirmLoadQuoteBtn', 'click', () => {
+      if (this.pendingQuoteToLoad) {
+        this.proceedLoadSavedQuote(this.pendingQuoteToLoad);
+      }
+    });
+
+    // Bouton de confirmation de changement de statut
+    this.addDOMListener('#confirmChangeStatusBtn', 'click', () => {
+      this.confirmChangeQuoteStatus();
+    });
+
+    // Bouton de confirmation de suppression de devis
+    this.addDOMListener('#confirmDeleteSavedQuoteBtn', 'click', () => {
+      this.deleteSavedQuote();
+    });
+
+    // Bouton de confirmation de création de facture
+    this.addDOMListener('#confirmCreateInvoiceBtn', 'click', () => {
+      console.log('[QuotesModule] confirmCreateInvoiceBtn clicked!');
+      console.log('[QuotesModule] this:', this);
+      console.log('[QuotesModule] this.confirmCreateInvoice:', this.confirmCreateInvoice);
+      if (typeof this.confirmCreateInvoice === 'function') {
+        this.confirmCreateInvoice();
+      } else {
+        console.error('[QuotesModule] confirmCreateInvoice n\'est pas une fonction!');
+      }
+    });
+
+    // Bouton de confirmation de sauvegarde de devis
+    this.addDOMListener('#confirmSaveQuoteBtn', 'click', () => {
+      const quoteName = this.getValue('#save-quote-name');
+      if (quoteName &amp;&amp; quoteName.trim()) {
+        this.saveQuoteManually(quoteName.trim(), window.currentQuoteId || null);
+        // Fermer le modal
+        const modalElement = this.getElement('#saveQuoteModal');
+        if (modalElement) {
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          if (modal) modal.hide();
+          modalElement.setAttribute('inert', '');
+        }
+      } else {
+        NotificationSystem.error('Veuillez saisir un nom pour le devis');
+      }
+    });
+
+    // Bouton de confirmation de déverrouillage de devis
+    this.addDOMListener('#confirmUnlockQuoteBtn', 'click', () => {
+      // Récupérer l'ID du devis à déverrouiller (stocké dans le modal ou variable globale)
+      const quoteIdToUnlock = this.getElement('#quoteIdToUnlock')?.value || window.currentQuoteId;
+      if (quoteIdToUnlock) {
+        this.proceedLoadSavedQuote(quoteIdToUnlock, true); // true = forcer le déverrouillage
+        // Fermer le modal
+        const modalElement = this.getElement('#unlockQuoteModal');
+        if (modalElement) {
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          if (modal) modal.hide();
+          modalElement.setAttribute('inert', '');
+        }
+      }
+    });
+
+    // Charger les devis quand l'onglet "Devis" est affiché
+    const quotesTab = this.getElement('#quotes-tab');
+    if (quotesTab) {
+      quotesTab.addEventListener('shown.bs.tab', () => {
+        this.loadQuotesInTab();
+      });
+    }
+
+    // Champ de recherche dans l'onglet Devis
+    this.addDOMListener('#quotes-search-input', 'input', async (e) => {
+      const statusFilter = this.getElement('#quotes-status-filter')?.value || '';
+      await this.loadQuotesInTab(e.target.value, statusFilter);
+    });
+
+    // Filtre de statut dans l'onglet Devis
+    this.addDOMListener('#quotes-status-filter', 'change', async (e) => {
+      const searchText = this.getElement('#quotes-search-input')?.value || '';
+      await this.loadQuotesInTab(searchText, e.target.value);
+    });
+
+    // Bouton Rafraîchir dans l'onglet Devis
+    this.addDOMListener('#refresh-quotes-btn', 'click', async () => {
+      const searchText = this.getElement('#quotes-search-input')?.value || '';
+      const statusFilter = this.getElement('#quotes-status-filter')?.value || '';
+      await this.loadQuotesInTab(searchText, statusFilter);
+    });
+
+    // Pagination - Sélecteur items par page
+    const itemsPerPageSelect = this.getElement('#quotes-items-per-page');
+    if (itemsPerPageSelect) {
+      itemsPerPageSelect.addEventListener('change', (e) => {
+        this.pagination.itemsPerPage = parseInt(e.target.value);
+        this.pagination.currentPage = 1; // Reset to first page
+        const searchText = this.getElement('#quotes-search-input')?.value || '';
+        const statusFilter = this.getElement('#quotes-status-filter')?.value || '';
+        this.loadQuotesInTab(searchText, statusFilter);
+      });
+    }
+
+    this.log('Event listeners attached for Quotes Module');
+  }
+
+  // ==========================================
+  // QUOTE PERSISTENCE
+  // ==========================================
+
+  /**
+   * Sauvegarde un devis manuellement.
+   *
+   * Workflow :
+   * 1. Synchroniser clientInfo depuis le formulaire
+   * 2. Récupérer authToken (Vendeur/Conseil autorisé)
+   * 3. Valider : nom non vide, devis non vide (≥1 article)
+   * 4. Calculer les totaux (HT, TVA, TTC)
+   * 5. Préparer les données (id, name, createdAt, clientInfo, quoteItems, headerConfig, discount, totals)
+   * 6. Appeler IPC 'save-quote' avec authToken + données
+   * 7. Si succès : notification + retour {success: true, id}
+   * 8. Si échec : notification erreur + retour {success: false}
+   *
+   * Note : Si existingId fourni, le devis est mis à jour (conserve createdAt).
+   * Sinon, un nouveau devis est créé avec nouvel ID et date de création.
+   *
+   * @async
+   * @param {string} quoteName - Nom du devis
+   * @param {string|null} [existingId=null] - ID du devis existant (pour modification)
+   * @returns {Promise&lt;Object>} Résultat {success: boolean, id?: string}
+   *
+   * @example
+   * const result = await quotesModule.saveQuoteManually('Devis Client ABC', null);
+   * if (result.success) {
+   *   console.log('Devis sauvegardé avec ID:', result.id);
+   * }
+   */
+  saveQuoteManually = async (quoteName, existingId = null) => {
+    try {
+      // Synchroniser clientInfo avec les champs du formulaire
+      this.syncClientInfoFromForm();
+
+      // Mode Vendeur/Conseil autorisé pour sauvegarder
+      const authToken = this.getAuthToken();
+
+      // Validation
+      if (!quoteName || quoteName.trim() === '') {
+        NotificationSystem.error('Veuillez saisir un nom pour le devis');
+        return { success: false };
+      }
+
+      if (window.quoteItems.length === 0) {
+        NotificationSystem.error('Le devis est vide. Ajoutez au moins un article.');
+        return { success: false };
+      }
+
+      // Calculer les totaux
+      // Calculer les totaux de base
+      let totals = this.calculateQuoteTotals();
+
+      // Appliquer la remise aux totaux
+      const discountPercent = parseFloat(document.getElementById('quote-discount')?.value || 0);
+      if (discountPercent > 0) {
+        const totalHTBeforeDiscount = totals.totalHT;
+        const discountAmount = (totals.totalHT * discountPercent) / 100;
+        const discountFactor = 1 - (discountPercent / 100);
+
+        totals = {
+          totalHT: parseFloat((totals.totalHT - discountAmount).toFixed(2)),
+          totalTVA: parseFloat((totals.totalTVA * discountFactor).toFixed(2)),
+          totalTTC: parseFloat((totals.totalHT - discountAmount + totals.totalTVA * discountFactor).toFixed(2)),
+          discount: discountPercent,
+          discountAmount: parseFloat(discountAmount.toFixed(2)),
+          totalHTBeforeDiscount: parseFloat(totalHTBeforeDiscount.toFixed(2))
+        };
+      } else {
+        totals.discount = 0;
+        totals.discountAmount = 0;
+        totals.totalHTBeforeDiscount = totals.totalHT;
+      }
+
+      // Préparer les données
+      const quoteData = {
+        id: existingId || window.currentQuoteId || `quote_${Date.now()}`,
+        name: quoteName.trim(),
+        createdAt: (existingId || window.currentQuoteId)
+          ? (window.currentQuoteCreatedAt || undefined)
+          : new Date().toISOString(),
+        clientInfo: { ...window.clientInfo },
+        quoteItems: [...window.quoteItems],
+        // headerConfig retiré - doit toujours être chargé depuis la config actuelle, pas sauvegardé avec le devis
+        discount: discountPercent,
+        totals: totals
+      };
+
+      const result = await this.invoke('save-quote', authToken, quoteData);
+
+      if (!result) {
+        throw new Error('Aucune réponse du serveur');
+      }
+
+      if (result.success) {
+        NotificationSystem.success(`Devis "${quoteName}" sauvegardé avec succès`);
+        return { success: true, id: result.id };
+      } else {
+        throw new Error(result.message || 'Erreur lors de la sauvegarde du devis.');
+      }
+    } catch (error) {
+      console.error('Erreur sauvegarde devis:', error);
+      NotificationSystem.error(`Échec de la sauvegarde : ${error.message}`);
+      return { success: false };
+    }
+  };
+
+  /**
+   * Affiche le modal de sauvegarde de devis.
+   *
+   * Workflow :
+   * 1. Vérifier que le devis n'est pas vide (≥1 article)
+   * 2. Si vide : notification erreur + arrêt
+   * 3. Générer un nom suggéré :
+   *    - Si devis chargé : nom original (window.currentQuoteName)
+   *    - Sinon : "Devis {Client} - {Date}" ou "Devis {Date}"
+   * 4. Pré-remplir le champ nom dans le modal
+   * 5. Afficher le modal Bootstrap
+   *
+   * L'utilisateur peut ensuite modifier le nom et confirmer la sauvegarde.
+   *
+   * @returns {void}
+   *
+   * @example
+   * quotesModule.showSaveQuoteModal();
+   * // → Modal s'affiche avec nom suggéré "Devis Client XYZ - 15/01/2025"
+   */
+  showSaveQuoteModal = () => {
+    // Vérifier que le devis n'est pas vide
+    if (window.quoteItems.length === 0) {
+      NotificationSystem.error('Le devis est vide. Ajoutez au moins un article avant de sauvegarder.');
+      return;
+    }
+
+    // Pré-remplir avec le nom original du devis s'il existe, sinon suggérer un nouveau nom
+    const suggestedName = window.currentQuoteName || (window.clientInfo.name
+      ? `Devis ${window.clientInfo.name} - ${new Date().toLocaleDateString('fr-FR')}`
+      : `Devis ${new Date().toLocaleDateString('fr-FR')}`);
+
+    document.getElementById('save-quote-name').value = suggestedName;
+
+    // Afficher le modal
+    const modalElement = document.getElementById('saveQuoteModal');
+    if (modalElement) modalElement.removeAttribute('inert');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  };
+
+  // ==========================================
+  // QUOTE LISTING
+  // ==========================================
+
+  /**
+   * Génère le HTML pour une ligne de devis dans le tableau du modal "Devis sauvegardés".
+   *
+   * LOGIQUE COMPLEXE DES BOUTONS :
+   * - Devis facturé/accepté → Lecture seule (Imprimer + Dupliquer uniquement)
+   * - Devis modifiable → Charger + Dupliquer + actions selon rôle
+   * - Mode Vendeur → Accès limité (seulement brouillon → en_attente)
+   * - Mode Admin → Accès complet + bouton Facturer si accepté
+   *
+   * Badges et indicateurs :
+   * - Badge "Récent" (vert) si modifié dans les dernières 24h
+   * - Badge de statut (couleur selon statut)
+   * - Temps relatif ("Il y a 2h", "Il y a 3j")
+   *
+   * Boutons selon statut :
+   * - **Facturé ou Accepté** : Imprimer, Dupliquer
+   * - **Validé** : Statut (Admin), Imprimer, Dupliquer
+   * - **Brouillon ou En attente** : Charger, Statut, Dupliquer
+   * - **Admin uniquement** : Bouton Facturer (si accepté et pas encore facturé)
+   * - **Tous** : Bouton Supprimer
+   *
+   * @param {Object} quote - Objet devis avec propriétés suivantes
+   * @param {string} quote.id - ID du devis
+   * @param {string} quote.name - Nom du devis
+   * @param {string} quote.clientName - Nom du client
+   * @param {string} quote.status - Statut du devis
+   * @param {number} quote.itemsCount - Nombre d'articles
+   * @param {number} quote.totalTTC - Total TTC
+   * @param {string} quote.modifiedAt - Date de modification (ISO string)
+   * @param {string} [quote.invoiceId] - ID de la facture associée (si facturé)
+   * @returns {string} HTML de la ligne &lt;tr> avec badges de statut et boutons contextuels
+   *
+   * @example
+   * const quote = {
+   *   id: 'quote_123',
+   *   name: 'Devis Client ABC',
+   *   clientName: 'ABC Corp',
+   *   status: 'accepté',
+   *   itemsCount: 5,
+   *   totalTTC: 1500.00,
+   *   modifiedAt: '2025-01-15T10:30:00Z'
+   * };
+   * const html = quotesModule.renderQuoteRow(quote);
+   * // → &lt;tr>...badges, boutons...&lt;/tr>
+   */
+  renderQuoteRow = (quote) => {
+    // Badge "Récent" si modifié dans les dernières 24h
+    const modifiedDate = new Date(quote.modifiedAt);
+    const now = new Date();
+    const hoursSinceModif = (now - modifiedDate) / (1000 * 60 * 60);
+    const isRecent = hoursSinceModif &lt; 24;
+    const recentBadge = isRecent ? '&lt;span class="badge bg-success ms-2">Récent&lt;/span>' : '';
+
+    // Temps relatif
+    const relativeTime = hoursSinceModif &lt; 1
+      ? 'Il y a quelques minutes'
+      : hoursSinceModif &lt; 24
+        ? `Il y a ${Math.floor(hoursSinceModif)}h`
+        : `Il y a ${Math.floor(hoursSinceModif / 24)}j`;
+
+    const rowClass = isRecent ? 'table-success' : '';
+
+    // Statut du devis
+    const status = quote.status || 'brouillon';
+    const statusBadge = window.getQuoteStatusBadge(status);
+    const isInvoiced = status === 'facturé';
+    const isAccepted = status === 'accepté';
+
+    // Boutons d'action en fonction du statut et du mode
+    let actionButtons = '';
+
+    // Devis facturé ou accepté : seulement Imprimer et Dupliquer (lecture seule)
+    if (isInvoiced || isAccepted) {
+      actionButtons += `&lt;button class="btn btn-primary btn-icon" onclick="printQuoteFromList('${quote.id}')" data-bs-toggle="tooltip" title="Imprimer">&lt;i class="fas fa-print">&lt;/i>&lt;/button>`;
+      actionButtons += `&lt;button class="btn btn-info btn-icon" onclick="duplicateQuote('${quote.id}')" data-bs-toggle="tooltip" title="Dupliquer">&lt;i class="fas fa-copy">&lt;/i>&lt;/button>`;
+    } else {
+      // Devis modifiable : Charger et Dupliquer
+      actionButtons += `&lt;button class="btn btn-primary btn-icon" onclick="loadSavedQuote('${quote.id}')" data-bs-toggle="tooltip" title="Charger">&lt;i class="fas fa-folder-open">&lt;/i>&lt;/button>`;
+      actionButtons += `&lt;button class="btn btn-info btn-icon" onclick="duplicateQuote('${quote.id}')" data-bs-toggle="tooltip" title="Dupliquer">&lt;i class="fas fa-copy">&lt;/i>&lt;/button>`;
+
+      // Mode Vendeur : ajouter bouton "Imprimer" pour les devis "validé"
+      if (window.isGuestMode &amp;&amp; status === 'validé') {
+        actionButtons += `&lt;button class="btn btn-success btn-icon" onclick="printQuoteFromList('${quote.id}')" data-bs-toggle="tooltip" title="Imprimer">&lt;i class="fas fa-print">&lt;/i>&lt;/button>`;
+      }
+
+      // Bouton "Statut" :
+      // - Admin : toujours visible pour les devis non facturés et non acceptés
+      // - Vendeur : uniquement si le devis est en "brouillon" (car ils peuvent seulement passer brouillon → en_attente)
+      if (!window.isGuestMode || status === 'brouillon') {
+        actionButtons += `&lt;button class="btn btn-warning btn-icon" onclick="askChangeQuoteStatus('${quote.id}')" data-bs-toggle="tooltip" title="Changer le statut">&lt;i class="fas fa-exchange-alt">&lt;/i>&lt;/button>`;
+      }
+    }
+
+    // Boutons réservés aux admins uniquement
+    if (!window.isGuestMode) {
+      // Bouton "Créer facture" seulement si statut = accepté et pas déjà facturé
+      const hasInvoice = this.hasValidInvoiceId(quote.invoiceId);
+      if (status === 'accepté' &amp;&amp; !hasInvoice) {
+        actionButtons += `&lt;button class="btn btn-success btn-icon" onclick="askCreateInvoice('${quote.id}')" data-bs-toggle="tooltip" title="Facturer">&lt;i class="fas fa-file-invoice-dollar">&lt;/i>&lt;/button>`;
+      }
+    }
+
+    actionButtons += `&lt;button class="btn btn-danger btn-icon" onclick="askDeleteSavedQuote('${quote.id}', '${this.escapeHtml(quote.name)}')" data-bs-toggle="tooltip" title="Supprimer">&lt;i class="fas fa-trash-alt">&lt;/i>&lt;/button>`;
+
+    return `
+      &lt;tr class="${rowClass}">
+        &lt;td>${this.escapeHtml(quote.name)}${recentBadge}&lt;/td>
+        &lt;td>${this.escapeHtml(quote.clientName)}&lt;/td>
+        &lt;td>${statusBadge}&lt;/td>
+        &lt;td>${quote.itemsCount}&lt;/td>
+        &lt;td>${this.formatCurrency(quote.totalTTC)}&lt;/td>
+        &lt;td>${this.formatDate(quote.modifiedAt)} &lt;small class="text-muted">(${relativeTime})&lt;/small>&lt;/td>
+        &lt;td>
+          ${actionButtons}
+        &lt;/td>
+      &lt;/tr>
+    `;
+  };
+
+  /**
+   * Génère une ligne de tableau pour l'onglet Devis.
+   *
+   * Identique à renderQuoteRow() mais pour l'onglet "Devis" (au lieu du modal).
+   * Affiche une colonne supplémentaire : Date de création.
+   *
+   * @param {Object} quote - Objet devis (voir renderQuoteRow pour détails)
+   * @returns {string} HTML de la ligne &lt;tr> avec badges de statut et boutons contextuels
+   *
+   * @see renderQuoteRow
+   */
+  renderQuoteRowForTab = (quote) => {
+    // Badge "Récent" si modifié dans les dernières 24h
+    const modifiedDate = new Date(quote.modifiedAt);
+    const now = new Date();
+    const hoursSinceModif = (now - modifiedDate) / (1000 * 60 * 60);
+    const isRecent = hoursSinceModif &lt; 24;
+    const recentBadge = isRecent ? '&lt;span class="badge bg-success ms-2">Récent&lt;/span>' : '';
+
+    // Temps relatif
+    const relativeTime = hoursSinceModif &lt; 1
+      ? 'Il y a quelques minutes'
+      : hoursSinceModif &lt; 24
+        ? `Il y a ${Math.floor(hoursSinceModif)}h`
+        : `Il y a ${Math.floor(hoursSinceModif / 24)}j`;
+
+    const rowClass = isRecent ? 'table-success' : '';
+
+    // Statut du devis
+    const status = quote.status || 'brouillon';
+    const statusBadge = window.getQuoteStatusBadge(status);
+    const isInvoiced = status === 'facturé';
+
+    // Boutons d'action en fonction du statut et du mode
+    let actionButtons = '';
+
+    if (isInvoiced || status === 'accepté') {
+      // Facturé ou Accepté : IMPRIMER + DUPLIQUER + SUPPRIMER
+      actionButtons += `&lt;button class="btn btn-primary btn-icon" onclick="printQuoteFromList('${quote.id}')" data-bs-toggle="tooltip" title="Imprimer">&lt;i class="fas fa-print">&lt;/i>&lt;/button>`;
+      actionButtons += `&lt;button class="btn btn-info btn-icon" onclick="duplicateQuote('${quote.id}')" data-bs-toggle="tooltip" title="Dupliquer">&lt;i class="fas fa-copy">&lt;/i>&lt;/button>`;
+    } else if (status === 'validé') {
+      // Validé : STATUT (admin only) + IMPRIMER + DUPLIQUER + SUPPRIMER (non-modifiable)
+      if (!window.isGuestMode) {
+        actionButtons += `&lt;button class="btn btn-warning btn-icon" onclick="askChangeQuoteStatus('${quote.id}')" data-bs-toggle="tooltip" title="Changer le statut">&lt;i class="fas fa-exchange-alt">&lt;/i>&lt;/button>`;
+      }
+      actionButtons += `&lt;button class="btn btn-primary btn-icon" onclick="printQuoteFromList('${quote.id}')" data-bs-toggle="tooltip" title="Imprimer">&lt;i class="fas fa-print">&lt;/i>&lt;/button>`;
+      actionButtons += `&lt;button class="btn btn-info btn-icon" onclick="duplicateQuote('${quote.id}')" data-bs-toggle="tooltip" title="Dupliquer">&lt;i class="fas fa-copy">&lt;/i>&lt;/button>`;
+    } else {
+      // Brouillon ou En attente : MODIFIER + STATUT + DUPLIQUER + SUPPRIMER
+      actionButtons += `&lt;button class="btn btn-primary btn-icon" onclick="loadSavedQuote('${quote.id}')" data-bs-toggle="tooltip" title="Modifier">&lt;i class="fas fa-edit">&lt;/i>&lt;/button>`;
+      if (!window.isGuestMode || status === 'brouillon') {
+        actionButtons += `&lt;button class="btn btn-warning btn-icon" onclick="askChangeQuoteStatus('${quote.id}')" data-bs-toggle="tooltip" title="Changer le statut">&lt;i class="fas fa-exchange-alt">&lt;/i>&lt;/button>`;
+      }
+      actionButtons += `&lt;button class="btn btn-info btn-icon" onclick="duplicateQuote('${quote.id}')" data-bs-toggle="tooltip" title="Dupliquer">&lt;i class="fas fa-copy">&lt;/i>&lt;/button>`;
+    }
+
+    // Boutons réservés aux admins uniquement
+    if (!window.isGuestMode) {
+      const hasInvoice = this.hasValidInvoiceId(quote.invoiceId);
+      if (status === 'accepté' &amp;&amp; !hasInvoice) {
+        actionButtons += `&lt;button class="btn btn-success btn-icon" onclick="askCreateInvoice('${quote.id}')" data-bs-toggle="tooltip" title="Facturer">&lt;i class="fas fa-file-invoice-dollar">&lt;/i>&lt;/button>`;
+      }
+    }
+
+    actionButtons += `&lt;button class="btn btn-danger btn-icon" onclick="askDeleteSavedQuote('${quote.id}', '${this.escapeHtml(quote.name)}')" data-bs-toggle="tooltip" title="Supprimer">&lt;i class="fas fa-trash-alt">&lt;/i>&lt;/button>`;
+
+    return `
+      &lt;tr class="${rowClass}">
+        &lt;td>
+          &lt;input type="checkbox" class="form-check-input quote-bulk-checkbox" data-id="${quote.id}">
+        &lt;/td>
+        &lt;td>${this.escapeHtml(quote.name)}${recentBadge}&lt;/td>
+        &lt;td>${this.escapeHtml(quote.clientName)}&lt;/td>
+        &lt;td>${statusBadge}&lt;/td>
+        &lt;td>${quote.itemsCount}&lt;/td>
+        &lt;td>${this.formatCurrency(quote.totalTTC)}&lt;/td>
+        &lt;td>${this.formatDate(quote.createdAt)}&lt;/td>
+        &lt;td>${this.formatDate(quote.modifiedAt)} &lt;small class="text-muted">(${relativeTime})&lt;/small>&lt;/td>
+        &lt;td>
+          ${actionButtons}
+        &lt;/td>
+      &lt;/tr>
+    `;
+  };
+
+  /**
+   * Charge les devis dans l'onglet Devis avec filtrage optionnel.
+   *
+   * Workflow :
+   * 1. Appeler IPC 'list-saved-quotes' pour récupérer tous les devis
+   * 2. Appliquer filtres de recherche (nom ou client, insensible à la casse)
+   * 3. Appliquer filtre de statut (exact)
+   * 4. Si aucun devis : afficher message "Aucun devis trouvé"
+   * 5. Sinon : générer HTML avec renderQuoteRowForTab() pour chaque devis
+   * 6. Injecter dans le tbody de la table
+   *
+   * @async
+   * @param {string} [searchText=''] - Texte de recherche (nom ou client)
+   * @param {string} [statusFilter=''] - Filtre de statut ('brouillon', 'en_attente', etc.)
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Charger tous les devis
+   * await quotesModule.loadQuotesInTab();
+   *
+   * @example
+   * // Charger uniquement les devis en attente contenant "ABC"
+   * await quotesModule.loadQuotesInTab('ABC', 'en_attente');
+   */
+  loadQuotesInTab = async (searchText = '', statusFilter = '') => {
+    try {
+      const result = await this.invoke('list-saved-quotes');
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des devis');
+        return;
+      }
+
+      let quotes = result.quotes || [];
+      this.allQuotes = quotes; // Sauvegarder tous les devis pour le comptage
+      const tableBody = document.getElementById('quotes-table-body');
+
+      console.log(`[DEBUG loadQuotesInTab] isGuestMode = ${window.isGuestMode}, Nombre de devis = ${quotes.length}`);
+
+      // Appliquer les filtres
+      if (searchText) {
+        const search = searchText.toLowerCase();
+        quotes = quotes.filter(q =>
+          (q.name &amp;&amp; q.name.toLowerCase().includes(search)) ||
+          (q.clientName &amp;&amp; q.clientName.toLowerCase().includes(search))
+        );
+      }
+
+      if (statusFilter) {
+        quotes = quotes.filter(q => (q.status || 'brouillon') === statusFilter);
+      }
+
+      // Mettre à jour les infos de pagination
+      this.pagination.totalItems = quotes.length;
+      this.pagination.totalPages = Math.ceil(quotes.length / this.pagination.itemsPerPage);
+
+      // S'assurer que currentPage est dans les limites
+      if (this.pagination.currentPage > this.pagination.totalPages) {
+        this.pagination.currentPage = this.pagination.totalPages || 1;
+      }
+
+      // Calculer les indices de début et fin pour la page actuelle
+      const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage;
+      const endIndex = startIndex + this.pagination.itemsPerPage;
+      const paginatedQuotes = quotes.slice(startIndex, endIndex);
+
+      if (quotes.length === 0) {
+        tableBody.innerHTML = '&lt;tr>&lt;td colspan="9" class="text-center">Aucun devis trouvé&lt;/td>&lt;/tr>';
+      } else {
+        tableBody.innerHTML = paginatedQuotes.map(this.renderQuoteRowForTab).join('');
+      }
+
+      console.log(`✅ [DEBUG] Populated table with ${paginatedQuotes.length}/${quotes.length} devis (page ${this.pagination.currentPage}/${this.pagination.totalPages})`);
+
+      // Mettre à jour les compteurs dans le filtre de statut
+      this.updateStatusFilterCounts();
+
+      // Mettre à jour les contrôles de pagination
+      this.updatePaginationControls(quotes.length, paginatedQuotes);
+    } catch (error) {
+      console.error('Erreur chargement devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Met à jour les compteurs dans le menu déroulant de filtrage par statut.
+   * Compte le nombre de devis pour chaque statut et met à jour les labels des options.
+   */
+  updateStatusFilterCounts() {
+    if (!this.allQuotes) return;
+
+    // Compter les devis par statut
+    const counts = {
+      'brouillon': 0,
+      'en_attente': 0,
+      'validé': 0,
+      'accepté': 0,
+      'facturé': 0,
+      'refusé': 0
+    };
+
+    this.allQuotes.forEach(quote => {
+      const status = quote.status || 'brouillon';
+      if (counts[status] !== undefined) {
+        counts[status]++;
+      }
+    });
+
+    // Mettre à jour les labels des options
+    const filterSelect = document.getElementById('quotes-status-filter');
+    if (filterSelect) {
+      const options = filterSelect.querySelectorAll('option');
+      options.forEach(option => {
+        const value = option.value;
+        if (value === '') {
+          const total = Object.values(counts).reduce((sum, count) => sum + count, 0);
+          option.textContent = `Tous les statuts (${total})`;
+        } else if (counts[value] !== undefined) {
+          const label = option.textContent.split('(')[0].trim();
+          option.textContent = `${label} (${counts[value]})`;
+        }
+      });
+    }
+  }
+
+  /**
+   * Affiche le modal de gestion des devis sauvegardés.
+   *
+   * Workflow :
+   * 1. Appeler IPC 'list-saved-quotes' pour récupérer tous les devis
+   * 2. Si aucun devis : afficher message "Aucun devis sauvegardé"
+   * 3. Sinon : générer HTML avec renderQuoteRow() pour chaque devis
+   * 4. Injecter dans le tbody de la table
+   * 5. Afficher le modal Bootstrap
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.showSavedQuotesModal();
+   * // → Modal s'affiche avec la liste de tous les devis
+   */
+  showSavedQuotesModal = async () => {
+    try {
+      const result = await this.invoke('list-saved-quotes');
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des devis');
+        return;
+      }
+
+      const quotes = result.quotes || [];
+      const tableBody = document.getElementById('saved-quotes-table-body');
+
+      console.log(`[DEBUG showSavedQuotesModal] isGuestMode = ${window.isGuestMode}, Nombre de devis = ${quotes.length}`);
+
+      if (quotes.length === 0) {
+        tableBody.innerHTML = '&lt;tr>&lt;td colspan="7" class="text-center">Aucun devis sauvegardé&lt;/td>&lt;/tr>';
+      } else {
+        tableBody.innerHTML = quotes.map(this.renderQuoteRow).join('');
+      }
+
+      // Afficher le modal
+      const modalElement = document.getElementById('savedQuotesModal');
+      if (modalElement) modalElement.removeAttribute('inert');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    } catch (error) {
+      console.error('Erreur affichage devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Rafraîchit uniquement le tableau des devis du modal sans fermer/rouvrir le modal.
+   *
+   * Utilisé après une modification (suppression, changement de statut, création de facture)
+   * pour mettre à jour la liste sans perturber l'utilisateur.
+   *
+   * Workflow :
+   * 1. Appeler IPC 'list-saved-quotes'
+   * 2. Régénérer le HTML de la table
+   * 3. Injecter dans le tbody (le modal reste ouvert)
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  refreshSavedQuotesTable = async () => {
+    try {
+      const result = await this.invoke('list-saved-quotes');
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement des devis');
+        return;
+      }
+
+      const quotes = result.quotes || [];
+      const tableBody = document.getElementById('saved-quotes-table-body');
+
+      console.log(`[DEBUG refreshSavedQuotesTable] isGuestMode = ${window.isGuestMode}, Nombre de devis = ${quotes.length}`);
+
+      if (quotes.length === 0) {
+        tableBody.innerHTML = '&lt;tr>&lt;td colspan="7" class="text-center">Aucun devis sauvegardé&lt;/td>&lt;/tr>';
+      } else {
+        tableBody.innerHTML = quotes.map(this.renderQuoteRow).join('');
+      }
+    } catch (error) {
+      console.error('Erreur rafraîchissement tableau:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // QUOTE LOADING
+  // ==========================================
+
+  /**
+   * Charge un devis sauvegardé (avec confirmation si devis en cours).
+   *
+   * Workflow :
+   * 1. Vérifier si un devis est en cours (window.quoteItems.length > 0)
+   * 2. Si oui : stocker quoteId dans this.pendingQuoteToLoad
+   * 3. Afficher modal de confirmation "Écraser le devis en cours ?"
+   * 4. Si non : appeler directement proceedLoadSavedQuote()
+   *
+   * L'utilisateur peut ensuite confirmer (→ proceedLoadSavedQuote) ou annuler.
+   *
+   * @async
+   * @param {string} quoteId - ID du devis à charger
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.loadSavedQuote('quote_123');
+   * // → Modal de confirmation si devis en cours, sinon chargement direct
+   */
+  loadSavedQuote = async (quoteId) => {
+    try {
+      // Vérifier si le devis actuel a des modifications non sauvegardées
+      if (window.quoteItems.length > 0) {
+        // Stocker l'ID du devis à charger
+        this.pendingQuoteToLoad = quoteId;
+
+        // Afficher le modal de confirmation
+        const confirmModalElement = document.getElementById('loadQuoteConfirmModal');
+        if (confirmModalElement) confirmModalElement.removeAttribute('inert');
+        const confirmModal = new bootstrap.Modal(confirmModalElement);
+        confirmModal.show();
+        return;
+      }
+
+      // Si pas de devis en cours, charger directement
+      await this.proceedLoadSavedQuote(quoteId);
+    } catch (error) {
+      console.error('Erreur chargement devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Procède au chargement effectif du devis (après confirmation ou directement).
+   *
+   * Workflow :
+   * 1. Appeler IPC 'load-saved-quote' avec quoteId
+   * 2. Vérifier : si statut = facturé → refus + notification (lecture seule)
+   * 3. Stocker ID, nom, date création, statut dans window.*
+   * 4. Restaurer clientInfo, quoteItems depuis le devis
+   * 5. Mettre à jour la date du devis → aujourd'hui
+   * 6. Remplir tous les champs du formulaire client
+   * 7. Restaurer la remise si elle existe
+   * 8. Rafraîchir le tableau des articles (window.updateQuoteTable)
+   * 9. Fermer les modals (confirmation + liste)
+   * 10. Afficher bouton "Changer le statut"
+   * 11. Si statut = accepté : verrouiller les champs (setQuoteFieldsLocked)
+   * 12. Notification de succès ou avertissement (si accepté)
+   * 13. Réinitialiser this.pendingQuoteToLoad
+   *
+   * @async
+   * @param {string} quoteId - ID du devis à charger
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.proceedLoadSavedQuote('quote_123');
+   * // → Devis chargé, formulaire rempli, tableau rafraîchi
+   */
+  proceedLoadSavedQuote = async (quoteId) => {
+    try {
+      const result = await this.invoke('load-saved-quote', quoteId);
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement du devis');
+        return;
+      }
+
+      const quote = result.quote;
+
+      // Bloquer le chargement des devis facturés (lecture seule)
+      if (quote.status === 'facturé') {
+        NotificationSystem.warning('Ce devis est facturé et ne peut plus être modifié. Utilisez "Imprimer" ou "Dupliquer".');
+        return;
+      }
+
+      // Stocker l'ID, le nom, la date de création et le statut du devis
+      window.currentQuoteId = quote.id;
+      window.currentQuoteName = quote.name;
+      window.currentQuoteCreatedAt = quote.createdAt;
+      window.currentQuoteStatus = quote.status || 'brouillon';
+
+      // Restaurer les données
+      window.clientInfo = { ...quote.clientInfo };
+      window.quoteItems = [...quote.quoteItems];
+
+      // Mettre à jour la date à aujourd'hui
+      const today = new Date().toISOString().split('T')[0];
+      window.clientInfo.quoteDate = today;
+
+      // Remplir les champs du formulaire
+      document.getElementById('client-name').value = window.clientInfo.name || '';
+      document.getElementById('client-phone').value = window.clientInfo.phone || '';
+      document.getElementById('client-email').value = window.clientInfo.email || '';
+      document.getElementById('client-address').value = window.clientInfo.address || '';
+      document.getElementById('quote-issuer').value = window.clientInfo.issuer || '';
+      document.getElementById('quote-date').value = today;
+
+      // Restaurer la remise (0 si non définie)
+      const discountSelect = document.getElementById('quote-discount');
+      if (discountSelect) {
+        discountSelect.value = quote.discount !== undefined ? quote.discount : 0;
+      }
+
+      // Mettre à jour l'affichage
+      if (typeof window.updateQuoteTable === 'function') {
+        window.updateQuoteTable();
+      }
+
+      // Fermer les modals
+      const confirmModalElement = document.getElementById('loadQuoteConfirmModal');
+      const confirmModal = bootstrap.Modal.getInstance(confirmModalElement);
+      if (confirmModal) {
+        confirmModal.hide();
+        if (confirmModalElement) confirmModalElement.setAttribute('inert', '');
+      }
+
+      const modalElement = document.getElementById('savedQuotesModal');
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      if (modal) modal.hide();
+      if (modalElement) modalElement.setAttribute('inert', '');
+
+      // Afficher le bouton "Changer le statut" car un devis est maintenant chargé
+      const changeStatusBtn = document.getElementById('change-current-quote-status-btn');
+      if (changeStatusBtn) changeStatusBtn.style.display = 'inline-block';
+
+      // Si le devis est accepté, bloquer les champs et afficher un message
+      if (window.currentQuoteStatus === 'accepté') {
+        this.setQuoteFieldsLocked(true);
+        NotificationSystem.warning(`Devis "${quote.name}" chargé (SIGNÉ - lecture seule). Utilisez le bouton rouge pour déverrouiller.`);
+      } else {
+        this.setQuoteFieldsLocked(false);
+        NotificationSystem.success(`Devis "${quote.name}" chargé avec succès`);
+      }
+
+      // Réinitialiser la variable
+      this.pendingQuoteToLoad = null;
+    } catch (error) {
+      console.error('Erreur chargement devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+      this.pendingQuoteToLoad = null;
+    }
+  };
+
+  // ==========================================
+  // QUOTE DUPLICATION
+  // ==========================================
+
+  /**
+   * Duplique un devis existant.
+   *
+   * Workflow :
+   * 1. Récupérer authToken (Vendeur/Conseil autorisé)
+   * 2. Charger le devis à dupliquer via IPC 'load-saved-quote'
+   * 3. Créer une copie avec nouveau nom : "{nom original} - Copie"
+   * 4. Recalculer les totaux si manquants
+   * 5. Sauvegarder la copie via IPC 'save-quote' (nouveau ID, nouvelle date)
+   * 6. Si succès : notification + rafraîchir les listes (modal + onglet)
+   *
+   * Note : Toutes les données sont copiées (clientInfo, quoteItems, totals, headerConfig)
+   * sauf l'ID et les dates qui sont régénérés.
+   *
+   * @async
+   * @param {string} quoteId - ID du devis à dupliquer
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.duplicateQuote('quote_123');
+   * // → Nouveau devis créé "Devis Client ABC - Copie"
+   */
+  duplicateQuote = async (quoteId) => {
+    try {
+      // Mode Vendeur/Conseil autorisé pour dupliquer
+      const authToken = this.getAuthToken();
+
+      // Charger le devis à dupliquer
+      const result = await this.invoke('load-saved-quote', quoteId);
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement du devis');
+        return;
+      }
+
+      const originalQuote = result.quote;
+
+      // Créer une copie avec nouveau nom
+      const newQuoteName = `${originalQuote.name} - Copie`;
+
+      // Recalculer les totaux si manquants
+      let totals = originalQuote.totals;
+      if (!totals &amp;&amp; originalQuote.quoteItems &amp;&amp; originalQuote.quoteItems.length > 0) {
+        const totalHT = originalQuote.quoteItems.reduce((sum, item) => sum + (parseFloat(item.priceHT) || 0), 0);
+        const totalTVA = originalQuote.quoteItems.reduce((sum, item) => sum + (parseFloat(item.tva) || 0), 0);
+        const totalTTC = originalQuote.quoteItems.reduce((sum, item) => sum + (parseFloat(item.priceTTC) || 0), 0);
+        totals = { totalHT, totalTVA, totalTTC };
+      }
+
+      // Sauvegarder la copie (inclure totals et headerConfig)
+      const savePayload = {
+        name: newQuoteName,
+        clientInfo: { ...originalQuote.clientInfo },
+        quoteItems: [...originalQuote.quoteItems],
+        totals: totals
+        // headerConfig retiré - doit toujours être chargé depuis la config actuelle
+      };
+
+      const saveResult = await this.invoke('save-quote', authToken, savePayload);
+
+      if (saveResult.success) {
+        NotificationSystem.success(`Devis dupliqué : "${newQuoteName}"`);
+        // Rafraîchir la liste du modal
+        await this.refreshSavedQuotesTable();
+
+        // Rafraîchir aussi l'onglet Devis si on est dessus
+        if (document.getElementById('quotes-tab').classList.contains('active')) {
+          await this.loadQuotesInTab();
+        }
+      } else {
+        NotificationSystem.error('Erreur lors de la duplication');
+      }
+
+    } catch (error) {
+      console.error('Erreur duplication devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // CREATE NEW QUOTE
+  // ==========================================
+
+  /**
+   * Crée un nouveau devis vierge.
+   *
+   * Workflow :
+   * 1. Vider window.quoteItems (tableau d'articles)
+   * 2. Réinitialiser window.clientInfo (nom, téléphone, email, adresse, émetteur vides)
+   * 3. Définir la date du devis → aujourd'hui
+   * 4. Réinitialiser le formulaire client (form.reset())
+   * 5. Définir la date dans l'input date
+   * 6. Rafraîchir le tableau des articles (window.updateQuoteTable)
+   * 7. Notification info "Nouveau devis créé"
+   *
+   * @returns {void}
+   *
+   * @example
+   * quotesModule.createNewQuote();
+   * // → Nouveau devis vierge, prêt à être rempli
+   */
+  createNewQuote = () => {
+    try {
+      console.log('[createNewQuote] Création d\'un nouveau devis');
+
+      // Réinitialiser les données
+      window.quoteItems = [];
+      window.clientInfo = {
+        name: '',
+        phone: '',
+        email: '',
+        address: '',
+        quoteDate: new Date().toISOString().split('T')[0],
+        issuer: ''
+      };
+
+      // Réinitialiser le formulaire
+      const form = document.getElementById('client-form');
+      if (form) {
+        form.reset();
+        // Définir la date du jour
+        const dateInput = form.querySelector('input[type="date"]');
+        if (dateInput) {
+          dateInput.value = window.clientInfo.quoteDate;
+        }
+      }
+
+      // Rafraîchir le tableau
+      if (typeof window.updateQuoteTable === 'function') {
+        window.updateQuoteTable();
+      }
+
+      NotificationSystem.info('Nouveau devis créé');
+      console.log('[createNewQuote] Devis vierge initialisé');
+
+    } catch (error) {
+      console.error('[createNewQuote] Erreur:', error);
+      NotificationSystem.error('Erreur lors de la création du devis');
+    }
+  };
+
+  // ==========================================
+  // QUOTE DELETION
+  // ==========================================
+
+  /**
+   * Demande confirmation avant suppression d'un devis.
+   *
+   * Workflow :
+   * 1. Stocker quoteId dans this.quoteToDeleteId
+   * 2. Stocker quoteName dans this.quoteToDeleteName
+   * 3. Mettre à jour le texte du modal avec le nom du devis
+   * 4. Afficher le modal Bootstrap de confirmation
+   *
+   * L'utilisateur peut ensuite confirmer (→ deleteSavedQuote) ou annuler.
+   *
+   * @param {string} quoteId - ID du devis à supprimer
+   * @param {string} quoteName - Nom du devis (pour affichage dans le modal)
+   * @returns {void}
+   *
+   * @example
+   * quotesModule.askDeleteSavedQuote('quote_123', 'Devis Client ABC');
+   * // → Modal de confirmation s'affiche : "Supprimer 'Devis Client ABC' ?"
+   */
+  askDeleteSavedQuote = (quoteId, quoteName) => {
+    this.quoteToDeleteId = quoteId;
+    this.quoteToDeleteName = quoteName;
+
+    document.getElementById('delete-quote-name').textContent = quoteName;
+
+    const modalElement = document.getElementById('deleteSavedQuoteModal');
+    if (modalElement) modalElement.removeAttribute('inert');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  };
+
+  /**
+   * Supprime un devis sauvegardé après confirmation.
+   *
+   * Workflow :
+   * 1. Récupérer authToken (Vendeur/Conseil autorisé)
+   * 2. Vérifier que this.quoteToDeleteId est défini
+   * 3. Appeler IPC 'delete-saved-quote' avec authToken + quoteId
+   * 4. Si succès :
+   *    - Notification de succès
+   *    - Déplacer le focus vers le modal de liste (pour accessibilité)
+   *    - Fermer le modal de confirmation
+   *    - Attendre 300ms
+   *    - Rafraîchir uniquement le tableau (refreshSavedQuotesTable)
+   *    - Rafraîchir aussi l'onglet Devis si actif
+   * 5. Réinitialiser this.quoteToDeleteId et this.quoteToDeleteName
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur confirme la suppression
+   * await quotesModule.deleteSavedQuote();
+   * // → Devis supprimé, listes rafraîchies, modal de confirmation fermé
+   */
+  deleteSavedQuote = async () => {
+    try {
+      // Mode Vendeur/Conseil autorisé pour supprimer
+      const authToken = this.getAuthToken();
+
+      if (!this.quoteToDeleteId) return;
+
+      const result = await this.invoke('delete-saved-quote', authToken, this.quoteToDeleteId);
+
+      if (result.success) {
+        NotificationSystem.success(`Devis "${this.quoteToDeleteName}" supprimé`);
+
+        // Fermer le modal de confirmation
+        const deleteModalElement = document.getElementById('deleteSavedQuoteModal');
+        const deleteModal = bootstrap.Modal.getInstance(deleteModalElement);
+
+        // Déplacer le focus vers le modal de liste AVANT de fermer
+        const savedQuotesModalElement = document.getElementById('savedQuotesModal');
+        if (savedQuotesModalElement) {
+          // Trouver un élément focusable dans le modal de liste
+          const closeButton = savedQuotesModalElement.querySelector('.btn-close');
+          if (closeButton) closeButton.focus();
+        }
+
+        if (deleteModal) deleteModal.hide();
+        if (deleteModalElement) deleteModalElement.setAttribute('inert', '');
+
+        // Attendre un court délai pour s'assurer que le modal est fermé
+        setTimeout(async () => {
+          // Rafraîchir uniquement le tableau sans fermer/rouvrir le modal de liste
+          await this.refreshSavedQuotesTable();
+
+          // Rafraîchir aussi l'onglet Devis si on est dessus
+          if (document.getElementById('quotes-tab').classList.contains('active')) {
+            await this.loadQuotesInTab();
+          }
+        }, 300);
+      } else {
+        NotificationSystem.error('Erreur lors de la suppression');
+      }
+
+      this.quoteToDeleteId = null;
+      this.quoteToDeleteName = null;
+    } catch (error) {
+      console.error('Erreur suppression devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // QUOTE STATUS MANAGEMENT
+  // ==========================================
+
+  /**
+   * Demande le changement de statut d'un devis.
+   *
+   * Workflow :
+   * 1. Récupérer authToken (Vendeur/Conseil autorisé pour brouillon → en_attente uniquement)
+   * 2. Charger le devis via IPC 'load-saved-quote' pour obtenir le statut actuel
+   * 3. Stocker le devis dans this.currentQuoteForStatus
+   * 4. Remplir le modal :
+   *    - Nom du devis
+   *    - Statut actuel (badge formaté)
+   *    - Select de nouveau statut
+   * 5. **Gestion des permissions** :
+   *    - **Vendeur** : pré-sélectionner "en_attente", désactiver toutes les autres options
+   *    - **Admin** : pré-sélectionner statut actuel, désactiver les transitions non autorisées
+   * 6. Si statut actuel = accepté : afficher champ date de signature
+   * 7. Afficher le modal Bootstrap
+   *
+   * Transitions autorisées (voir canTransitionTo) :
+   * - brouillon → en_attente, refusé
+   * - en_attente → validé, refusé
+   * - validé → accepté, refusé
+   * - accepté → facturé
+   *
+   * @async
+   * @param {string} quoteId - ID du devis dont on veut changer le statut
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.askChangeQuoteStatus('quote_123');
+   * // → Modal s'affiche avec select de statut (permissions appliquées)
+   */
+  askChangeQuoteStatus = async (quoteId) => {
+    try {
+      const authToken = this.getAuthToken();
+      // Mode Vendeur/Conseil autorisé pour passage en "en_attente" uniquement
+
+      // Charger le devis pour obtenir ses informations
+      const result = await this.invoke('load-saved-quote', quoteId);
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement du devis');
+        return;
+      }
+
+      const quote = result.quote;
+      this.currentQuoteForStatus = quote;
+
+      // Remplir le modal
+      document.getElementById('status-quote-name').textContent = quote.name;
+      document.getElementById('status-current').textContent = window.getQuoteStatusBadge(quote.status || 'brouillon').replace(/&lt;[^>]*>/g, '');
+
+      const statusSelect = document.getElementById('new-status-select');
+      const currentStatus = quote.status || 'brouillon';
+
+      // En mode Vendeur : pré-sélectionner "en_attente" directement
+      // En mode Admin : pré-sélectionner le statut actuel
+      if (window.isGuestMode &amp;&amp; currentStatus === 'brouillon') {
+        statusSelect.value = 'en_attente';
+      } else {
+        statusSelect.value = currentStatus;
+      }
+
+      // Désactiver les options de statut non autorisées
+      Array.from(statusSelect.options).forEach(option => {
+        const targetStatus = option.value;
+
+        // En mode Vendeur/Conseil : seule transition "brouillon" → "en_attente" autorisée
+        if (window.isGuestMode) {
+          // Autoriser uniquement: brouillon → en_attente (pas de "garder le même statut")
+          const isAllowedTransition = (currentStatus === 'brouillon' &amp;&amp; targetStatus === 'en_attente');
+
+          if (!isAllowedTransition) {
+            option.disabled = true;
+            option.style.color = '#ccc';
+          } else {
+            option.disabled = false;
+            option.style.color = '';
+          }
+        } else {
+          // En mode Admin : vérifier les transitions normales
+          if (!this.canTransitionTo(currentStatus, targetStatus) &amp;&amp; targetStatus !== currentStatus) {
+            option.disabled = true;
+            option.style.color = '#ccc';
+          } else {
+            option.disabled = false;
+            option.style.color = '';
+          }
+        }
+      });
+
+      // Afficher/masquer le champ date de signature
+      const signatureDateContainer = document.getElementById('signature-date-container');
+      if (quote.status === 'accepté') {
+        signatureDateContainer.style.display = 'block';
+        document.getElementById('signature-date-input').value = quote.signatureDate ? new Date(quote.signatureDate).toISOString().split('T')[0] : '';
+      } else {
+        signatureDateContainer.style.display = 'none';
+      }
+
+      // Afficher le modal
+      const modalElement = document.getElementById('changeQuoteStatusModal');
+      if (modalElement) modalElement.removeAttribute('inert');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    } catch (error) {
+      console.error('Erreur ouverture modal statut:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Confirme le changement de statut d'un devis.
+   *
+   * Workflow :
+   * 1. Récupérer authToken
+   * 2. Vérifier que this.currentQuoteForStatus est défini
+   * 3. Récupérer le nouveau statut depuis le select
+   * 4. **Validation des permissions Vendeur** :
+   *    - Si mode Vendeur : vérifier statut actuel = brouillon ET nouveau statut = en_attente
+   *    - Sinon : erreur + arrêt
+   * 5. Préparer les données additionnelles :
+   *    - Si nouveau statut = accepté : inclure date de signature
+   * 6. Appeler IPC 'update-quote-status' avec authToken + {quoteId, status, additionalData}
+   * 7. Si succès :
+   *    - Notification de succès
+   *    - Fermer le modal
+   *    - Attendre 300ms
+   *    - Rafraîchir les listes (modal + onglet)
+   *    - Mettre à jour dashboard vendeur si mode Vendeur (window.updateVendeurPendingQuotes)
+   * 8. Réinitialiser this.currentQuoteForStatus
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur confirme le changement de statut
+   * await quotesModule.confirmChangeQuoteStatus();
+   * // → Statut mis à jour, listes rafraîchies
+   */
+  confirmChangeQuoteStatus = async () => {
+    try {
+      const authToken = this.getAuthToken();
+
+      if (!this.currentQuoteForStatus) return;
+
+      const newStatus = document.getElementById('new-status-select').value;
+      const currentStatus = this.currentQuoteForStatus.status || 'brouillon';
+
+      // En mode Vendeur/Conseil : autoriser uniquement "brouillon" → "en_attente"
+      if (window.isGuestMode) {
+        console.log('[DEBUG] Mode Vendeur - Statut actuel:', currentStatus, '- Nouveau statut:', newStatus);
+        if (currentStatus !== 'brouillon') {
+          NotificationSystem.error('En mode Vendeur/Conseil, vous ne pouvez modifier que les devis en brouillon');
+          console.error('[DEBUG] Rejet: statut actuel n\'est pas brouillon');
+          return;
+        }
+        if (newStatus !== 'en_attente') {
+          NotificationSystem.error('En mode Vendeur/Conseil, vous ne pouvez passer les devis qu\'en statut "en attente"');
+          console.error('[DEBUG] Rejet: nouveau statut n\'est pas en_attente');
+          return;
+        }
+      }
+
+      const additionalData = {};
+
+      // Si statut = accepté, inclure la date de signature
+      if (newStatus === 'accepté') {
+        const signatureDate = document.getElementById('signature-date-input').value;
+        if (signatureDate) {
+          additionalData.signatureDate = new Date(signatureDate).toISOString();
+        }
+      }
+
+      // Appeler l'IPC pour changer le statut
+      const payload = {
+        quoteId: this.currentQuoteForStatus.id,
+        status: newStatus,
+        additionalData
+      };
+      console.log('[DEBUG] Appel update-quote-status avec:', { authToken, payload });
+
+      const result = await this.invoke('update-quote-status', authToken, payload);
+
+      console.log('[DEBUG] Résultat update-quote-status:', result);
+
+      if (result.success) {
+        NotificationSystem.success(`Statut mis à jour : ${newStatus}`);
+
+        // Fermer le modal
+        const modalElement = document.getElementById('changeQuoteStatusModal');
+        const modal = bootstrap.Modal.getInstance(modalElement);
+        if (modal) modal.hide();
+        if (modalElement) modalElement.setAttribute('inert', '');
+
+        // Rafraîchir la liste
+        setTimeout(async () => {
+          await this.refreshSavedQuotesTable();
+
+          // Rafraîchir aussi l'onglet Devis si on est dessus
+          if (document.getElementById('quotes-tab').classList.contains('active')) {
+            await this.loadQuotesInTab();
+          }
+
+          // Mettre à jour le dashboard vendeur si nécessaire
+          if (window.isGuestMode &amp;&amp; typeof window.updateVendeurPendingQuotes === 'function') {
+            await window.updateVendeurPendingQuotes();
+          }
+        }, 300);
+      } else {
+        console.error('[DEBUG] Échec update-quote-status. Résultat:', result);
+        NotificationSystem.error(`Erreur lors de la mise à jour du statut${result.error ? ': ' + result.error : ''}`);
+      }
+
+      this.currentQuoteForStatus = null;
+    } catch (error) {
+      console.error('Erreur changement statut:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // QUOTE TO INVOICE CONVERSION
+  // ==========================================
+
+  /**
+   * Demande la création d'une facture depuis un devis accepté.
+   *
+   * **ADMIN UNIQUEMENT** - Mode Administrateur requis.
+   *
+   * Workflow :
+   * 1. Vérifier l'authentification admin (window.isAuthenticatedThisSession)
+   * 2. Si non authentifié : notification + arrêt
+   * 3. Charger le devis via IPC 'load-saved-quote'
+   * 4. Stocker le devis dans this.currentQuoteForInvoice
+   * 5. **Vérifications** :
+   *    - Statut doit être "accepté" (sinon erreur)
+   *    - Pas déjà facturé (vérifier invoiceId via hasValidInvoiceId)
+   * 6. Remplir le modal de confirmation :
+   *    - Nom du devis
+   *    - Nom du client
+   *    - Total TTC
+   * 7. Afficher le modal Bootstrap
+   *
+   * L'utilisateur peut ensuite confirmer (→ confirmCreateInvoice) ou annuler.
+   *
+   * @async
+   * @param {string} quoteId - ID du devis accepté à facturer
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.askCreateInvoice('quote_123');
+   * // → Modal de confirmation s'affiche avec récap du devis
+   */
+  askCreateInvoice = async (quoteId) => {
+    try {
+      console.log('[DEBUG askCreateInvoice] quoteId reçu:', quoteId);
+      console.log('[DEBUG askCreateInvoice] typeof quoteId:', typeof quoteId);
+
+      // Vérifier l'authentification admin
+      if (!window.isAuthenticatedThisSession) {
+        console.warn('[DEBUG askCreateInvoice] Pas authentifié!');
+        NotificationSystem.warning('Mode Administrateur requis pour créer une facture');
+        return;
+      }
+
+      // Charger le devis
+      console.log('[DEBUG] Appel load-saved-quote avec ID:', quoteId);
+      const result = await this.invoke('load-saved-quote', quoteId);
+      console.log('[DEBUG] Résultat load-saved-quote:', result);
+
+      if (!result.success) {
+        console.error('[DEBUG] ÉCHEC du chargement:', result.message);
+        NotificationSystem.error(`Devis non trouvé: ${result.message || 'erreur inconnue'}`);
+        return;
+      }
+
+      const quote = result.quote;
+      console.log('[DEBUG askCreateInvoice] Quote chargé, stockage dans this.currentQuoteForInvoice');
+      this.currentQuoteForInvoice = quote;
+      console.log('[DEBUG askCreateInvoice] this.currentQuoteForInvoice après assignation:', this.currentQuoteForInvoice);
+
+      console.log('[DEBUG] Quote chargé:', {
+        name: quote.name,
+        status: quote.status,
+        invoiceId: quote.invoiceId,
+        hasClientInfo: !!quote.clientInfo,
+        hasTotals: !!quote.totals
+      });
+
+      // Vérifier que le statut est bien "accepté"
+      if (quote.status !== 'accepté') {
+        console.error('[DEBUG] Statut invalide:', quote.status);
+        NotificationSystem.error('Seuls les devis acceptés peuvent être facturés');
+        return;
+      }
+
+      // Vérifier qu'il n'a pas déjà été facturé (attention au string "null")
+      if (this.hasValidInvoiceId(quote.invoiceId)) {
+        console.error('Devis déjà facturé, invoiceId:', quote.invoiceId);
+        NotificationSystem.error('Ce devis a déjà été facturé');
+        return;
+      }
+
+      console.log('[DEBUG] Toutes les vérifications OK, affichage du modal');
+
+      // Remplir le modal
+      document.getElementById('invoice-quote-name').textContent = quote.name;
+      document.getElementById('invoice-client-name').textContent = quote.clientInfo.name;
+      document.getElementById('invoice-total-ttc').textContent = this.formatCurrency(quote.totals.totalTTC);
+
+      // Afficher le modal
+      const modalElement = document.getElementById('createInvoiceModal');
+      if (modalElement) modalElement.removeAttribute('inert');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    } catch (error) {
+      console.error('Erreur ouverture modal facture:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  /**
+   * Confirme la création de la facture depuis un devis accepté.
+   *
+   * Workflow :
+   * 1. Récupérer authToken
+   * 2. Vérifier qu'il existe (sinon erreur)
+   * 3. Vérifier que this.currentQuoteForInvoice est défini
+   * 4. Appeler IPC 'create-invoice-from-quote' avec authToken + quoteId
+   * 5. Si succès :
+   *    - Notification de succès avec numéro de facture
+   *    - Fermer le modal
+   *    - Attendre 300ms
+   *    - Rafraîchir les listes de devis (modal + onglet)
+   *    - Rafraîchir la liste des factures si on est sur cet onglet
+   * 6. Réinitialiser this.currentQuoteForInvoice
+   *
+   * Note : Le backend crée automatiquement la facture et met à jour
+   * le statut du devis → facturé + stocke l'invoiceId.
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * // Utilisateur confirme la création de facture
+   * await quotesModule.confirmCreateInvoice();
+   * // → Facture créée, statut devis → facturé, listes rafraîchies
+   */
+  confirmCreateInvoice = async () => {
+    try {
+      const authToken = this.getAuthToken();
+      if (!authToken) {
+        NotificationSystem.error('Vous devez être connecté pour créer une facture');
+        return;
+      }
+
+      console.log('[DEBUG confirmCreateInvoice] currentQuoteForInvoice:', this.currentQuoteForInvoice);
+      if (!this.currentQuoteForInvoice) {
+        console.error('[DEBUG confirmCreateInvoice] currentQuoteForInvoice est vide!');
+        NotificationSystem.error('Aucun devis sélectionné pour la facturation');
+        return;
+      }
+
+      console.log('[DEBUG confirmCreateInvoice] Création facture pour quote:', this.currentQuoteForInvoice.id);
+
+      // Appeler l'IPC pour créer la facture (passer authToken puis l'ID)
+      const result = await this.invoke('create-invoice-from-quote', authToken, this.currentQuoteForInvoice.id);
+
+      console.log('[DEBUG] Résultat création facture:', result);
+
+      if (result.success) {
+        NotificationSystem.success(`Facture ${result.invoice.number} créée avec succès`);
+
+        // Fermer le modal
+        const modalElement = document.getElementById('createInvoiceModal');
+        const modal = bootstrap.Modal.getInstance(modalElement);
+        if (modal) modal.hide();
+        if (modalElement) modalElement.setAttribute('inert', '');
+
+        // Rafraîchir les listes
+        setTimeout(async () => {
+          await this.refreshSavedQuotesTable();
+
+          // Rafraîchir aussi l'onglet Devis si on est dessus
+          if (document.getElementById('quotes-tab').classList.contains('active')) {
+            await this.loadQuotesInTab();
+          }
+
+          // Rafraîchir aussi la liste des factures si on est sur cet onglet
+          if (document.getElementById('invoices-tab').classList.contains('active') &amp;&amp; typeof window.loadInvoices === 'function') {
+            await window.loadInvoices();
+          }
+        }, 300);
+      } else {
+        NotificationSystem.error(result.message || 'Erreur lors de la création de la facture');
+      }
+
+      this.currentQuoteForInvoice = null;
+    } catch (error) {
+      console.error('Erreur création facture:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // QUOTE PRINTING
+  // ==========================================
+
+  /**
+   * Imprime un devis depuis la liste sans le charger dans l'interface.
+   *
+   * **Utilisé principalement pour les devis facturés ou acceptés (lecture seule).**
+   *
+   * Workflow :
+   * 1. Charger le devis via IPC 'load-saved-quote'
+   * 2. **Sauvegarder** les variables globales actuelles :
+   *    - window.quoteItems, window.clientInfo, window.headerConfig
+   *    - Valeurs des champs HTML du formulaire client
+   * 3. **Charger temporairement** les données du devis :
+   *    - Copier quoteItems, clientInfo dans window.*
+   *    - Remplir les champs HTML avec les valeurs du devis
+   * 4. Appeler window.printQuote() pour générer et imprimer le PDF
+   * 5. **Restaurer** les variables globales et champs HTML
+   * 6. Rafraîchir le tableau (window.updateQuoteTable)
+   *
+   * Grâce à cette méthode, l'utilisateur peut imprimer un devis sans perturber
+   * le devis actuellement en cours de modification dans l'interface.
+   *
+   * @async
+   * @param {string} quoteId - ID du devis à imprimer
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.printQuoteFromList('quote_123');
+   * // → Devis imprimé, interface non modifiée
+   */
+  printQuoteFromList = async (quoteId) => {
+    try {
+      // Charger le devis
+      const result = await this.invoke('load-saved-quote', quoteId);
+
+      if (!result.success) {
+        NotificationSystem.error('Erreur lors du chargement du devis');
+        return;
+      }
+
+      const quote = result.quote;
+
+      // Sauvegarder les variables globales actuelles
+      const savedQuoteItems = [...window.quoteItems];
+      const savedClientInfo = { ...window.clientInfo };
+      const savedHeaderConfig = { ...window.headerConfig };
+
+      // Sauvegarder les valeurs des champs HTML
+      const savedHtmlFields = {
+        'client-name': document.getElementById('client-name').value,
+        'client-phone': document.getElementById('client-phone').value,
+        'client-email': document.getElementById('client-email').value,
+        'client-address': document.getElementById('client-address').value,
+        'quote-issuer': document.getElementById('quote-issuer').value,
+        'quote-date': document.getElementById('quote-date').value,
+        'quote-discount': document.getElementById('quote-discount')?.value || '0'
+      };
+
+      try {
+        // Charger temporairement les données du devis
+        window.quoteItems = [...quote.quoteItems];
+        window.clientInfo = { ...quote.clientInfo };
+        // headerConfig reste le même (config actuelle de l'entreprise)
+
+        // Remplir temporairement les champs HTML pour la validation
+        document.getElementById('client-name').value = window.clientInfo.name || '';
+        document.getElementById('client-phone').value = window.clientInfo.phone || '';
+        document.getElementById('client-email').value = window.clientInfo.email || '';
+        document.getElementById('client-address').value = window.clientInfo.address || '';
+        document.getElementById('quote-issuer').value = window.clientInfo.issuer || '';
+        document.getElementById('quote-date').value = window.clientInfo.quoteDate || '';
+
+        // Restaurer la remise (0 si non définie)
+        const discountSelect = document.getElementById('quote-discount');
+        if (discountSelect) {
+          discountSelect.value = quote.discount !== undefined ? quote.discount : 0;
+        }
+
+        // Appeler la fonction d'impression
+        if (typeof window.printQuote === 'function') {
+          await window.printQuote();
+        }
+
+      } finally {
+        // Restaurer les variables globales
+        window.quoteItems = savedQuoteItems;
+        window.clientInfo = savedClientInfo;
+        window.headerConfig = savedHeaderConfig;
+
+        // Restaurer les champs HTML
+        document.getElementById('client-name').value = savedHtmlFields['client-name'];
+        document.getElementById('client-phone').value = savedHtmlFields['client-phone'];
+        document.getElementById('client-email').value = savedHtmlFields['client-email'];
+        document.getElementById('client-address').value = savedHtmlFields['client-address'];
+        document.getElementById('quote-issuer').value = savedHtmlFields['quote-issuer'];
+        document.getElementById('quote-date').value = savedHtmlFields['quote-date'];
+        const discountSelectRestore = document.getElementById('quote-discount');
+        if (discountSelectRestore) {
+          discountSelectRestore.value = savedHtmlFields['quote-discount'];
+        }
+
+        // Restaurer l'affichage du tableau
+        if (typeof window.updateQuoteTable === 'function') {
+          window.updateQuoteTable();
+        }
+      }
+
+    } catch (error) {
+      console.error('Erreur impression devis:', error);
+      NotificationSystem.error(`Erreur : ${error.message}`);
+    }
+  };
+
+  // ==========================================
+  // QUOTE LOCK/UNLOCK
+  // ==========================================
+
+  /**
+   * Verrouille ou déverrouille les champs du devis.
+   *
+   * **Utilisé pour les devis acceptés (signés) afin de les rendre lecture seule.**
+   *
+   * Champs verrouillés :
+   * - Formulaire client : nom, téléphone, email, adresse, date, émetteur
+   * - Remise
+   * - Boutons d'action : ajouter article, ajout rapide, sauvegarder
+   * - Boutons de modification/suppression dans le tableau des articles
+   *
+   * Champs toujours actifs (même verrouillés) :
+   * - Bouton "Récupérer Devis"
+   * - Bouton "Vider Devis"
+   *
+   * Styles appliqués quand verrouillé :
+   * - Champs : backgroundColor = #f5f5f5, cursor = not-allowed
+   * - Boutons : opacity = 0.5, cursor = not-allowed
+   *
+   * @param {boolean} locked - true pour verrouiller, false pour déverrouiller
+   * @returns {void}
+   *
+   * @example
+   * // Verrouiller le devis (devis accepté chargé)
+   * quotesModule.setQuoteFieldsLocked(true);
+   * // → Tous les champs sont en lecture seule
+   *
+   * @example
+   * // Déverrouiller le devis
+   * quotesModule.setQuoteFieldsLocked(false);
+   * // → Tous les champs sont modifiables
+   */
+  setQuoteFieldsLocked = (locked) => {
+    // Champs clients et remise
+    const clientFields = ['client-name', 'client-phone', 'client-email', 'client-address', 'quote-date', 'quote-issuer', 'quote-discount'];
+    clientFields.forEach(id => {
+      const field = document.getElementById(id);
+      if (field) {
+        field.disabled = locked;
+        if (locked) {
+          field.style.backgroundColor = '#f5f5f5';
+          field.style.cursor = 'not-allowed';
+        } else {
+          field.style.backgroundColor = '';
+          field.style.cursor = '';
+        }
+      }
+    });
+
+    // Boutons d'action (sauf "Récupérer Devis" et "Vider Devis" qui doivent toujours rester actifs)
+    const actionButtons = [
+      'add-item-btn',
+      'quick-add-btn',
+      'save-quote-btn'
+    ];
+    actionButtons.forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) {
+        btn.disabled = locked;
+        if (locked) {
+          btn.style.opacity = '0.5';
+          btn.style.cursor = 'not-allowed';
+        } else {
+          btn.style.opacity = '';
+          btn.style.cursor = '';
+        }
+      }
+    });
+
+    // Désactiver les boutons de suppression et modification dans le tableau
+    const editButtons = document.querySelectorAll('.edit-item-btn, .delete-item-btn');
+    editButtons.forEach(btn => {
+      btn.disabled = locked;
+      if (locked) {
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'not-allowed';
+      } else {
+        btn.style.opacity = '';
+        btn.style.cursor = '';
+      }
+    });
+  };
+
+  // ==========================================
+  // HELPER FUNCTIONS
+  // ==========================================
+
+  /**
+   * Synchronise window.clientInfo avec les champs du formulaire.
+   *
+   * Lit tous les champs du formulaire client et met à jour l'objet clientInfo.
+   * Appelé avant chaque sauvegarde de devis pour s'assurer que les dernières
+   * modifications du formulaire sont bien capturées.
+   *
+   * Champs synchronisés :
+   * - name (nom du client)
+   * - phone (téléphone)
+   * - email (email)
+   * - address (adresse)
+   * - quoteDate (date du devis, par défaut aujourd'hui)
+   * - issuer (émetteur du devis)
+   *
+   * @private
+   * @returns {void}
+   */
+  syncClientInfoFromForm() {
+    window.clientInfo.name = document.getElementById('client-name')?.value || '';
+    window.clientInfo.phone = document.getElementById('client-phone')?.value || '';
+    window.clientInfo.email = document.getElementById('client-email')?.value || '';
+    window.clientInfo.address = document.getElementById('client-address')?.value || '';
+    window.clientInfo.quoteDate = document.getElementById('quote-date')?.value || new Date().toISOString().split('T')[0];
+    window.clientInfo.issuer = document.getElementById('quote-issuer')?.value || '';
+  }
+
+  /**
+   * Calcule les totaux du devis (HT, TVA, TTC).
+   *
+   * Additionne tous les articles du devis (window.quoteItems) pour calculer :
+   * - Total HT : somme des priceHT de tous les articles
+   * - Total TVA : somme des tva de tous les articles
+   * - Total TTC : somme des priceTTC de tous les articles
+   *
+   * Les montants sont arrondis à 2 décimales.
+   *
+   * @private
+   * @returns {Object} Totaux calculés
+   * @returns {number} returns.totalHT - Total hors taxes
+   * @returns {number} returns.totalTVA - Total de la TVA
+   * @returns {number} returns.totalTTC - Total toutes taxes comprises
+   *
+   * @example
+   * const totals = quotesModule.calculateQuoteTotals();
+   * // → {totalHT: 1000.00, totalTVA: 200.00, totalTTC: 1200.00}
+   */
+  calculateQuoteTotals() {
+    let totalHT = 0;
+    let totalTVA = 0;
+    let totalTTC = 0;
+
+    window.quoteItems.forEach(item => {
+      totalHT += item.priceHT || 0;
+      totalTVA += item.tva || 0;
+      totalTTC += item.priceTTC || 0;
+    });
+
+    return {
+      totalHT: parseFloat(totalHT.toFixed(2)),
+      totalTVA: parseFloat(totalTVA.toFixed(2)),
+      totalTTC: parseFloat(totalTTC.toFixed(2))
+    };
+  }
+
+  /**
+   * Récupère le token d'authentification depuis window.sessionToken.
+   *
+   * Le sessionToken est défini après connexion en mode Admin.
+   * En mode Vendeur/Conseil, le token peut être null ou undefined
+   * mais certaines opérations sont autorisées sans token.
+   *
+   * @private
+   * @returns {string|null} Token d'authentification ou null
+   */
+  getAuthToken() {
+    return window.sessionToken || null;
+  }
+
+  /**
+   * Retourne le badge HTML Bootstrap pour un statut de devis.
+   *
+   * Statuts supportés (avec couleurs) :
+   * - **brouillon** → Gris (bg-secondary)
+   * - **en_attente** → Jaune (bg-warning text-dark)
+   * - **validé** → Bleu (bg-primary)
+   * - **accepté** → Vert (bg-success)
+   * - **refusé** → Rouge (bg-danger)
+   * - **facturé** → Cyan (bg-info)
+   *
+   * Anciens statuts (compatibilité) :
+   * - envoyé → affiché comme "Validé"
+   * - signé → affiché comme "Accepté"
+   * - abandonné → affiché comme "Refusé"
+   * - expiré → affiché comme "Refusé"
+   *
+   * @param {string} status - Statut du devis
+   * @returns {string} HTML du badge &lt;span class="badge ...">Label&lt;/span>
+   *
+   * @example
+   * const badge = quotesModule.getQuoteStatusBadge('accepté');
+   * // → '&lt;span class="badge bg-success">Accepté&lt;/span>'
+   */
+  getQuoteStatusBadge = (status) => {
+    const statusConfig = {
+      'brouillon': { label: 'Brouillon', class: 'bg-secondary' },
+      'en_attente': { label: 'En attente', class: 'bg-warning text-dark' },
+      'validé': { label: 'Validé', class: 'bg-primary' },
+      'accepté': { label: 'Accepté', class: 'bg-success' },
+      'refusé': { label: 'Refusé', class: 'bg-danger' },
+      'facturé': { label: 'Facturé', class: 'bg-info' },
+      // Anciens statuts (pour compatibilité avec les devis existants)
+      'envoyé': { label: 'Validé', class: 'bg-primary' },
+      'signé': { label: 'Accepté', class: 'bg-success' },
+      'abandonné': { label: 'Refusé', class: 'bg-danger' },
+      'expiré': { label: 'Refusé', class: 'bg-danger' }
+    };
+
+    const config = statusConfig[status] || { label: status, class: 'bg-secondary' };
+    return `&lt;span class="badge ${config.class}">${config.label}&lt;/span>`;
+  };
+
+  /**
+   * Vérifie si un invoiceId est valide.
+   *
+   * Un invoiceId est considéré valide s'il n'est pas :
+   * - null
+   * - undefined
+   * - la chaîne "null" (cas de sérialisation JSON incorrecte)
+   *
+   * Utilisé pour vérifier si un devis a déjà été facturé avant d'autoriser
+   * la création d'une nouvelle facture.
+   *
+   * @param {*} invoiceId - ID de facture à vérifier
+   * @returns {boolean} true si l'ID est valide, false sinon
+   *
+   * @example
+   * quotesModule.hasValidInvoiceId('invoice_123'); // → true
+   * quotesModule.hasValidInvoiceId(null); // → false
+   * quotesModule.hasValidInvoiceId('null'); // → false
+   * quotesModule.hasValidInvoiceId(undefined); // → false
+   */
+  hasValidInvoiceId(invoiceId) {
+    return invoiceId &amp;&amp; invoiceId !== 'null' &amp;&amp; invoiceId !== null &amp;&amp; invoiceId !== undefined;
+  }
+
+  /**
+   * Vérifie si une transition de statut est autorisée.
+   *
+   * Règles de transition (workflow métier) :
+   * - **brouillon** → en_attente, refusé
+   * - **en_attente** → validé, refusé
+   * - **validé** → accepté, refusé
+   * - **accepté** → facturé
+   * - **refusé** → (aucune transition possible)
+   * - **facturé** → (aucune transition possible)
+   *
+   * Note : En mode Vendeur/Conseil, seule la transition brouillon → en_attente
+   * est autorisée (vérifiée dans confirmChangeQuoteStatus).
+   *
+   * @param {string} currentStatus - Statut actuel du devis
+   * @param {string} newStatus - Nouveau statut souhaité
+   * @returns {boolean} true si la transition est autorisée, false sinon
+   *
+   * @example
+   * quotesModule.canTransitionTo('brouillon', 'en_attente'); // → true
+   * quotesModule.canTransitionTo('brouillon', 'facturé'); // → false
+   * quotesModule.canTransitionTo('facturé', 'accepté'); // → false
+   */
+  canTransitionTo(currentStatus, newStatus) {
+    const ALLOWED_STATUS_TRANSITIONS = {
+      'brouillon': ['en_attente', 'refusé'],
+      'en_attente': ['validé', 'refusé'],
+      'validé': ['accepté', 'refusé'],
+      'accepté': ['facturé'],
+      'refusé': [],
+      'facturé': []
+    };
+
+    const allowed = ALLOWED_STATUS_TRANSITIONS[currentStatus] || [];
+    return allowed.includes(newStatus);
+  }
+
+  /**
+   * Échappe les caractères HTML pour prévenir les attaques XSS.
+   *
+   * Remplace les caractères spéciaux HTML par leurs entités :
+   * - &amp; → &amp;amp;
+   * - &lt; → &amp;lt;
+   * - > → &amp;gt;
+   * - " → &amp;quot;
+   * - ' → &amp;#039;
+   * - / → &amp;#x2F;
+   *
+   * @param {string} text - Texte à échapper
+   * @returns {string} Texte échappé sécurisé pour insertion HTML
+   *
+   * @example
+   * quotesModule.escapeHtml('&lt;script>alert("XSS")&lt;/script>');
+   * // → '&amp;lt;script&amp;gt;alert(&amp;quot;XSS&amp;quot;)&amp;lt;&amp;#x2F;script&amp;gt;'
+   */
+  escapeHtml(text) {
+    if (!text) return '';
+    return String(text)
+      .replace(/&amp;/g, '&amp;amp;')
+      .replace(/&lt;/g, '&amp;lt;')
+      .replace(/>/g, '&amp;gt;')
+      .replace(/"/g, '&amp;quot;')
+      .replace(/'/g, '&amp;#039;')
+      .replace(/\//g, '&amp;#x2F;');
+  }
+
+  /**
+   * Formate une date ISO au format français (JJ/MM/AAAA).
+   *
+   * @param {string} dateString - Date au format ISO (YYYY-MM-DDTHH:mm:ss.sssZ)
+   * @returns {string} Date formatée (DD/MM/YYYY) ou chaîne originale si erreur
+   *
+   * @example
+   * quotesModule.formatDate('2025-01-15T10:30:00Z');
+   * // → '15/01/2025'
+   */
+  formatDate(dateString) {
+    if (!dateString) return '';
+    try {
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return dateString;
+
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    } catch (e) {
+      return dateString;
+    }
+  }
+
+  // ==========================================
+  // PAGINATION
+  // ==========================================
+
+  /**
+   * Change de page dans la pagination.
+   * @param {number} direction - Direction: -1 pour précédent, 1 pour suivant
+   * @private
+   */
+  changePage(direction) {
+    const newPage = this.pagination.currentPage + direction;
+    if (newPage >= 1 &amp;&amp; newPage &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = newPage;
+      const searchText = this.getElement('#quotes-search-input')?.value || '';
+      const statusFilter = this.getElement('#quotes-status-filter')?.value || '';
+      this.loadQuotesInTab(searchText, statusFilter);
+    }
+  }
+
+  /**
+   * Va à une page spécifique.
+   * @param {number} pageNumber - Numéro de page (1-indexed)
+   * @private
+   */
+  goToPage(pageNumber) {
+    if (pageNumber >= 1 &amp;&amp; pageNumber &lt;= this.pagination.totalPages) {
+      this.pagination.currentPage = pageNumber;
+      const searchText = this.getElement('#quotes-search-input')?.value || '';
+      const statusFilter = this.getElement('#quotes-status-filter')?.value || '';
+      this.loadQuotesInTab(searchText, statusFilter);
+    }
+  }
+
+  /**
+   * Met à jour les contrôles de pagination (info et boutons).
+   * @param {number} totalItems - Nombre total d'items
+   * @param {Array} displayedItems - Items affichés sur la page actuelle
+   * @private
+   */
+  updatePaginationControls(totalItems, displayedItems) {
+    // Mettre à jour le texte d'information
+    const paginationInfo = this.getElement('#quotes-pagination-info');
+    if (paginationInfo) {
+      if (totalItems === 0) {
+        paginationInfo.textContent = 'Aucun devis';
+      } else {
+        const startIndex = (this.pagination.currentPage - 1) * this.pagination.itemsPerPage + 1;
+        const endIndex = startIndex + displayedItems.length - 1;
+        paginationInfo.textContent = `Affichage ${startIndex}-${endIndex} sur ${totalItems} devis`;
+      }
+    }
+
+    // Mettre à jour les boutons de pagination
+    const paginationControls = this.getElement('#quotes-pagination-controls');
+    if (paginationControls &amp;&amp; totalItems > 0) {
+      const prevDisabled = this.pagination.currentPage === 1 ? 'disabled' : '';
+      const nextDisabled = this.pagination.currentPage === this.pagination.totalPages ? 'disabled' : '';
+
+      // Générer les numéros de page (max 5 pages visibles)
+      const pageNumbers = this.generatePageNumbers();
+
+      paginationControls.innerHTML = `
+        &lt;button class="btn btn-sm btn-outline-primary" ${prevDisabled} onclick="window.quotesModule.changePage(-1)">
+          &lt;i class="fas fa-chevron-left">&lt;/i> Précédent
+        &lt;/button>
+        ${pageNumbers.map(page => {
+          if (page === '...') {
+            return '&lt;span class="mx-1">...&lt;/span>';
+          }
+          const active = page === this.pagination.currentPage ? 'btn-primary' : 'btn-outline-primary';
+          return `&lt;button class="btn btn-sm ${active}" onclick="window.quotesModule.goToPage(${page})">${page}&lt;/button>`;
+        }).join('')}
+        &lt;button class="btn btn-sm btn-outline-primary" ${nextDisabled} onclick="window.quotesModule.changePage(1)">
+          Suivant &lt;i class="fas fa-chevron-right">&lt;/i>
+        &lt;/button>
+      `;
+    } else if (paginationControls) {
+      paginationControls.innerHTML = '';
+    }
+  }
+
+  /**
+   * Génère les numéros de page à afficher (max 5 pages visibles avec ellipses).
+   * @returns {Array} - Array de numéros de page et ellipses
+   * @private
+   */
+  generatePageNumbers() {
+    const pages = [];
+    const total = this.pagination.totalPages;
+    const current = this.pagination.currentPage;
+
+    if (total &lt;= 7) {
+      // Afficher toutes les pages si &lt;= 7
+      for (let i = 1; i &lt;= total; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Toujours afficher la première page
+      pages.push(1);
+
+      if (current > 3) {
+        pages.push('...');
+      }
+
+      // Pages autour de la page actuelle
+      const start = Math.max(2, current - 1);
+      const end = Math.min(total - 1, current + 1);
+
+      for (let i = start; i &lt;= end; i++) {
+        pages.push(i);
+      }
+
+      if (current &lt; total - 2) {
+        pages.push('...');
+      }
+
+      // Toujours afficher la dernière page
+      pages.push(total);
+    }
+
+    return pages;
+  }
+
+  /**
+   * Supprime plusieurs devis en masse (opération bulk).
+   *
+   * Workflow :
+   * 1. Récupérer authToken (Vendeur/Conseil autorisé)
+   * 2. Pour chaque quoteId dans le tableau :
+   *    - Appeler IPC 'delete-saved-quote' avec authToken + quoteId
+   * 3. Si succès : notification + rafraîchissement de la liste
+   *
+   * @async
+   * @param {Array&lt;string>} quoteIds - Tableau des IDs des devis à supprimer
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.bulkDeleteQuotes(['quote_123', 'quote_456']);
+   * // → Devis supprimés, notification affichée, liste rafraîchie
+   */
+  async bulkDeleteQuotes(quoteIds) {
+    try {
+      const authToken = this.getAuthToken();
+
+      let successCount = 0;
+      let errorCount = 0;
+
+      for (const quoteId of quoteIds) {
+        try {
+          const result = await this.invoke('delete-saved-quote', authToken, quoteId);
+          if (result.success) {
+            successCount++;
+          } else {
+            errorCount++;
+          }
+        } catch (error) {
+          this.logError('Erreur lors de la suppression du devis', error);
+          errorCount++;
+        }
+      }
+
+      if (successCount > 0) {
+        NotificationSystem.success(`${successCount} devis supprimé(s) avec succès`);
+
+        // Rafraîchir l'onglet Devis si actif
+        if (document.getElementById('quotes-tab').classList.contains('active')) {
+          await this.loadQuotesInTab();
+        }
+      }
+
+      if (errorCount > 0) {
+        NotificationSystem.error(`${errorCount} devis n'ont pas pu être supprimés`);
+      }
+
+      // Réinitialiser les sélections
+      if (this.bulkActions) {
+        this.bulkActions.clearSelection();
+      }
+    } catch (error) {
+      this.logError('Erreur lors de la suppression en masse', error);
+      NotificationSystem.error('Erreur lors de la suppression en masse');
+    }
+  }
+
+  /**
+   * Exporte plusieurs devis en masse au format CSV.
+   *
+   * Workflow :
+   * 1. Pour chaque quoteId :
+   *    - Charger les données complètes du devis
+   * 2. Générer un fichier CSV avec tous les devis sélectionnés
+   * 3. Télécharger le fichier CSV
+   *
+   * @async
+   * @param {Array&lt;string>} quoteIds - Tableau des IDs des devis à exporter
+   * @returns {Promise&lt;void>}
+   *
+   * @example
+   * await quotesModule.bulkExportQuotes(['quote_123', 'quote_456']);
+   * // → Fichier CSV téléchargé avec les 2 devis
+   */
+  async bulkExportQuotes(quoteIds) {
+    try {
+      const quotes = [];
+
+      for (const quoteId of quoteIds) {
+        try {
+          const result = await this.invoke('load-saved-quote', quoteId);
+          if (result.success &amp;&amp; result.quote) {
+            quotes.push(result.quote);
+          }
+        } catch (error) {
+          this.logError('Erreur lors du chargement du devis pour export', error);
+        }
+      }
+
+      if (quotes.length === 0) {
+        NotificationSystem.error('Aucun devis à exporter');
+        return;
+      }
+
+      // Générer le CSV
+      const csv = this.generateCSV(quotes);
+
+      // Créer un blob et télécharger
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+
+      const timestamp = new Date().toISOString().split('T')[0];
+      link.setAttribute('href', url);
+      link.setAttribute('download', `devis_export_${timestamp}.csv`);
+      link.style.visibility = 'hidden';
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      NotificationSystem.success(`${quotes.length} devis exporté(s) avec succès`);
+
+      // Réinitialiser les sélections
+      if (this.bulkActions) {
+        this.bulkActions.clearSelection();
+      }
+    } catch (error) {
+      this.logError('Erreur lors de l\'export en masse', error);
+      NotificationSystem.error('Erreur lors de l\'export en masse');
+    }
+  }
+
+  /**
+   * Génère un fichier CSV à partir d'un tableau de devis.
+   *
+   * Format CSV :
+   * - Séparateur : point-virgule (;)
+   * - Encodage : UTF-8
+   * - Colonnes : Nom, Client, Statut, Date de création, Date de modification, Total HT, Total TVA, Total TTC, Nombre d'articles
+   *
+   * @param {Array&lt;Object>} quotes - Tableau des devis à exporter
+   * @returns {string} Contenu CSV
+   *
+   * @example
+   * const csv = quotesModule.generateCSV([quote1, quote2]);
+   * // → "Nom;Client;Statut;Date de création;..."
+   */
+  generateCSV(quotes) {
+    if (!quotes || !Array.isArray(quotes) || quotes.length === 0) {
+      return 'Nom du devis;Client;Téléphone;Email;Adresse;Statut;Date de création;Date de modification;Total HT;Total TVA;Total TTC;Nombre d\'articles;Émetteur';
+    }
+
+    // En-têtes CSV
+    const headers = [
+      'Nom du devis',
+      'Client',
+      'Téléphone',
+      'Email',
+      'Adresse',
+      'Statut',
+      'Date de création',
+      'Date de modification',
+      'Total HT',
+      'Total TVA',
+      'Total TTC',
+      'Nombre d\'articles',
+      'Émetteur'
+    ];
+
+    // Construire les lignes CSV
+    const rows = quotes.map(quote => {
+      const clientInfo = quote.clientInfo || {};
+      const items = quote.items || [];
+      const totals = this.calculateTotalsForItems(items);
+
+      return [
+        this.escapeCsvValue(quote.name || ''),
+        this.escapeCsvValue(clientInfo.name || ''),
+        this.escapeCsvValue(clientInfo.phone || ''),
+        this.escapeCsvValue(clientInfo.email || ''),
+        this.escapeCsvValue(clientInfo.address || ''),
+        this.escapeCsvValue(quote.status || 'brouillon'),
+        this.formatDate(quote.createdAt),
+        this.formatDate(quote.updatedAt),
+        totals.totalHT.toFixed(2),
+        totals.totalTVA.toFixed(2),
+        totals.totalTTC.toFixed(2),
+        items.length,
+        this.escapeCsvValue(clientInfo.issuer || '')
+      ].join(';');
+    });
+
+    // Combiner en-têtes et lignes
+    return [headers.join(';'), ...rows].join('\n');
+  }
+
+  /**
+   * Échappe une valeur pour l'inclure dans un CSV.
+   * Encadre par des guillemets si la valeur contient des caractères spéciaux.
+   *
+   * @param {string} value - Valeur à échapper
+   * @returns {string} Valeur échappée
+   * @private
+   */
+  escapeCsvValue(value) {
+    if (!value) return '';
+
+    // Convertir en string
+    const str = String(value);
+
+    // Si contient des caractères spéciaux, encadrer de guillemets et doubler les guillemets internes
+    if (str.includes(';') || str.includes('"') || str.includes('\n') || str.includes('\r')) {
+      return `"${str.replace(/"/g, '""')}"`;
+    }
+
+    return str;
+  }
+
+  /**
+   * Formate une date ISO en format français (DD/MM/YYYY).
+   *
+   * @param {string} isoDate - Date au format ISO
+   * @returns {string} Date formatée ou chaîne vide
+   * @private
+   */
+  formatDate(isoDate) {
+    if (!isoDate) return '';
+
+    try {
+      const date = new Date(isoDate);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    } catch (error) {
+      return '';
+    }
+  }
+
+  /**
+   * Calcule les totaux d'un devis (HT, TVA, TTC) à partir d'un tableau d'items.
+   * Utilisé pour l'export CSV des bulk operations.
+   *
+   * @param {Array&lt;Object>} items - Articles du devis
+   * @returns {Object} Totaux {totalHT, totalTVA, totalTTC}
+   * @private
+   */
+  calculateTotalsForItems(items) {
+    let totalHT = 0;
+    let totalTVA = 0;
+    let totalTTC = 0;
+
+    // Vérifier que items est un tableau valide
+    if (!items || !Array.isArray(items)) {
+      return { totalHT: 0, totalTVA: 0, totalTTC: 0 };
+    }
+
+    items.forEach(item => {
+      const priceHT = parseFloat(item.priceHT) || 0;
+      const quantity = parseFloat(item.quantity) || 0;
+      const tva = parseFloat(item.tva) || 0;
+
+      const itemTotalHT = priceHT * quantity;
+      const itemTVA = itemTotalHT * (tva / 100);
+      const itemTotalTTC = itemTotalHT + itemTVA;
+
+      totalHT += itemTotalHT;
+      totalTVA += itemTVA;
+      totalTTC += itemTotalTTC;
+    });
+
+    return {
+      totalHT,
+      totalTVA,
+      totalTTC
+    };
+  }
+
+  /**
+   * Formate un montant en devise française (EUR).
+   *
+   * Utilise l'API Intl.NumberFormat pour un formatage localisé.
+   * Format : 1 234,56 €
+   *
+   * @param {number} amount - Montant à formater
+   * @returns {string} Montant formaté avec symbole € ou '0,00 €' si invalide
+   *
+   * @example
+   * quotesModule.formatCurrency(1234.56);
+   * // → '1 234,56 €'
+   *
+   * @example
+   * quotesModule.formatCurrency(null);
+   * // → '0,00 €'
+   */
+  formatCurrency(amount) {
+    if (amount === null || amount === undefined || isNaN(amount)) return '0,00 €';
+    return new Intl.NumberFormat('fr-FR', {
+      style: 'currency',
+      currency: 'EUR'
+    }).format(amount);
+  }
+}
+
+export default QuotesModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> TemplatesModule</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Class</p>
+                    <h1>TemplatesModule</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-TemplatesModule.html">TemplatesModule</a>~</span>TemplatesModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="TemplatesModule">
+        <a class="href-link" href="#TemplatesModule">#</a>
+        
+        <span class="code-name">
+            
+                new TemplatesModule<span class="signature">(state, eventBus)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Crée une instance du module Templates.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>state</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="StateManager.html">StateManager</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Gestionnaire d'état global</p></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>eventBus</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type"><a href="EventBus.html">EventBus</a></code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Bus d'événements</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line222">line 222</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="askDeleteTemplate">
+    <a class="href-link" href="#askDeleteTemplate">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        askDeleteTemplate
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Demande confirmation avant de supprimer un template.
+Charge le template, affiche son nom dans le modal et ouvre le modal de confirmation.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line669">line 669</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Supprimer" sur template
+await askDeleteTemplate('550e8400-e29b-41d4-a716-446655440000');
+// → Modal de confirmation affiché avec le nom du template</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="askSaveCurrentAsTemplate">
+    <a class="href-link" href="#askSaveCurrentAsTemplate">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        askSaveCurrentAsTemplate
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Ouvre le modal pour sauvegarder le devis actuel comme template.
+Vérifie l'authentification et que le devis contient au moins 1 article.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère authToken via window.getAuthToken()</li>
+<li>Si non connecté → NotificationSystem.error + return</li>
+<li>Vérifie window.quoteItems.length &gt; 0</li>
+<li>Si devis vide → NotificationSystem.error &quot;Le devis actuel est vide&quot; + return</li>
+<li>Récupère modal #saveTemplateModal</li>
+<li>Retire attribut 'inert' (accessibilité)</li>
+<li>Affiche modal via Bootstrap</li>
+</ol>
+<p>Prérequis :</p>
+<ul>
+<li>Utilisateur connecté (authToken disponible)</li>
+<li>window.quoteItems doit contenir au moins 1 article</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line351">line 351</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si non connecté ou devis vide</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Vendeur clique "Sauvegarder comme Template" après avoir construit un devis de 5 articles
+await askSaveCurrentAsTemplate();
+// → Modal s'ouvre avec champs nom et description</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="confirmDeleteTemplate">
+    <a class="href-link" href="#confirmDeleteTemplate">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        confirmDeleteTemplate
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Supprime définitivement un template après confirmation.
+Envoie IPC 'delete-quote-template', puis recharge la liste des templates.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupération authToken via window.getAuthToken()</li>
+<li>Si non connecté → NotificationSystem.error, arrêter</li>
+<li>Envoi IPC 'delete-quote-template' avec authToken + templateId</li>
+<li>Si succès :
+<ul>
+<li>NotificationSystem.success &quot;Template supprimé&quot;</li>
+<li>Ferme le modal</li>
+<li>Recharge liste templates (loadTemplates)</li>
+</ul>
+</li>
+<li>Si erreur → NotificationSystem.error</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line728">line 728</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si non connecté ou erreur IPC</li>
+            
+                <li>NotificationSystem#event:success Si template supprimé</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Confirmer" dans le modal de suppression
+await confirmDeleteTemplate();
+// → IPC 'delete-quote-template' envoyé
+// → Template supprimé de templates.json
+// → "Template supprimé"
+// → Liste rechargée sans ce template</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="confirmSaveTemplate">
+    <a class="href-link" href="#confirmSaveTemplate">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        confirmSaveTemplate
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Sauvegarde le devis actuel comme template après validation.
+Récupère le nom et la description, extrait les articles, envoie via IPC.</p>
+<p>Workflow :</p>
+<ol>
+<li>Récupère authToken via window.getAuthToken()</li>
+<li>Si non connecté → NotificationSystem.error + return</li>
+<li>Récupère #template-name et #template-description (trim)</li>
+<li>Validation : Si nom vide → NotificationSystem.error &quot;Le nom est requis&quot; + return</li>
+<li>Extrait les données de window.quoteItems :
+<ul>
+<li>Pour chaque article : { material, clientRequest, quantity, calculation }</li>
+<li>IMPORTANT : Ne sauvegarde PAS les prix (seront recalculés au chargement)</li>
+</ul>
+</li>
+<li>Envoie IPC 'save-quote-template' avec authToken + { name, description, quoteItems }</li>
+<li>Si succès :
+<ul>
+<li>NotificationSystem.success &quot;Template '[nom]' créé&quot;</li>
+<li>Ferme modal (#saveTemplateModal)</li>
+<li>Réinitialise formulaire (vide #template-name et #template-description)</li>
+<li>Recharge liste templates (loadTemplates)</li>
+</ul>
+</li>
+<li>Si erreur → NotificationSystem.error</li>
+</ol>
+<p>Données sauvegardées par article :</p>
+<ul>
+<li>material : Objet matériau complet (id, name, reference, price, tvaRate, unit, supplier, etc.)</li>
+<li>clientRequest : Demande client (texte libre)</li>
+<li>quantity : Quantité de base</li>
+<li>calculation : Données de calcul (surface, longueur, largeur, etc.)</li>
+</ul>
+<p>Backend :</p>
+<ul>
+<li>Génère un UUID v4 pour le template</li>
+<li>Calcule itemsCount automatiquement</li>
+<li>Ajoute createdAt (ISO 8601) et createdBy</li>
+<li>Sauvegarde dans templates.json</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line415">line 415</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si non connecté ou nom manquant</li>
+            
+                <li>NotificationSystem#event:success Si template créé</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur saisit "Réno SDB Standard" et clique "Sauvegarder"
+await confirmSaveTemplate();
+// → IPC 'save-quote-template' envoyé
+// → Template créé avec UUID, 12 articles
+// → "Template 'Réno SDB Standard' créé"
+// → Modal fermé, liste rechargée</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="loadTemplates">
+    <a class="href-link" href="#loadTemplates">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        loadTemplates
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Charge et affiche la liste de tous les templates disponibles.
+Génère un tableau HTML avec métadonnées et boutons d'action.</p>
+<p>Workflow :</p>
+<ol>
+<li>Envoie IPC 'list-quote-templates' (sans auth, lecture seule)</li>
+<li>Backend retourne { success, templates: [...] }</li>
+<li>Si erreur → NotificationSystem.error + return</li>
+<li>Récupère tableau #templates-table-body</li>
+<li>Si aucun template → affiche &quot;Aucun template&quot;</li>
+<li>Sinon génère HTML pour chaque template :
+<ul>
+<li>Colonne 1 : Nom (strong, échappé HTML)</li>
+<li>Colonne 2 : Description (échappé HTML, &quot;-&quot; si vide)</li>
+<li>Colonne 3 : Nombre d'articles (ex: &quot;12 articles&quot;)</li>
+<li>Colonne 4 : Date de création (formatée DD/MM/YYYY via DateFormatter.toFrench)</li>
+<li>Colonne 5 : Bouton &quot;Utiliser&quot; onclick useTemplate(id) + Bouton &quot;Supprimer&quot; onclick deleteTemplate(id)</li>
+</ul>
+</li>
+<li>Affiche le tableau généré</li>
+</ol>
+<p>Sécurité :</p>
+<ul>
+<li>Échappement HTML via TextFormatter.escapeHtml() (protection XSS)</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line509">line 509</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si erreur de chargement</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur ouvre l'onglet Templates
+await loadTemplates();
+// → IPC 'list-quote-templates' envoyé
+// → Tableau affiché avec 3 templates :
+//   1. "Réno SDB Standard" - 12 articles - 15/01/2025
+//   2. "Terrasse été" - 8 articles - 10/01/2025
+//   3. "Isolation hiver" - 15 articles - 05/01/2025</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="useTemplate">
+    <a class="href-link" href="#useTemplate">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        useTemplate
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Charge un template et l'applique au devis actuel.
+Vide le devis en cours, charge tous les articles du template avec recalcul des prix,
+rafraîchit l'UI et bascule vers l'onglet Nouveau Devis.</p>
+<p>Workflow :</p>
+<ol>
+<li>Envoie IPC 'load-quote-template' avec templateId</li>
+<li>Backend retourne { success, template } avec template.quoteItems complet</li>
+<li>Si non trouvé → NotificationSystem.error &quot;Template non trouvé&quot; + return</li>
+<li>Vide window.quoteItems actuel (reset complet du devis en cours)</li>
+<li>Pour chaque article du template.quoteItems :
+a. Extrait material, clientRequest, quantity, calculation
+b. Recalcule les prix depuis material.price actuel :
+<ul>
+<li>unitPriceHT = material.price / (1 + material.tvaRate)</li>
+<li>unitPriceTTC = material.price</li>
+<li>priceHT = quantity * unitPriceHT</li>
+<li>priceTTC = quantity * material.price</li>
+<li>tva = priceTTC - priceHT
+c. Ajoute l'article complet à window.quoteItems</li>
+</ul>
+</li>
+<li>Appelle window.updateQuoteTable() (QuoteBuilderModule) pour rafraîchir UI</li>
+<li>Bascule vers onglet #new-quote-tab via Bootstrap Tab API</li>
+<li>NotificationSystem.success &quot;Template '[nom]' chargé (X articles)&quot;</li>
+</ol>
+<p>IMPORTANT - Recalcul des prix :</p>
+<ul>
+<li>Les prix du template ne sont PAS sauvegardés</li>
+<li>Ils sont recalculés à chaque chargement depuis material.price actuel</li>
+<li>Garantit que le devis utilise toujours les prix à jour du catalogue</li>
+<li>Si un matériau a changé de prix depuis la création du template, le nouveau prix est utilisé</li>
+</ul>
+<p>Impact sur le devis en cours :</p>
+<ul>
+<li>ATTENTION : window.quoteItems est complètement vidé avant chargement</li>
+<li>Les articles du devis en cours seront perdus (sans confirmation)</li>
+<li>Recommandation UX : Ajouter une confirmation si window.quoteItems.length &gt; 0</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line606">line 606</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+    <div class="method-parameter columns">
+        <div class="column is-2"><label>Fires:</label></div>
+        <div class="column is-10">
+            <ul>
+                <li>NotificationSystem#event:error Si template non trouvé ou erreur IPC</li>
+            
+                <li>NotificationSystem#event:success Si template chargé avec succès</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique "Utiliser" sur template "Réno SDB Standard" (12 articles)
+await useTemplate('550e8400-e29b-41d4-a716-446655440000');
+// → IPC 'load-quote-template' envoyé
+// → window.quoteItems vidé
+// → 12 articles chargés avec prix recalculés
+// → Onglet "Nouveau Devis" activé
+// → "Template 'Réno SDB Standard' chargé (12 articles)"</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="viewTemplateDetails">
+    <a class="href-link" href="#viewTemplateDetails">#</a>
+    
+        
+            <span class='tag'>async</span>
+        
+    
+    <span class="code-name">
+        viewTemplateDetails
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Affiche les détails complets d'un template dans un modal.</p>
+<p>Workflow :</p>
+<ol>
+<li>Charge le template complet via IPC 'load-quote-template'</li>
+<li>Si non trouvé : afficher erreur, arrêter</li>
+<li>Remplir tous les champs du modal de détails</li>
+<li>Afficher le modal 'templateDetailsModal'</li>
+</ol>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line787">line 787</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Utilisateur clique sur "Voir détails" pour le template #3
+await viewTemplateDetails('550e8400-e29b-41d4-a716-446655440000');
+// → Modal affiché avec toutes les informations du template</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="init">
+        <a class="href-link" href="#init">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                init<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Initialise le module Templates.
+Expose les fonctions globales pour compatibilité.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_templates_TemplatesModule.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_templates_TemplatesModule.js.html">modules/templates/TemplatesModule.js</a>, <a href="modules_templates_TemplatesModule.js.html#line241">line 241</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Si l'initialisation échoue</p></div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const templatesModule = new TemplatesModule(state, eventBus);
+await templatesModule.init();
+// Fonctions globales exposées : askSaveCurrentAsTemplate, confirmSaveTemplate, loadTemplates, useTemplate, deleteTemplate</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1548 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> modules/quotebuilder/QuoteBuilderModule.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule.html">DashboardModule</a></li><li><a href="module-DataCache.html">DataCache</a></li><li><a href="module-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule.html">FECModule</a></li><li><a href="module-FollowUpModule.html">FollowUpModule</a></li><li><a href="module-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-KeyboardShortcutsModule.html">KeyboardShortcutsModule</a></li><li><a href="module-Logger.html">Logger</a></li><li><a href="module-MLService.html">MLService</a></li><li><a href="module-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-NotificationSystem.html">NotificationSystem</a></li><li><a href="module-NotificationSystemV2.html">NotificationSystemV2</a></li><li><a href="module-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-TourModule.html">TourModule</a></li><li><a href="module-UtilitiesModule.html">UtilitiesModule</a></li><li><a href="module-calculations.html">calculations</a></li><li><a href="module-constants.html">constants</a></li><li><a href="module-formatters.html">formatters</a></li><li><a href="module-helpers.html">helpers</a></li></ul><h3>Classes</h3><ul><li><a href="BaseModule.html">BaseModule</a></li><li><a href="BulkActionsManager.html">BulkActionsManager</a></li><li><a href="CacheKeys.html">CacheKeys</a></li><li><a href="EventBus.html">EventBus</a></li><li><a href="LoadingStateManager.html">LoadingStateManager</a></li><li><a href="ModalHelper.html">ModalHelper</a></li><li><a href="PaginationManager.html">PaginationManager</a></li><li><a href="ServerValidator.html">ServerValidator</a></li><li><a href="StateManager.html">StateManager</a></li><li><a href="TabRefreshManager.html">TabRefreshManager</a></li><li><a href="UndoRedoManager.html">UndoRedoManager</a></li><li><a href="module-AboutModule-AboutModule.html">AboutModule</a></li><li><a href="module-AuthModule-AuthModule.html">AuthModule</a></li><li><a href="module-BackupModule-BackupModule.html">BackupModule</a></li><li><a href="module-ClientsModule-ClientsModule.html">ClientsModule</a></li><li><a href="module-ConfigModule-ConfigModule.html">ConfigModule</a></li><li><a href="module-DashboardModule-DashboardModule.html">DashboardModule</a></li><li><a href="module-ExportModule-ExportModule.html">ExportModule</a></li><li><a href="module-FECModule-FECModule.html">FECModule</a></li><li><a href="module-ImportModule-ImportModule.html">ImportModule</a></li><li><a href="module-InvoicesModule-InvoicesModule.html">InvoicesModule</a></li><li><a href="module-Logger-Logger.html">Logger</a></li><li><a href="module-Logger-ModuleLogger.html">ModuleLogger</a></li><li><a href="module-MaterialsModule-MaterialsModule.html">MaterialsModule</a></li><li><a href="module-PDFModule-PDFModule.html">PDFModule</a></li><li><a href="module-QuickAddModule-QuickAddModule.html">QuickAddModule</a></li><li><a href="module-QuoteBuilderModule-QuoteBuilderModule.html">QuoteBuilderModule</a></li><li><a href="module-QuotesModule-QuotesModule.html">QuotesModule</a></li><li><a href="module-RevenueModule-RevenueModule.html">RevenueModule</a></li><li><a href="module-ScannerModule-ScannerModule.html">ScannerModule</a></li><li><a href="module-SuppliersModule-SuppliersModule.html">SuppliersModule</a></li><li><a href="module-TemplatesModule-TemplatesModule.html">TemplatesModule</a></li><li><a href="module-UtilitiesModule-UtilitiesModule.html">UtilitiesModule</a></li></ul><h3>Global</h3><ul><li><a href="global.html#clear">clear</a></li><li><a href="global.html#crypto">crypto</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#emitSync">emitSync</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#once">once</a></li><li><a href="global.html#validateBeforeAddToQuote">validateBeforeAddToQuote</a></li><li><a href="global.html#validateBeforeExport">validateBeforeExport</a></li><li><a href="global.html#validateBeforeSaveMaterial">validateBeforeSaveMaterial</a></li><li><a href="global.html#validateBeforeSendEmail">validateBeforeSendEmail</a></li><li><a href="global.html#validateHeaderConfig">validateHeaderConfig</a></li><li><a href="global.html#validatePasswordChange">validatePasswordChange</a></li><li><a href="global.html#validateSMTPConfig">validateSMTPConfig</a></li><li><a href="global.html#waitFor">waitFor</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/quotebuilder/QuoteBuilderModule.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * ========================================
+ * QUOTE BUILDER MODULE - Construction de devis
+ * ========================================
+ *
+ * Module de construction interactive de devis pour l'application AutoCalc OptiDevis.
+ * Gère toute la logique de calcul, d'ajout d'articles, de gestion des totaux et de
+ * synchronisation avec le formulaire client.
+ *
+ * Architecture :
+ * Le module fonctionne comme un "panier" intelligent qui calcule automatiquement
+ * les quantités et prix en fonction des paramètres saisis par l'utilisateur.
+ *
+ * Workflow principal - Ajout d'un article au devis :
+ * 1. Utilisateur sélectionne un matériau (via MaterialsModule)
+ * 2. Affichage du matériau sélectionné (updateSelectedMaterialDisplay)
+ * 3. Utilisateur saisit les paramètres de calcul :
+ *    - Surface (m²) pour calcul surfacique
+ *    - Épaisseur (cm) + longueur (m) pour calcul volumique
+ *    - Unités pour calcul direct
+ *    - Demande client (description personnalisée)
+ * 4. Aperçu en temps réel (updateCalculationPreview) :
+ *    - Calcul de la quantité via calculateQuantity()
+ *    - Calcul des prix HT, TVA, TTC
+ *    - Affichage du détail du calcul
+ * 5. Utilisateur clique "Ajouter au devis"
+ * 6. Validation (matériau sélectionné, quantité > 0)
+ * 7. Création de l'item avec toutes les propriétés calculées
+ * 8. Ajout à this.quoteItems
+ * 9. Rafraîchissement du tableau (updateQuoteTable)
+ * 10. Réinitialisation des champs et de la sélection
+ * 11. Notification de succès
+ *
+ * Workflow de calcul automatique :
+ * - **Calcul surfacique** : quantité = surface × pièces/m² du matériau
+ * - **Calcul volumique** : quantité = surface × épaisseur × densité du matériau
+ * - **Calcul direct** : quantité = unités saisies
+ * - **Prix** :
+ *   - Prix unitaire TTC = prix matériau
+ *   - Prix unitaire HT = TTC / (1 + taux TVA)
+ *   - Total HT = quantité × prix unitaire HT
+ *   - Total TVA = Total TTC - Total HT
+ *   - Total TTC = quantité × prix unitaire TTC
+ *
+ * Gestion des remises :
+ * - Pourcentage de remise appliqué sur le total HT
+ * - Montant remise = Total HT × (remise% / 100)
+ * - Total HT après remise = Total HT - Montant remise
+ * - TVA et TTC recalculés proportionnellement
+ * - Affichage conditionnel des lignes de remise dans le tableau
+ *
+ * Verrouillage des devis acceptés :
+ * - Lorsqu'un devis accepté (signé) est chargé :
+ *   - Tous les champs client sont verrouillés (disabled + style visuel)
+ *   - Tous les boutons d'action sont désactivés (Ajouter, Ajout rapide, Sauvegarder)
+ *   - Boutons de suppression/modification dans le tableau désactivés
+ * - Boutons "Récupérer Devis" et "Vider Devis" restent actifs
+ * - Admin peut déverrouiller manuellement via bouton dédié
+ *
+ * Synchronisation avec variables globales :
+ * - Le module utilise des getters/setters ES6 pour synchroniser automatiquement
+ *   ses propriétés avec window.* pour compatibilité avec le code legacy
+ * - Variables synchronisées :
+ *   - window.quoteItems ↔ this.quoteItems
+ *   - window.selectedMaterial ↔ this.selectedMaterial
+ *   - window.clientInfo ↔ this.clientInfo
+ *   - window.currentQuoteId ↔ this.currentQuoteId
+ *   - window.currentQuoteName ↔ this.currentQuoteName
+ *   - window.currentQuoteCreatedAt ↔ this.currentQuoteCreatedAt
+ *   - window.currentQuoteStatus ↔ this.currentQuoteStatus
+ * - Les modifications de window.* se reflètent automatiquement dans le module et vice-versa
+ *
+ * Réinitialisation du devis :
+ * - Vide tous les articles (quoteItems = [])
+ * - Réinitialise clientInfo (sauf date → aujourd'hui)
+ * - Réinitialise les métadonnées (ID, nom, date création, statut)
+ * - Vide tous les champs du formulaire
+ * - Remet la remise à 0%
+ * - Masque le bouton "Changer le statut"
+ * - Déverrouille les champs si un devis accepté était chargé
+ * - Rafraîchit le tableau
+ *
+ * Événements écoutés :
+ * - input sur champs de calcul → updateCalculationPreview()
+ * - input sur champs client → syncClientInfoFromForm()
+ * - change sur remise → updateQuoteTable()
+ * - click sur "Ajouter au devis" → addToQuote()
+ *
+ * Fonctions exposées (compatibilité legacy) :
+ * - updateSelectedMaterialDisplay, updateCalculationPreview
+ * - addToQuote, removeQuoteItem
+ * - updateQuoteTable, calculateQuoteTotals
+ * - clearQuote, askClearQuote
+ * - setQuoteFieldsLocked, syncClientInfoFromForm
+ *
+ * Intégrations :
+ * - MaterialsModule : Sélection de matériau (via window.selectedMaterial)
+ * - QuotesModule : Sauvegarde/chargement de devis complets
+ * - ValidationSystem : Validation des champs avant ajout
+ * - calculations.js : Calcul centralisé des quantités
+ *
+ * @module QuoteBuilderModule
+ * @extends BaseModule
+ * @version 2.0.0
+ * @author AutoCalc OptiDevis
+ */
+
+import BaseModule from '../../core/BaseModule.js';
+import NotificationSystem from '../../shared/ui/NotificationSystem.js';
+import { calculateQuantity } from '../../shared/utils/calculations.js';
+import { TextFormatter } from '../../shared/utils/formatters.js';
+import mlService from '../../shared/services/MLService.js';
+
+class QuoteBuilderModule extends BaseModule {
+  /**
+   * Crée une instance du module QuoteBuilder.
+   *
+   * @param {StateManager} state - Gestionnaire d'état global
+   * @param {EventBus} eventBus - Bus d'événements pour communication inter-modules
+   */
+  constructor(state, eventBus) {
+    super('quotebuilder', state, eventBus);
+
+    /**
+     * Articles du devis en cours.
+     * Chaque item contient toutes les informations calculées pour un article.
+     *
+     * @type {Array&lt;Object>}
+     * @private
+     * @property {Object} material - Objet matériau complet
+     * @property {string} clientRequest - Description/demande client
+     * @property {number} quantity - Quantité calculée
+     * @property {string} calculation - Texte explicatif du calcul
+     * @property {number} unitPriceHT - Prix unitaire HT
+     * @property {number} unitPriceTTC - Prix unitaire TTC
+     * @property {number} priceHT - Total HT pour cet item
+     * @property {number} priceTTC - Total TTC pour cet item
+     * @property {number} tva - Montant TVA pour cet item
+     * @property {string} totalHT - Total HT formaté (2 décimales)
+     * @property {string} totalTVA - Total TVA formaté (2 décimales)
+     * @property {string} totalTTC - Total TTC formaté (2 décimales)
+     * @property {string} tvaRate - Taux de TVA formaté (ex: "20.0%")
+     */
+    this.quoteItems = [];
+
+    /**
+     * Matériau actuellement sélectionné pour ajout au devis.
+     * Synchronisé avec window.selectedMaterial via getter/setter.
+     *
+     * @type {Object|null}
+     * @private
+     */
+    this.selectedMaterial = null;
+
+    /**
+     * Informations client du devis en cours.
+     * Synchronisé avec les champs du formulaire client et window.clientInfo.
+     *
+     * @type {Object}
+     * @private
+     * @property {string} name - Nom du client
+     * @property {string} phone - Téléphone du client
+     * @property {string} email - Email du client
+     * @property {string} address - Adresse du client
+     * @property {string} quoteDate - Date du devis (YYYY-MM-DD)
+     * @property {string} issuer - Émetteur du devis
+     */
+    this.clientInfo = {
+      name: '',
+      phone: '',
+      email: '',
+      address: '',
+      quoteDate: new Date().toISOString().split('T')[0],
+      issuer: ''
+    };
+
+    /**
+     * ID du devis actuellement chargé (null si nouveau devis).
+     * Synchronisé avec window.currentQuoteId.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteId = null;
+
+    /**
+     * Nom du devis actuellement chargé.
+     * Synchronisé avec window.currentQuoteName.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteName = null;
+
+    /**
+     * Date de création du devis actuellement chargé (ISO string).
+     * Synchronisé avec window.currentQuoteCreatedAt.
+     *
+     * @type {string|null}
+     * @private
+     */
+    this.currentQuoteCreatedAt = null;
+
+    /**
+     * Statut du devis actuellement chargé.
+     * Synchronisé avec window.currentQuoteStatus.
+     *
+     * @type {string}
+     * @private
+     * @default 'brouillon'
+     */
+    this.currentQuoteStatus = 'brouillon';
+
+    this.log('QuoteBuilderModule instantiated');
+  }
+
+  /**
+   * Initialise le module QuoteBuilder.
+   *
+   * Effectue les opérations suivantes :
+   * - Expose toutes les fonctions au scope global pour compatibilité legacy
+   * - Configure les getters/setters pour synchroniser les propriétés avec window.*
+   * - Configure tous les event listeners sur les champs du formulaire
+   *
+   * @async
+   * @returns {Promise&lt;void>}
+   * @throws {Error} Si une erreur survient pendant l'initialisation
+   *
+   * @example
+   * const module = new QuoteBuilderModule(stateManager, eventBus);
+   * await module.init();
+   */
+  async init() {
+    try {
+      this.log('Initializing QuoteBuilderModule...');
+
+      // Exposer les fonctions au scope global
+      // NOTE: selectMaterial() est exposé par MaterialsModule, pas par QuoteBuilderModule
+      // pour éviter les conflits et utiliser la version avec gestion du cache
+      this.exposeToGlobal({
+        updateSelectedMaterialDisplay: this.updateSelectedMaterialDisplay,
+        updateCalculationPreview: this.updateCalculationPreview,
+        addToQuote: this.addToQuote,
+        removeQuoteItem: this.removeQuoteItem,
+        updateQuoteTable: this.updateQuoteTable,
+        calculateQuoteTotals: this.calculateQuoteTotals,
+        clearQuote: this.clearQuote,
+        askClearQuote: this.askClearQuote,
+        setQuoteFieldsLocked: this.setQuoteFieldsLocked,
+        syncClientInfoFromForm: this.syncClientInfoFromForm,
+        adjustToAveragePrice: this.adjustToAveragePrice
+      });
+
+      // Exposer les variables au scope global
+      this.syncGlobalVariables();
+
+      // Setup event listeners pour les changements de champs
+      this.setupEventListeners();
+
+      this.initialized = true;
+      this.log('QuoteBuilderModule initialized successfully');
+
+    } catch (error) {
+      this.error('Error initializing QuoteBuilderModule:', error);
+      throw error;
+    }
+  }
+
+  // ==========================================
+  // EVENT LISTENERS
+  // ==========================================
+
+  /**
+   * Configure tous les event listeners pour les champs du formulaire.
+   *
+   * Attache les listeners suivants :
+   * - Click sur bouton "Ajouter au devis" → addToQuote()
+   * - Input sur champs de calcul (surface, épaisseur, longueur, unités) → updateCalculationPreview()
+   * - Input sur champ demande client → updateCalculationPreview()
+   * - Change sur champ remise → updateQuoteTable()
+   * - Input sur champs client (nom, tel, email, adresse, date) → syncClientInfoFromForm()
+   *
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * // Appelé automatiquement par init()
+   * this.setupEventListeners();
+   */
+  setupEventListeners() {
+    // Bouton "Ajouter au devis"
+    const addToQuoteBtn = this.getElement('#add-to-quote-btn');
+    if (addToQuoteBtn) {
+      addToQuoteBtn.addEventListener('click', () => this.addToQuote());
+    }
+
+    // Écouter les changements sur les champs de calcul
+    const calculationFields = ['surface-input', 'thickness-input', 'length-input', 'unit-input', 'unit-select'];
+    calculationFields.forEach(id => {
+      const field = this.getElement(`#${id}`);
+      if (field) {
+        field.addEventListener('input', () => this.updateCalculationPreview());
+      }
+    });
+
+    // Champ de demande client
+    const clientRequestInput = this.getElement('#client-request-input');
+    if (clientRequestInput) {
+      clientRequestInput.addEventListener('input', () => this.updateCalculationPreview());
+    }
+
+    // Écouter le changement de remise
+    const discountField = this.getElement('#quote-discount');
+    if (discountField) {
+      discountField.addEventListener('change', () => this.updateQuoteTable());
+    }
+
+    // Écouter les changements sur les champs client pour synchronisation
+    const clientInputs = ['client-name', 'client-phone', 'client-email', 'client-address', 'quote-date'];
+    clientInputs.forEach(id => {
+      const input = this.getElement(`#${id}`);
+      if (input) {
+        input.addEventListener('input', () => {
+          this.syncClientInfoFromForm();
+        });
+      }
+    });
+
+    // === GESTION DU SÉLECTEUR CLIENT ===
+
+    // Charger et peupler la liste des clients
+    this.populateClientDropdown();
+
+    // Écouter le changement de sélection client
+    const clientSelect = this.getElement('#client-name-select');
+    if (clientSelect) {
+      clientSelect.addEventListener('change', (e) => {
+        this.handleClientSelection(e.target.value);
+      });
+    }
+
+    // Bouton "+" pour créer un nouveau client depuis le devis
+    const addClientBtn = this.getElement('#add-client-from-quote-btn');
+    if (addClientBtn) {
+      addClientBtn.addEventListener('click', () => {
+        this.openClientFormModal();
+      });
+    }
+
+    // Écouter l'événement de création/mise à jour de client pour rafraîchir le dropdown
+    this.events.on('clients:created', () => {
+      this.populateClientDropdown();
+    });
+
+    this.events.on('clients:updated', () => {
+      this.populateClientDropdown();
+    });
+
+    // Bouton de confirmation de vidage de devis (dans le modal)
+    const confirmClearBtn = this.getElement('#confirmClearQuoteBtn');
+    if (confirmClearBtn) {
+      confirmClearBtn.addEventListener('click', () => {
+        this.clearQuote();
+        // Fermer le modal
+        const modalElement = this.getElement('#clearQuoteModal');
+        if (modalElement) {
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          if (modal) modal.hide();
+          modalElement.setAttribute('inert', '');
+        }
+      });
+    }
+  }
+
+  // ==========================================
+  // SÉLECTION DE MATÉRIAU
+  // ==========================================
+
+  // NOTE: La fonction selectMaterial() est gérée par MaterialsModule
+  // pour éviter les conflits et centraliser la logique de sélection.
+  // QuoteBuilderModule écoute les événements 'materials:selected' si nécessaire.
+
+  /**
+   * Met à jour l'affichage du matériau actuellement sélectionné.
+   *
+   * Affiche le nom du matériau sélectionné dans la zone #selected-material-display,
+   * ou "Aucun" si aucun matériau n'est sélectionné.
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Après sélection d'un matériau
+   * this.selectedMaterial = material;
+   * this.updateSelectedMaterialDisplay();
+   * // Affiche: "Matériau sélectionné : Ciment Portland"
+   */
+  updateSelectedMaterialDisplay() {
+    const display = this.getElement('#selected-material-display');
+    if (!display) return;
+
+    if (this.selectedMaterial) {
+      const name = TextFormatter.escapeHtml(this.selectedMaterial.name);
+      display.innerHTML = `&lt;strong>Matériau sélectionné :&lt;/strong> ${name}`;
+    } else {
+      display.innerHTML = `&lt;strong>Matériau sélectionné :&lt;/strong> Aucun`;
+    }
+  }
+
+  // ==========================================
+  // CALCULS ET PRÉVISUALISATION
+  // ==========================================
+
+  /**
+   * Met à jour l'aperçu du calcul en temps réel.
+   *
+   * Récupère les valeurs saisies dans les champs de calcul (surface, épaisseur, longueur, unités),
+   * calcule automatiquement la quantité et les prix (HT, TVA, TTC), puis affiche le résultat
+   * dans la zone #calculation-preview.
+   *
+   * Utilise la fonction centralisée calculateQuantity() pour déterminer :
+   * - La quantité en fonction du type de calcul (surfacique/volumique/direct)
+   * - Le texte explicatif du calcul
+   *
+   * Si aucun matériau n'est sélectionné, vide la zone d'aperçu.
+   *
+   * @public
+   * @returns {void}
+   *
+   * @example
+   * // Lorsque l'utilisateur saisit "10" dans le champ surface
+   * // La prévisualisation affiche automatiquement :
+   * // Calcul: 10 m² × 12.5 pièces/m² = 125 unités
+   * // Quantité: 125 unités
+   * // Prix Total HT: 520.83 €
+   * // TVA (20.0%): 104.17 €
+   * // Prix Total TTC: 625.00 €
+   */
+  updateCalculationPreview() {
+    this.log('Mise à jour de l\'aperçu du calcul...');
+
+    const preview = this.getElement('#calculation-preview');
+    if (!preview) return;
+
+    if (!this.selectedMaterial) {
+      preview.innerHTML = '';
+      return;
+    }
+
+    const surface = parseFloat(this.getValue('#surface-input')) || 0;
+    const thickness = parseFloat(this.getValue('#thickness-input')) || 0;
+    const length = parseFloat(this.getValue('#length-input')) || 0;
+    const units = parseInt(this.getValue('#unit-input')) || 0;
+    const selectedUnit = this.getValue('#unit-select') || this.selectedMaterial.unit;
+
+    // Utiliser la fonction centralisée pour le calcul
+    const { quantity, calculationText } = calculateQuantity(
+      this.selectedMaterial, surface, thickness, length, units, selectedUnit
+    );
+
+    // Assurer que tvaRate est un nombre valide (défaut 0.20 si non défini)
+    // Supporte les deux formats: tva (20) et tvaRate (0.20)
+    let tvaRate;
+    if (typeof this.selectedMaterial.tvaRate === 'number' &amp;&amp; !isNaN(this.selectedMaterial.tvaRate)) {
+      tvaRate = this.selectedMaterial.tvaRate;
+    } else if (typeof this.selectedMaterial.tva === 'number' &amp;&amp; !isNaN(this.selectedMaterial.tva)) {
+      tvaRate = this.selectedMaterial.tva / 100; // Convertir 20 en 0.20
+    } else {
+      tvaRate = 0.20; // Défaut 20%
+    }
+
+    const priceHT = quantity * this.selectedMaterial.price / (1 + tvaRate);
+    const priceTTC = quantity * this.selectedMaterial.price;
+    const tva = priceTTC - priceHT;
+
+    preview.innerHTML = `
+      &lt;strong>Calcul:&lt;/strong> ${calculationText}&lt;br>
+      &lt;strong>Quantité:&lt;/strong> ${quantity} unités&lt;br>
+      &lt;strong>Prix Total HT:&lt;/strong> ${priceHT.toFixed(2)} €&lt;br>
+      &lt;strong>TVA (${(tvaRate * 100).toFixed(1)}%):&lt;/strong> ${tva.toFixed(2)} €&lt;br>
+      &lt;strong>Prix Total TTC:&lt;/strong> ${priceTTC.toFixed(2)} €
+    `;
+  }
+
+  // ==========================================
+  // GESTION DES ITEMS DU DEVIS
+  // ==========================================
+
+  /**
+   * Ajoute un nouvel article au devis en cours.
+   *
+   * Workflow complet :
+   * 1. Validation via validateBeforeAddToQuote() (si disponible)
+   * 2. Vérification qu'un matériau est sélectionné
+   * 3. Récupération des paramètres de calcul (surface, épaisseur, longueur, unités)
+   * 4. Calcul de la quantité via calculateQuantity()
+   * 5. Validation que la quantité > 0
+   * 6. Calcul des prix HT, TTC et TVA
+   * 7. Création de l'objet item avec 13 propriétés
+   * 8. Ajout à this.quoteItems
+   * 9. Rafraîchissement du tableau via updateQuoteTable()
+   * 10. Réinitialisation des champs et de la sélection
+   * 11. Notification de succès
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#error Si aucun matériau sélectionné ou quantité invalide
+   * @fires NotificationSystem#success Lorsque l'article est ajouté
+   *
+   * @example
+   * // Utilisateur sélectionne un matériau, saisit surface = 10 m², clique "Ajouter"
+   * this.addToQuote();
+   * // → Item ajouté avec quantité calculée, prix HT/TTC, affichage dans tableau
+   * // → Champs réinitialisés, prêt pour nouvel article
+   */
+  addToQuote() {
+    this.log('Ajout au devis...');
+
+    // Validation avant ajout
+    if (typeof window.validateBeforeAddToQuote === 'function') {
+      if (!window.validateBeforeAddToQuote()) {
+        return;
+      }
+    }
+
+    if (!this.selectedMaterial) {
+      NotificationSystem.error('Veuillez sélectionner un matériau');
+      return;
+    }
+
+    const surface = parseFloat(this.getValue('#surface-input')) || 0;
+    const thickness = parseFloat(this.getValue('#thickness-input')) || 0;
+    const length = parseFloat(this.getValue('#length-input')) || 0;
+    const units = parseInt(this.getValue('#unit-input')) || 0;
+    const clientRequest = this.getValue('#client-request-input') || '';
+    const selectedUnit = this.getValue('#unit-select') || this.selectedMaterial.unit;
+
+    // Calculer la quantité
+    const { quantity, calculationText } = calculateQuantity(
+      this.selectedMaterial, surface, thickness, length, units, selectedUnit
+    );
+
+    if (quantity &lt;= 0) {
+      NotificationSystem.error('Veuillez spécifier une quantité valide');
+      return;
+    }
+
+    // Assurer que tvaRate est un nombre valide (défaut 0.20 si non défini)
+    // Supporte les deux formats: tva (20) et tvaRate (0.20)
+    let tvaRate;
+    if (typeof this.selectedMaterial.tvaRate === 'number' &amp;&amp; !isNaN(this.selectedMaterial.tvaRate)) {
+      tvaRate = this.selectedMaterial.tvaRate;
+    } else if (typeof this.selectedMaterial.tva === 'number' &amp;&amp; !isNaN(this.selectedMaterial.tva)) {
+      tvaRate = this.selectedMaterial.tva / 100; // Convertir 20 en 0.20
+    } else {
+      tvaRate = 0.20; // Défaut 20%
+    }
+
+    const priceHT = quantity * this.selectedMaterial.price / (1 + tvaRate);
+    const priceTTC = quantity * this.selectedMaterial.price;
+    const tva = priceTTC - priceHT;
+
+    // Ajouter l'item au devis
+    this.quoteItems.push({
+      material: this.selectedMaterial,
+      clientRequest,
+      quantity,
+      calculation: calculationText,
+      unitPriceHT: this.selectedMaterial.price / (1 + tvaRate),
+      unitPriceTTC: this.selectedMaterial.price,
+      priceHT: priceHT,
+      priceTTC: priceTTC,
+      tva: tva,
+      totalHT: priceHT.toFixed(2),
+      totalTVA: tva.toFixed(2),
+      totalTTC: priceTTC.toFixed(2),
+      tvaRate: `${(tvaRate * 100).toFixed(1)}%`
+    });
+
+    this.updateQuoteTable();
+    NotificationSystem.success(`"${this.selectedMaterial.name}" ajouté au devis`);
+
+    // Réinitialiser les champs
+    this.selectedMaterial = null;
+    this.updateSelectedMaterialDisplay();
+    this.setValue('#surface-input', '');
+    this.setValue('#thickness-input', '');
+    this.setValue('#length-input', '');
+    this.setValue('#unit-input', '');
+    this.setValue('#client-request-input', '');
+
+    // Réinitialiser la validation des champs
+    if (typeof window.ValidationSystem !== 'undefined') {
+      ['surface-input', 'thickness-input', 'length-input', 'unit-input'].forEach(id => {
+        window.ValidationSystem.resetField(id);
+      });
+    }
+
+    this.updateCalculationPreview();
+  }
+
+  /**
+   * Supprime un article du devis en cours.
+   *
+   * Supprime l'item situé à l'index spécifié de this.quoteItems,
+   * met à jour le tableau d'affichage et affiche une notification de succès
+   * avec le nom du matériau supprimé.
+   *
+   * Si l'index est invalide (hors limites), affiche une erreur.
+   *
+   * @public
+   * @param {number} index - Index de l'item à supprimer dans this.quoteItems (0-based)
+   * @returns {void}
+   * @fires NotificationSystem#success Lorsque l'article est supprimé
+   * @fires NotificationSystem#error Si l'index est invalide
+   *
+   * @example
+   * // Utilisateur clique sur le bouton "Supprimer" de la 3e ligne
+   * removeQuoteItem(2); // Index 2 = 3e élément
+   * // → Article retiré de quoteItems
+   * // → Tableau mis à jour
+   * // → Notification: "Ciment Portland retiré du devis"
+   */
+  removeQuoteItem(index) {
+    this.log('Suppression de l\'élément du devis, index:', index);
+
+    if (index >= 0 &amp;&amp; index &lt; this.quoteItems.length) {
+      const itemName = this.quoteItems[index].material.name;
+      this.quoteItems.splice(index, 1);
+      this.updateQuoteTable();
+      NotificationSystem.success(`"${itemName}" retiré du devis`);
+    } else {
+      NotificationSystem.error('Élément introuvable');
+    }
+  }
+
+  // ==========================================
+  // TABLEAU DU DEVIS
+  // ==========================================
+
+  /**
+   * Met à jour l'affichage complet du tableau du devis.
+   *
+   * Reconstruit entièrement le tableau HTML (#quote-table) avec tous les articles du devis,
+   * puis calcule et affiche les totaux (HT, TVA, TTC) en bas de page.
+   *
+   * Gestion de la remise :
+   * - Récupère le pourcentage de remise (#quote-discount)
+   * - Si remise > 0 : affiche les lignes "Total HT avant remise" et "Remise"
+   * - Applique la remise sur le total HT
+   * - Recalcule TVA et TTC proportionnellement
+   *
+   * Chaque ligne du tableau affiche :
+   * - Nom du matériau
+   * - Demande client
+   * - Quantité
+   * - Détail du calcul
+   * - Prix unitaire HT
+   * - Prix unitaire TTC
+   * - Total HT
+   * - Taux TVA
+   * - Total TTC
+   * - Bouton "Supprimer"
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#error Si le tableau n'est pas trouvé dans le DOM
+   *
+   * @example
+   * // Après ajout ou suppression d'un article
+   * this.updateQuoteTable();
+   * // → Tableau reconstruit avec tous les articles
+   * // → Totaux recalculés et affichés
+   */
+  updateQuoteTable() {
+    this.log('Mise à jour du tableau du devis...');
+
+    const tableBody = this.getElement('#quote-table');
+    if (!tableBody) {
+      this.error('Tableau du devis non trouvé');
+      NotificationSystem.error('Tableau du devis non trouvé');
+      return;
+    }
+
+    tableBody.innerHTML = '';
+    let totalHT = 0;
+    let totalTVA = 0;
+    let totalTTC = 0;
+
+    this.quoteItems.forEach((item, index) => {
+      const row = document.createElement('tr');
+      const materialName = TextFormatter.escapeHtml(item.material?.name ?? '-');
+      const clientRequest = TextFormatter.escapeHtml(item.clientRequest ?? '');
+      const calculation = TextFormatter.escapeHtml(item.calculation ?? '');
+
+      row.innerHTML = `
+        &lt;td>${materialName}&lt;/td>
+        &lt;td>${clientRequest}&lt;/td>
+        &lt;td>${item.quantity ?? '-'}&lt;/td>
+        &lt;td>${calculation}&lt;/td>
+        &lt;td>${typeof item.unitPriceHT === 'number' ? item.unitPriceHT.toFixed(2) : (item.unitPriceHT ?? '-')}&lt;/td>
+        &lt;td>${typeof item.unitPriceTTC === 'number' ? item.unitPriceTTC.toFixed(2) : (item.unitPriceTTC ?? '-')}&lt;/td>
+        &lt;td>${item.totalHT ?? '-'}&lt;/td>
+        &lt;td>${item.tvaRate ?? '-'}&lt;/td>
+        &lt;td>${item.totalTTC ?? '-'}&lt;/td>
+        &lt;td>&lt;button class="btn btn-danger btn-icon" onclick="removeQuoteItem(${index})" data-bs-toggle="tooltip" title="Supprimer">&lt;i class="fas fa-trash-alt">&lt;/i>&lt;/button>&lt;/td>
+      `;
+      tableBody.appendChild(row);
+      totalHT += Number(item.totalHT) || 0;
+      totalTVA += Number(item.totalTVA) || 0;
+      totalTTC += Number(item.totalTTC) || 0;
+    });
+
+    // Appliquer la remise si nécessaire
+    const discountPercent = parseFloat(this.getValue('#quote-discount') || 0);
+    const totalHTBeforeDiscount = totalHT;
+    const discountAmount = (totalHT * discountPercent) / 100;
+
+    // Afficher/masquer les lignes de remise
+    const hasDiscount = discountPercent > 0;
+    const elementsToToggle = [
+      'total-ht-before-label', 'total-ht-before', 'total-ht-before-euro', 'total-ht-before-br',
+      'discount-label', 'discount-amount', 'discount-euro', 'discount-br'
+    ];
+
+    elementsToToggle.forEach(id => {
+      const el = this.getElement(`#${id}`);
+      if (el) el.style.display = hasDiscount ? 'inline' : 'none';
+    });
+
+    if (hasDiscount) {
+      // Afficher le total HT avant remise
+      const htBeforeEl = this.getElement('#total-ht-before');
+      if (htBeforeEl) {
+        htBeforeEl.textContent = totalHTBeforeDiscount.toFixed(2);
+      }
+
+      // Afficher le pourcentage et le montant de la remise
+      const discountPercentEl = this.getElement('#discount-percent');
+      if (discountPercentEl) {
+        discountPercentEl.textContent = discountPercent;
+      }
+
+      const discountAmountEl = this.getElement('#discount-amount');
+      if (discountAmountEl) {
+        discountAmountEl.textContent = discountAmount.toFixed(2);
+      }
+
+      // Appliquer la remise au HT
+      totalHT = totalHT - discountAmount;
+
+      // Recalculer la TVA et TTC proportionnellement
+      const discountFactor = totalHT / totalHTBeforeDiscount;
+      totalTVA = totalTVA * discountFactor;
+      totalTTC = totalHT + totalTVA;
+    }
+
+    // Afficher les totaux
+    const totalHTEl = this.getElement('#total-ht');
+    const totalTVAEl = this.getElement('#total-tva');
+    const totalTTCEl = this.getElement('#total-ttc');
+
+    if (totalHTEl) totalHTEl.textContent = totalHT.toFixed(2);
+    if (totalTVAEl) totalTVAEl.textContent = totalTVA.toFixed(2);
+    if (totalTTCEl) totalTTCEl.textContent = totalTTC.toFixed(2);
+
+    // Vérification ML des anomalies de prix
+    if (this.quoteItems.length > 0 &amp;&amp; totalTTC > 0) {
+      this.checkPriceAnomalies(totalTTC, this.quoteItems.length);
+    }
+  }
+
+  /**
+   * Calcule les totaux du devis en cours.
+   *
+   * Additionne tous les prix HT, TVA et TTC de tous les articles présents
+   * dans this.quoteItems et retourne les totaux arrondis à 2 décimales.
+   *
+   * Note : Cette fonction ne prend PAS en compte la remise. Pour obtenir
+   * les totaux avec remise appliquée, utiliser updateQuoteTable() qui gère
+   * le calcul complet incluant la remise.
+   *
+   * @public
+   * @returns {Object} Objet contenant les totaux du devis
+   * @returns {number} return.totalHT - Total hors taxes (2 décimales)
+   * @returns {number} return.totalTVA - Total TVA (2 décimales)
+   * @returns {number} return.totalTTC - Total toutes taxes comprises (2 décimales)
+   *
+   * @example
+   * const totals = this.calculateQuoteTotals();
+   * console.log(totals);
+   * // { totalHT: 1250.50, totalTVA: 250.10, totalTTC: 1500.60 }
+   */
+  calculateQuoteTotals() {
+    let totalHT = 0;
+    let totalTVA = 0;
+    let totalTTC = 0;
+
+    this.quoteItems.forEach(item => {
+      totalHT += item.priceHT || 0;
+      totalTVA += item.tva || 0;
+      totalTTC += item.priceTTC || 0;
+    });
+
+    return {
+      totalHT: parseFloat(totalHT.toFixed(2)),
+      totalTVA: parseFloat(totalTVA.toFixed(2)),
+      totalTTC: parseFloat(totalTTC.toFixed(2))
+    };
+  }
+
+  /**
+   * Vérifie si le prix total du devis est anormal via ML.
+   *
+   * Cette méthode utilise le MLService pour détecter des anomalies de prix
+   * en comparant avec l'historique des devis similaires (même nombre d'items).
+   *
+   * Utilise un algorithme Z-score (si ML actif) ou statistiques simples (fallback).
+   * Si une anomalie est détectée, affiche un warning visuel avec options d'action.
+   *
+   * @param {number} totalPrice - Prix total TTC du devis
+   * @param {number} itemsCount - Nombre d'items dans le devis
+   * @returns {Promise&lt;void>}
+   * @private
+   *
+   * @example
+   * await this.checkPriceAnomalies(5000, 10);
+   * // → Si prix anormal, affiche warning avec fourchette attendue
+   */
+  async checkPriceAnomalies(totalPrice, itemsCount) {
+    try {
+      // Appel MLService (auto-fallback si ML indisponible)
+      const anomalyCheck = await mlService.detectPriceAnomalies(totalPrice, itemsCount);
+
+      // Supprimer ancien warning s'il existe
+      const oldWarning = this.getElement('#ml-price-warning');
+      if (oldWarning) oldWarning.remove();
+
+      // Si anomalie détectée, afficher warning
+      if (anomalyCheck.is_anomaly &amp;&amp; anomalyCheck.warning) {
+        this.displayPriceWarning(anomalyCheck);
+      }
+
+    } catch (error) {
+      this.error('Erreur vérification anomalies prix:', error);
+      // Ne pas afficher d'erreur à l'utilisateur (feature optionnelle)
+    }
+  }
+
+  /**
+   * Affiche un warning visuel pour prix anormal.
+   *
+   * Crée une bannière d'avertissement orange avec :
+   * - Message d'anomalie
+   * - Fourchette de prix attendue
+   * - Prix moyen historique
+   * - Score Z (écarts-types)
+   * - Actions : Ignorer / Utiliser prix moyen
+   *
+   * @param {Object} anomalyCheck - Résultat de la détection d'anomalie
+   * @param {boolean} anomalyCheck.is_anomaly - True si anomalie détectée
+   * @param {string} anomalyCheck.warning - Message d'avertissement
+   * @param {Array&lt;number>} anomalyCheck.expected_range - [min, max] fourchette attendue
+   * @param {number} anomalyCheck.mean_price - Prix moyen historique
+   * @param {number} anomalyCheck.z_score - Score Z (nb écarts-types)
+   * @param {number} anomalyCheck.samples_count - Nombre de devis similaires analysés
+   * @returns {void}
+   * @private
+   */
+  displayPriceWarning(anomalyCheck) {
+    const quoteTableContainer = this.getElement('#quote-items-container')?.parentElement;
+    if (!quoteTableContainer) return;
+
+    // Créer warning container
+    const warningDiv = document.createElement('div');
+    warningDiv.id = 'ml-price-warning';
+    warningDiv.className = 'alert alert-warning mb-3';
+    warningDiv.style.borderLeft = '4px solid #ffc107';
+    warningDiv.style.borderRadius = '4px';
+
+    warningDiv.innerHTML = `
+      &lt;div class="d-flex align-items-start">
+        &lt;div class="me-2" style="font-size: 24px;">
+          &lt;i class="fas fa-exclamation-triangle text-warning">&lt;/i>
+        &lt;/div>
+        &lt;div class="flex-grow-1">
+          &lt;h6 class="alert-heading mb-2">
+            &lt;i class="fas fa-brain">&lt;/i> Détection ML: ${TextFormatter.escapeHtml(anomalyCheck.warning)}
+          &lt;/h6>
+          &lt;div class="small mb-2">
+            &lt;strong>Fourchette attendue :&lt;/strong> ${anomalyCheck.expected_range[0].toFixed(2)} € - ${anomalyCheck.expected_range[1].toFixed(2)} €&lt;br>
+            &lt;strong>Prix moyen historique :&lt;/strong> ${anomalyCheck.mean_price.toFixed(2)} €&lt;br>
+            &lt;strong>Score d'anomalie :&lt;/strong> ${anomalyCheck.z_score} écarts-types&lt;br>
+            &lt;small class="text-muted">(Basé sur ${anomalyCheck.samples_count} devis similaires)&lt;/small>
+          &lt;/div>
+          &lt;div class="mt-2">
+            &lt;button class="btn btn-sm btn-secondary me-2" onclick="document.getElementById('ml-price-warning').remove()">
+              &lt;i class="fas fa-times">&lt;/i> Ignorer
+            &lt;/button>
+            &lt;button class="btn btn-sm btn-warning" onclick="quoteBuilderModule.adjustToAveragePrice(${anomalyCheck.mean_price})">
+              &lt;i class="fas fa-balance-scale">&lt;/i> Utiliser prix moyen (${anomalyCheck.mean_price.toFixed(2)} €)
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    `;
+
+    // Insérer avant le tableau de devis
+    quoteTableContainer.insertBefore(warningDiv, quoteTableContainer.firstChild);
+  }
+
+  /**
+   * Ajuste le devis pour utiliser le prix moyen suggéré.
+   *
+   * Cette méthode applique une remise proportionnelle pour atteindre
+   * le prix moyen recommandé par le ML.
+   *
+   * @param {number} targetPrice - Prix cible (moyen historique)
+   * @returns {void}
+   * @public
+   */
+  adjustToAveragePrice(targetPrice) {
+    const currentTotals = this.calculateQuoteTotals();
+    const currentPrice = currentTotals.totalTTC;
+
+    if (currentPrice &lt;= 0) return;
+
+    // Calculer la remise nécessaire pour atteindre le prix cible
+    const discountPercent = ((currentPrice - targetPrice) / currentPrice) * 100;
+
+    // Appliquer la remise (arrondie à 1 décimale)
+    const discountEl = this.getElement('#quote-discount');
+    if (discountEl) {
+      discountEl.value = Math.max(0, Math.round(discountPercent * 10) / 10);
+      this.updateQuoteTable(); // Recalculer avec la nouvelle remise
+    }
+
+    // Supprimer le warning
+    const warning = this.getElement('#ml-price-warning');
+    if (warning) warning.remove();
+
+    // Notification
+    NotificationSystem.success(
+      `Prix ajusté au prix moyen recommandé (${targetPrice.toFixed(2)} €)`,
+      'Ajustement ML appliqué'
+    );
+  }
+
+  // ==========================================
+  // RÉINITIALISATION DU DEVIS
+  // ==========================================
+
+  /**
+   * Demande une confirmation utilisateur avant de vider complètement le devis.
+   *
+   * Vérifie d'abord si le devis contient des données (articles ou infos client).
+   * Si le devis est déjà vide, affiche une notification et ne fait rien.
+   *
+   * Si le devis contient des données, affiche un modal Bootstrap (#clearQuoteModal)
+   * demandant confirmation. La confirmation appellera clearQuote().
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#success Si le devis est déjà vide
+   *
+   * @example
+   * // Utilisateur clique sur le bouton "Vider le devis"
+   * this.askClearQuote();
+   * // → Si devis non vide : modal de confirmation affiché
+   * // → Si devis vide : notification "Le devis est déjà vide"
+   */
+  askClearQuote() {
+    // Vérifie s'il y a quelque chose à vider
+    if (this.quoteItems.length === 0 &amp;&amp; !this.clientInfo.name &amp;&amp; !this.clientInfo.phone &amp;&amp;
+        !this.clientInfo.email &amp;&amp; !this.clientInfo.address) {
+      NotificationSystem.success('Le devis est déjà vide');
+      return;
+    }
+
+    // Affiche le modal de confirmation
+    const modalElement = this.getElement('#clearQuoteModal');
+    if (modalElement) {
+      modalElement.removeAttribute('inert');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  }
+
+  /**
+   * Vide complètement le devis en cours et réinitialise tous les champs.
+   *
+   * Opérations effectuées :
+   * - Vide this.quoteItems (supprime tous les articles)
+   * - Réinitialise this.clientInfo (vide tous les champs sauf date → aujourd'hui)
+   * - Réinitialise les métadonnées (currentQuoteId, currentQuoteName, currentQuoteCreatedAt)
+   * - Remet le statut à 'brouillon'
+   * - Vide tous les champs du formulaire HTML
+   * - Remet la remise à 0%
+   * - Masque le bouton "Changer le statut"
+   * - Déverrouille les champs (si un devis accepté était chargé)
+   * - Rafraîchit le tableau d'affichage
+   *
+   * Cette fonction est appelée après confirmation de l'utilisateur via askClearQuote().
+   *
+   * @public
+   * @returns {void}
+   * @fires NotificationSystem#success Lorsque le devis est réinitialisé
+   *
+   * @example
+   * // Utilisateur confirme la suppression dans le modal
+   * this.clearQuote();
+   * // → Devis entièrement vidé
+   * // → Formulaire réinitialisé
+   * // → Prêt pour un nouveau devis
+   */
+  clearQuote() {
+    this.log('Vider le devis...');
+
+    this.quoteItems = [];
+    this.clientInfo = {
+      name: '',
+      phone: '',
+      email: '',
+      address: '',
+      quoteDate: new Date().toISOString().split('T')[0],
+      issuer: ''
+    };
+    this.currentQuoteId = null;
+    this.currentQuoteName = null;
+    this.currentQuoteCreatedAt = null;
+    this.currentQuoteStatus = 'brouillon';
+
+    const clientInputs = ['client-name', 'client-phone', 'client-email', 'client-address', 'quote-date', 'quote-issuer'];
+    clientInputs.forEach(id => {
+      const input = this.getElement(`#${id}`);
+      if (input) {
+        input.value = id === 'quote-date' ? new Date().toISOString().split('T')[0] : '';
+      }
+    });
+
+    // Réinitialiser la remise à 0%
+    const discountSelect = this.getElement('#quote-discount');
+    if (discountSelect) discountSelect.value = '0';
+
+    // Masquer le bouton "Changer le statut" car pas de devis chargé
+    const changeStatusBtn = this.getElement('#change-current-quote-status-btn');
+    if (changeStatusBtn) changeStatusBtn.style.display = 'none';
+
+    // Débloquer les champs (cas où un devis accepté était chargé)
+    this.setQuoteFieldsLocked(false);
+
+    this.updateQuoteTable();
+    NotificationSystem.success('Devis réinitialisé');
+  }
+
+  // ==========================================
+  // VERROUILLAGE DES CHAMPS
+  // ==========================================
+
+  /**
+   * Verrouille ou déverrouille tous les champs et boutons du formulaire de devis.
+   *
+   * Utilisé principalement pour empêcher la modification d'un devis accepté/signé.
+   * Lorsqu'un devis au statut "accepté" est chargé, tous les champs sont verrouillés
+   * pour préserver l'intégrité du document signé.
+   *
+   * Éléments verrouillés/déverrouillés :
+   * - Champs client : nom, téléphone, email, adresse, date, émetteur
+   * - Champ remise
+   * - Boutons d'action : Ajouter article, Ajout rapide, Sauvegarder devis
+   * - Boutons de modification/suppression dans le tableau des articles
+   *
+   * Effet visuel du verrouillage :
+   * - Champs : disabled + fond gris (#f5f5f5) + curseur not-allowed
+   * - Boutons : disabled + opacité 0.5 + curseur not-allowed
+   *
+   * @public
+   * @param {boolean} locked - true pour verrouiller les champs, false pour les déverrouiller
+   * @returns {void}
+   *
+   * @example
+   * // Chargement d'un devis accepté (signé)
+   * this.setQuoteFieldsLocked(true);
+   * // → Tous les champs et boutons sont désactivés et grisés
+   *
+   * @example
+   * // Admin déverrouille manuellement un devis accepté
+   * this.setQuoteFieldsLocked(false);
+   * // → Tous les champs redeviennent modifiables
+   */
+  setQuoteFieldsLocked(locked) {
+    // Champs clients et remise
+    const clientFields = ['client-name', 'client-phone', 'client-email', 'client-address', 'quote-date', 'quote-issuer', 'quote-discount'];
+    clientFields.forEach(id => {
+      const field = this.getElement(`#${id}`);
+      if (field) {
+        field.disabled = locked;
+        if (locked) {
+          field.style.backgroundColor = '#f5f5f5';
+          field.style.cursor = 'not-allowed';
+        } else {
+          field.style.backgroundColor = '';
+          field.style.cursor = '';
+        }
+      }
+    });
+
+    // Boutons d'action
+    const actionButtons = ['add-item-btn', 'quick-add-btn', 'save-quote-btn'];
+    actionButtons.forEach(id => {
+      const btn = this.getElement(`#${id}`);
+      if (btn) {
+        btn.disabled = locked;
+        if (locked) {
+          btn.style.opacity = '0.5';
+          btn.style.cursor = 'not-allowed';
+        } else {
+          btn.style.opacity = '';
+          btn.style.cursor = '';
+        }
+      }
+    });
+
+    // Désactiver les boutons de suppression et modification dans le tableau
+    const editButtons = document.querySelectorAll('.edit-item-btn, .delete-item-btn');
+    editButtons.forEach(btn => {
+      btn.disabled = locked;
+      if (locked) {
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'not-allowed';
+      } else {
+        btn.style.opacity = '';
+        btn.style.cursor = '';
+      }
+    });
+  }
+
+  // ==========================================
+  // SYNCHRONISATION INFOS CLIENT
+  // ==========================================
+
+  /**
+   * Synchronise l'objet clientInfo avec les valeurs actuelles des champs HTML.
+   *
+   * Récupère les valeurs de tous les champs du formulaire client et met à jour
+   * les propriétés correspondantes de this.clientInfo. Cette fonction est appelée
+   * automatiquement à chaque modification d'un champ client (event listener 'input').
+   *
+   * Champs synchronisés :
+   * - #client-name → clientInfo.name
+   * - #client-phone → clientInfo.phone
+   * - #client-email → clientInfo.email
+   * - #client-address → clientInfo.address
+   * - #quote-date → clientInfo.quoteDate (défaut: aujourd'hui)
+   * - #quote-issuer → clientInfo.issuer
+   *
+   * Cette synchronisation garantit que this.clientInfo est toujours à jour avec
+   * les valeurs du formulaire, facilitant la sauvegarde du devis.
+   *
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * // Utilisateur saisit "Dupont" dans #client-name
+   * // → Event listener 'input' déclenche automatiquement :
+   * this.syncClientInfoFromForm();
+   * // → this.clientInfo.name = "Dupont"
+   */
+  syncClientInfoFromForm() {
+    this.clientInfo.name = this.getValue('#client-name') || '';
+    this.clientInfo.phone = this.getValue('#client-phone') || '';
+    this.clientInfo.email = this.getValue('#client-email') || '';
+    this.clientInfo.address = this.getValue('#client-address') || '';
+    this.clientInfo.quoteDate = this.getValue('#quote-date') || new Date().toISOString().split('T')[0];
+    this.clientInfo.issuer = this.getValue('#quote-issuer') || '';
+  }
+
+  // ==========================================
+  // GESTION DU SÉLECTEUR CLIENT
+  // ==========================================
+
+  /**
+   * Peuple le dropdown de sélection client avec la liste des clients existants.
+   * Récupère les clients depuis le ClientsModule via l'état global.
+   *
+   * @private
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  async populateClientDropdown() {
+    try {
+      const clientSelect = this.getElement('#client-name-select');
+      if (!clientSelect) return;
+
+      // Récupérer le module clients
+      const clientsModule = window.app.getModule('clients');
+      if (!clientsModule) {
+        this.warn('ClientsModule not found, cannot populate dropdown');
+        return;
+      }
+
+      // Récupérer la liste des clients
+      const clients = clientsModule.clients || [];
+
+      // Conserver les options par défaut et vider les autres
+      clientSelect.innerHTML = `
+        &lt;option value="">-- Sélectionner un client ou saisir manuellement --&lt;/option>
+        &lt;option value="__manual__">✍️ Saisie manuelle (devis ponctuel)&lt;/option>
+      `;
+
+      // Ajouter chaque client comme option
+      clients.forEach(client => {
+        const option = document.createElement('option');
+        option.value = client.id;
+        option.textContent = `${client.name} (${client.type || 'N/A'})`;
+        clientSelect.appendChild(option);
+      });
+
+      this.log(`Client dropdown populated with ${clients.length} clients`);
+
+    } catch (error) {
+      this.error('Error populating client dropdown:', error);
+    }
+  }
+
+  /**
+   * Gère la sélection d'un client dans le dropdown.
+   * Si un client est sélectionné, remplit automatiquement les champs du formulaire.
+   * Si "Saisie manuelle" est sélectionné, affiche le champ texte libre.
+   *
+   * @private
+   * @param {string} clientId - ID du client sélectionné ou "__manual__"
+   * @returns {void}
+   */
+  handleClientSelection(clientId) {
+    const clientNameInput = this.getElement('#client-name');
+    const clientPhoneInput = this.getElement('#client-phone');
+    const clientEmailInput = this.getElement('#client-email');
+    const clientAddressInput = this.getElement('#client-address');
+
+    if (!clientId || clientId === '') {
+      // Aucune sélection - masquer le champ texte et vider les champs
+      if (clientNameInput) clientNameInput.style.display = 'none';
+      this.clearClientFields();
+      return;
+    }
+
+    if (clientId === '__manual__') {
+      // Saisie manuelle - afficher le champ texte et vider les autres champs
+      if (clientNameInput) {
+        clientNameInput.style.display = 'block';
+        clientNameInput.value = '';
+        clientNameInput.focus();
+      }
+      if (clientPhoneInput) clientPhoneInput.value = '';
+      if (clientEmailInput) clientEmailInput.value = '';
+      if (clientAddressInput) clientAddressInput.value = '';
+
+      this.syncClientInfoFromForm();
+      this.log('Manual client input mode activated');
+      return;
+    }
+
+    // Client existant sélectionné - remplir les champs
+    const clientsModule = window.app.getModule('clients');
+    if (!clientsModule) {
+      this.warn('ClientsModule not found');
+      return;
+    }
+
+    const client = clientsModule.clients.find(c => c.id === clientId);
+    if (!client) {
+      this.warn(`Client with id ${clientId} not found`);
+      return;
+    }
+
+    // Masquer le champ texte manuel
+    if (clientNameInput) clientNameInput.style.display = 'none';
+
+    // Remplir les champs avec les données du client
+    if (clientNameInput) clientNameInput.value = client.name || '';
+    if (clientPhoneInput) clientPhoneInput.value = client.phone || '';
+    if (clientEmailInput) clientEmailInput.value = client.email || '';
+    if (clientAddressInput) clientAddressInput.value = client.address || '';
+
+    // Synchroniser avec clientInfo
+    this.syncClientInfoFromForm();
+
+    this.log(`Client ${client.name} selected and form filled`);
+    window.NotificationSystem.success(`Client ${client.name} sélectionné`);
+  }
+
+  /**
+   * Ouvre le modal de création de client depuis le formulaire de devis.
+   * Utilise le ClientsModule pour ouvrir le modal de formulaire client.
+   *
+   * @private
+   * @returns {void}
+   */
+  openClientFormModal() {
+    const clientsModule = window.app.getModule('clients');
+    if (!clientsModule) {
+      this.error('ClientsModule not found');
+      window.NotificationSystem.error('Module Clients non disponible');
+      return;
+    }
+
+    // Appeler la méthode addClient du ClientsModule
+    if (typeof clientsModule.addClient === 'function') {
+      clientsModule.addClient();
+      this.log('Client form modal opened from quote builder');
+    } else {
+      this.error('addClient method not found on ClientsModule');
+      window.NotificationSystem.error('Impossible d\'ouvrir le formulaire client');
+    }
+  }
+
+  /**
+   * Vide tous les champs client du formulaire.
+   *
+   * @private
+   * @returns {void}
+   */
+  clearClientFields() {
+    const clientNameInput = this.getElement('#client-name');
+    const clientPhoneInput = this.getElement('#client-phone');
+    const clientEmailInput = this.getElement('#client-email');
+    const clientAddressInput = this.getElement('#client-address');
+
+    if (clientNameInput) clientNameInput.value = '';
+    if (clientPhoneInput) clientPhoneInput.value = '';
+    if (clientEmailInput) clientEmailInput.value = '';
+    if (clientAddressInput) clientAddressInput.value = '';
+
+    this.syncClientInfoFromForm();
+  }
+
+  // ==========================================
+  // SYNCHRONISATION AVEC SCOPE GLOBAL
+  // ==========================================
+
+  /**
+   * Configure la synchronisation bidirectionnelle entre les propriétés du module
+   * et les variables globales window.* pour compatibilité avec le code legacy.
+   *
+   * Utilise Object.defineProperty() pour créer des getters/setters ES6 qui
+   * assurent une synchronisation automatique et transparente :
+   * - Toute modification de window.quoteItems se reflète dans this.quoteItems
+   * - Toute modification de this.quoteItems se reflète dans window.quoteItems
+   * - Idem pour toutes les variables synchronisées
+   *
+   * Variables synchronisées :
+   * - window.quoteItems ↔ this.quoteItems (articles du devis)
+   * - window.selectedMaterial ↔ this.selectedMaterial (matériau sélectionné)
+   * - window.clientInfo ↔ this.clientInfo (infos client)
+   * - window.currentQuoteId ↔ this.currentQuoteId (ID devis chargé)
+   * - window.currentQuoteName ↔ this.currentQuoteName (nom devis chargé)
+   * - window.currentQuoteCreatedAt ↔ this.currentQuoteCreatedAt (date création)
+   * - window.currentQuoteStatus ↔ this.currentQuoteStatus (statut)
+   *
+   * Cette approche permet de maintenir la compatibilité avec le code existant
+   * qui accède directement aux variables globales, tout en utilisant des propriétés
+   * d'instance modernes dans le module.
+   *
+   * @private
+   * @returns {void}
+   *
+   * @example
+   * // Le code legacy peut toujours utiliser :
+   * window.quoteItems.push(newItem);
+   * // → Automatiquement synchronisé avec this.quoteItems
+   *
+   * @example
+   * // Le module utilise :
+   * this.selectedMaterial = material;
+   * // → Automatiquement synchronisé avec window.selectedMaterial
+   */
+  syncGlobalVariables() {
+    // Créer des getters/setters pour synchroniser automatiquement
+    Object.defineProperty(window, 'quoteItems', {
+      get: () => this.quoteItems,
+      set: (value) => {
+        this.quoteItems = value;
+      }
+    });
+
+    Object.defineProperty(window, 'selectedMaterial', {
+      get: () => this.selectedMaterial,
+      set: (value) => {
+        this.selectedMaterial = value;
+      }
+    });
+
+    Object.defineProperty(window, 'clientInfo', {
+      get: () => this.clientInfo,
+      set: (value) => {
+        this.clientInfo = value;
+      }
+    });
+
+    Object.defineProperty(window, 'currentQuoteId', {
+      get: () => this.currentQuoteId,
+      set: (value) => {
+        this.currentQuoteId = value;
+      }
+    });
+
+    Object.defineProperty(window, 'currentQuoteName', {
+      get: () => this.currentQuoteName,
+      set: (value) => {
+        this.currentQuoteName = value;
+      }
+    });
+
+    Object.defineProperty(window, 'currentQuoteCreatedAt', {
+      get: () => this.currentQuoteCreatedAt,
+      set: (value) => {
+        this.currentQuoteCreatedAt = value;
+      }
+    });
+
+    Object.defineProperty(window, 'currentQuoteStatus', {
+      get: () => this.currentQuoteStatus,
+      set: (value) => {
+        this.currentQuoteStatus = value;
+      }
+    });
+  }
+}
+
+export default QuoteBuilderModule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

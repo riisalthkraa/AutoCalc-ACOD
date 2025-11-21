@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoCalc OptiDevis - Solution professionnelle de gestion de devis et factures pour artisans et PME du bâtiment. Calculs intelligents, templates personnalisables, souveraineté des données.">
+    <meta name="keywords" content="devis, factures, bâtiment, artisan, gestion, AutoCalc, OptiDevis, BTP, construction">
+    <meta name="author" content="David VIEY">
+    <title>AutoCalc OptiDevis - La solution intelligente pour vos devis et factures</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation moderne -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in-up">
+                    <div class="badge mb-2">
+                        <i class="fas fa-rocket"></i>
+                        Nouvelle version 3.5.0 disponible
+                    </div>
+                    <h1>La solution intelligente pour vos devis et factures</h1>
+                    <p>
+                        AutoCalc OptiDevis révolutionne la gestion de devis pour les artisans et PME du bâtiment.
+                        Calculs automatiques, templates personnalisables, souveraineté totale de vos données.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-download"></i>
+                            Essai gratuit 60 jours
+                        </a>
+                        <a href="comparatif.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-chart-bar"></i>
+                            Voir le comparatif
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">300€</span>
+                            <span class="stat-label">Prix unique à vie</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">140</span>
+                            <span class="stat-label">Tests automatisés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Données locales</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <img src="screenshots/Acceuil vendeur-conseil.png" alt="Interface AutoCalc OptiDevis">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi AutoCalc Section -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi choisir AutoCalc OptiDevis ?</h2>
+                <p class="section-subtitle">
+                    Une solution complète pensée pour les professionnels du bâtiment qui veulent gagner du temps et contrôler leurs données
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Calculs Intelligents</h3>
+                    <p class="feature-description">
+                        Les calculs automatiques détectent les conversions nécessaires (m² → pièces, m³ → kg).
+                        Saisissez "75m² plaque BA13" et obtenez automatiquement 79 plaques. Gain de temps : 90%.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Souveraineté des Données</h3>
+                    <p class="feature-description">
+                        Vos données restent 100% sur votre ordinateur. Aucun cloud obligatoire, aucune dépendance externe.
+                        Contrôle total et conformité RGPD garantie.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 class="feature-title">Licence à Vie</h3>
+                    <p class="feature-description">
+                        Un seul paiement de ~300€ pour une licence perpétuelle. Économisez 2 750€ sur 3 ans vs solutions SaaS.
+                        Mises à jour mineures gratuites incluses.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <h3 class="feature-title">Scanner Code-Barres</h3>
+                    <p class="feature-description">
+                        Scannez directement vos produits via webcam (codes 1D: 128, 39, EAN).
+                        Ajout immédiat au devis, idéal pour magasins et négoces.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Analytics Avancés</h3>
+                    <p class="feature-description">
+                        Tableau de bord avec KPIs temps réel, graphiques Chart.js, recommandations IA,
+                        top 20 produits par CA, taux de conversion devis→factures.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="feature-title">28 Thèmes Personnalisables</h3>
+                    <p class="feature-description">
+                        Choisissez parmi 28 thèmes d'interface (Business, Moderne, Sombre) et 5 designs PDF professionnels.
+                        Adaptez le branding selon vos clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Comparatif -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Comment se positionne AutoCalc face à la concurrence ?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95;">
+                Découvrez notre comparatif détaillé avec OBAT et les solutions SaaS du marché
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; margin-bottom: 2rem;">
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                    <div style="font-size: 2rem; font-weight: 800;">85%</div>
+                    <div style="font-size: 0.9rem;">Économies sur 3 ans</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                    <div style="font-size: 2rem; font-weight: 800;">22</div>
+                    <div style="font-size: 0.9rem;">Fonctionnalités supérieures</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 12px;">
+                    <div style="font-size: 2rem; font-weight: 800;">100%</div>
+                    <div style="font-size: 0.9rem;">Contrôle de vos données</div>
+                </div>
+            </div>
+            <a href="comparatif.html" class="btn btn-accent btn-lg">
+                <i class="fas fa-chart-bar"></i>
+                Voir le comparatif complet
+            </a>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Templates et Catalogues Prêts à l'Emploi</h2>
+                <p class="section-subtitle">
+                    Importez facilement vos données clients, fournisseurs et matériaux grâce à nos templates Excel optimisés
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-users" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3>Template Clients</h3>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Importez vos clients avec toutes leurs informations : nom, adresse, contacts, historique
+                    </p>
+                    <a href="templates.html#clients" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Télécharger
+                    </a>
+                </div>
+
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-truck" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3>Template Fournisseurs</h3>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Gérez vos fournisseurs : coordonnées, délais de livraison, conditions de paiement
+                    </p>
+                    <a href="templates.html#fournisseurs" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Télécharger
+                    </a>
+                </div>
+
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-boxes" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3>Catalogue Matériaux</h3>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Catalogue complet avec métadonnées riches : prix, TVA, unités, conversions automatiques
+                    </p>
+                    <a href="templates.html#materiaux" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Télécharger
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouveautés v3.5.0 -->
+    <section style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge mb-2" style="font-size: 1rem;">
+                    <i class="fas fa-star"></i>
+                    Nouveau - 21 novembre 2025
+                </div>
+                <h2 class="section-title">Version 3.5.0 - Nouvelles fonctionnalités</h2>
+                <p class="section-subtitle">
+                    Découvrez les dernières améliorations et nouveautés
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-lg); margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div style="width: 48px; height: 48px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-file-excel" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4>Import/Export Excel Avancé</h4>
+                                <p style="color: var(--gray); margin: 0.5rem 0 0 0;">
+                                    Nouveaux templates Excel pour clients, fournisseurs et matériaux avec import en 1 clic
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-lg); margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div style="width: 48px; height: 48px; background: var(--secondary); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4>Relances Automatiques</h4>
+                                <p style="color: var(--gray); margin: 0.5rem 0 0 0;">
+                                    Système de relances de paiement automatiques avec templates personnalisables
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-tachometer-alt" style="color: white; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4>Dashboard Amélioré</h4>
+                                <p style="color: var(--gray); margin: 0.5rem 0 0 0;">
+                                    Nouveaux graphiques temps réel et KPIs de performance avec recommandations IA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 3rem; border-radius: 24px; box-shadow: var(--shadow-xl);">
+                    <h3 style="margin-bottom: 1.5rem;">Statistiques de la release</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 600;">Tests réussis</span>
+                            <span style="color: var(--success); font-weight: 700;">140/140</span>
+                        </div>
+                        <div style="background: var(--gray-lighter); height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="width: 100%; height: 100%; background: var(--success);"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 600;">Score qualité</span>
+                            <span style="color: var(--primary-solid); font-weight: 700;">75/100</span>
+                        </div>
+                        <div style="background: var(--gray-lighter); height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="width: 75%; height: 100%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 600;">Couverture sécurité</span>
+                            <span style="color: var(--success); font-weight: 700;">65/100</span>
+                        </div>
+                        <div style="background: var(--gray-lighter); height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="width: 65%; height: 100%; background: var(--success);"></div>
+                        </div>
+                    </div>
+
+                    <a href="changelog.html" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-list"></i>
+                        Voir le changelog complet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qui utilise AutoCalc -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Qui utilise AutoCalc OptiDevis ?</h2>
+                <p class="section-subtitle">
+                    Un logiciel polyvalent adapté à différents professionnels du bâtiment
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="glass-card">
+                    <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">
+                        <i class="fas fa-hard-hat" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Artisans du bâtiment</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--gray);">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Maçons & plâtriers
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Peintres & décorateurs
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Plombiers & électriciens
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Menuisiers & charpentiers
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card">
+                    <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">
+                        <i class="fas fa-store" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Magasins & négoces</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--gray);">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Magasins de bricolage
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Négoces de matériaux
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Scanner code-barres intégré
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Gestion multi-vendeurs
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card">
+                    <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">
+                        <i class="fas fa-briefcase" style="color: var(--primary-solid);"></i>
+                    </div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Bureaux d'études</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--gray);">
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Bureaux d'études BTP
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Experts-comptables
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Export comptable FEC
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            Rapports détaillés
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5rem 0;">
+        <div class="container text-center">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Prêt à transformer votre gestion de devis ?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.95;">
+                Testez gratuitement AutoCalc OptiDevis pendant 60 jours, sans engagement
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent btn-lg">
+                    <i class="fas fa-download"></i>
+                    Essai gratuit 60 jours
+                </a>
+                <a href="tarifs.html" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-euro-sign"></i>
+                    Voir les tarifs
+                </a>
+            </div>
+            <div style="display: flex; gap: 3rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="fas fa-check" style="font-size: 1.25rem;"></i>
+                    <span>Installation en 2 minutes</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="fas fa-check" style="font-size: 1.25rem;"></i>
+                    <span>Support technique gratuit</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="fas fa-check" style="font-size: 1.25rem;"></i>
+                    <span>Mises à jour incluses</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer moderne -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="AutoCalc OptiDevis" style="width: 48px; height: 48px; border-radius: 12px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AutoCalc OptiDevis</span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        La solution intelligente de gestion de devis et factures pour les professionnels du bâtiment
+                    </p>
+                    <p style="font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> 99 Rue Michel Montaigne<br>
+                        33350 Castillon-la-Bataille, France<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Riisalth@hotmail.fr" style="color: var(--gray-light);">Riisalth@hotmail.fr</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="fonctionnalites.html" class="footer-link">Fonctionnalités</a></li>
+                        <li><a href="comparatif.html" class="footer-link">Comparatif</a></li>
+                        <li><a href="templates.html" class="footer-link">Templates</a></li>
+                        <li><a href="tarifs.html" class="footer-link">Tarifs</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html" class="footer-link">Documentation</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer-link">Support technique</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html" class="footer-link">Mentions légales</a></li>
+                        <li><a href="cgv.html" class="footer-link">CGV</a></li>
+                        <li><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></li>
+                    </ul>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem;">
+                            <i class="fas fa-flag"></i> Made in France
+                        </span>
+                        <span class="badge" style="font-size: 0.75rem; padding: 0.375rem 0.75rem; background: var(--success);">
+                            <i class="fas fa-shield-alt"></i> RGPD
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
