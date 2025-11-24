@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rapports CI/CD AutoCalc OptiDevis - Tests automatisés et qualité du code">
+    <title>CI/CD & Qualité - AutoCalc OptiDevis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
+                <span>AutoCalc OptiDevis</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
+                <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
+                <li><a href="templates.html" class="nav-link">Templates</a></li>
+                <li><a href="services.html" class="nav-link">Services Pro</a></li>
+                <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li><a href="qualite.html" class="nav-link">Qualité</a></li>
+                <li><a href="ci-cd.html" class="nav-link active">CI/CD</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 100px; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="section-header" style="color: white; margin-bottom: 40px;">
+                <h1 style="font-size: 3rem; margin-bottom: 20px;">
+                    <i class="fas fa-robot"></i> CI/CD & Tests Automatisés
+                </h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">
+                    Qualité et fiabilité garanties par des tests automatisés à chaque modification
+                </p>
+            </div>
+
+            <!-- Badges -->
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <a href="https://github.com/riisalthkraa/riisalthkraa-AutoCalc-DEV/actions" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.shields.io/github/actions/workflow/status/riisalthkraa/riisalthkraa-AutoCalc-DEV/ci.yml?branch=main&label=Tests&style=for-the-badge" alt="Tests Status">
+                </a>
+                <a href="https://github.com/riisalthkraa/riisalthkraa-AutoCalc-DEV/releases/latest" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.shields.io/github/v/release/riisalthkraa/riisalthkraa-AutoCalc-DEV?style=for-the-badge" alt="Latest Release">
+                </a>
+                <img src="https://img.shields.io/badge/Tests-140+-success?style=for-the-badge" alt="Test Count">
+                <img src="https://img.shields.io/badge/Quality-CI%2FCD-blue?style=for-the-badge" alt="CI/CD">
+            </div>
+
+            <!-- Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+
+                <!-- Tests CI -->
+                <div class="feature-card" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-vial" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5rem;">Tests Automatisés</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        +140 tests unitaires et d'intégration exécutés automatiquement sur chaque commit.
+                    </p>
+                    <a href="https://github.com/riisalthkraa/riisalthkraa-AutoCalc-DEV/actions/workflows/ci.yml" target="_blank" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-external-link-alt"></i> Voir les résultats CI
+                    </a>
+                </div>
+
+                <!-- Release -->
+                <div class="feature-card" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-rocket" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5rem;">Releases Automatiques</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Builds automatiques pour Windows, Linux et macOS avec rapports de tests inclus.
+                    </p>
+                    <a href="https://github.com/riisalthkraa/riisalthkraa-AutoCalc-DEV/releases/latest" target="_blank" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-download"></i> Dernière release
+                    </a>
+                </div>
+
+                <!-- Qualité Code -->
+                <div class="feature-card" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-shield-alt" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5rem;">Qualité & Sécurité</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Code analysé et testé automatiquement pour garantir la fiabilité et la sécurité.
+                    </p>
+                    <a href="qualite.html" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-chart-line"></i> Rapport qualité
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Process CI/CD -->
+            <div style="background: white; padding: 40px; border-radius: 15px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h2 style="color: #333; margin-bottom: 30px; text-align: center;">
+                    <i class="fas fa-cogs"></i> Notre Process CI/CD
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-code" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 10px;">1. Commit</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Code poussé sur GitHub</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-vial" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 10px;">2. Tests Auto</h4>
+                        <p style="color: #666; font-size: 0.9rem;">140+ tests exécutés</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-hammer" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 10px;">3. Build</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Multi-plateformes</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-rocket" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <h4 style="color: #333; margin-bottom: 10px;">4. Release</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Publication automatique</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confiance -->
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 15px; margin-top: 40px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">
+                <h2 style="color: white; margin-bottom: 20px;">
+                    <i class="fas fa-certificate"></i> Garantie de Qualité
+                </h2>
+                <p style="color: white; font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    Chaque version d'AutoCalc OptiDevis est testée automatiquement avant sa publication.
+                    Les rapports de tests sont inclus dans chaque release pour une transparence totale.
+                    <strong>Votre confiance, notre priorité.</strong>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="background: #1a1a2e; color: white; padding: 40px 0; margin-top: 0;">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2025 AutoCalc OptiDevis - Tous droits réservés</p>
+            <div style="margin-top: 20px;">
+                <a href="mentions-legales.html" style="color: white; margin: 0 15px;">Mentions légales</a>
+                <a href="politique-confidentialite.html" style="color: white; margin: 0 15px;">Politique de confidentialité</a>
+                <a href="cgv.html" style="color: white; margin: 0 15px;">CGV</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
