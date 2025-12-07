@@ -118,17 +118,61 @@ img {
     padding: 0 2rem;
 }
 
-/* Navigation moderne */
-.navbar {
+/* Bannière Annonce E-Facture */
+.announcement-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.announcement-content i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* Navigation moderne */
+.navbar {
+    position: fixed;
+    top: 45px; /* Décalé pour la bannière */
+    left: 0;
+    right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
 }
 
@@ -141,7 +185,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -149,35 +193,38 @@ img {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
+    gap: 0.75rem;
+    font-size: 1.25rem;
     font-weight: 800;
     background: var(--primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
 }
 
 .nav-logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
 .nav-link {
     color: var(--dark);
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 8px;
     transition: var(--transition-fast);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -264,12 +311,31 @@ img {
     font-size: 0.875rem;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-solid);
+    border-radius: 3px;
+    transition: var(--transition-fast);
+}
+
 /* Hero Section moderne */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem; /* Ajusté pour bannière + navbar */
     position: relative;
     overflow: hidden;
 }
@@ -572,9 +638,42 @@ section {
         grid-template-columns: 1fr 1fr;
     }
 
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
     .nav-menu {
+        position: fixed;
+        top: 105px; /* Bannière + navbar */
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 105px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
         flex-direction: column;
+        padding: 2rem;
         gap: 1rem;
+        box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+
+    .announcement-content {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+
+    .nav-brand span {
+        font-size: 1.1rem;
     }
 }
 
@@ -585,7 +684,7 @@ section {
     }
 
     .hero {
-        padding: 6rem 0 3rem;
+        padding: 8rem 0 3rem; /* Ajusté pour bannière */
     }
 
     section {

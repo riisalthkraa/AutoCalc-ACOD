@@ -100,6 +100,15 @@
     </style>
 </head>
 <body>
+        <!-- Bannière E-Facture -->
+    <div class="announcement-banner">
+        <div class="announcement-content">
+            <i class="fas fa-star"></i>
+            <span><strong>Nouveauté 2026 :</strong> Module E-Facture Obligatoire disponible dès le 2 janvier 2026 !</span>
+            <i class="fas fa-arrow-right"></i>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -107,18 +116,22 @@
                 <img src="images/logo.png" alt="AutoCalc OptiDevis" class="nav-logo">
                 <span>AutoCalc OptiDevis</span>
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
                 <li><a href="fonctionnalites.html" class="nav-link">Fonctionnalités</a></li>
                 <li><a href="comparatif.html" class="nav-link">Comparatif</a></li>
-                <li><a href="templates.html" class="nav-link">Templates</a></li>
-                <li><a href="services.html" class="nav-link">Services Pro</a></li>
                 <li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
-                <li><a href="changelog.html" class="nav-link">Changelog</a></li>
-                <li><a href="qualite.html" class="nav-link active">Qualité</a></li>
-                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
-                <li><a href="contact.html" class="btn btn-primary btn-sm">Essai Gratuit</a></li>
+                <li><a href="ci-cd.html" class="nav-link">CI/CD & Qualité</a></li>
+                <li><a href="documentation.html" class="nav-link">Docs</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Télécharger
+                </a></li>
             </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -610,8 +623,8 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 - Créé par David VIEY - Tous droits réservés</p>
+                        <div class="footer-bottom">
+                <p>&copy; 2025 AutoCalc OptiDevis v3.5.0 | <a href="https://rk-developpement.fr" target="_blank" style="color: var(--primary-solid); text-decoration: underline;">RK Développement</a> | Créé par David VIEY | Tous droits réservés</p>
             </div>
         </div>
     </footer>
