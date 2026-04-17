@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Message de console (Easter egg)
     console.log('%cAutoCalc OptiDevis', 'font-size: 20px; font-weight: bold; color: #667eea;');
     console.log('%cDéveloppé par David VIEY', 'font-size: 12px; color: #64748b;');
-    console.log('%c🚀 v3.2.0 - Octobre 2025', 'font-size: 12px; color: #10b981;');
+    console.log('%c🚀 v3.5.0 - 2026', 'font-size: 12px; color: #10b981;');
 });
 
 // Gestion des formulaires (si présents)
