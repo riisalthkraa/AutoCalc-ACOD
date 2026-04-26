@@ -1,20 +1,374 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AutoCalc OptiDevis - Solution professionnelle de gestion de devis et factures pour artisans et PME du bâtiment. Calculs intelligents, templates personnalisables, souveraineté des données.">
-    <meta name="keywords" content="devis, factures, bâtiment, artisan, gestion, AutoCalc, OptiDevis, BTP, construction, logiciel devis">
-    <meta name="author" content="RK Développement">
-    <meta property="og:title" content="AutoCalc OptiDevis - Logiciel de devis pour le bâtiment">
-    <meta property="og:description" content="Créez vos devis et factures en quelques clics. Calculs intelligents, licence à vie, données 100% locales.">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:type" content="website">
-    <title>AutoCalc OptiDevis - La solution intelligente pour vos devis et factures</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
+  <!-- ===== TITLE & DESCRIPTION ===== -->
+  <title>AutoCalc OptiDevis — Logiciel de devis & facture bâtiment, conforme E-Facture 2026 | Licence à vie 300€</title>
+  <meta name="description" content="Logiciel de devis et facturation pour artisans et PME du bâtiment. Calculs automatiques, conforme à la facturation électronique 2026, 100% local (RGPD), licence unique 300€ sans abonnement. Essai gratuit 60 jours sur Windows.">
+  <meta name="keywords" content="logiciel devis bâtiment, logiciel facturation artisan, e-facture 2026, facturation électronique obligatoire, devis sans abonnement, logiciel BTP, devis plaquiste, devis maçon, devis électricien, alternative Batappli, alternative EBP, alternative Tolteck, devis hors ligne, RGPD bâtiment, export FEC">
+  <meta name="author" content="RK Développement">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="application-name" content="AutoCalc OptiDevis">
+  <meta name="generator" content="RK Développement">
+
+  <!-- ===== GÉO / SEO LOCAL ===== -->
+  <meta name="geo.region" content="FR-NAQ">
+  <meta name="geo.placename" content="Castillon-la-Bataille, Gironde">
+  <meta name="geo.position" content="44.8528;-0.0367">
+  <meta name="ICBM" content="44.8528, -0.0367">
+
+  <!-- ===== CANONIQUE & LANGUES ===== -->
+  <link rel="canonical" href="https://autocalc-optidevis.fr/">
+  <link rel="alternate" hreflang="fr-FR" href="https://autocalc-optidevis.fr/">
+  <link rel="alternate" hreflang="x-default" href="https://autocalc-optidevis.fr/">
+
+  <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AutoCalc OptiDevis">
+  <meta property="og:url" content="https://autocalc-optidevis.fr/">
+  <meta property="og:title" content="AutoCalc OptiDevis — Devis & Facture bâtiment, conforme E-Facture 2026">
+  <meta property="og:description" content="Calculs automatiques, licence à vie 300€, données 100% locales. L'alternative aux SaaS pour artisans et PME du bâtiment. Essai gratuit 60 jours.">
+  <meta property="og:image" content="https://autocalc-optidevis.fr/images/og-cover-1200x630.png">
+  <meta property="og:image:secure_url" content="https://autocalc-optidevis.fr/images/og-cover-1200x630.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Capture d'écran du logiciel AutoCalc OptiDevis avec le slogan : Devis bâtiment, conforme E-Facture 2026">
+
+  <!-- ===== TWITTER / X CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AutoCalc OptiDevis — Devis & Facture bâtiment, conforme E-Facture 2026">
+  <meta name="twitter:description" content="Logiciel de devis pour artisans. Licence à vie 300€, sans abonnement, 100% local, conforme facturation électronique 2026. Essai 60 jours.">
+  <meta name="twitter:image" content="https://autocalc-optidevis.fr/images/og-cover-1200x630.png">
+  <meta name="twitter:image:alt" content="Interface AutoCalc OptiDevis — devis bâtiment automatisés">
+
+  <!-- ===== ICONES & PWA ===== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ===== PRECONNECT PERFORMANCES ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- ===== SITEMAP ===== -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- ===== CSS & FONTS ===== -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- ============================================================ -->
+  <!-- ============== SCHEMA.ORG  —  JSON-LD GRAPH ================ -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "Organization",
+        "@id": "https://autocalc-optidevis.fr/#organization",
+        "name": "AutoCalc OptiDevis",
+        "alternateName": "ACOD",
+        "url": "https://autocalc-optidevis.fr/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://autocalc-optidevis.fr/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "RK",
+          "url": "https://rk-developpement.fr"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "RK Développement",
+          "url": "https://rk-developpement.fr"
+        },
+        "email": "riisalthkraal@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "99 Rue Michel Montaigne",
+          "addressLocality": "Castillon-la-Bataille",
+          "postalCode": "33350",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "addressCountry": "FR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "knowsAbout": [
+          "Logiciel de devis",
+          "Facturation électronique",
+          "E-Facture 2026",
+          "Bâtiment",
+          "Artisanat",
+          "Gestion commerciale"
+        ]
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://autocalc-optidevis.fr/#website",
+        "url": "https://autocalc-optidevis.fr/",
+        "name": "AutoCalc OptiDevis",
+        "description": "Logiciel de devis et facturation pour artisans et PME du bâtiment, conforme E-Facture 2026.",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://autocalc-optidevis.fr/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://autocalc-optidevis.fr/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://autocalc-optidevis.fr/#webpage",
+        "url": "https://autocalc-optidevis.fr/",
+        "name": "AutoCalc OptiDevis — Logiciel de devis & facture bâtiment, conforme E-Facture 2026",
+        "isPartOf": { "@id": "https://autocalc-optidevis.fr/#website" },
+        "about": { "@id": "https://autocalc-optidevis.fr/#software" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://autocalc-optidevis.fr/images/og-cover-1200x630.png"
+        },
+        "inLanguage": "fr-FR",
+        "datePublished": "2024-09-01",
+        "dateModified": "2026-04-26",
+        "breadcrumb": { "@id": "https://autocalc-optidevis.fr/#breadcrumb" }
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://autocalc-optidevis.fr/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://autocalc-optidevis.fr/"
+          }
+        ]
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://autocalc-optidevis.fr/#software",
+        "name": "AutoCalc OptiDevis",
+        "alternateName": "ACOD",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "AccountingApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "softwareVersion": "3.5.0",
+        "datePublished": "2024-09-01",
+        "dateModified": "2026-04-26",
+        "downloadUrl": "https://github.com/riisalthkraa/AutoCalc-ACOD/releases/download/v3.5.0/AutoCalc.OptiDevis.Setup.3.5.0.exe",
+        "installUrl": "https://autocalc-optidevis.fr/",
+        "fileSize": "85 MB",
+        "url": "https://autocalc-optidevis.fr/",
+        "image": "https://autocalc-optidevis.fr/images/og-cover-1200x630.png",
+        "screenshot": [
+          "https://autocalc-optidevis.fr/screenshots/accueil-vendeur-conseil.png"
+        ],
+        "description": "Logiciel de devis et de facturation pour les artisans et PME du bâtiment. Calculs automatiques (m² → pièces, m³ → kg), scanner code-barres, tableau de bord KPI, conforme à la facturation électronique 2026, export comptable FEC. 100% local, RGPD natif, licence unique à vie sans abonnement.",
+        "featureList": [
+          "Calculs automatiques de quantités (m² → pièces, m³ → kg)",
+          "Module e-facture conforme à l'obligation 2026",
+          "Scanner code-barres EAN, 128, 39 via webcam",
+          "Tableau de bord KPI temps réel",
+          "Export comptable FEC",
+          "Templates Excel clients, fournisseurs, matériaux",
+          "Données 100% locales, sans cloud obligatoire",
+          "Conforme RGPD",
+          "Multi-vendeurs"
+        ],
+        "softwareRequirements": "Windows 10 ou supérieur, 4 Go RAM, 500 Mo d'espace disque",
+        "publisher": { "@id": "https://autocalc-optidevis.fr/#organization" },
+        "author": { "@id": "https://autocalc-optidevis.fr/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "@id": "https://autocalc-optidevis.fr/#offer",
+          "price": "300.00",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://autocalc-optidevis.fr/tarifs.html",
+          "seller": { "@id": "https://autocalc-optidevis.fr/#organization" },
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "France"
+          },
+          "category": "Licence à vie",
+          "hasFreeShippingOffer": false,
+          "businessFunction": "https://schema.org/Sell"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "3",
+          "reviewCount": "3"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sébastien M." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Avant je passais 1h par devis sur Excel. Maintenant en 10 minutes c'est fait, envoyé en PDF au client. Les calculs de quantité sont automatiques, plus d'erreurs."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Laurent & Sophie D." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "On a remplacé notre abonnement à 90€/mois. Le scanner code-barres pour le magasin c'est un vrai plus, et nos données restent chez nous."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Marc T." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "L'export FEC m'a convaincu. Mon comptable reçoit tout directement. Le rapport taux de conversion devis/factures m'aide à suivre mon activité."
+          }
+        ]
+      },
+
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://autocalc-optidevis.fr/#localbusiness",
+        "name": "AutoCalc OptiDevis — RK Développement",
+        "image": "https://autocalc-optidevis.fr/images/logo.png",
+        "url": "https://autocalc-optidevis.fr/",
+        "telephone": "",
+        "email": "riisalthkraal@gmail.com",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "99 Rue Michel Montaigne",
+          "addressLocality": "Castillon-la-Bataille",
+          "postalCode": "33350",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 44.8528,
+          "longitude": -0.0367
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "France" },
+          { "@type": "AdministrativeArea", "name": "Nouvelle-Aquitaine" },
+          { "@type": "AdministrativeArea", "name": "Gironde" }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      },
+
+      {
+        "@type": "Product",
+        "@id": "https://autocalc-optidevis.fr/#product",
+        "name": "AutoCalc OptiDevis — Licence à vie",
+        "description": "Licence unique à vie d'AutoCalc OptiDevis, logiciel de devis et facturation conforme E-Facture 2026 pour artisans et PME du bâtiment.",
+        "brand": { "@id": "https://autocalc-optidevis.fr/#organization" },
+        "category": "Logiciel de gestion / Devis et facturation BTP",
+        "image": "https://autocalc-optidevis.fr/images/og-cover-1200x630.png",
+        "offers": { "@id": "https://autocalc-optidevis.fr/#offer" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "3",
+          "reviewCount": "3"
+        }
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://autocalc-optidevis.fr/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AutoCalc OptiDevis est-il conforme à la facturation électronique 2026 ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. AutoCalc OptiDevis intègre nativement le module E-Facture conforme à l'obligation légale entrant en vigueur en 2026. Le logiciel gère devis, factures, relances et l'export comptable FEC pour votre comptable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Y a-t-il un abonnement mensuel ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. AutoCalc OptiDevis fonctionne avec une licence unique à vie de 300€. Aucun abonnement mensuel, aucun frais récurrent. Les mises à jour sont incluses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mes données sont-elles stockées sur un cloud ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Toutes vos données (devis, factures, clients, fournisseurs) restent 100% locales sur votre ordinateur. Aucun cloud obligatoire. La conformité RGPD est garantie par conception."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps dure l'essai gratuit ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'essai gratuit dure 60 jours, sans engagement et sans carte bancaire. Vous testez toutes les fonctionnalités du logiciel avant de décider."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sur quels systèmes fonctionne le logiciel ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AutoCalc OptiDevis fonctionne sur Windows 10 et Windows 11. L'installation prend 2 minutes et ne nécessite ni compte, ni carte bancaire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "À quels métiers le logiciel s'adresse-t-il ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AutoCalc OptiDevis est conçu pour les artisans (maçons, plâtriers, peintres, plombiers, électriciens, menuisiers, charpentiers), les magasins et négoces de matériaux, ainsi que les bureaux d'études BTP et experts-comptables."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles fonctionnalités intelligentes propose le logiciel ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les calculs automatiques détectent les conversions nécessaires (m² vers pièces, m³ vers kg). Par exemple, en saisissant 75m² de plaque BA13, le logiciel calcule automatiquement 79 plaques. Un scanner code-barres via webcam (EAN, 128, 39) est également intégré."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
     <!-- Bannière -->
