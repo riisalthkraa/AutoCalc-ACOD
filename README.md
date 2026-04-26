@@ -116,7 +116,7 @@ SITE BIS/
 ├── images/                         # Logos et assets
 │   └── logo.png
 ├── screenshots/                    # Captures d'écran du logiciel
-│   ├── Acceuil vendeur-conseil.png
+│   ├── accueil-vendeur-conseil.png
 │   ├── NOUVEAU MODULE CLIENTS.png
 │   ├── NOUVEAU MODULE FOURNISSEURS.png
 │   └── ...
